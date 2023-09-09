@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ZeusPalace
 {
-    public partial class Form1 : Form
+    public partial class TabbedForm : Form
     {
-        public Form1()
+        public TabbedForm()
         {
             InitializeComponent();
         }
