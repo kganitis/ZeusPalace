@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ZeusPalace
+namespace ZeusPalace.Modules.Devices
 {
-    public partial class TabbedForm : Form
+    public partial class DevicesForm : EmbeddedForm
     {
-        public TabbedForm()
+        public DevicesForm()
         {
             InitializeComponent();
         }

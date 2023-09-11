@@ -46,22 +46,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseForm.cs">
+    <Compile Include="Entities\Accommodation\Accommodation.cs" />
+    <Compile Include="Entities\Accommodation\AccommodationType.cs" />
+    <Compile Include="Entities\Accommodation\Apartment.cs" />
+    <Compile Include="Entities\User\Customer.cs" />
+    <Compile Include="Entities\User\Employee.cs" />
+    <Compile Include="Modules\Devices\DevicesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaseForm.Designer.cs">
-      <DependentUpon>BaseForm.cs</DependentUpon>
+    <Compile Include="Modules\Devices\DevicesForm.Designer.cs">
+      <DependentUpon>DevicesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\EmbeddedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\EmbeddedForm.Designer.cs">
+      <DependentUpon>EmbeddedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Orders\OrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Orders\OrdersForm.Designer.cs">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Pool\PoolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Pool\PoolForm.Designer.cs">
+      <DependentUpon>PoolForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TabbedForm.cs">
+    <Compile Include="Modules\Driving\DrivingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TabbedForm.Designer.cs">
-      <DependentUpon>TabbedForm.cs</DependentUpon>
+    <Compile Include="Modules\Driving\DrivingForm.Designer.cs">
+      <DependentUpon>DrivingForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BaseForm.resx">
-      <DependentUpon>BaseForm.cs</DependentUpon>
+    <Compile Include="Entities\User\UserRole.cs" />
+    <Compile Include="Entities\User\User.cs" />
+    <EmbeddedResource Include="Modules\Devices\DevicesForm.resx">
+      <DependentUpon>DevicesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\EmbeddedForm.resx">
+      <DependentUpon>EmbeddedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Orders\OrdersForm.resx">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Pool\PoolForm.resx">
+      <DependentUpon>PoolForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -72,8 +115,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TabbedForm.resx">
-      <DependentUpon>TabbedForm.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Driving\DrivingForm.resx">
+      <DependentUpon>DrivingForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -88,5 +131,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
