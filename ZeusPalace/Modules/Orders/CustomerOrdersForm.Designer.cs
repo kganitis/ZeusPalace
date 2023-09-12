@@ -1,6 +1,6 @@
 ﻿namespace ZeusPalace.Modules.Orders
 {
-    partial class OrdersForm
+    partial class CustomerOrdersForm
     {
         /// <summary>
         /// Required designer variable.

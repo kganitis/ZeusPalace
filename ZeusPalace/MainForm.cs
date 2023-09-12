@@ -42,7 +42,7 @@ namespace ZeusPalace
             embeddedForms.Add(typeof(DevicesForm), new DevicesForm());
             embeddedForms.Add(typeof(PoolForm), new PoolForm());
             embeddedForms.Add(typeof(DrivingForm), new DrivingForm());
-            embeddedForms.Add(typeof(OrdersForm), new OrdersForm());
+            embeddedForms.Add(typeof(CustomerOrdersForm), new CustomerOrdersForm());
             foreach (var embeddedForm in embeddedForms.Values)
             {
                 embeddedForm.TopLevel = false;
@@ -101,7 +101,7 @@ namespace ZeusPalace
 
         private void buttonOrders_Click(object sender, EventArgs e)
         {
-            ShowEmbeddedForm(embeddedForms[typeof(OrdersForm)], (Button)sender);
+            ShowEmbeddedForm(embeddedForms[typeof(CustomerOrdersForm)], (Button)sender);
         }
     }
 }

@@ -11,12 +11,19 @@ namespace ZeusPalace
     internal class Customer : User
     {
         public override UserRole Role => UserRole.Customer;
-        public Accommodation accommodation { get; }
+        public Accommodation Accommodation { get; }
+        public decimal Balance { get; set; }
 
         public Customer(string name, Accommodation accommodation)
         {
             Name = name;
-            this.accommodation = accommodation;
+            Accommodation = accommodation;
+            Balance = 0;
+        }
+
+        public void AddToBalance(decimal amount)
+        {
+            Balance += amount;
         }
     }
 }

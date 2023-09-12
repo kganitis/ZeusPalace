@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ZeusPalace.Modules.Orders
 {
-    public partial class OrdersForm : EmbeddedForm
+    public partial class CustomerOrdersForm : EmbeddedForm
     {
-        public OrdersForm()
+        public CustomerOrdersForm()
         {
             InitializeComponent();
         }

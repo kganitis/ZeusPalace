@@ -49,6 +49,15 @@
     <Compile Include="Entities\Accommodation\Accommodation.cs" />
     <Compile Include="Entities\Accommodation\AccommodationType.cs" />
     <Compile Include="Entities\Accommodation\Apartment.cs" />
+    <Compile Include="Entities\Accommodation\TrojanHorse.cs" />
+    <Compile Include="Entities\Order\Chat.cs" />
+    <Compile Include="Entities\Order\Menu.cs" />
+    <Compile Include="Entities\Order\MenuItem.cs" />
+    <Compile Include="Entities\Order\MenuItemType.cs" />
+    <Compile Include="Entities\Order\Message.cs" />
+    <Compile Include="Entities\Order\Order.cs" />
+    <Compile Include="Entities\Order\OrderItem.cs" />
+    <Compile Include="Entities\Order\OrderStatus.cs" />
     <Compile Include="Entities\User\Customer.cs" />
     <Compile Include="Entities\User\Employee.cs" />
     <Compile Include="Modules\Devices\DevicesForm.cs">
@@ -69,11 +78,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Orders\OrdersForm.cs">
+    <Compile Include="Modules\Orders\CustomerOrdersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules\Orders\OrdersForm.Designer.cs">
-      <DependentUpon>OrdersForm.cs</DependentUpon>
+    <Compile Include="Modules\Orders\CustomerOrdersForm.Designer.cs">
+      <DependentUpon>CustomerOrdersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Pool\PoolForm.cs">
       <SubType>Form</SubType>
@@ -100,8 +109,8 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Orders\OrdersForm.resx">
-      <DependentUpon>OrdersForm.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Orders\CustomerOrdersForm.resx">
+      <DependentUpon>CustomerOrdersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Pool\PoolForm.resx">
       <DependentUpon>PoolForm.cs</DependentUpon>
