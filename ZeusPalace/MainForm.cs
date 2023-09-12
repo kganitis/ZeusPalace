@@ -25,6 +25,8 @@ namespace ZeusPalace
         private readonly Color activeButtonBackColor;
         private readonly Font defaultButtonFont;
         private readonly Font activeButtonFont;
+        private readonly int initialWidth;
+        private readonly int initialHeight;
 
         public MainForm()
         {
@@ -33,6 +35,8 @@ namespace ZeusPalace
             defaultButtonFont = buttonDevices.Font;
             activeButtonBackColor = Color.NavajoWhite;
             activeButtonFont = new Font("Palatino Linotype", 21.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            initialWidth = Width;
+            initialHeight = Height;
             embeddedForms = new Dictionary<Type, EmbeddedForm>();
             PreloadForms();
         }
@@ -102,6 +106,13 @@ namespace ZeusPalace
         private void buttonOrders_Click(object sender, EventArgs e)
         {
             ShowEmbeddedForm(embeddedForms[typeof(CustomerOrdersForm)], (Button)sender);
+        }
+
+        // Make the form not-resizable by reseting the size on resizing event
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            Width = initialWidth;
+            Height = initialHeight;
         }
     }
 }

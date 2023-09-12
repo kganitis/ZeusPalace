@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // OrdersForm
+            // CustomerOrdersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "OrdersForm";
+            this.ClientSize = new System.Drawing.Size(1264, 601);
+            this.Name = "CustomerOrdersForm";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
