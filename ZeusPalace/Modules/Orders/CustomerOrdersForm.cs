@@ -12,9 +12,27 @@ namespace ZeusPalace.Modules.Orders
 {
     public partial class CustomerOrdersForm : EmbeddedForm
     {
+        private Color buttonNextStepDefaultBackColor;
         public CustomerOrdersForm()
         {
             InitializeComponent();
+            buttonNextStepDefaultBackColor = buttonOrderNextStep.BackColor;
+            foreach (Button btn in panelOrderControls.Controls.OfType<Button>())
+            {
+                btn.FlatAppearance.MouseDownBackColor = btn.FlatAppearance.MouseOverBackColor;
+            }
+        }
+
+        private void buttonNextStep_MouseEnter(object sender, EventArgs e)
+        {
+            buttonOrderNextStep.BackColor = buttonOrderNextStep.FlatAppearance.MouseOverBackColor;
+            buttonTotalPrice.BackColor = buttonTotalPrice.FlatAppearance.MouseOverBackColor;
+        }
+
+        private void buttonNextStep_MouseLeave(object sender, EventArgs e)
+        {
+            buttonOrderNextStep.BackColor = buttonNextStepDefaultBackColor;
+            buttonTotalPrice.BackColor = buttonNextStepDefaultBackColor;
         }
     }
 }

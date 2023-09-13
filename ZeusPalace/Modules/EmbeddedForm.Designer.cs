@@ -38,7 +38,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EmbeddedForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Resize += new System.EventHandler(this.EmbeddedForm_Resize);
             this.ResumeLayout(false);
 
         }
