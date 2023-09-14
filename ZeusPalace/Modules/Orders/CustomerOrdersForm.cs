@@ -12,6 +12,7 @@ namespace ZeusPalace.Modules.Orders
 {
     public partial class CustomerOrdersForm : EmbeddedForm
     {
+        private CustomerOrdersController controller = new CustomerOrdersController();
         private Color buttonNextStepDefaultBackColor;
         public CustomerOrdersForm()
         {
@@ -20,6 +21,12 @@ namespace ZeusPalace.Modules.Orders
             foreach (Button btn in tableLayoutPanelOrderControls.Controls.OfType<Button>())
             {
                 btn.FlatAppearance.MouseDownBackColor = btn.FlatAppearance.MouseOverBackColor;
+            }
+            AlignLabelToCenter(labelTime, panelTime);
+            System.Collections.IList menuItems = controller.Menu.MenuItems;
+            for (int i = 0; i < menuItems.Count; i++)
+            {
+                MenuItem item = (MenuItem)menuItems[i];
             }
         }
 
@@ -33,6 +40,11 @@ namespace ZeusPalace.Modules.Orders
         {
             buttonOrderNextStep.BackColor = buttonNextStepDefaultBackColor;
             buttonTotalPrice.BackColor = buttonNextStepDefaultBackColor;
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

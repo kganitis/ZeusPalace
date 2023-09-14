@@ -39,6 +39,7 @@ namespace ZeusPalace
             {
                 btn.FlatAppearance.MouseOverBackColor = activeButtonBackColor;
                 btn.FlatAppearance.MouseDownBackColor = btn.FlatAppearance.MouseOverBackColor;
+                
             }
             initialWidth = Width;
             initialHeight = Height;

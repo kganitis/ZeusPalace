@@ -1,5 +1,8 @@
-﻿using System;
+﻿using CsvHelper.Configuration;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,17 +15,12 @@ namespace ZeusPalace.Entities.Order
         public string Name { get; set; }
         public MenuItemType Type { get; set; }
         public decimal Price { get; set; }
-        public int StartTime { get; set; }
-        public int EndTime { get; set; }
 
-
-        public MenuItem(string name, MenuItemType type, decimal price, int startTime, int endTime)
+        public MenuItem(string name, MenuItemType type, decimal price)
         {
             Name = name;
             Type = type;
             Price = price;
-            StartTime = startTime;
-            EndTime = endTime;
         }
     }
 }
