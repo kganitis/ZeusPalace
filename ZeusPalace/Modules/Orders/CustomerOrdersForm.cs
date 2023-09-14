@@ -17,7 +17,7 @@ namespace ZeusPalace.Modules.Orders
         {
             InitializeComponent();
             buttonNextStepDefaultBackColor = buttonOrderNextStep.BackColor;
-            foreach (Button btn in panelOrderControls.Controls.OfType<Button>())
+            foreach (Button btn in tableLayoutPanelOrderControls.Controls.OfType<Button>())
             {
                 btn.FlatAppearance.MouseDownBackColor = btn.FlatAppearance.MouseOverBackColor;
             }

@@ -33,8 +33,13 @@ namespace ZeusPalace
             InitializeComponent();
             defaultButtonBackColor = buttonDevices.BackColor;
             defaultButtonFont = buttonDevices.Font;
-            activeButtonBackColor = Color.NavajoWhite;
-            activeButtonFont = new Font("Palatino Linotype", 21.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            activeButtonBackColor = Color.FromArgb(82, 99, 140);
+            activeButtonFont = new Font("Calibri", 21.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            foreach (Button btn in panelMenu.Controls.OfType<Button>())
+            {
+                btn.FlatAppearance.MouseOverBackColor = activeButtonBackColor;
+                btn.FlatAppearance.MouseDownBackColor = btn.FlatAppearance.MouseOverBackColor;
+            }
             initialWidth = Width;
             initialHeight = Height;
             embeddedForms = new Dictionary<Type, EmbeddedForm>();
