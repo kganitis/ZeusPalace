@@ -8,7 +8,7 @@ namespace ZeusPalace.Entities.Order
 {
     internal class Order
     {
-        public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
+        private readonly List<OrderItem> orderItems = new List<OrderItem>();
         public decimal TotalPrice => CalculateTotalPrice();
         public OrderStatus Status { get; set; }
         public Chat Chat { get; set; } = new Chat();
@@ -18,25 +18,38 @@ namespace ZeusPalace.Entities.Order
             Status = OrderStatus.Open;
         }
 
-        public void AddOrderItem(OrderItem item)
+        public void UpdateOrderItem(MenuItem menuItem, int quantity)
         {
-            OrderItems.Add(item);
+            var orderItem = orderItems.FirstOrDefault(item => item.MenuItem == menuItem);
+
+            if (orderItem != null)
+            {
+                orderItem.Quantity = quantity;
+                if (quantity == 0)
+                {
+                    orderItems.Remove(orderItem);
+                }
+            }
+            else
+            {
+                orderItems.Add(new OrderItem(menuItem, quantity));
+            }
         }
 
-        public void UpdateOrderItem(OrderItem item, int quantity)
+        public OrderItem GetOrderItem(int index)
         {
-            item.Quantity = quantity;
+            return orderItems[index];
         }
 
-        public void removeOrderItem(OrderItem item)
+        public int GetOrderItemsCount()
         {
-            OrderItems.Remove(item);
+            return orderItems.Count;
         }
 
         private decimal CalculateTotalPrice()
         {
-            decimal totalPrice = 0.0m;
-            foreach (var orderItem in OrderItems)
+            decimal totalPrice = 0.00m;
+            foreach (var orderItem in orderItems)
             {
                 totalPrice += orderItem.GetTotalPrice();
             }

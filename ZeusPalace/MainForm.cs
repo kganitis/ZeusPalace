@@ -62,6 +62,11 @@ namespace ZeusPalace
             }
         }
 
+        public EmbeddedForm GetEmbeddedForm(Type type)
+        {
+            return embeddedForms[type];
+        }
+
         private void AlignLabelToCenter(Control label, Panel parentPanel)
         {
             int labelX = (parentPanel.Width - label.Width) / 2;

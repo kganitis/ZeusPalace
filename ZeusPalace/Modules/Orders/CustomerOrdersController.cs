@@ -14,7 +14,17 @@ namespace ZeusPalace.Modules.Orders
 
         public CustomerOrdersController()
         {
-            Menu.MenuItems = Menu.GetDefaultMenuItems();
+            
+        }
+
+        public void UpdateItemQuantity(string itemName, int quantity)
+        {
+            Order.UpdateOrderItem(Menu.GetMenuItemByName(itemName), quantity);
+        }
+
+        public bool ItemIsAvailabe(string itemName, int currentTime)
+        {
+            return Menu.GetMenuItemByName(itemName).IsAvailable(currentTime);
         }
     }
 }

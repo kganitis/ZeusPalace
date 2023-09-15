@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,32 +14,30 @@ namespace ZeusPalace.Modules.Orders
     public partial class MenuItemQuantityControl : UserControl
     {
         public event EventHandler QuantityChanged;
-        private int quantity;
 
         public MenuItemQuantityControl()
         {
             InitializeComponent();
-            Quantity = 1;
-            labelQuantity.Text = Quantity.ToString();
+            labelQuantity.Text = "0";
+        }
+
+        public MenuItemQuantityControl(int quantity)
+        {
+            InitializeComponent();
+            labelQuantity.Text = quantity.ToString();
         }
 
         public int Quantity
         {
-            get { return quantity; }
+            get { return int.Parse(labelQuantity.Text); }
             set
             {
-                if (quantity != value)
+                if (Quantity != value)
                 {
-                    quantity = value;
-                    OnQuantityChanged();
+                    labelQuantity.Text = value.ToString();
+                    QuantityChanged?.Invoke(this, EventArgs.Empty);
                 }
             }
-        }
-
-        private void OnQuantityChanged()
-        {
-            QuantityChanged?.Invoke(this, EventArgs.Empty);
-            labelQuantity.Text = Quantity.ToString();
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)

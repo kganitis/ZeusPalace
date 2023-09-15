@@ -128,6 +128,12 @@
     <Compile Include="Modules\Orders\UserControls\MenuItemControl.Designer.cs">
       <DependentUpon>MenuItemControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Orders\UserControls\OrderPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Orders\UserControls\OrderPanelControl.Designer.cs">
+      <DependentUpon>OrderPanelControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Pool\PoolForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Orders\UserControls\MenuItemControl.resx">
       <DependentUpon>MenuItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Orders\UserControls\OrderPanelControl.resx">
+      <DependentUpon>OrderPanelControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Pool\PoolForm.resx">
       <DependentUpon>PoolForm.cs</DependentUpon>

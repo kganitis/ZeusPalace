@@ -17,24 +17,24 @@ namespace ZeusPalace.Entities.Order
         }
     }
 
-    internal enum MenuItemType
+    public enum MenuItemType
     {
-        [MenuItem("Καφέδες", startTime: 6, endTime: 16)]
+        [MenuItem("Καφέδες", startTime: 600, endTime: 1600)]
         Coffee,
 
-        [MenuItem("Ροφήματα", startTime: 6, endTime: 24)]
+        [MenuItem("Ροφήματα", startTime: 600, endTime: 2400)]
         Beverage,
 
-        [MenuItem("Πρωινό", startTime: 6, endTime: 10)]
+        [MenuItem("Πρωινό", startTime: 600, endTime: 1000)]
         Breakfast,
 
-        [MenuItem("Γεύματα", startTime: 12, endTime: 16)]
+        [MenuItem("Γεύματα", startTime: 1200, endTime: 1600)]
         Meal,
 
-        [MenuItem("Ποτά", startTime: 18, endTime: 2)]
+        [MenuItem("Ποτά", startTime: 1800, endTime: 200)]
         Alcohol,
 
-        [MenuItem("Επιδόρπια", startTime: 12, endTime: 24)]
+        [MenuItem("Επιδόρπια", startTime: 1200, endTime: 2400)]
         Dessert
     }
 

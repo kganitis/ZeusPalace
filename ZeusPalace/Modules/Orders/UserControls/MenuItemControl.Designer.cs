@@ -38,11 +38,9 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tableLayoutPanel1.Controls.Add(this.labelPrice, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelName, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.buttonAdd, 2, 0);
@@ -58,23 +56,23 @@
             // 
             this.labelPrice.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelPrice.AutoSize = true;
-            this.labelPrice.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrice.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelPrice.Location = new System.Drawing.Point(232, 8);
+            this.labelPrice.Location = new System.Drawing.Point(249, 6);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(57, 19);
+            this.labelPrice.Size = new System.Drawing.Size(38, 23);
             this.labelPrice.TabIndex = 1;
-            this.labelPrice.Text = "10.00 €";
+            this.labelPrice.Text = "10 €";
             // 
             // labelName
             // 
             this.labelName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelName.AutoSize = true;
-            this.labelName.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelName.Location = new System.Drawing.Point(3, 6);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(147, 23);
+            this.labelName.Size = new System.Drawing.Size(128, 23);
             this.labelName.TabIndex = 0;
             this.labelName.Text = "Όνομα προϊόντος";
             // 
@@ -82,12 +80,13 @@
             // 
             this.buttonAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(198)))), ((int)(((byte)(191)))));
+            this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAdd.FlatAppearance.BorderSize = 0;
             this.buttonAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(111)))));
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonAdd.Location = new System.Drawing.Point(305, 5);
+            this.buttonAdd.Location = new System.Drawing.Point(304, 5);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(0);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(81, 25);
@@ -103,6 +102,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MenuItemControl";
             this.Size = new System.Drawing.Size(400, 35);
+            this.EnabledChanged += new System.EventHandler(this.MenuItemControl_EnabledChanged);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

@@ -9,66 +9,32 @@ namespace ZeusPalace.Entities.Order
 {
     internal class Menu
     {
-        public List<MenuItem> MenuItems { get; set; } = new List<MenuItem>();
+        private List<MenuItem> menuItems;
+
+        public Menu()
+        {
+            menuItems = GetDefaultMenuItems();
+        }
 
         public void AddMenuItem(MenuItem menuItem)
         {
-            MenuItems.Add(menuItem);
+            menuItems.Add(menuItem);
         }
 
-        public List<MenuItem> GenerateMenuForTime(int currentTime)
+        public MenuItem GetMenuItem(int index)
         {
-            // Filter menu items based on the current time
-            return MenuItems
-                .Where(item => currentTime >= GetStartTime(item.Type) && currentTime <= GetEndTime(item.Type))
-                .ToList();
+            return menuItems[index];
         }
 
-        // Helper method to get the StartTime attribute value for a MenuItemType
-        private int GetStartTime(MenuItemType menuItemType)
+        public MenuItem GetMenuItemByName(string menuItemName)
         {
-            FieldInfo fieldInfo = menuItemType.GetType().GetField(menuItemType.ToString());
-            MenuItemAttribute[] attributes = fieldInfo.GetCustomAttributes(typeof(MenuItemAttribute), false) as MenuItemAttribute[];
-
-            if (attributes != null && attributes.Length > 0)
-            {
-                return attributes[0].StartTime;
-            }
-
-            // Default value if attribute not found
-            return 0;
+            return menuItems.FirstOrDefault(item => item.Name == menuItemName);
         }
 
-        // Helper method to get the EndTime attribute value for a MenuItemType
-        private int GetEndTime(MenuItemType menuItemType)
+        public int GetMenuItemsCount()
         {
-            FieldInfo fieldInfo = menuItemType.GetType().GetField(menuItemType.ToString());
-            MenuItemAttribute[] attributes = fieldInfo.GetCustomAttributes(typeof(MenuItemAttribute), false) as MenuItemAttribute[];
-
-            if (attributes != null && attributes.Length > 0)
-            {
-                return attributes[0].EndTime;
-            }
-
-            // Default value if attribute not found
-            return 24; // Assuming the default end time is 23:59
+            return menuItems.Count;
         }
-
-        // Helper method to get the StringValue attribute value for a MenuItemType
-        private string GetStringValue(MenuItemType menuItemType)
-        {
-            FieldInfo fieldInfo = menuItemType.GetType().GetField(menuItemType.ToString());
-            MenuItemAttribute[] attributes = fieldInfo.GetCustomAttributes(typeof(MenuItemAttribute), false) as MenuItemAttribute[];
-
-            if (attributes != null && attributes.Length > 0)
-            {
-                return attributes[0].StringValue;
-            }
-
-            // Default value if attribute not found
-            return string.Empty;
-        }
-
 
         public static List<MenuItem> GetDefaultMenuItems()
         {

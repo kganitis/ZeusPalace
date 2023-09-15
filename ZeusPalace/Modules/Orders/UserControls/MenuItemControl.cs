@@ -4,62 +4,78 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZeusPalace.Entities.Order;
 
 namespace ZeusPalace.Modules.Orders
 {
     public partial class MenuItemControl : UserControl
     {
-        private int quantity;
+        private readonly MenuItemQuantityControl menuItemQuantityControl;
         public event EventHandler QuantityChanged;
-        private MenuItemQuantityControl menuItemQuantityControl;
+
+        public string ItemName { get { return labelName.Text; } }
+
+        public int Quantity
+        {
+            get { return menuItemQuantityControl.Quantity; }
+        }
 
         public MenuItemControl()
         {
             InitializeComponent();
-            Quantity = 0;
+            menuItemQuantityControl = new MenuItemQuantityControl();
         }
 
-        public int Quantity
+        public MenuItemControl(Entities.Order.MenuItem menuItem)
         {
-            get { return quantity; }
-            set
-            {
-                if (quantity != value)
-                {
-                    quantity = value;
-                    OnQuantityChanged();
-                }
-            }
+            InitializeComponent();
+            menuItemQuantityControl = new MenuItemQuantityControl();
+            menuItemQuantityControl.QuantityChanged += MenuItemQuantityControl_QuantityChanged;
+            labelName.Text = menuItem.Name;
+            labelPrice.Text = menuItem.Price.ToString() + " €";
+        }
+
+        public MenuItemControl(Entities.Order.MenuItem menuItem, int quantity)
+        {
+            InitializeComponent();
+            menuItemQuantityControl = new MenuItemQuantityControl(quantity);
+            menuItemQuantityControl.QuantityChanged += MenuItemQuantityControl_QuantityChanged;
+            labelName.Text = menuItem.Name;
+            labelPrice.Text = menuItem.Price.ToString() + " €";
+            tableLayoutPanel1.Controls.Remove(buttonAdd);
+            tableLayoutPanel1.Controls.Add(menuItemQuantityControl, 2, 0);
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            menuItemQuantityControl.Quantity = 1;
             tableLayoutPanel1.Controls.Remove(buttonAdd);
-            this.menuItemQuantityControl = new MenuItemQuantityControl();
-            this.menuItemQuantityControl.QuantityChanged += MenuItemQuantityControl_QuantityChanged;
-            tableLayoutPanel1.Controls.Add(this.menuItemQuantityControl, 2, 0);
-            MenuItemQuantityControl menuItemQuantityControl = new MenuItemQuantityControl();
-            Quantity++;
-        }
-
-        private void OnQuantityChanged()
-        {
-            QuantityChanged?.Invoke(this, EventArgs.Empty);
+            tableLayoutPanel1.Controls.Add(menuItemQuantityControl, 2, 0);
         }
 
         private void MenuItemQuantityControl_QuantityChanged(object sender, EventArgs e)
         {
-            if (sender is MenuItemQuantityControl menuItemQuantityControl)
+            if (Quantity == 0)
             {
-                Quantity = menuItemQuantityControl.Quantity;
-                if (Quantity == 0)
-                {
-                    tableLayoutPanel1.Controls.Remove(menuItemQuantityControl);
-                    tableLayoutPanel1.Controls.Add(buttonAdd, 2, 0);
-                }
+                tableLayoutPanel1.Controls.Remove(menuItemQuantityControl);
+                tableLayoutPanel1.Controls.Add(buttonAdd, 2, 0);
+            }
+            QuantityChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void MenuItemControl_EnabledChanged(object sender, EventArgs e)
+        {
+            if (!Enabled)
+            {
+                tableLayoutPanel1.Controls.Remove(buttonAdd);
+            }
+            else
+            {
+                tableLayoutPanel1.Controls.Add(buttonAdd, 2, 0);
             }
         }
     }
