@@ -18,55 +18,61 @@ namespace ZeusPalace.Modules.Orders
     public partial class CustomerOrdersForm : EmbeddedForm
     {
         private readonly CustomerOrdersController controller = new CustomerOrdersController();
-        private readonly Color buttonNextStepDefaultBackColor;
-        private Panel panelOrderPreview;
+        private OrderPanelControl panelOrderPreview;
+        private OrderPanelControl panelOrderPlaced;
+        OrderPanelControl activePanel;
+
         public int Time { get; set; }
 
         public CustomerOrdersForm()
         {
             InitializeComponent();
             Time = 1559;
+            InitializeControls();
+            PopulateMenuItems();
+            activePanel = panelMenu;
+        }
 
-            // Manage controls properties
+        private void InitializeControls()
+        {
             string formattedTime = $"{Time / 100:00}:{Time % 100:00}";
             labelTime.Text = formattedTime;
-            buttonNextStepDefaultBackColor = buttonOrderNextStep.BackColor;
+
+            // Buttons
             foreach (Button btn in tableLayoutPanelOrderControls.Controls.OfType<Button>())
             {
                 btn.FlatAppearance.MouseDownBackColor = btn.FlatAppearance.MouseOverBackColor;
             }
-            AlignLabelToCenter(labelTime, panelTime);
-            AlignLabelToCenter(labelOrderTitle, panelOrderTitle);
+            //
+            // buttonNextStep
+            //
+            buttonNextStep.DefaultColor = ColorPicker.TurquoiseGreen;
+            buttonNextStep.ForeColor = ColorPicker.Charcoal;
+            buttonNextStep.UpdateTextLeft("Συνέχεια");
+            buttonNextStep.UpdateTextRight("0.00 €");
+
             
-            PopulateMenuItems();
+            
+            AlignLabelToCenter(labelTime, panelTime);
         }
 
         private void PopulateMenuItems()
         {
-            // Define constants for layout
-            const int startingPointX = 50;
-            const int startingPointY = 20;
-            const int distanceX = 460;
-            const int distanceY = 35;
-            const int marginY = distanceY;
-
-            int row = 0;
-            int col = 0;
-            MenuItemType currentType = controller.Menu.GetMenuItem(0).Type;
-            for (int i = 0; i < controller.Menu.GetMenuItemsCount(); i++)
+            MenuItemType currentType = controller.GetMenuItem(0).Type;
+            for (int i = 0; i < controller.GetMenuItemsCount(); i++)
             {
-                Entities.Order.MenuItem nextMenuItem = controller.Menu.GetMenuItem(i);
+                Entities.Order.MenuItem nextMenuItem = controller.GetMenuItem(i);
 
-                // The first control is always a category
+                // The first item is always a category
                 if (i == 0)
                 {
-                    AddControl(new MenuCategoryControl(nextMenuItem.GetTypeStringValue()));
+                    panelMenu.AddControl(new MenuCategoryControl(nextMenuItem.GetTypeStringValue()));
                 }
 
-                // Check if we need to insert new category control
+                // Check if we need to insert new category item
                 if (nextMenuItem.Type != currentType)
                 {
-                    AddControl(new MenuCategoryControl(nextMenuItem.GetTypeStringValue()));
+                    panelMenu.AddControl(new MenuCategoryControl(nextMenuItem.GetTypeStringValue()));
                     currentType = nextMenuItem.Type;
                 }
 
@@ -76,132 +82,108 @@ namespace ZeusPalace.Modules.Orders
                 {
                     menuItemControl.Enabled = false;
                 }
-                AddControl(menuItemControl);
+                panelMenu.AddControl(menuItemControl);
             }
+        }
 
-            Point GetNextPoint(Control control)
+        private void PrepareOrderPreview()
+        {
+            panelOrderPreview = new OrderPanelControl("Σύνοψη παραγγελίας");
+            foreach (Control item in panelMenu.Items.OfType<MenuItemControl>())
             {
-                // Calculate the position based on row and column
-                int nextPointX = startingPointX + distanceX * col;
-                int nextPointY = startingPointY + distanceY * row;
-
-                // Check if the control goes beyond the panel's height
-                if (nextPointY + control.Height > panelMenu.Height - marginY)
+                MenuItemControl nextItem = (MenuItemControl)item;
+                if (nextItem.Quantity > 0)
                 {
-                    col++;
-                    row = 0;
-                    nextPointX = startingPointX + distanceX * col;
-                    nextPointY = startingPointY + distanceY * row;
-                }
-
-                row++;
-
-                return new Point(nextPointX, nextPointY);
-            }
-
-            void AddControl(Control control)
-            {
-                control.Location = GetNextPoint(control);
-                panelMenu.Controls.Add(control);
-            }
-        }
-
-        private Panel ClonePanel(Panel panel)
-        {
-            return new Panel
-            {
-                Dock = panel.Dock,
-                Location = panel.Location,
-                Size = panel.Size
-            };
-        }
-
-        private MenuItemControl CloneMenuItemControl(MenuItemControl menuItemControl)
-        {
-            return new MenuItemControl(controller.Menu.GetMenuItemByName(menuItemControl.ItemName), menuItemControl.Quantity);
-        }
-
-        private void PopulateOrderPreviewItems()
-        {
-            panelOrderPreview = ClonePanel(panelMenu);
-
-            // Define constants for layout
-            const int startingPointX = 50;
-            const int startingPointY = 20;
-            const int distanceX = 460;
-            const int distanceY = 35;
-            const int marginY = distanceY;
-
-            int row = 0;
-            int col = 0;
-            foreach (Control control in panelMenu.Controls.OfType<MenuItemControl>())
-            {
-                if (((MenuItemControl)control).Quantity > 0)
-                {
-                    MenuItemControl menuItemControl = CloneMenuItemControl((MenuItemControl)control);
+                    MenuItemControl menuItemControl = new MenuItemControl(controller.GetMenuItemByName(nextItem.ItemName), nextItem.Quantity);
                     menuItemControl.QuantityChanged += MenuItemControl_QuantityChanged;
-                    menuItemControl.Location = GetNextPoint(menuItemControl);
-                    panelOrderPreview.Controls.Add(menuItemControl);
+                    panelOrderPreview.AddControl(menuItemControl);
                 }
             }
-
-            Point GetNextPoint(Control control)
-            {
-                // Calculate the position based on row and column
-                int nextPointX = startingPointX + distanceX * col;
-                int nextPointY = startingPointY + distanceY * row;
-
-                // Check if the control goes beyond the panel's height
-                if (nextPointY + control.Height > panelOrderPreview.Height - marginY)
-                {
-                    col++;
-                    row = 0;
-                    nextPointX = startingPointX + distanceX * col;
-                    nextPointY = startingPointY + distanceY * row;
-                }
-
-                row++;
-
-                return new Point(nextPointX, nextPointY);
-            }
-        }
-
-        private void ShowOrderPreview()
-        {
-            PopulateOrderPreviewItems();
-            panelOrder.Controls.Add(panelOrderPreview);
-            panelOrderPreview.BringToFront();
-            labelOrderTitle.Text = "Σύνοψη παραγγελίας";
-            AlignLabelToCenter(labelOrderTitle, panelOrderTitle);
         }
 
         private void MenuItemControl_QuantityChanged(object sender, EventArgs e)
         {
             MenuItemControl menuItemControl = (MenuItemControl)sender;
             controller.UpdateItemQuantity(menuItemControl.ItemName, menuItemControl.Quantity);
-            buttonTotalPrice.Text = controller.Order.TotalPrice.ToString() + " €";
+            decimal totalPrice = controller.GetTotalPrice();
+            buttonNextStep.UpdateTextRight($"{totalPrice} €");
+            if (totalPrice == 0.00m)
+            {
+                buttonOrderCancel.Visible = false;
+                buttonNextStep.Visible = false;
+            }
+            else
+            {
+                buttonOrderCancel.Visible = true;
+                buttonNextStep.Visible = true;
+                controller.SetOrderStatus(OrderStatus.Open);
+            }
         }
 
-        private void buttonNextStep_MouseEnter(object sender, EventArgs e)
+        private void ShowPanel(OrderPanelControl panel)
         {
-            buttonOrderNextStep.BackColor = buttonOrderNextStep.FlatAppearance.MouseOverBackColor;
-            buttonTotalPrice.BackColor = buttonTotalPrice.FlatAppearance.MouseOverBackColor;
+            panel.Dock = DockStyle.Top;
+            panel.Visible = true;
+            if (!panelOrder.Controls.Contains(panel))
+            {
+                panelOrder.Controls.Add(panel);
+            }
+            activePanel = panel;
         }
 
-        private void buttonNextStep_MouseLeave(object sender, EventArgs e)
+        private void HidePanel(OrderPanelControl panel)
         {
-            buttonOrderNextStep.BackColor = buttonNextStepDefaultBackColor;
-            buttonTotalPrice.BackColor = buttonNextStepDefaultBackColor;
+            panel.Visible = false;
         }
 
-        private void buttonOrderNextStep_Click(object sender, EventArgs e)
+        private void DiscardPanel(OrderPanelControl panel)
         {
-            ShowOrderPreview();
+            panelOrder.Controls.Remove(panel);
+            panel.Dispose();
         }
 
-        private void buttonTotalPrice_Click(object sender, EventArgs e)
+        private void buttonNextStep_Click(object sender, EventArgs e)
         {
-            ShowOrderPreview();
+            if (activePanel == panelMenu)
+            {
+                PrepareOrderPreview();
+                HidePanel(panelMenu);
+                buttonOrderEdit.Visible = true;
+                ShowPanel(panelOrderPreview);
+            }
+            else if (activePanel == panelOrderPreview)
+            {
+                controller.SetOrderStatus(OrderStatus.Placed);
+                string orderPlacedMessage = "Παρακαλούμε περιμένετε μέχρι ο υπάλληλος\nνα επιβεβαιώσει την παραγγελία σας";
+                panelOrderPlaced = new OrderPanelControl("", orderPlacedMessage);
+                buttonNextStep.Visible = false;
+                buttonOrderEdit.Visible = false;
+                HidePanel(panelOrderPreview);
+                ShowPanel(panelOrderPlaced);
+            }
+        }
+
+        private void buttonOrderEdit_Click(object sender, EventArgs e)
+        {
+            DiscardPanel(activePanel);
+            ShowPanel(panelMenu);
+            buttonOrderEdit.Visible = false;
+        }
+
+        private void buttonOrderCancel_Click(object sender, EventArgs e)
+        {
+            controller.CancelOrder();
+            buttonNextStep.UpdateTextRight($"{controller.GetTotalPrice()} €");
+            if (activePanel != panelMenu)
+            {
+                DiscardPanel(activePanel);
+            }
+            panelMenu.ClearControls();
+            buttonNextStep.Visible = false;
+            buttonOrderCancel.Visible = false;
+            buttonOrderEdit.Visible = false;
+            PopulateMenuItems();
+            ShowPanel(panelMenu);
         }
     }
 }

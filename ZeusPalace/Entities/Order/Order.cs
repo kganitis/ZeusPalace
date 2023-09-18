@@ -55,5 +55,11 @@ namespace ZeusPalace.Entities.Order
             }
             return totalPrice;
         }
+
+        public void CancelOrder()
+        {
+            orderItems.Clear();
+            Status = OrderStatus.Cancelled;
+        }
     }
 }

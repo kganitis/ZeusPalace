@@ -21,9 +21,8 @@ namespace ZeusPalace.Modules.Orders
             labelQuantity.Text = "0";
         }
 
-        public MenuItemQuantityControl(int quantity)
+        public MenuItemQuantityControl(int quantity) : this()
         {
-            InitializeComponent();
             labelQuantity.Text = quantity.ToString();
         }
 

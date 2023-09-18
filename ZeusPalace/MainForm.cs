@@ -22,7 +22,6 @@ namespace ZeusPalace
         private Button activeButton;
         private Form activeForm;
         private readonly Color defaultButtonBackColor;
-        private readonly Color activeButtonBackColor;
         private readonly Font defaultButtonFont;
         private readonly Font activeButtonFont;
         private readonly int initialWidth;
@@ -33,13 +32,12 @@ namespace ZeusPalace
             InitializeComponent();
             defaultButtonBackColor = buttonDevices.BackColor;
             defaultButtonFont = buttonDevices.Font;
-            activeButtonBackColor = Color.FromArgb(82, 99, 140);
             activeButtonFont = new Font("Calibri", 21.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             foreach (Button btn in panelMenu.Controls.OfType<Button>())
             {
-                btn.FlatAppearance.MouseOverBackColor = activeButtonBackColor;
+                btn.FlatAppearance.BorderColor = ColorPicker.GetTint(defaultButtonBackColor, 10);
+                btn.FlatAppearance.MouseOverBackColor = ColorPicker.GetTint(defaultButtonBackColor, 10);
                 btn.FlatAppearance.MouseDownBackColor = btn.FlatAppearance.MouseOverBackColor;
-                
             }
             initialWidth = Width;
             initialHeight = Height;
@@ -77,7 +75,7 @@ namespace ZeusPalace
         private void ActivateButton(Button btn)
         {
             activeButton = btn;
-            activeButton.BackColor = activeButtonBackColor;
+            activeButton.BackColor = ColorPicker.GetTint(defaultButtonBackColor, 10);
             activeButton.Font = activeButtonFont;
         }
 

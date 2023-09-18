@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorPicker.cs" />
     <Compile Include="Entities\Accommodation\Accommodation.cs" />
     <Compile Include="Entities\Accommodation\AccommodationType.cs" />
     <Compile Include="Entities\Accommodation\Apartment.cs" />
@@ -110,6 +111,12 @@
       <DependentUpon>CustomerOrdersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Orders\CustomerOrdersController.cs" />
+    <Compile Include="Modules\Orders\UserControls\DoubleButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Orders\UserControls\DoubleButton.Designer.cs">
+      <DependentUpon>DoubleButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Orders\UserControls\MenuCategoryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Orders\CustomerOrdersForm.resx">
       <DependentUpon>CustomerOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Orders\UserControls\DoubleButton.resx">
+      <DependentUpon>DoubleButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Orders\UserControls\MenuCategoryControl.resx">
       <DependentUpon>MenuCategoryControl.cs</DependentUpon>
