@@ -34,6 +34,18 @@ namespace ZeusPalace.Modules.Orders.UserControls
             }
         }
 
+        public string TextLeft
+        {
+            get { return Label1.Text; }
+            set { Label1 = CreateLabel(value); }
+        }
+
+        public string TextRight
+        {
+            get { return Label2.Text; }
+            set { Label2 = CreateLabel(value); }
+        }
+
         private Label Label1
         {
             get
@@ -73,16 +85,6 @@ namespace ZeusPalace.Modules.Orders.UserControls
             newLabel.MouseEnter += (sender, e) => OnMouseEnter(e);
             newLabel.MouseLeave += (sender, e) => OnMouseLeave(e);
             return newLabel;
-        }
-
-        public void UpdateTextLeft(string label1)
-        {
-            Label1 = CreateLabel(label1);
-        }
-
-        public void UpdateTextRight(string label2)
-        {
-            Label2 = CreateLabel(label2);
         }
 
         private void tableLayoutPanel1_Click(object sender, EventArgs e)

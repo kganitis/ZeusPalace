@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ZeusPalace.Entities.Order
 {
@@ -36,9 +37,22 @@ namespace ZeusPalace.Entities.Order
             }
         }
 
-        public OrderItem GetOrderItem(int index)
+        public OrderItem GetOrderItemByName(string orderItemName)
         {
-            return orderItems[index];
+            return orderItems.FirstOrDefault(item => item.MenuItem.Name == orderItemName);
+        }
+
+        public int GetOrderItemQuantity(string orderItemName)
+        {
+            OrderItem item = GetOrderItemByName(orderItemName);
+            if (item != null)
+            {
+                return item.Quantity;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         public int GetOrderItemsCount()

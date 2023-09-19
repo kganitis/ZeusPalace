@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelNewOrder = new System.Windows.Forms.Panel();
             this.panelChat = new System.Windows.Forms.Panel();
             this.panelOrder = new System.Windows.Forms.Panel();
             this.buttonOrderEdit = new System.Windows.Forms.Button();
-            this.panelMenu = new ZeusPalace.Modules.Orders.UserControls.OrderPanelControl();
             this.panelOrderControls = new System.Windows.Forms.Panel();
             this.tableLayoutPanelOrderControls = new System.Windows.Forms.TableLayoutPanel();
             this.buttonOrderCancel = new System.Windows.Forms.Button();
             this.buttonNextStep = new ZeusPalace.Modules.Orders.UserControls.DoubleButton();
             this.panelTime = new System.Windows.Forms.Panel();
             this.labelTime = new System.Windows.Forms.Label();
+            this.panelMenu = new ZeusPalace.Modules.Orders.UserControls.OrderPanelTableControl();
+            this.timerOrderConfirmation = new System.Windows.Forms.Timer(this.components);
             this.panelNewOrder.SuspendLayout();
             this.panelOrder.SuspendLayout();
             this.panelOrderControls.SuspendLayout();
@@ -71,8 +73,8 @@
             this.panelOrder.BackColor = System.Drawing.Color.Transparent;
             this.panelOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelOrder.Controls.Add(this.buttonOrderEdit);
-            this.panelOrder.Controls.Add(this.panelMenu);
             this.panelOrder.Controls.Add(this.panelOrderControls);
+            this.panelOrder.Controls.Add(this.panelMenu);
             this.panelOrder.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelOrder.Location = new System.Drawing.Point(0, 0);
             this.panelOrder.Name = "panelOrder";
@@ -97,17 +99,6 @@
             this.buttonOrderEdit.UseVisualStyleBackColor = false;
             this.buttonOrderEdit.Visible = false;
             this.buttonOrderEdit.Click += new System.EventHandler(this.buttonOrderEdit_Click);
-            // 
-            // panelMenu
-            // 
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(960, 600);
-            this.panelMenu.TabIndex = 2;
-            this.panelMenu.Table = true;
             // 
             // panelOrderControls
             // 
@@ -190,6 +181,19 @@
             this.labelTime.TabIndex = 0;
             this.labelTime.Text = "16:00";
             // 
+            // panelMenu
+            // 
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(960, 600);
+            this.panelMenu.TabIndex = 5;
+            this.panelMenu.Title = "Μενού ημέρας";
+            // 
+            // timerOrderConfirmation
+            // 
+            this.timerOrderConfirmation.Interval = 3000;
+            this.timerOrderConfirmation.Tick += new System.EventHandler(this.timerOrderConfirmation_Tick);
+            // 
             // CustomerOrdersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,8 +220,9 @@
         private System.Windows.Forms.Panel panelChat;
         private System.Windows.Forms.Panel panelTime;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelOrderControls;
-        private UserControls.OrderPanelControl panelMenu;
         private UserControls.DoubleButton buttonNextStep;
         private System.Windows.Forms.Button buttonOrderEdit;
+        private UserControls.OrderPanelTableControl panelMenu;
+        private System.Windows.Forms.Timer timerOrderConfirmation;
     }
 }

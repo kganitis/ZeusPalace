@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZeusPalace.Entities.Order;
+using MenuItem = ZeusPalace.Entities.Order.MenuItem;
 
 namespace ZeusPalace.Modules.Orders
 {
@@ -17,13 +18,17 @@ namespace ZeusPalace.Modules.Orders
         private readonly MenuItemQuantityControl menuItemQuantityControl;
         public event EventHandler QuantityChanged;
         public string ItemName => labelName.Text;
-        public int Quantity => menuItemQuantityControl.Quantity;
+        public int Quantity
+        {
+            get { return menuItemQuantityControl.Quantity; }
+            set { menuItemQuantityControl.Quantity = value; }
+        }
 
         public MenuItemControl() : this(null, 0) { }
 
-        public MenuItemControl(Entities.Order.MenuItem menuItem) : this(menuItem, 0) { }
+        public MenuItemControl(MenuItem menuItem) : this(menuItem, 0) { }
 
-        public MenuItemControl(Entities.Order.MenuItem menuItem, int initialQuantity)
+        public MenuItemControl(MenuItem menuItem, int initialQuantity)
         {
             InitializeComponent();
 

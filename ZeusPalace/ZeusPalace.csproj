@@ -141,6 +141,21 @@
     <Compile Include="Modules\Orders\UserControls\OrderPanelControl.Designer.cs">
       <DependentUpon>OrderPanelControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Orders\UserControls\OrderPanelMessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Orders\UserControls\OrderPanelMessageControl.Designer.cs">
+      <DependentUpon>OrderPanelMessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Orders\UserControls\OrderPanelPaymentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Orders\UserControls\OrderPanelPaymentControl.Designer.cs">
+      <DependentUpon>OrderPanelPaymentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Orders\UserControls\OrderPanelTableControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Modules\Pool\PoolForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +199,15 @@
     <EmbeddedResource Include="Modules\Orders\UserControls\OrderPanelControl.resx">
       <DependentUpon>OrderPanelControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Orders\UserControls\OrderPanelMessageControl.resx">
+      <DependentUpon>OrderPanelMessageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Orders\UserControls\OrderPanelPaymentControl.resx">
+      <DependentUpon>OrderPanelPaymentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Orders\UserControls\OrderPanelTableControl.resx">
+      <DependentUpon>OrderPanelTableControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Pool\PoolForm.resx">
       <DependentUpon>PoolForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +240,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\omadika2324.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hourglass.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -25,6 +25,11 @@ namespace ZeusPalace.Modules.Orders
             order.Status = orderStatus;
         }
 
+        public int GetItemQuantity(string itemName)
+        {
+            return order.GetOrderItemQuantity(itemName);
+        }
+
         public void UpdateItemQuantity(string itemName, int quantity)
         {
             order.UpdateOrderItem(menu.GetMenuItemByName(itemName), quantity);
