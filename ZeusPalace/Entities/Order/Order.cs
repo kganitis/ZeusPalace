@@ -13,6 +13,8 @@ namespace ZeusPalace.Entities.Order
         public decimal TotalPrice => CalculateTotalPrice();
         public OrderStatus Status { get; set; }
         public Chat Chat { get; set; } = new Chat();
+        public PaymentMethod PaymentMethod { get; set; }
+        public DeliveryMethod DeliveryMethod { get; set; }
 
         public Order()
         {

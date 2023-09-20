@@ -77,6 +77,7 @@
     <Compile Include="Entities\Accommodation\Apartment.cs" />
     <Compile Include="Entities\Accommodation\TrojanHorse.cs" />
     <Compile Include="Entities\Order\Chat.cs" />
+    <Compile Include="Entities\Order\DeliveryMethod.cs" />
     <Compile Include="Entities\Order\Menu.cs" />
     <Compile Include="Entities\Order\MenuItem.cs" />
     <Compile Include="Entities\Order\MenuItemType.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Entities\Order\Order.cs" />
     <Compile Include="Entities\Order\OrderItem.cs" />
     <Compile Include="Entities\Order\OrderStatus.cs" />
+    <Compile Include="Entities\Order\PaymentMethod.cs" />
     <Compile Include="Entities\User\Customer.cs" />
     <Compile Include="Entities\User\Employee.cs" />
     <Compile Include="Modules\Devices\DevicesForm.cs">
@@ -140,6 +142,12 @@
     </Compile>
     <Compile Include="Modules\Orders\UserControls\OrderPanelControl.Designer.cs">
       <DependentUpon>OrderPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Orders\UserControls\OrderPanelCreditCardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Orders\UserControls\OrderPanelCreditCardControl.Designer.cs">
+      <DependentUpon>OrderPanelCreditCardControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Orders\UserControls\OrderPanelMessageControl.cs">
       <SubType>UserControl</SubType>
@@ -198,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Orders\UserControls\OrderPanelControl.resx">
       <DependentUpon>OrderPanelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Orders\UserControls\OrderPanelCreditCardControl.resx">
+      <DependentUpon>OrderPanelCreditCardControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Orders\UserControls\OrderPanelMessageControl.resx">
       <DependentUpon>OrderPanelMessageControl.cs</DependentUpon>

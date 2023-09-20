@@ -41,6 +41,9 @@
             this.labelTime = new System.Windows.Forms.Label();
             this.panelMenu = new ZeusPalace.Modules.Orders.UserControls.OrderPanelTableControl();
             this.timerOrderConfirmation = new System.Windows.Forms.Timer(this.components);
+            this.timerOrderPreparing = new System.Windows.Forms.Timer(this.components);
+            this.timerOrderDelivering = new System.Windows.Forms.Timer(this.components);
+            this.buttonOrderReview = new System.Windows.Forms.Button();
             this.panelNewOrder.SuspendLayout();
             this.panelOrder.SuspendLayout();
             this.panelOrderControls.SuspendLayout();
@@ -72,6 +75,7 @@
             // 
             this.panelOrder.BackColor = System.Drawing.Color.Transparent;
             this.panelOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelOrder.Controls.Add(this.buttonOrderReview);
             this.panelOrder.Controls.Add(this.buttonOrderEdit);
             this.panelOrder.Controls.Add(this.panelOrderControls);
             this.panelOrder.Controls.Add(this.panelMenu);
@@ -194,6 +198,34 @@
             this.timerOrderConfirmation.Interval = 3000;
             this.timerOrderConfirmation.Tick += new System.EventHandler(this.timerOrderConfirmation_Tick);
             // 
+            // timerOrderPreparing
+            // 
+            this.timerOrderPreparing.Interval = 10000;
+            this.timerOrderPreparing.Tick += new System.EventHandler(this.timerOrderPreparing_Tick);
+            // 
+            // timerOrderDelivering
+            // 
+            this.timerOrderDelivering.Interval = 10000;
+            this.timerOrderDelivering.Tick += new System.EventHandler(this.timerOrderDelivering_Tick);
+            // 
+            // buttonOrderReview
+            // 
+            this.buttonOrderReview.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonOrderReview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(198)))), ((int)(((byte)(191)))));
+            this.buttonOrderReview.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOrderReview.FlatAppearance.BorderSize = 0;
+            this.buttonOrderReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOrderReview.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOrderReview.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.buttonOrderReview.Location = new System.Drawing.Point(576, 567);
+            this.buttonOrderReview.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.buttonOrderReview.Name = "buttonOrderReview";
+            this.buttonOrderReview.Size = new System.Drawing.Size(286, 25);
+            this.buttonOrderReview.TabIndex = 6;
+            this.buttonOrderReview.Text = "Προβολή παραγγελίας";
+            this.buttonOrderReview.UseVisualStyleBackColor = false;
+            this.buttonOrderReview.Visible = false;
+            // 
             // CustomerOrdersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,5 +256,8 @@
         private System.Windows.Forms.Button buttonOrderEdit;
         private UserControls.OrderPanelTableControl panelMenu;
         private System.Windows.Forms.Timer timerOrderConfirmation;
+        private System.Windows.Forms.Timer timerOrderPreparing;
+        private System.Windows.Forms.Timer timerOrderDelivering;
+        private System.Windows.Forms.Button buttonOrderReview;
     }
 }

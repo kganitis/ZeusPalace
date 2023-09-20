@@ -31,6 +31,16 @@ namespace ZeusPalace.Modules.Orders.UserControls
             set { labelMessage.Text = value; }
         }
 
+        public bool PictureVisible
+        {
+            set { pictureBox1.Visible = value; }
+        }
+
+        public Image Image
+        {
+            set { pictureBox1.Image = value; }
+        }
+
         private void labelMessage_TextChanged(object sender, EventArgs e)
         {
             labelMessage.Location = new Point((Width - labelMessage.Width) / 2, labelMessage.Location.Y);

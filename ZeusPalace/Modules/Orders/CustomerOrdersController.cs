@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZeusPalace.Entities.Accommodation;
 using ZeusPalace.Entities.Order;
 using Menu = ZeusPalace.Entities.Order.Menu;
 using MenuItem = ZeusPalace.Entities.Order.MenuItem;
@@ -14,6 +15,7 @@ namespace ZeusPalace.Modules.Orders
     {
         private Order order = new Order();
         private Menu menu = new Menu();
+        private Customer customer = new Customer("George Papadopoulos", new Apartment());
 
         public CustomerOrdersController()
         {
@@ -63,6 +65,36 @@ namespace ZeusPalace.Modules.Orders
         public void CancelOrder()
         {
             order.CancelOrder();
+        }
+
+        public decimal GetCustomerBalance()
+        {
+            return customer.Balance;
+        }
+
+        public AccommodationType GetAccommodationType()
+        {
+            return customer.Accommodation.Type;
+        }
+
+        public PaymentMethod GetPaymentMethod()
+        {
+            return order.PaymentMethod;
+        }
+
+        public void SetPaymentMethod(PaymentMethod paymentMethod)
+        {
+            order.PaymentMethod = paymentMethod;
+        }
+
+        public DeliveryMethod GetDeliveryMethod()
+        {
+            return order.DeliveryMethod;
+        }
+
+        public void SetDeliveryMethod(DeliveryMethod deliveryMethod)
+        {
+            order.DeliveryMethod = deliveryMethod;
         }
     }
 }
