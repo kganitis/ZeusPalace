@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ZeusPalace.Entities.Order
+﻿namespace ZeusPalace.Entities.Order
 {
     internal enum OrderStatus
     {
@@ -15,6 +9,6 @@ namespace ZeusPalace.Entities.Order
         Ready,      // Η παραγγελία είναι έτοιμη και αναμένεται παραλαβή από τον πελάτη
         Delivery,   // Η παραγγελία είναι προς παράδοση
         Completed,  // Η παραγγελία παραδόθηκε στον πελάτη
-        Canceled    // Ο πελάτης ή ο υπάλληλος ακύρωσε την παραγγελία
+        Cancelled   // Ο πελάτης ή ο υπάλληλος ακύρωσε την παραγγελία
     }
 }

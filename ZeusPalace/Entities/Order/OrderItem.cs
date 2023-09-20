@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ZeusPalace.Entities.Order
 {
-    internal class OrderItem
+    public class OrderItem
     {
         public MenuItem MenuItem { get; set; }
         public int Quantity { get; set; }
@@ -16,6 +16,12 @@ namespace ZeusPalace.Entities.Order
         {
             MenuItem = menuItem;
             Quantity = quantity;
+        }
+
+        public OrderItem(MenuItem menuItem)
+        {
+            MenuItem = menuItem;
+            Quantity = 0;
         }
 
         public decimal GetTotalPrice()

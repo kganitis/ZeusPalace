@@ -3,36 +3,79 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ZeusPalace.Entities.Order
 {
     internal class Order
     {
-        public int OrderNumber { get; set; }
-        public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
+        private readonly List<OrderItem> orderItems = new List<OrderItem>();
         public decimal TotalPrice => CalculateTotalPrice();
         public OrderStatus Status { get; set; }
         public Chat Chat { get; set; } = new Chat();
+        public PaymentMethod PaymentMethod { get; set; }
+        public DeliveryMethod DeliveryMethod { get; set; }
 
-        public Order(int orderNumber)
+        public Order()
         {
-            OrderNumber = orderNumber;
             Status = OrderStatus.Open;
         }
 
-        public void AddOrderItem(OrderItem item)
+        public void UpdateOrderItem(MenuItem menuItem, int quantity)
         {
-            OrderItems.Add(item);
+            var orderItem = orderItems.FirstOrDefault(item => item.MenuItem == menuItem);
+
+            if (orderItem != null)
+            {
+                orderItem.Quantity = quantity;
+                if (quantity == 0)
+                {
+                    orderItems.Remove(orderItem);
+                }
+            }
+            else
+            {
+                orderItems.Add(new OrderItem(menuItem, quantity));
+            }
+        }
+
+        public OrderItem GetOrderItemByName(string orderItemName)
+        {
+            return orderItems.FirstOrDefault(item => item.MenuItem.Name == orderItemName);
+        }
+
+        public int GetOrderItemQuantity(string orderItemName)
+        {
+            OrderItem item = GetOrderItemByName(orderItemName);
+            if (item != null)
+            {
+                return item.Quantity;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public int GetOrderItemsCount()
+        {
+            return orderItems.Count;
         }
 
         private decimal CalculateTotalPrice()
         {
-            decimal totalPrice = 0.0m;
-            foreach (var orderItem in OrderItems)
+            decimal totalPrice = 0.00m;
+            foreach (var orderItem in orderItems)
             {
                 totalPrice += orderItem.GetTotalPrice();
             }
             return totalPrice;
+        }
+
+        public void CancelOrder()
+        {
+            orderItems.Clear();
+            Status = OrderStatus.Cancelled;
         }
     }
 }

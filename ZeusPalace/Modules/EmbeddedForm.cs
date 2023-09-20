@@ -16,5 +16,12 @@ namespace ZeusPalace.Modules
         {
             InitializeComponent();
         }
+
+        protected void AlignLabelToCenter(Control label, Panel parentPanel)
+        {
+            int labelX = (parentPanel.Width - label.Width) / 2;
+            int labelY = (parentPanel.Height - label.Height) / 2;
+            label.Location = new Point(labelX, labelY);
+        }
     }
 }

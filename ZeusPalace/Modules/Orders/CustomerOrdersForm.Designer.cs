@@ -28,17 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelNewOrder = new System.Windows.Forms.Panel();
             this.panelChat = new System.Windows.Forms.Panel();
             this.panelOrder = new System.Windows.Forms.Panel();
+            this.buttonOrderEdit = new System.Windows.Forms.Button();
             this.panelOrderControls = new System.Windows.Forms.Panel();
             this.tableLayoutPanelOrderControls = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonTotalPrice = new System.Windows.Forms.Button();
-            this.buttonOrderNextStep = new System.Windows.Forms.Button();
             this.buttonOrderCancel = new System.Windows.Forms.Button();
+            this.buttonNextStep = new ZeusPalace.Modules.Orders.UserControls.DoubleButton();
             this.panelTime = new System.Windows.Forms.Panel();
             this.labelTime = new System.Windows.Forms.Label();
-            this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelMenu = new ZeusPalace.Modules.Orders.UserControls.OrderPanelTableControl();
+            this.timerOrderConfirmation = new System.Windows.Forms.Timer(this.components);
+            this.timerOrderPreparing = new System.Windows.Forms.Timer(this.components);
+            this.timerOrderDelivering = new System.Windows.Forms.Timer(this.components);
+            this.buttonOrderReview = new System.Windows.Forms.Button();
             this.panelNewOrder.SuspendLayout();
             this.panelOrder.SuspendLayout();
             this.panelOrderControls.SuspendLayout();
@@ -59,96 +64,75 @@
             // 
             // panelChat
             // 
+            this.panelChat.BackColor = System.Drawing.Color.Transparent;
             this.panelChat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChat.Location = new System.Drawing.Point(1000, 0);
+            this.panelChat.Location = new System.Drawing.Point(960, 0);
             this.panelChat.Name = "panelChat";
-            this.panelChat.Size = new System.Drawing.Size(280, 660);
+            this.panelChat.Size = new System.Drawing.Size(320, 660);
             this.panelChat.TabIndex = 1;
             // 
             // panelOrder
             // 
             this.panelOrder.BackColor = System.Drawing.Color.Transparent;
             this.panelOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelOrder.Controls.Add(this.buttonOrderReview);
+            this.panelOrder.Controls.Add(this.buttonOrderEdit);
             this.panelOrder.Controls.Add(this.panelOrderControls);
             this.panelOrder.Controls.Add(this.panelMenu);
             this.panelOrder.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelOrder.Location = new System.Drawing.Point(0, 0);
             this.panelOrder.Name = "panelOrder";
-            this.panelOrder.Size = new System.Drawing.Size(1000, 660);
+            this.panelOrder.Size = new System.Drawing.Size(960, 660);
             this.panelOrder.TabIndex = 0;
+            // 
+            // buttonOrderEdit
+            // 
+            this.buttonOrderEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonOrderEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(198)))), ((int)(((byte)(191)))));
+            this.buttonOrderEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOrderEdit.FlatAppearance.BorderSize = 0;
+            this.buttonOrderEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOrderEdit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOrderEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.buttonOrderEdit.Location = new System.Drawing.Point(195, 567);
+            this.buttonOrderEdit.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.buttonOrderEdit.Name = "buttonOrderEdit";
+            this.buttonOrderEdit.Size = new System.Drawing.Size(286, 25);
+            this.buttonOrderEdit.TabIndex = 4;
+            this.buttonOrderEdit.Text = "Επεξεργασία παραγγελίας";
+            this.buttonOrderEdit.UseVisualStyleBackColor = false;
+            this.buttonOrderEdit.Visible = false;
+            this.buttonOrderEdit.Click += new System.EventHandler(this.buttonOrderEdit_Click);
             // 
             // panelOrderControls
             // 
-            this.panelOrderControls.BackColor = System.Drawing.SystemColors.Control;
+            this.panelOrderControls.BackColor = System.Drawing.Color.Transparent;
             this.panelOrderControls.Controls.Add(this.tableLayoutPanelOrderControls);
             this.panelOrderControls.Controls.Add(this.panelTime);
-            this.panelOrderControls.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelOrderControls.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelOrderControls.Location = new System.Drawing.Point(0, 600);
             this.panelOrderControls.Name = "panelOrderControls";
-            this.panelOrderControls.Size = new System.Drawing.Size(1000, 60);
+            this.panelOrderControls.Size = new System.Drawing.Size(960, 60);
             this.panelOrderControls.TabIndex = 1;
             // 
             // tableLayoutPanelOrderControls
             // 
-            this.tableLayoutPanelOrderControls.ColumnCount = 6;
-            this.tableLayoutPanelOrderControls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanelOrderControls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanelOrderControls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanelOrderControls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.002F));
-            this.tableLayoutPanelOrderControls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.33133F));
-            this.tableLayoutPanelOrderControls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanelOrderControls.Controls.Add(this.buttonTotalPrice, 4, 0);
-            this.tableLayoutPanelOrderControls.Controls.Add(this.buttonOrderNextStep, 3, 0);
+            this.tableLayoutPanelOrderControls.ColumnCount = 5;
+            this.tableLayoutPanelOrderControls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11148F));
+            this.tableLayoutPanelOrderControls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33444F));
+            this.tableLayoutPanelOrderControls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11148F));
+            this.tableLayoutPanelOrderControls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33112F));
+            this.tableLayoutPanelOrderControls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11148F));
+            this.tableLayoutPanelOrderControls.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelOrderControls.Controls.Add(this.buttonOrderCancel, 1, 0);
+            this.tableLayoutPanelOrderControls.Controls.Add(this.buttonNextStep, 3, 0);
             this.tableLayoutPanelOrderControls.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelOrderControls.Location = new System.Drawing.Point(100, 0);
             this.tableLayoutPanelOrderControls.Name = "tableLayoutPanelOrderControls";
             this.tableLayoutPanelOrderControls.RowCount = 1;
             this.tableLayoutPanelOrderControls.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelOrderControls.Size = new System.Drawing.Size(900, 60);
+            this.tableLayoutPanelOrderControls.Size = new System.Drawing.Size(860, 60);
             this.tableLayoutPanelOrderControls.TabIndex = 4;
-            // 
-            // buttonTotalPrice
-            // 
-            this.buttonTotalPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(139)))));
-            this.buttonTotalPrice.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonTotalPrice.FlatAppearance.BorderSize = 0;
-            this.buttonTotalPrice.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(180)))), ((int)(((byte)(145)))));
-            this.buttonTotalPrice.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(180)))), ((int)(((byte)(145)))));
-            this.buttonTotalPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTotalPrice.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonTotalPrice.Location = new System.Drawing.Point(680, 5);
-            this.buttonTotalPrice.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.buttonTotalPrice.Name = "buttonTotalPrice";
-            this.buttonTotalPrice.Size = new System.Drawing.Size(119, 50);
-            this.buttonTotalPrice.TabIndex = 2;
-            this.buttonTotalPrice.TabStop = false;
-            this.buttonTotalPrice.Text = "1.000,00 E";
-            this.buttonTotalPrice.UseVisualStyleBackColor = false;
-            this.buttonTotalPrice.MouseEnter += new System.EventHandler(this.buttonNextStep_MouseEnter);
-            this.buttonTotalPrice.MouseLeave += new System.EventHandler(this.buttonNextStep_MouseLeave);
-            // 
-            // buttonOrderNextStep
-            // 
-            this.buttonOrderNextStep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(139)))));
-            this.buttonOrderNextStep.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonOrderNextStep.FlatAppearance.BorderSize = 0;
-            this.buttonOrderNextStep.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(180)))), ((int)(((byte)(145)))));
-            this.buttonOrderNextStep.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(180)))), ((int)(((byte)(145)))));
-            this.buttonOrderNextStep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOrderNextStep.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOrderNextStep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonOrderNextStep.Location = new System.Drawing.Point(500, 5);
-            this.buttonOrderNextStep.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.buttonOrderNextStep.Name = "buttonOrderNextStep";
-            this.buttonOrderNextStep.Size = new System.Drawing.Size(180, 50);
-            this.buttonOrderNextStep.TabIndex = 1;
-            this.buttonOrderNextStep.TabStop = false;
-            this.buttonOrderNextStep.Text = "Επόμενο βήμα";
-            this.buttonOrderNextStep.UseVisualStyleBackColor = false;
-            this.buttonOrderNextStep.MouseEnter += new System.EventHandler(this.buttonNextStep_MouseEnter);
-            this.buttonOrderNextStep.MouseLeave += new System.EventHandler(this.buttonNextStep_MouseLeave);
             // 
             // buttonOrderCancel
             // 
@@ -159,17 +143,31 @@
             this.buttonOrderCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOrderCancel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOrderCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonOrderCancel.Location = new System.Drawing.Point(100, 5);
+            this.buttonOrderCancel.Location = new System.Drawing.Point(95, 5);
             this.buttonOrderCancel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.buttonOrderCancel.Name = "buttonOrderCancel";
-            this.buttonOrderCancel.Size = new System.Drawing.Size(299, 50);
+            this.buttonOrderCancel.Size = new System.Drawing.Size(286, 50);
             this.buttonOrderCancel.TabIndex = 2;
             this.buttonOrderCancel.Text = "Ακύρωση παραγγελίας";
             this.buttonOrderCancel.UseVisualStyleBackColor = false;
+            this.buttonOrderCancel.Visible = false;
+            this.buttonOrderCancel.Click += new System.EventHandler(this.buttonOrderCancel_Click);
+            // 
+            // buttonNextStep
+            // 
+            this.buttonNextStep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNextStep.DefaultColor = System.Drawing.Color.Empty;
+            this.buttonNextStep.Location = new System.Drawing.Point(476, 5);
+            this.buttonNextStep.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.buttonNextStep.Name = "buttonNextStep";
+            this.buttonNextStep.Size = new System.Drawing.Size(286, 50);
+            this.buttonNextStep.TabIndex = 3;
+            this.buttonNextStep.Visible = false;
+            this.buttonNextStep.Click += new System.EventHandler(this.buttonNextStep_Click);
             // 
             // panelTime
             // 
-            this.panelTime.BackColor = System.Drawing.SystemColors.Control;
+            this.panelTime.BackColor = System.Drawing.Color.Transparent;
             this.panelTime.Controls.Add(this.labelTime);
             this.panelTime.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelTime.Location = new System.Drawing.Point(0, 0);
@@ -179,21 +177,54 @@
             // 
             // labelTime
             // 
-            this.labelTime.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTime.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelTime.Location = new System.Drawing.Point(12, 13);
+            this.labelTime.Location = new System.Drawing.Point(12, 17);
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(78, 34);
+            this.labelTime.Size = new System.Drawing.Size(62, 27);
             this.labelTime.TabIndex = 0;
             this.labelTime.Text = "16:00";
             // 
             // panelMenu
             // 
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1000, 600);
-            this.panelMenu.TabIndex = 0;
+            this.panelMenu.Size = new System.Drawing.Size(960, 600);
+            this.panelMenu.TabIndex = 5;
+            this.panelMenu.Title = "Μενού ημέρας";
+            // 
+            // timerOrderConfirmation
+            // 
+            this.timerOrderConfirmation.Interval = 3000;
+            this.timerOrderConfirmation.Tick += new System.EventHandler(this.timerOrderConfirmation_Tick);
+            // 
+            // timerOrderPreparing
+            // 
+            this.timerOrderPreparing.Interval = 10000;
+            this.timerOrderPreparing.Tick += new System.EventHandler(this.timerOrderPreparing_Tick);
+            // 
+            // timerOrderDelivering
+            // 
+            this.timerOrderDelivering.Interval = 10000;
+            this.timerOrderDelivering.Tick += new System.EventHandler(this.timerOrderDelivering_Tick);
+            // 
+            // buttonOrderReview
+            // 
+            this.buttonOrderReview.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonOrderReview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(198)))), ((int)(((byte)(191)))));
+            this.buttonOrderReview.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOrderReview.FlatAppearance.BorderSize = 0;
+            this.buttonOrderReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOrderReview.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOrderReview.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.buttonOrderReview.Location = new System.Drawing.Point(576, 567);
+            this.buttonOrderReview.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.buttonOrderReview.Name = "buttonOrderReview";
+            this.buttonOrderReview.Size = new System.Drawing.Size(286, 25);
+            this.buttonOrderReview.TabIndex = 6;
+            this.buttonOrderReview.Text = "Προβολή παραγγελίας";
+            this.buttonOrderReview.UseVisualStyleBackColor = false;
+            this.buttonOrderReview.Visible = false;
             // 
             // CustomerOrdersForm
             // 
@@ -217,12 +248,16 @@
         private System.Windows.Forms.Panel panelOrder;
         private System.Windows.Forms.Panel panelOrderControls;
         private System.Windows.Forms.Label labelTime;
-        private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button buttonOrderCancel;
-        private System.Windows.Forms.Button buttonOrderNextStep;
-        private System.Windows.Forms.Button buttonTotalPrice;
         private System.Windows.Forms.Panel panelChat;
         private System.Windows.Forms.Panel panelTime;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelOrderControls;
+        private UserControls.DoubleButton buttonNextStep;
+        private System.Windows.Forms.Button buttonOrderEdit;
+        private UserControls.OrderPanelTableControl panelMenu;
+        private System.Windows.Forms.Timer timerOrderConfirmation;
+        private System.Windows.Forms.Timer timerOrderPreparing;
+        private System.Windows.Forms.Timer timerOrderDelivering;
+        private System.Windows.Forms.Button buttonOrderReview;
     }
 }

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonOrders = new System.Windows.Forms.Button();
             this.buttonDriving = new System.Windows.Forms.Button();
             this.buttonPool = new System.Windows.Forms.Button();
             this.buttonDevices = new System.Windows.Forms.Button();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
-            this.buttonOrders = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +48,26 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(1280, 60);
             this.panelMenu.TabIndex = 1;
+            // 
+            // buttonOrders
+            // 
+            this.buttonOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(112)))));
+            this.buttonOrders.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOrders.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonOrders.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(99)))), ((int)(((byte)(140)))));
+            this.buttonOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOrders.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOrders.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
+            this.buttonOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonOrders.Location = new System.Drawing.Point(960, 0);
+            this.buttonOrders.Name = "buttonOrders";
+            this.buttonOrders.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.buttonOrders.Size = new System.Drawing.Size(320, 60);
+            this.buttonOrders.TabIndex = 5;
+            this.buttonOrders.Text = "Παραγγελίες";
+            this.buttonOrders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonOrders.UseVisualStyleBackColor = false;
+            this.buttonOrders.Click += new System.EventHandler(this.buttonOrders_Click);
             // 
             // buttonDriving
             // 
@@ -65,7 +85,6 @@
             this.buttonDriving.Size = new System.Drawing.Size(320, 60);
             this.buttonDriving.TabIndex = 4;
             this.buttonDriving.Text = "Οδήγηση";
-            this.buttonDriving.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDriving.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDriving.UseVisualStyleBackColor = false;
             this.buttonDriving.Click += new System.EventHandler(this.buttonTrojanHorse_Click);
@@ -86,7 +105,6 @@
             this.buttonPool.Size = new System.Drawing.Size(320, 60);
             this.buttonPool.TabIndex = 3;
             this.buttonPool.Text = "Πισίνα";
-            this.buttonPool.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonPool.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonPool.UseVisualStyleBackColor = false;
             this.buttonPool.Click += new System.EventHandler(this.buttonPool_Click);
@@ -107,39 +125,18 @@
             this.buttonDevices.Size = new System.Drawing.Size(320, 60);
             this.buttonDevices.TabIndex = 2;
             this.buttonDevices.Text = "Συσκευές";
-            this.buttonDevices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDevices.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDevices.UseVisualStyleBackColor = false;
             this.buttonDevices.Click += new System.EventHandler(this.buttonApartment_Click);
             // 
             // panelDesktopPane
             // 
+            this.panelDesktopPane.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
             this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktopPane.Location = new System.Drawing.Point(0, 60);
             this.panelDesktopPane.Name = "panelDesktopPane";
             this.panelDesktopPane.Size = new System.Drawing.Size(1280, 660);
             this.panelDesktopPane.TabIndex = 2;
-            // 
-            // buttonOrders
-            // 
-            this.buttonOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(112)))));
-            this.buttonOrders.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonOrders.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonOrders.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(99)))), ((int)(((byte)(140)))));
-            this.buttonOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOrders.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOrders.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
-            this.buttonOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonOrders.Location = new System.Drawing.Point(960, 0);
-            this.buttonOrders.Name = "buttonOrders";
-            this.buttonOrders.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.buttonOrders.Size = new System.Drawing.Size(320, 60);
-            this.buttonOrders.TabIndex = 5;
-            this.buttonOrders.Text = "Παραγγελίες";
-            this.buttonOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonOrders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonOrders.UseVisualStyleBackColor = false;
-            this.buttonOrders.Click += new System.EventHandler(this.buttonOrders_Click);
             // 
             // MainForm
             // 
