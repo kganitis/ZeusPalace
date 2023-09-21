@@ -16,6 +16,8 @@ namespace ZeusPalace.Modules.Orders.UserControls
         public DoubleButton()
         {
             InitializeComponent();
+            TextLeft = string.Empty;
+            TextRight = string.Empty;
         }
 
         public DoubleButton(string label1Text, string label2Text) : this()

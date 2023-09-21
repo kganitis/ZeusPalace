@@ -40,12 +40,23 @@
             this.textBoxCardNumber = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.toolTipCVV = new System.Windows.Forms.ToolTip(this.components);
+            this.labelMessage = new System.Windows.Forms.Label();
+            this.timerProcessing = new System.Windows.Forms.Timer(this.components);
+            this.pictureBoxProcessing = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSuccess = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
             this.panelTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProcessing)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSuccess)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.label3);
+            this.panelMain.Controls.Add(this.pictureBoxProcessing);
+            this.panelMain.Controls.Add(this.pictureBoxSuccess);
+            this.panelMain.Controls.Add(this.labelMessage);
             this.panelMain.Controls.Add(this.label2);
             this.panelMain.Controls.Add(this.textBoxCardNumber);
             this.panelMain.Controls.Add(this.textBoxExpDate);
@@ -104,11 +115,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(519, 289);
+            this.label1.Location = new System.Drawing.Point(496, 287);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 13);
+            this.label1.Size = new System.Drawing.Size(198, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "Όλα τα πεδία είναι υποχρεωτικά";
             // 
@@ -173,6 +184,53 @@
             this.label2.Text = "(τι είναι;)";
             this.toolTipCVV.SetToolTip(this.label2, "O 3-ψηφιος αριθμός στο πίσω μέρος της κάρτας σας");
             // 
+            // labelMessage
+            // 
+            this.labelMessage.AutoSize = true;
+            this.labelMessage.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelMessage.Location = new System.Drawing.Point(478, 342);
+            this.labelMessage.Name = "labelMessage";
+            this.labelMessage.Size = new System.Drawing.Size(152, 23);
+            this.labelMessage.TabIndex = 11;
+            this.labelMessage.Text = "Πληρωμή σε εξέλιξη";
+            this.labelMessage.Visible = false;
+            // 
+            // timerProcessing
+            // 
+            this.timerProcessing.Interval = 5000;
+            this.timerProcessing.Tick += new System.EventHandler(this.timerProcessing_Tick);
+            // 
+            // pictureBoxProcessing
+            // 
+            this.pictureBoxProcessing.Image = global::ZeusPalace.Properties.Resources.spinner;
+            this.pictureBoxProcessing.Location = new System.Drawing.Point(436, 339);
+            this.pictureBoxProcessing.Name = "pictureBoxProcessing";
+            this.pictureBoxProcessing.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxProcessing.TabIndex = 14;
+            this.pictureBoxProcessing.TabStop = false;
+            this.pictureBoxProcessing.Visible = false;
+            // 
+            // pictureBoxSuccess
+            // 
+            this.pictureBoxSuccess.Image = global::ZeusPalace.Properties.Resources.success;
+            this.pictureBoxSuccess.Location = new System.Drawing.Point(436, 339);
+            this.pictureBoxSuccess.Name = "pictureBoxSuccess";
+            this.pictureBoxSuccess.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxSuccess.TabIndex = 13;
+            this.pictureBoxSuccess.TabStop = false;
+            this.pictureBoxSuccess.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 17.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(237, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(192, 30);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Στοιχεία κάρτας";
+            // 
             // OrderPanelCreditCardControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +240,8 @@
             this.panelMain.PerformLayout();
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProcessing)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSuccess)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,5 +259,10 @@
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolTip toolTipCVV;
+        private System.Windows.Forms.Label labelMessage;
+        private System.Windows.Forms.PictureBox pictureBoxSuccess;
+        private System.Windows.Forms.Timer timerProcessing;
+        private System.Windows.Forms.PictureBox pictureBoxProcessing;
+        protected System.Windows.Forms.Label label3;
     }
 }

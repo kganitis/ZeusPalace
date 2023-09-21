@@ -15,6 +15,7 @@ namespace ZeusPalace.Modules.Orders.UserControls
     {
         private Color defaultTextForeColor;
         public event EventHandler FieldsChanged;
+        public event EventHandler PaymentSuccessful;
         public OrderPanelCreditCardControl()
         {
             InitializeComponent();
@@ -39,6 +40,13 @@ namespace ZeusPalace.Modules.Orders.UserControls
                 && textBoxCVV.Text.Length != 0
                 && textBoxName.Text.Length != 0;
             }
+        }
+
+        public void ExecutePayment()
+        {
+            pictureBoxProcessing.Visible = true;
+            labelMessage.Visible = true;
+            timerProcessing.Start();
         }
 
         private void textBoxCardNumber_TextChanged(object sender, EventArgs e)
@@ -113,6 +121,16 @@ namespace ZeusPalace.Modules.Orders.UserControls
                     e.SuppressKeyPress = true; // Suppress backspace keypress
                 }
             }   
+        }
+
+        private void timerProcessing_Tick(object sender, EventArgs e)
+        {
+            timerProcessing.Stop();
+            labelMessage.Text = "Πληρωμή επιτυχής!";
+            labelMessage.ForeColor = ColorPicker.TurquoiseGreen;
+            pictureBoxProcessing.Visible = false;
+            pictureBoxSuccess.Visible = true;
+            PaymentSuccessful?.Invoke(this, EventArgs.Empty);
         }
     }
 }

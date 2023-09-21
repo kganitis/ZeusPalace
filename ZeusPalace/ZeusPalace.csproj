@@ -250,10 +250,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\omadika2324.jpg" />
+    <None Include="Resources\hourglass.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\hourglass.gif" />
+    <None Include="Resources\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spinner.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

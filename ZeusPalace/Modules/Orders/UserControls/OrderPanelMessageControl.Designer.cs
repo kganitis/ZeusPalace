@@ -51,7 +51,6 @@
             this.labelMessage.TabIndex = 1;
             this.labelMessage.Text = "Μήνυμα";
             this.labelMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelMessage.TextChanged += new System.EventHandler(this.labelMessage_TextChanged);
             // 
             // pictureBox1
             // 
