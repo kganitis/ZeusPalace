@@ -67,6 +67,7 @@
             // panelChat
             // 
             this.panelChat.BackColor = System.Drawing.Color.Transparent;
+            this.panelChat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelChat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChat.Location = new System.Drawing.Point(960, 0);
             this.panelChat.Name = "panelChat";
@@ -202,6 +203,8 @@
             this.buttonNextStep.Name = "buttonNextStep";
             this.buttonNextStep.Size = new System.Drawing.Size(286, 50);
             this.buttonNextStep.TabIndex = 3;
+            this.buttonNextStep.TextLeft = "";
+            this.buttonNextStep.TextRight = "";
             this.buttonNextStep.Visible = false;
             this.buttonNextStep.Click += new System.EventHandler(this.buttonNextStep_Click);
             // 

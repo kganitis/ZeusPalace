@@ -25,6 +25,8 @@ namespace ZeusPalace.Modules.Orders
         private OrderPanelPaymentControl panelPayment;
         private OrderPanelCreditCardControl panelCreditCard;
         private OrderPanelMessageControl panelOrderPreparing;
+        private CustomerChatForm customerChat;
+        private EmployeeChatForm employeeChat;
 
         // external data, hardcoded for testing, TO DO auto-retrieval
         private int currentTime = 1559;
@@ -51,6 +53,16 @@ namespace ZeusPalace.Modules.Orders
             buttonNextStep.ForeColor = ColorPicker.Charcoal;
             buttonNextStep.TextLeft = "Συνέχεια";
             buttonNextStep.TextRight = "0.00 €";
+
+            // Chat
+            customerChat = new CustomerChatForm();
+            employeeChat = new EmployeeChatForm();
+            customerChat.TopLevel = false;
+            customerChat.Dock = DockStyle.Fill;
+            panelChat.Controls.Add(customerChat);
+            customerChat.BringToFront();
+            customerChat.Show();
+            employeeChat.Show();
         }
 
         private void InitializePanelOrderPlaced()
