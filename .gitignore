@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+/.vs/ZeusPalace/v17/.suo
+/ZeusPalace/obj/
