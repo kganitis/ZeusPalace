@@ -1,8 +1,6 @@
-﻿using System.Windows.Forms;
-
-namespace ZeusPalace.Modules.Orders.UserControls.ChatUserControls
+﻿namespace ZeusPalace.Modules.Orders.UserControls.ChatUserControls
 {
-    partial class CustomerMessageControl
+    partial class EmployeeMessageControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,31 +29,45 @@ namespace ZeusPalace.Modules.Orders.UserControls.ChatUserControls
         private void InitializeComponent()
         {
             this.panelMessage = new System.Windows.Forms.Panel();
+            this.pictureBoxEmployee = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMessage
             // 
-            this.panelMessage.Location = new System.Drawing.Point(0, 0);
+            this.panelMessage.Location = new System.Drawing.Point(55, 0);
             this.panelMessage.Name = "panelMessage";
-            this.panelMessage.Size = new System.Drawing.Size(280, 25);
-            this.panelMessage.TabIndex = 0;
+            this.panelMessage.Size = new System.Drawing.Size(225, 25);
+            this.panelMessage.TabIndex = 1;
             // 
-            // CustomerMessageControl
+            // pictureBoxEmployee
+            // 
+            this.pictureBoxEmployee.Image = global::ZeusPalace.Properties.Resources.employee_woman;
+            this.pictureBoxEmployee.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxEmployee.Name = "pictureBoxEmployee";
+            this.pictureBoxEmployee.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxEmployee.TabIndex = 0;
+            this.pictureBoxEmployee.TabStop = false;
+            // 
+            // EmployeeMessageControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
             this.Controls.Add(this.panelMessage);
-            this.MaximumSize = new System.Drawing.Size(280, 300);
-            this.MinimumSize = new System.Drawing.Size(280, 30);
-            this.Name = "CustomerMessageControl";
-            this.Size = new System.Drawing.Size(280, 30);
+            this.Controls.Add(this.pictureBoxEmployee);
+            this.MaximumSize = new System.Drawing.Size(280, 400);
+            this.MinimumSize = new System.Drawing.Size(280, 55);
+            this.Name = "EmployeeMessageControl";
+            this.Size = new System.Drawing.Size(280, 55);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmployee)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Panel panelMessage;
+        private System.Windows.Forms.PictureBox pictureBoxEmployee;
+        private System.Windows.Forms.Panel panelMessage;
     }
 }

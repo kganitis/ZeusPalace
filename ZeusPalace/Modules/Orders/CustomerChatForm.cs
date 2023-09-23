@@ -13,6 +13,7 @@ namespace ZeusPalace.Modules.Orders
         public CustomerChatForm()
         {
             InitializeComponent();
+            labelEmployeeName.Text = "Περσεφόνη";
         }
     }
 }

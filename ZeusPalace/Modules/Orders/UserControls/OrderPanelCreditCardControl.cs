@@ -127,7 +127,7 @@ namespace ZeusPalace.Modules.Orders.UserControls
         {
             timerProcessing.Stop();
             labelMessage.Text = "Πληρωμή επιτυχής!";
-            labelMessage.ForeColor = ColorPicker.TurquoiseGreen;
+            labelMessage.ForeColor = Color.FromArgb(26, 161, 91);
             pictureBoxProcessing.Visible = false;
             pictureBoxSuccess.Visible = true;
             PaymentSuccessful?.Invoke(this, EventArgs.Empty);

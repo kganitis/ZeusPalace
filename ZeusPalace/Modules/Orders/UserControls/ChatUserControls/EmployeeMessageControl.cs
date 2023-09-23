@@ -10,31 +10,31 @@ using System.Windows.Forms;
 
 namespace ZeusPalace.Modules.Orders.UserControls.ChatUserControls
 {
-    public partial class CustomerMessageControl : UserControl
+    public partial class EmployeeMessageControl : UserControl
     {
-        public CustomerMessageControl()
+        public EmployeeMessageControl()
         {
             InitializeComponent();
             Dock = DockStyle.Bottom;
         }
 
-        public CustomerMessageControl(string message) : this()
+        public EmployeeMessageControl(string message) : this()
         {
-            int bottomMargin = Height - panelMessage.Height;
+            int bottomMargin = Height - pictureBoxEmployee.Height;
             Label labelMessage = new Label
             {
                 AutoSize = true,
-                BackColor = Color.Linen,
+                BackColor = Color.Honeydew,
                 Font = new Font("Palatino Linotype", 12F, FontStyle.Regular, GraphicsUnit.Point, 0),
-                Location = new Point(80, 0),
-                MaximumSize = new Size(200, 300),
+                Location = new Point(0, 0),
+                MaximumSize = new Size(200, 400),
                 Text = message,
-                TextAlign = ContentAlignment.MiddleRight,
-                Dock = DockStyle.Right
+                TextAlign = ContentAlignment.MiddleLeft,
+                Dock = DockStyle.Left
             };
             panelMessage.Controls.Add(labelMessage);
             panelMessage.Height = labelMessage.Height;
-            Height = panelMessage.Height + bottomMargin;
+            Height = Math.Max(panelMessage.Height, pictureBoxEmployee.Height) + bottomMargin;
         }
     }
 }

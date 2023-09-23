@@ -44,7 +44,7 @@
             // 
             this.labelEmployeeName.AutoSize = true;
             this.labelEmployeeName.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmployeeName.Location = new System.Drawing.Point(53, 14);
+            this.labelEmployeeName.Location = new System.Drawing.Point(66, 14);
             this.labelEmployeeName.Margin = new System.Windows.Forms.Padding(0);
             this.labelEmployeeName.Name = "labelEmployeeName";
             this.labelEmployeeName.Size = new System.Drawing.Size(162, 22);
@@ -62,6 +62,7 @@
             // 
             // pictureBoxEmployee
             // 
+            this.pictureBoxEmployee.Image = global::ZeusPalace.Properties.Resources.employee_woman;
             this.pictureBoxEmployee.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxEmployee.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxEmployee.Name = "pictureBoxEmployee";

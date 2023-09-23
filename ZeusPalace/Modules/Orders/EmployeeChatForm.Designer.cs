@@ -30,6 +30,10 @@
         {
             this.SuspendLayout();
             // 
+            // richTextBoxTypeMessage
+            // 
+            this.richTextBoxTypeMessage.BackColor = System.Drawing.Color.Honeydew;
+            // 
             // EmployeeChatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

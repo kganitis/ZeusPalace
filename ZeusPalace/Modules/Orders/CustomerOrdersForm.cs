@@ -57,12 +57,24 @@ namespace ZeusPalace.Modules.Orders
             // Chat
             customerChat = new CustomerChatForm();
             employeeChat = new EmployeeChatForm();
+            customerChat.MessageSent += CustomerChat_MessageSent;
+            employeeChat.MessageSent += EmployeeChat_MessageSent;
             customerChat.TopLevel = false;
             customerChat.Dock = DockStyle.Fill;
             panelChat.Controls.Add(customerChat);
             customerChat.BringToFront();
             customerChat.Show();
             employeeChat.Show();
+        }
+
+        private void EmployeeChat_MessageSent(object sender, EventArgs e)
+        {
+            customerChat.ReceiveMessage(employeeChat.LastMessageSent);
+        }
+
+        private void CustomerChat_MessageSent(object sender, EventArgs e)
+        {
+            employeeChat.ReceiveMessage(customerChat.LastMessageSent);
         }
 
         private void InitializePanelOrderPlaced()

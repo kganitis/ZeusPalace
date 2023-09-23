@@ -187,11 +187,11 @@
             // labelMessage
             // 
             this.labelMessage.AutoSize = true;
-            this.labelMessage.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMessage.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelMessage.Location = new System.Drawing.Point(478, 342);
             this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(152, 23);
+            this.labelMessage.Size = new System.Drawing.Size(172, 22);
             this.labelMessage.TabIndex = 11;
             this.labelMessage.Text = "Πληρωμή σε εξέλιξη";
             this.labelMessage.Visible = false;
