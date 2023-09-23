@@ -56,7 +56,6 @@ namespace ZeusPalace
                 embeddedForm.TopLevel = false;
                 embeddedForm.Dock = DockStyle.Fill;
                 panelDesktopPane.Controls.Add(embeddedForm);
-                panelDesktopPane.Tag = embeddedForm;
             }
         }
 

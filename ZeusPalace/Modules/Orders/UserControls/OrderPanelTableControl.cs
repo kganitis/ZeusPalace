@@ -97,17 +97,5 @@ namespace ZeusPalace.Modules.Orders.UserControls
             nextAvailableCol = 0;
             nextAvailableRow = 0;
         }
-
-        /*private void labelMessage_TextChanged(object sender, EventArgs e)
-        {
-            labelMessage.Location = new Point((Width - labelMessage.Width) / 2, labelMessage.Location.Y);
-        }
-
-        public OrderPanelControl(string title, string message) : this(title)
-        {
-            labelMessage.Text = message;
-            labelMessage.Visible = true;
-            Table = false;
-        }*/
     }
 }

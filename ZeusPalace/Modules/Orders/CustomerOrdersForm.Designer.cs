@@ -32,6 +32,8 @@
             this.panelNewOrder = new System.Windows.Forms.Panel();
             this.panelChat = new System.Windows.Forms.Panel();
             this.panelOrder = new System.Windows.Forms.Panel();
+            this.buttonNewOrder = new System.Windows.Forms.Button();
+            this.buttonOrderReview = new System.Windows.Forms.Button();
             this.buttonOrderEdit = new System.Windows.Forms.Button();
             this.panelOrderControls = new System.Windows.Forms.Panel();
             this.tableLayoutPanelOrderControls = new System.Windows.Forms.TableLayoutPanel();
@@ -43,7 +45,7 @@
             this.timerOrderConfirmation = new System.Windows.Forms.Timer(this.components);
             this.timerOrderPreparing = new System.Windows.Forms.Timer(this.components);
             this.timerOrderDelivering = new System.Windows.Forms.Timer(this.components);
-            this.buttonOrderReview = new System.Windows.Forms.Button();
+            this.timerPaymentSuccessful = new System.Windows.Forms.Timer(this.components);
             this.panelNewOrder.SuspendLayout();
             this.panelOrder.SuspendLayout();
             this.panelOrderControls.SuspendLayout();
@@ -65,6 +67,7 @@
             // panelChat
             // 
             this.panelChat.BackColor = System.Drawing.Color.Transparent;
+            this.panelChat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelChat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChat.Location = new System.Drawing.Point(960, 0);
             this.panelChat.Name = "panelChat";
@@ -75,6 +78,7 @@
             // 
             this.panelOrder.BackColor = System.Drawing.Color.Transparent;
             this.panelOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelOrder.Controls.Add(this.buttonNewOrder);
             this.panelOrder.Controls.Add(this.buttonOrderReview);
             this.panelOrder.Controls.Add(this.buttonOrderEdit);
             this.panelOrder.Controls.Add(this.panelOrderControls);
@@ -84,6 +88,43 @@
             this.panelOrder.Name = "panelOrder";
             this.panelOrder.Size = new System.Drawing.Size(960, 660);
             this.panelOrder.TabIndex = 0;
+            // 
+            // buttonNewOrder
+            // 
+            this.buttonNewOrder.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonNewOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(112)))));
+            this.buttonNewOrder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNewOrder.FlatAppearance.BorderSize = 0;
+            this.buttonNewOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNewOrder.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNewOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
+            this.buttonNewOrder.Location = new System.Drawing.Point(337, 504);
+            this.buttonNewOrder.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.buttonNewOrder.Name = "buttonNewOrder";
+            this.buttonNewOrder.Size = new System.Drawing.Size(286, 50);
+            this.buttonNewOrder.TabIndex = 7;
+            this.buttonNewOrder.Text = "Νέα παραγγελία";
+            this.buttonNewOrder.UseVisualStyleBackColor = false;
+            this.buttonNewOrder.Visible = false;
+            this.buttonNewOrder.Click += new System.EventHandler(this.buttonNewOrder_Click);
+            // 
+            // buttonOrderReview
+            // 
+            this.buttonOrderReview.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonOrderReview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(198)))), ((int)(((byte)(191)))));
+            this.buttonOrderReview.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOrderReview.FlatAppearance.BorderSize = 0;
+            this.buttonOrderReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOrderReview.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOrderReview.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.buttonOrderReview.Location = new System.Drawing.Point(576, 567);
+            this.buttonOrderReview.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.buttonOrderReview.Name = "buttonOrderReview";
+            this.buttonOrderReview.Size = new System.Drawing.Size(286, 25);
+            this.buttonOrderReview.TabIndex = 6;
+            this.buttonOrderReview.Text = "Προβολή παραγγελίας";
+            this.buttonOrderReview.UseVisualStyleBackColor = false;
+            this.buttonOrderReview.Visible = false;
             // 
             // buttonOrderEdit
             // 
@@ -162,6 +203,8 @@
             this.buttonNextStep.Name = "buttonNextStep";
             this.buttonNextStep.Size = new System.Drawing.Size(286, 50);
             this.buttonNextStep.TabIndex = 3;
+            this.buttonNextStep.TextLeft = "";
+            this.buttonNextStep.TextRight = "";
             this.buttonNextStep.Visible = false;
             this.buttonNextStep.Click += new System.EventHandler(this.buttonNextStep_Click);
             // 
@@ -208,23 +251,10 @@
             this.timerOrderDelivering.Interval = 10000;
             this.timerOrderDelivering.Tick += new System.EventHandler(this.timerOrderDelivering_Tick);
             // 
-            // buttonOrderReview
+            // timerPaymentSuccessful
             // 
-            this.buttonOrderReview.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonOrderReview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(198)))), ((int)(((byte)(191)))));
-            this.buttonOrderReview.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonOrderReview.FlatAppearance.BorderSize = 0;
-            this.buttonOrderReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOrderReview.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOrderReview.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonOrderReview.Location = new System.Drawing.Point(576, 567);
-            this.buttonOrderReview.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.buttonOrderReview.Name = "buttonOrderReview";
-            this.buttonOrderReview.Size = new System.Drawing.Size(286, 25);
-            this.buttonOrderReview.TabIndex = 6;
-            this.buttonOrderReview.Text = "Προβολή παραγγελίας";
-            this.buttonOrderReview.UseVisualStyleBackColor = false;
-            this.buttonOrderReview.Visible = false;
+            this.timerPaymentSuccessful.Interval = 3000;
+            this.timerPaymentSuccessful.Tick += new System.EventHandler(this.timerPaymentSuccessful_Tick);
             // 
             // CustomerOrdersForm
             // 
@@ -259,5 +289,7 @@
         private System.Windows.Forms.Timer timerOrderPreparing;
         private System.Windows.Forms.Timer timerOrderDelivering;
         private System.Windows.Forms.Button buttonOrderReview;
+        private System.Windows.Forms.Timer timerPaymentSuccessful;
+        private System.Windows.Forms.Button buttonNewOrder;
     }
 }

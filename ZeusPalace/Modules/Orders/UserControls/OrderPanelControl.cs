@@ -22,7 +22,11 @@ namespace ZeusPalace.Modules.Orders.UserControls
         public string Title
         {
             get { return labelTitle.Text; }
-            set { labelTitle.Text = value; }
+            set 
+            {
+                labelTitle.Text = value;
+                AlignLabelToCenter(labelTitle, panelTitle);
+            }
         }
 
         protected void AlignLabelToCenter(Label label, Panel parentPanel)

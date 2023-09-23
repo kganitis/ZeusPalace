@@ -25,10 +25,12 @@ namespace ZeusPalace.Modules.Orders
         private OrderPanelPaymentControl panelPayment;
         private OrderPanelCreditCardControl panelCreditCard;
         private OrderPanelMessageControl panelOrderPreparing;
+        private CustomerChatForm customerChat;
+        private EmployeeChatForm employeeChat;
 
         // external data, hardcoded for testing, TO DO auto-retrieval
-        public int Time = 1559;
-        public decimal Balance = 200.00m;
+        private int currentTime = 1559;
+        private decimal currentBalance = 200.00m;
 
         public CustomerOrdersForm()
         {
@@ -40,29 +42,53 @@ namespace ZeusPalace.Modules.Orders
 
         private void InitializeControls()
         {
-            // Time
-            string formattedTime = $"{Time / 100:00}:{Time % 100:00}";
+            // currentTime
+            string formattedTime = $"{currentTime / 100:00}:{currentTime % 100:00}";
             labelTime.Text = formattedTime;
             AlignLabelToCenter(labelTime, panelTime);
 
-            // Panels
-            string orderPlacedMessage = "Παρακαλούμε περιμένετε μέχρι ο υπάλληλος" +
-                                      "\nνα επιβεβαιώσει την παραγγελία σας";
-            panelOrderPlaced = new OrderPanelMessageControl(string.Empty, orderPlacedMessage);
-            string orderPreparingMessage = "Η παραγγελία σας αυτή τη στιγμή ετοιμάζεται." +
-                                   "\nΕυχαριστούμε για την υπομονή σας!";
-            panelOrderPreparing = new OrderPanelMessageControl(string.Empty, orderPreparingMessage);
-
             // Buttons
-            foreach (Button btn in tableLayoutPanelOrderControls.Controls.OfType<Button>())
-            {
-                btn.FlatAppearance.MouseDownBackColor = btn.FlatAppearance.MouseOverBackColor;
-            }
-            // buttonNextStep
+            buttonOrderCancel.FlatAppearance.MouseDownBackColor = buttonOrderCancel.FlatAppearance.MouseOverBackColor;
             buttonNextStep.DefaultColor = ColorPicker.TurquoiseGreen;
             buttonNextStep.ForeColor = ColorPicker.Charcoal;
             buttonNextStep.TextLeft = "Συνέχεια";
             buttonNextStep.TextRight = "0.00 €";
+
+            // Chat
+            customerChat = new CustomerChatForm();
+            employeeChat = new EmployeeChatForm();
+            customerChat.MessageSent += CustomerChat_MessageSent;
+            employeeChat.MessageSent += EmployeeChat_MessageSent;
+            customerChat.TopLevel = false;
+            customerChat.Dock = DockStyle.Fill;
+            panelChat.Controls.Add(customerChat);
+            customerChat.BringToFront();
+            customerChat.Show();
+            employeeChat.Show();
+        }
+
+        private void EmployeeChat_MessageSent(object sender, EventArgs e)
+        {
+            customerChat.ReceiveMessage(employeeChat.LastMessageSent);
+        }
+
+        private void CustomerChat_MessageSent(object sender, EventArgs e)
+        {
+            employeeChat.ReceiveMessage(customerChat.LastMessageSent);
+        }
+
+        private void InitializePanelOrderPlaced()
+        {
+            string orderPlacedMessage = "Παρακαλούμε περιμένετε μέχρι ο υπάλληλος" +
+                                      "\nνα επιβεβαιώσει την παραγγελία σας";
+            panelOrderPlaced = new OrderPanelMessageControl(string.Empty, orderPlacedMessage);
+        }
+
+        private void InitializePanelOrderPreparing()
+        {
+            string orderPreparingMessage = "Η παραγγελία σας αυτή τη στιγμή ετοιμάζεται." +
+                                   "\nΕυχαριστούμε για την υπομονή σας!";
+            panelOrderPreparing = new OrderPanelMessageControl(string.Empty, orderPreparingMessage);
         }
 
         private void PopulateMenuItems()
@@ -89,7 +115,7 @@ namespace ZeusPalace.Modules.Orders
                 int quantity = controller.GetItemQuantity(nextMenuItem.Name);
                 MenuItemControl menuItemControl = new MenuItemControl(nextMenuItem, quantity);
                 menuItemControl.QuantityChanged += MenuItemControl_QuantityChanged;
-                if (!nextMenuItem.IsAvailable(Time))
+                if (!nextMenuItem.IsAvailable(currentTime))
                 {
                     menuItemControl.Enabled = false;
                 }
@@ -165,6 +191,7 @@ namespace ZeusPalace.Modules.Orders
             }
             else if (activePanel == panelOrderPreview)
             {
+                InitializePanelOrderPlaced();
                 controller.SetOrderStatus(OrderStatus.Placed);
                 buttonNextStep.Visible = false;
                 buttonOrderCancel.Visible = false;
@@ -181,12 +208,18 @@ namespace ZeusPalace.Modules.Orders
                 {
                     panelCreditCard = new OrderPanelCreditCardControl();
                     panelCreditCard.FieldsChanged += PanelCreditCard_FieldsChanged;
+                    panelCreditCard.PaymentSuccessful += PanelCreditCard_PaymentSuccessful;
                     buttonNextStep.Enabled = panelCreditCard.FieldsAreFilled;
                     DiscardPanel(panelPayment);
                     ShowPanel(panelCreditCard);
                 }
                 else
                 {
+                    if (panelPayment.PaymentMethod == PaymentMethod.AddToAccount)
+                    {
+                        currentBalance += controller.GetTotalPrice();
+                    }
+                    InitializePanelOrderPreparing();
                     controller.SetOrderStatus(OrderStatus.Preparing);
                     buttonNextStep.Visible = false;
                     buttonOrderCancel.Visible = false;
@@ -197,14 +230,15 @@ namespace ZeusPalace.Modules.Orders
             }
             else if (activePanel == panelCreditCard)
             {
-                // Πληρωμή σε εξέλιξη......
-                controller.SetOrderStatus(OrderStatus.Preparing);
-                buttonNextStep.Visible = false;
-                buttonOrderCancel.Visible = false;
-                DiscardPanel(panelCreditCard);
-                ShowPanel(panelOrderPreparing);
-                timerOrderPreparing.Start();
+                panelCreditCard.ExecutePayment();
+                buttonNextStep.Enabled = false;
+                buttonOrderCancel.Enabled = false;
             }
+        }
+
+        private void PanelCreditCard_PaymentSuccessful(object sender, EventArgs e)
+        {
+            timerPaymentSuccessful.Start();
         }
 
         private void PanelCreditCard_FieldsChanged(object sender, EventArgs e)
@@ -244,7 +278,7 @@ namespace ZeusPalace.Modules.Orders
             buttonNextStep.TextLeft = "Πληρωμή";
             buttonNextStep.Visible = true;
             buttonOrderCancel.Visible = true;
-            panelPayment = new OrderPanelPaymentControl(Balance + controller.GetTotalPrice());
+            panelPayment = new OrderPanelPaymentControl(currentBalance + controller.GetTotalPrice());
             panelPayment.CreditCard_CheckedChanged += PanelPayment_CreditCard_CheckedChanged;
             ShowPanel(panelPayment);
         }
@@ -263,8 +297,7 @@ namespace ZeusPalace.Modules.Orders
                 panelOrderPreparing.Message = "Η παραγγελία σας είναι έτοιμη και μπορείτε να" +
                                             "\nπεράσετε από το εστιατόριο να την παραλάβετε!";
                 panelOrderPreparing.PictureVisible = false;
-                // buttonOrderReview.Visible = true;
-                // show order details
+                buttonNewOrder.Visible = true;
             }
             else
             {
@@ -281,8 +314,32 @@ namespace ZeusPalace.Modules.Orders
             controller.SetOrderStatus(OrderStatus.Completed);
             panelOrderPreparing.Message = "Η παραγγελία σας έχει ολοκληρωθεί";
             panelOrderPreparing.PictureVisible = false;
-            // buttonOrderReview.Visible = true;
-            // show order details
+            buttonNewOrder.Visible = true;
+        }
+
+        private void timerPaymentSuccessful_Tick(object sender, EventArgs e)
+        {
+            InitializePanelOrderPreparing();
+            timerPaymentSuccessful.Stop();
+            controller.SetOrderStatus(OrderStatus.Preparing);
+            buttonNextStep.Visible = false;
+            buttonOrderCancel.Visible = false;
+            DiscardPanel(panelCreditCard);
+            ShowPanel(panelOrderPreparing);
+            timerOrderPreparing.Start();
+        }
+
+        private void buttonNewOrder_Click(object sender, EventArgs e)
+        {
+            controller.NewOrder();
+            buttonNextStep.TextLeft = "Συνέχεια";
+            buttonNextStep.TextRight = $"{controller.GetTotalPrice()} €";
+            buttonNextStep.Enabled = true;
+            buttonOrderCancel.Enabled = true;
+            buttonNewOrder.Visible = false;
+            DiscardPanel(activePanel);
+            PopulateMenuItems();
+            ShowPanel(panelMenu);
         }
     }
 }

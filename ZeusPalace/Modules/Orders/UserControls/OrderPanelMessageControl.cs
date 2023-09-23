@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,13 +21,25 @@ namespace ZeusPalace.Modules.Orders.UserControls
         {
             Title = title;
             Message = message;
-            labelMessage_TextChanged(this, new EventArgs());
         }
 
         public string Message
         {
             get { return labelMessage.Text;}
-            set { labelMessage.Text = value; }
+            set
+            {
+                panelMain.Controls.Remove(labelMessage);
+                labelMessage = new Label
+                {
+                    AutoSize = true,
+                    Font = new Font("Palatino Linotype", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0),
+                    Location = new Point(422, 120),
+                    Text = value,
+                    TextAlign = ContentAlignment.MiddleCenter
+                };
+                panelMain.Controls.Add(labelMessage);
+                labelMessage.Location = new Point((Width - labelMessage.Width) / 2, labelMessage.Location.Y);
+            }
         }
 
         public bool PictureVisible
@@ -39,11 +50,6 @@ namespace ZeusPalace.Modules.Orders.UserControls
         public Image Image
         {
             set { pictureBox1.Image = value; }
-        }
-
-        private void labelMessage_TextChanged(object sender, EventArgs e)
-        {
-            labelMessage.Location = new Point((Width - labelMessage.Width) / 2, labelMessage.Location.Y);
         }
     }
 }

@@ -67,6 +67,12 @@ namespace ZeusPalace.Modules.Orders
             order.CancelOrder();
         }
 
+        public void NewOrder()
+        {
+            order = new Order();
+            SetOrderStatus(OrderStatus.Open);
+        }
+
         public decimal GetCustomerBalance()
         {
             return customer.Balance;

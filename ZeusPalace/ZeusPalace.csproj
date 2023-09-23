@@ -106,6 +106,18 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Orders\ChatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Orders\ChatForm.Designer.cs">
+      <DependentUpon>ChatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Orders\CustomerChatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Orders\CustomerChatForm.Designer.cs">
+      <DependentUpon>CustomerChatForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Orders\CustomerOrdersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +125,24 @@
       <DependentUpon>CustomerOrdersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Orders\CustomerOrdersController.cs" />
+    <Compile Include="Modules\Orders\EmployeeChatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Orders\EmployeeChatForm.Designer.cs">
+      <DependentUpon>EmployeeChatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Orders\UserControls\ChatUserControls\CustomerMessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Orders\UserControls\ChatUserControls\CustomerMessageControl.Designer.cs">
+      <DependentUpon>CustomerMessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Orders\UserControls\ChatUserControls\EmployeeMessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Orders\UserControls\ChatUserControls\EmployeeMessageControl.Designer.cs">
+      <DependentUpon>EmployeeMessageControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Orders\UserControls\DoubleButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -189,8 +219,23 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Orders\ChatForm.resx">
+      <DependentUpon>ChatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Orders\CustomerChatForm.resx">
+      <DependentUpon>CustomerChatForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Orders\CustomerOrdersForm.resx">
       <DependentUpon>CustomerOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Orders\EmployeeChatForm.resx">
+      <DependentUpon>EmployeeChatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Orders\UserControls\ChatUserControls\CustomerMessageControl.resx">
+      <DependentUpon>CustomerMessageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Orders\UserControls\ChatUserControls\EmployeeMessageControl.resx">
+      <DependentUpon>EmployeeMessageControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Orders\UserControls\DoubleButton.resx">
       <DependentUpon>DoubleButton.cs</DependentUpon>
@@ -250,10 +295,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\omadika2324.jpg" />
+    <None Include="Resources\hourglass.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\hourglass.gif" />
+    <None Include="Resources\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spinner.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee_woman.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

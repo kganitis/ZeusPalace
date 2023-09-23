@@ -15,6 +15,7 @@ namespace ZeusPalace.Modules.Orders.UserControls
     public partial class OrderPanelPaymentControl : OrderPanelControl
     {
         public event EventHandler CreditCard_CheckedChanged;
+        
         public PaymentMethod PaymentMethod
         {
             get
