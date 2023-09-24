@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZeusPalace.Entities.Accommodation;
 using ZeusPalace.Entities.Order;
 using ZeusPalace.Modules.Orders.UserControls;
 using MenuItem = ZeusPalace.Entities.Order.MenuItem;
@@ -26,11 +27,11 @@ namespace ZeusPalace.Modules.Orders
         private OrderPanelCreditCardControl panelCreditCard;
         private OrderPanelMessageControl panelOrderPreparing;
         private CustomerChatForm customerChat;
-        private EmployeeChatForm employeeChat;
+        private EmployeeOrdersForm employeeOrdersForm;
 
         // external data, hardcoded for testing, TO DO auto-retrieval
+        private Customer customer = new Customer("Γιώργος Παπαδόπουλος", new Apartment(), 200.00m);
         private int currentTime = 1559;
-        private decimal currentBalance = 200.00m;
 
         public CustomerOrdersForm()
         {
@@ -56,25 +57,63 @@ namespace ZeusPalace.Modules.Orders
 
             // Chat
             customerChat = new CustomerChatForm();
-            employeeChat = new EmployeeChatForm();
             customerChat.MessageSent += CustomerChat_MessageSent;
-            employeeChat.MessageSent += EmployeeChat_MessageSent;
             customerChat.TopLevel = false;
             customerChat.Dock = DockStyle.Fill;
             panelChat.Controls.Add(customerChat);
             customerChat.BringToFront();
             customerChat.Show();
-            employeeChat.Show();
+        }
+
+        private EmployeeOrdersForm EmployeeOrdersForm
+        {
+            get
+            {
+                if (employeeOrdersForm == null)
+                {
+                    employeeOrdersForm = new EmployeeOrdersForm(currentTime, customer.Name);
+                    employeeOrdersForm.MessageSent += EmployeeChat_MessageSent;
+                    employeeOrdersForm.OrderRejected += EmployeeOrdersForm_OrderRejected;
+                    employeeOrdersForm.OrderConfirmed += EmployeeOrdersForm_OrderConfirmed;
+                    employeeOrdersForm.FormClosed += EmployeeOrdersForm_FormClosed;
+                    employeeOrdersForm.Show();
+                }
+                return employeeOrdersForm;
+            }
+            set { employeeOrdersForm = value; }
+        }
+
+        private void EmployeeOrdersForm_OrderConfirmed(object sender, EventArgs e)
+        {
+            controller.SetOrderStatus(OrderStatus.Confirmed);
+            HidePanel(panelOrderPlaced);
+            buttonNextStep.TextLeft = "Πληρωμή";
+            buttonNextStep.Visible = true;
+            buttonOrderCancel.Visible = true;
+            panelPayment = new OrderPanelPaymentControl(customer.Balance + controller.GetTotalPrice());
+            panelPayment.CreditCard_CheckedChanged += PanelPayment_CreditCard_CheckedChanged;
+            ShowPanel(panelPayment);
+        }
+
+        private void EmployeeOrdersForm_OrderRejected(object sender, EventArgs e)
+        {
+            buttonOrderEdit_Click(sender, e);
+        }
+
+        private void EmployeeOrdersForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            EmployeeOrdersForm.Dispose();
+            EmployeeOrdersForm = null;
         }
 
         private void EmployeeChat_MessageSent(object sender, EventArgs e)
         {
-            customerChat.ReceiveMessage(employeeChat.LastMessageSent);
+            customerChat.ReceiveMessage(EmployeeOrdersForm.LastMessageSent);
         }
 
         private void CustomerChat_MessageSent(object sender, EventArgs e)
         {
-            employeeChat.ReceiveMessage(customerChat.LastMessageSent);
+            EmployeeOrdersForm.ReceiveMessage(customerChat.LastMessageSent);
         }
 
         private void InitializePanelOrderPlaced()
@@ -196,9 +235,9 @@ namespace ZeusPalace.Modules.Orders
                 buttonNextStep.Visible = false;
                 buttonOrderCancel.Visible = false;
                 buttonOrderEdit.Visible = false;
+                EmployeeOrdersForm.ReceiveOrder(panelOrderPreview.Items.OfType<MenuItemControl>());
                 DiscardPanel(panelOrderPreview);
                 ShowPanel(panelOrderPlaced);
-                timerOrderConfirmation.Start();
             }
             else if (activePanel == panelPayment)
             {
@@ -217,7 +256,7 @@ namespace ZeusPalace.Modules.Orders
                 {
                     if (panelPayment.PaymentMethod == PaymentMethod.AddToAccount)
                     {
-                        currentBalance += controller.GetTotalPrice();
+                        customer.Balance += controller.GetTotalPrice();
                     }
                     InitializePanelOrderPreparing();
                     controller.SetOrderStatus(OrderStatus.Preparing);
@@ -252,6 +291,10 @@ namespace ZeusPalace.Modules.Orders
             DiscardPanel(activePanel);
             ShowPanel(panelMenu);
             buttonOrderEdit.Visible = false;
+            if (employeeOrdersForm != null)
+            {
+                EmployeeOrdersForm.CancelOrder();
+            }
         }
 
         private void buttonOrderCancel_Click(object sender, EventArgs e)
@@ -268,19 +311,10 @@ namespace ZeusPalace.Modules.Orders
             buttonOrderEdit.Visible = false;
             PopulateMenuItems();
             ShowPanel(panelMenu);
-        }
-
-        private void timerOrderConfirmation_Tick(object sender, EventArgs e)
-        {
-            timerOrderConfirmation.Stop();
-            controller.SetOrderStatus(OrderStatus.Confirmed);
-            HidePanel(panelOrderPlaced);
-            buttonNextStep.TextLeft = "Πληρωμή";
-            buttonNextStep.Visible = true;
-            buttonOrderCancel.Visible = true;
-            panelPayment = new OrderPanelPaymentControl(currentBalance + controller.GetTotalPrice());
-            panelPayment.CreditCard_CheckedChanged += PanelPayment_CreditCard_CheckedChanged;
-            ShowPanel(panelPayment);
+            if (employeeOrdersForm != null)
+            {
+                EmployeeOrdersForm.CancelOrder();
+            }
         }
 
         private void PanelPayment_CreditCard_CheckedChanged(object sender, EventArgs e)

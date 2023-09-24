@@ -131,6 +131,12 @@
     <Compile Include="Modules\Orders\EmployeeChatForm.Designer.cs">
       <DependentUpon>EmployeeChatForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Orders\EmployeeOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Orders\EmployeeOrdersForm.Designer.cs">
+      <DependentUpon>EmployeeOrdersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Orders\UserControls\ChatUserControls\CustomerMessageControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Orders\EmployeeChatForm.resx">
       <DependentUpon>EmployeeChatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Orders\EmployeeOrdersForm.resx">
+      <DependentUpon>EmployeeOrdersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Orders\UserControls\ChatUserControls\CustomerMessageControl.resx">
       <DependentUpon>CustomerMessageControl.cs</DependentUpon>

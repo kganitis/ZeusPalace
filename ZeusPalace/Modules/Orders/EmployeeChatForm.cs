@@ -14,5 +14,10 @@ namespace ZeusPalace.Modules.Orders
         {
             InitializeComponent();
         }
+
+        public EmployeeChatForm(string customerName) : this()
+        {
+            labelUsername.Text = customerName;
+        }
     }
 }

@@ -14,11 +14,11 @@ namespace ZeusPalace
         public Accommodation Accommodation { get; }
         public decimal Balance { get; set; }
 
-        public Customer(string name, Accommodation accommodation)
+        public Customer(string name, Accommodation accommodation, decimal initialBalance=0)
         {
             Name = name;
             Accommodation = accommodation;
-            Balance = 0;
+            Balance = initialBalance;
         }
 
         public void AddToBalance(decimal amount)
