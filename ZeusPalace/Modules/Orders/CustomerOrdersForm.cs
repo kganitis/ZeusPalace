@@ -35,6 +35,20 @@ namespace ZeusPalace.Modules.Orders
         private Customer customer = new Customer("Γιώργος Παπαδόπουλος", new Apartment(), 200.00m);
         private int currentTime = 1559;
 
+        private EmployeeOrdersForm EmployeeOrdersForm
+        {
+            get
+            {
+                if (employeeOrdersForm == null)
+                {
+                    CreateEmployeeOrdersForm();
+                    employeeOrdersForm.Show();
+                }
+                return employeeOrdersForm;
+            }
+            set { employeeOrdersForm = value; }
+        }
+
         #endregion
 
         #region Constructor and Initialization
@@ -89,22 +103,13 @@ namespace ZeusPalace.Modules.Orders
 
         #region Employee Interaction Methods
 
-        private EmployeeOrdersForm EmployeeOrdersForm
+        private void CreateEmployeeOrdersForm()
         {
-            get
-            {
-                if (employeeOrdersForm == null)
-                {
-                    employeeOrdersForm = new EmployeeOrdersForm(currentTime, customer.Name);
-                    employeeOrdersForm.MessageSent += EmployeeChat_MessageSent;
-                    employeeOrdersForm.OrderRejected += EmployeeOrdersForm_OrderRejected;
-                    employeeOrdersForm.OrderConfirmed += EmployeeOrdersForm_OrderConfirmed;
-                    employeeOrdersForm.FormClosed += EmployeeOrdersForm_FormClosed;
-                    employeeOrdersForm.Show();
-                }
-                return employeeOrdersForm;
-            }
-            set { employeeOrdersForm = value; }
+            employeeOrdersForm = new EmployeeOrdersForm(currentTime, customer.Name);
+            employeeOrdersForm.MessageSent += EmployeeChat_MessageSent;
+            employeeOrdersForm.OrderRejected += EmployeeOrdersForm_OrderRejected;
+            employeeOrdersForm.OrderConfirmed += EmployeeOrdersForm_OrderConfirmed;
+            employeeOrdersForm.FormClosed += EmployeeOrdersForm_FormClosed;
         }
 
         private void EmployeeOrdersForm_OrderConfirmed(object sender, EventArgs e)
