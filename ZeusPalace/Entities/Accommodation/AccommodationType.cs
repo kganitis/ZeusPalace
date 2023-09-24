@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZeusPalace.Entities.Accommodation
 {
-    internal enum AccommodationType
+    public enum AccommodationType
     {
         Apartment,
         TrojanHorse

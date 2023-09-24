@@ -32,8 +32,8 @@ namespace ZeusPalace.Modules.Orders
         private EmployeeOrdersForm employeeOrdersForm;
 
         // external data, hardcoded for testing, TO DO auto-retrieval
-        private Customer customer = new Customer("Γιώργος Παπαδόπουλος", new Apartment(), 200.00m);
-        private int currentTime = 1559;
+        private Customer customer = AppController.Instance.Customer;
+        private int currentTime = AppController.Instance.Time;
 
         private EmployeeOrdersForm EmployeeOrdersForm
         {
@@ -298,7 +298,7 @@ namespace ZeusPalace.Modules.Orders
                 {
                     if (panelPayment.PaymentMethod == PaymentMethod.AddToAccount)
                     {
-                        customer.Balance += controller.GetTotalPrice();
+                        AppController.Instance.Customer.Balance += controller.GetTotalPrice();
                     }
                     InitializePanelOrderPreparing();
                     controller.SetOrderStatus(OrderStatus.Preparing);
@@ -338,6 +338,7 @@ namespace ZeusPalace.Modules.Orders
                 DiscardPanel(activePanel);
             }
             buttonNextStep.TextLeft = "Συνέχεια";
+            buttonNextStep.Enabled = true;
             buttonNextStep.Visible = false;
             buttonOrderCancel.Visible = false;
             buttonOrderEdit.Visible = false;

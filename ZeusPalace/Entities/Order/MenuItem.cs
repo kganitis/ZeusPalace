@@ -31,13 +31,20 @@ namespace ZeusPalace.Entities.Order
 
         public bool IsAvailable(int currentTime)
         {
+            int adjustedStartTime = StartTime;
             int adjustedEndTime = EndTime;
             if (StartTime > EndTime)
             {
-                currentTime += 2400;
-                adjustedEndTime = EndTime + 2400;
+                if (currentTime > StartTime)
+                {
+                    adjustedEndTime += 2400;
+                }
+                else
+                {
+                    adjustedStartTime -= 2400;
+                }
             }
-            return currentTime >= StartTime && currentTime < adjustedEndTime;
+            return currentTime >= adjustedStartTime && currentTime < adjustedEndTime;
         }
 
         // Helper method to get the StartTime attribute value

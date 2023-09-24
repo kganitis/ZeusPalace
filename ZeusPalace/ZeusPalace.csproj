@@ -71,6 +71,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppController.cs" />
+    <Compile Include="AppControllerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppControllerForm.Designer.cs">
+      <DependentUpon>AppControllerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ColorPicker.cs" />
     <Compile Include="Entities\Accommodation\Accommodation.cs" />
     <Compile Include="Entities\Accommodation\AccommodationType.cs" />
@@ -216,6 +223,9 @@
     </Compile>
     <Compile Include="Entities\User\UserRole.cs" />
     <Compile Include="Entities\User\User.cs" />
+    <EmbeddedResource Include="AppControllerForm.resx">
+      <DependentUpon>AppControllerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Devices\DevicesForm.resx">
       <DependentUpon>DevicesForm.cs</DependentUpon>
     </EmbeddedResource>

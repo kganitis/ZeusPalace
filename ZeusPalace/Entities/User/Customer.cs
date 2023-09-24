@@ -8,7 +8,7 @@ using ZeusPalace.Entities.Accommodation;
 
 namespace ZeusPalace
 {
-    internal class Customer : User
+    public class Customer : User
     {
         public override UserRole Role => UserRole.Customer;
         public Accommodation Accommodation { get; }
