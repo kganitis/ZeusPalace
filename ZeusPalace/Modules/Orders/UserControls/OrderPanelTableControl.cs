@@ -12,7 +12,7 @@ namespace ZeusPalace.Modules.Orders.UserControls
     {
         private void InitializeComponent()
         {
-            this.tableItems = new System.Windows.Forms.TableLayoutPanel();
+            this.tableItems = new TableLayoutPanel();
             this.panelMain.SuspendLayout();
             this.panelTitle.SuspendLayout();
             this.SuspendLayout();
@@ -24,31 +24,31 @@ namespace ZeusPalace.Modules.Orders.UserControls
             // tableItems
             // 
             this.tableItems.ColumnCount = 3;
-            this.tableItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
-            this.tableItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
-            this.tableItems.Location = new System.Drawing.Point(50, 0);
+            this.tableItems.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 400F));
+            this.tableItems.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            this.tableItems.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 400F));
+            this.tableItems.Location = new Point(50, 0);
             this.tableItems.Name = "tableItems";
             this.tableItems.RowCount = 13;
-            this.tableItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableItems.Size = new System.Drawing.Size(860, 455);
+            this.tableItems.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            this.tableItems.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            this.tableItems.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            this.tableItems.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            this.tableItems.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            this.tableItems.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            this.tableItems.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            this.tableItems.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            this.tableItems.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            this.tableItems.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            this.tableItems.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            this.tableItems.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            this.tableItems.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F));
+            this.tableItems.Size = new Size(860, 455);
             this.tableItems.TabIndex = 0;
             // 
             // OrderPanelTableControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new SizeF(6F, 13F);
             this.Name = "OrderPanelTableControl";
             this.panelMain.ResumeLayout(false);
             this.panelTitle.ResumeLayout(false);

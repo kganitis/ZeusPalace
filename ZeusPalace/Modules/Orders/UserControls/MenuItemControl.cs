@@ -28,11 +28,11 @@ namespace ZeusPalace.Modules.Orders
 
         public MenuItemControl(MenuItem menuItem) : this(menuItem, 0) { }
 
-        public MenuItemControl(MenuItem menuItem, int initialQuantity)
+        public MenuItemControl(MenuItem menuItem, int initialQuantity, bool viewOnly=false)
         {
             InitializeComponent();
 
-            menuItemQuantityControl = new MenuItemQuantityControl(initialQuantity);
+            menuItemQuantityControl = new MenuItemQuantityControl(initialQuantity, viewOnly);
             menuItemQuantityControl.QuantityChanged += MenuItemQuantityControl_QuantityChanged;
 
             if (menuItem != null)
@@ -42,6 +42,11 @@ namespace ZeusPalace.Modules.Orders
             }
 
             UpdateControlsVisibility();
+
+            if (viewOnly)
+            {
+                labelPrice.Visible = false;
+            }
         }
 
         private void UpdateControlsVisibility()
@@ -64,6 +69,13 @@ namespace ZeusPalace.Modules.Orders
                 tableLayoutPanel1.Controls.Remove(controlToReplace);
                 tableLayoutPanel1.Controls.Add(control, 2, 0);
             }
+        }
+
+        public MenuItemControl Clone()
+        {
+            MenuItemControl clonedControl = new MenuItemControl(null, Quantity, true);
+            clonedControl.labelName.Text = labelName.Text;
+            return clonedControl;
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)

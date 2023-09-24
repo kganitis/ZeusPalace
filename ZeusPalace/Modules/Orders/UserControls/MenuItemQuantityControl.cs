@@ -21,9 +21,14 @@ namespace ZeusPalace.Modules.Orders
             labelQuantity.Text = "0";
         }
 
-        public MenuItemQuantityControl(int quantity) : this()
+        public MenuItemQuantityControl(int quantity, bool viewOnly=false) : this()
         {
             labelQuantity.Text = quantity.ToString();
+            if (viewOnly )
+            {
+                buttonRemove.Visible = false;
+                buttonAdd.Visible = false;
+            }
         }
 
         public int Quantity

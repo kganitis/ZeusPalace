@@ -32,15 +32,20 @@
             this.richTextBoxTypeMessage = new System.Windows.Forms.RichTextBox();
             this.buttonSendMessage = new System.Windows.Forms.Button();
             this.labelCharacterCount = new System.Windows.Forms.Label();
+            this.panelEmployee = new System.Windows.Forms.Panel();
+            this.pictureBoxEmployee = new System.Windows.Forms.PictureBox();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.panelEmployee.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMessages
             // 
             this.panelMessages.AutoScroll = true;
             this.panelMessages.AutoScrollMinSize = new System.Drawing.Size(0, 1);
-            this.panelMessages.Location = new System.Drawing.Point(10, 10);
+            this.panelMessages.Location = new System.Drawing.Point(10, 60);
             this.panelMessages.Name = "panelMessages";
-            this.panelMessages.Size = new System.Drawing.Size(300, 500);
+            this.panelMessages.Size = new System.Drawing.Size(300, 450);
             this.panelMessages.TabIndex = 6;
             // 
             // richTextBoxTypeMessage
@@ -92,15 +97,49 @@
             this.labelCharacterCount.Text = "300/300";
             this.labelCharacterCount.Visible = false;
             // 
+            // panelEmployee
+            // 
+            this.panelEmployee.Controls.Add(this.pictureBoxEmployee);
+            this.panelEmployee.Controls.Add(this.labelUsername);
+            this.panelEmployee.Location = new System.Drawing.Point(10, 10);
+            this.panelEmployee.Name = "panelEmployee";
+            this.panelEmployee.Size = new System.Drawing.Size(300, 50);
+            this.panelEmployee.TabIndex = 11;
+            // 
+            // pictureBoxEmployee
+            // 
+            this.pictureBoxEmployee.Image = global::ZeusPalace.Properties.Resources.employee_woman;
+            this.pictureBoxEmployee.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxEmployee.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBoxEmployee.Name = "pictureBoxEmployee";
+            this.pictureBoxEmployee.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxEmployee.TabIndex = 8;
+            this.pictureBoxEmployee.TabStop = false;
+            // 
+            // labelUsername
+            // 
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.Location = new System.Drawing.Point(66, 14);
+            this.labelUsername.Margin = new System.Windows.Forms.Padding(0);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(130, 22);
+            this.labelUsername.TabIndex = 9;
+            this.labelUsername.Text = "Όνομα χρήστη";
+            // 
             // ChatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(320, 660);
+            this.Controls.Add(this.panelEmployee);
             this.Controls.Add(this.labelCharacterCount);
             this.Controls.Add(this.buttonSendMessage);
             this.Controls.Add(this.panelMessages);
             this.Controls.Add(this.richTextBoxTypeMessage);
             this.Name = "ChatForm";
+            this.panelEmployee.ResumeLayout(false);
+            this.panelEmployee.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,5 +150,8 @@
         private System.Windows.Forms.Button buttonSendMessage;
         protected System.Windows.Forms.RichTextBox richTextBoxTypeMessage;
         private System.Windows.Forms.Label labelCharacterCount;
+        private System.Windows.Forms.Panel panelEmployee;
+        protected System.Windows.Forms.PictureBox pictureBoxEmployee;
+        protected System.Windows.Forms.Label labelUsername;
     }
 }

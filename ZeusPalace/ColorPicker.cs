@@ -27,19 +27,6 @@ namespace ZeusPalace
             return Color.FromArgb(baseColor.A, red, green, blue);
         }
 
-        public static Color RevertShade(Color shadedColor, int percent)
-        {
-            // Calculate the inverse of the scaling factor
-            float scale = 1f - (percent / 100f);
-
-            int red = (int)(shadedColor.R / scale);
-            int green = (int)(shadedColor.G / scale);
-            int blue = (int)(shadedColor.B / scale);
-
-            return Color.FromArgb(shadedColor.A, red, green, blue);
-        }
-
-
         public static Color GetTint(Color baseColor, int percent)
         {
             float scale = 1f + (percent / 100f);

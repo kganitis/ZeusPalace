@@ -15,8 +15,7 @@ namespace ZeusPalace.Modules.Orders
     {
         private Order order = new Order();
         private Menu menu = new Menu();
-        private Customer customer = new Customer("George Papadopoulos", new Apartment());
-
+        
         public CustomerOrdersController()
         {
             SetOrderStatus(OrderStatus.Open);
@@ -71,16 +70,6 @@ namespace ZeusPalace.Modules.Orders
         {
             order = new Order();
             SetOrderStatus(OrderStatus.Open);
-        }
-
-        public decimal GetCustomerBalance()
-        {
-            return customer.Balance;
-        }
-
-        public AccommodationType GetAccommodationType()
-        {
-            return customer.Accommodation.Type;
         }
 
         public PaymentMethod GetPaymentMethod()

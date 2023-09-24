@@ -28,20 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // richTextBoxTypeMessage
             // 
             this.richTextBoxTypeMessage.BackColor = System.Drawing.Color.Honeydew;
             // 
+            // pictureBoxEmployee
+            // 
+            this.pictureBoxEmployee.Visible = false;
+            // 
+            // labelUsername
+            // 
+            this.labelUsername.Location = new System.Drawing.Point(9, 14);
+            this.labelUsername.Size = new System.Drawing.Size(127, 22);
+            this.labelUsername.Text = "Όνομα πελάτη";
+            // 
             // EmployeeChatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(320, 660);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EmployeeChatForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmployee)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

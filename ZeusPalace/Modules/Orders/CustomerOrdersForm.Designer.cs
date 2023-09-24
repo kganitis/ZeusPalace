@@ -42,7 +42,6 @@
             this.panelTime = new System.Windows.Forms.Panel();
             this.labelTime = new System.Windows.Forms.Label();
             this.panelMenu = new ZeusPalace.Modules.Orders.UserControls.OrderPanelTableControl();
-            this.timerOrderConfirmation = new System.Windows.Forms.Timer(this.components);
             this.timerOrderPreparing = new System.Windows.Forms.Timer(this.components);
             this.timerOrderDelivering = new System.Windows.Forms.Timer(this.components);
             this.timerPaymentSuccessful = new System.Windows.Forms.Timer(this.components);
@@ -236,11 +235,6 @@
             this.panelMenu.TabIndex = 5;
             this.panelMenu.Title = "Μενού ημέρας";
             // 
-            // timerOrderConfirmation
-            // 
-            this.timerOrderConfirmation.Interval = 3000;
-            this.timerOrderConfirmation.Tick += new System.EventHandler(this.timerOrderConfirmation_Tick);
-            // 
             // timerOrderPreparing
             // 
             this.timerOrderPreparing.Interval = 10000;
@@ -285,7 +279,6 @@
         private UserControls.DoubleButton buttonNextStep;
         private System.Windows.Forms.Button buttonOrderEdit;
         private UserControls.OrderPanelTableControl panelMenu;
-        private System.Windows.Forms.Timer timerOrderConfirmation;
         private System.Windows.Forms.Timer timerOrderPreparing;
         private System.Windows.Forms.Timer timerOrderDelivering;
         private System.Windows.Forms.Button buttonOrderReview;
