@@ -19,6 +19,8 @@ namespace ZeusPalace.Modules.Orders
 {
     public partial class CustomerOrdersForm : EmbeddedForm
     {
+        #region Fields and Properties
+
         private readonly CustomerOrdersController controller = new CustomerOrdersController();
         private OrderPanelControl activePanel;
         private OrderPanelTableControl panelOrderPreview;
@@ -32,6 +34,10 @@ namespace ZeusPalace.Modules.Orders
         // external data, hardcoded for testing, TO DO auto-retrieval
         private Customer customer = new Customer("Γιώργος Παπαδόπουλος", new Apartment(), 200.00m);
         private int currentTime = 1559;
+
+        #endregion
+
+        #region Constructor and Initialization
 
         public CustomerOrdersForm()
         {
@@ -64,6 +70,24 @@ namespace ZeusPalace.Modules.Orders
             customerChat.BringToFront();
             customerChat.Show();
         }
+
+        private void InitializePanelOrderPlaced()
+        {
+            string orderPlacedMessage = "Παρακαλούμε περιμένετε μέχρι ο υπάλληλος" +
+                                      "\nνα επιβεβαιώσει την παραγγελία σας";
+            panelOrderPlaced = new OrderPanelMessageControl(string.Empty, orderPlacedMessage);
+        }
+
+        private void InitializePanelOrderPreparing()
+        {
+            string orderPreparingMessage = "Η παραγγελία σας αυτή τη στιγμή ετοιμάζεται." +
+                                   "\nΕυχαριστούμε για την υπομονή σας!";
+            panelOrderPreparing = new OrderPanelMessageControl(string.Empty, orderPreparingMessage);
+        }
+
+        #endregion
+
+        #region Employee Interaction Methods
 
         private EmployeeOrdersForm EmployeeOrdersForm
         {
@@ -116,19 +140,47 @@ namespace ZeusPalace.Modules.Orders
             EmployeeOrdersForm.ReceiveMessage(customerChat.LastMessageSent);
         }
 
-        private void InitializePanelOrderPlaced()
+        #endregion
+
+        #region Event Handlers
+
+        private void MenuItemControl_QuantityChanged(object sender, EventArgs e)
         {
-            string orderPlacedMessage = "Παρακαλούμε περιμένετε μέχρι ο υπάλληλος" +
-                                      "\nνα επιβεβαιώσει την παραγγελία σας";
-            panelOrderPlaced = new OrderPanelMessageControl(string.Empty, orderPlacedMessage);
+            MenuItemControl menuItemControl = (MenuItemControl)sender;
+            controller.UpdateItemQuantity(menuItemControl.ItemName, menuItemControl.Quantity);
+            decimal totalPrice = controller.GetTotalPrice();
+            buttonNextStep.TextRight = $"{totalPrice} €";
+            if (totalPrice == 0.00m)
+            {
+                buttonOrderCancel.Visible = false;
+                buttonNextStep.Visible = false;
+            }
+            else
+            {
+                buttonOrderCancel.Visible = true;
+                buttonNextStep.Visible = true;
+                controller.SetOrderStatus(OrderStatus.Open);
+            }
         }
 
-        private void InitializePanelOrderPreparing()
+        private void PanelCreditCard_PaymentSuccessful(object sender, EventArgs e)
         {
-            string orderPreparingMessage = "Η παραγγελία σας αυτή τη στιγμή ετοιμάζεται." +
-                                   "\nΕυχαριστούμε για την υπομονή σας!";
-            panelOrderPreparing = new OrderPanelMessageControl(string.Empty, orderPreparingMessage);
+            timerPaymentSuccessful.Start();
         }
+
+        private void PanelCreditCard_FieldsChanged(object sender, EventArgs e)
+        {
+            buttonNextStep.Enabled = panelCreditCard.FieldsAreFilled;
+        }
+
+        private void PanelPayment_CreditCard_CheckedChanged(object sender, EventArgs e)
+        {
+            buttonNextStep.TextLeft = ((RadioButton)sender).Checked ? "Πληρωμή" : "Ολοκλήρωση";
+        }
+
+        #endregion
+
+        #region Panel Display Methods
 
         private void PopulateMenuItems()
         {
@@ -177,25 +229,6 @@ namespace ZeusPalace.Modules.Orders
             }
         }
 
-        private void MenuItemControl_QuantityChanged(object sender, EventArgs e)
-        {
-            MenuItemControl menuItemControl = (MenuItemControl)sender;
-            controller.UpdateItemQuantity(menuItemControl.ItemName, menuItemControl.Quantity);
-            decimal totalPrice = controller.GetTotalPrice();
-            buttonNextStep.TextRight = $"{totalPrice} €";
-            if (totalPrice == 0.00m)
-            {
-                buttonOrderCancel.Visible = false;
-                buttonNextStep.Visible = false;
-            }
-            else
-            {
-                buttonOrderCancel.Visible = true;
-                buttonNextStep.Visible = true;
-                controller.SetOrderStatus(OrderStatus.Open);
-            }
-        }
-
         private void ShowPanel(OrderPanelControl panel)
         {
             panel.Dock = DockStyle.Top;
@@ -217,6 +250,10 @@ namespace ZeusPalace.Modules.Orders
             panelOrder.Controls.Remove(panel);
             panel.Dispose();
         }
+
+        #endregion
+
+        #region Button Click Handlers
 
         private void buttonNextStep_Click(object sender, EventArgs e)
         {
@@ -275,16 +312,6 @@ namespace ZeusPalace.Modules.Orders
             }
         }
 
-        private void PanelCreditCard_PaymentSuccessful(object sender, EventArgs e)
-        {
-            timerPaymentSuccessful.Start();
-        }
-
-        private void PanelCreditCard_FieldsChanged(object sender, EventArgs e)
-        {
-            buttonNextStep.Enabled = panelCreditCard.FieldsAreFilled;
-        }
-
         private void buttonOrderEdit_Click(object sender, EventArgs e)
         {
             PopulateMenuItems();
@@ -317,10 +344,22 @@ namespace ZeusPalace.Modules.Orders
             }
         }
 
-        private void PanelPayment_CreditCard_CheckedChanged(object sender, EventArgs e)
+        private void buttonNewOrder_Click(object sender, EventArgs e)
         {
-            buttonNextStep.TextLeft = ((RadioButton)sender).Checked ? "Πληρωμή" : "Ολοκλήρωση";
+            controller.NewOrder();
+            buttonNextStep.TextLeft = "Συνέχεια";
+            buttonNextStep.TextRight = $"{controller.GetTotalPrice()} €";
+            buttonNextStep.Enabled = true;
+            buttonOrderCancel.Enabled = true;
+            buttonNewOrder.Visible = false;
+            DiscardPanel(activePanel);
+            PopulateMenuItems();
+            ShowPanel(panelMenu);
         }
+
+        #endregion
+
+        #region Timer Tick Handlers
 
         private void timerOrderPreparing_Tick(object sender, EventArgs e)
         {
@@ -363,17 +402,6 @@ namespace ZeusPalace.Modules.Orders
             timerOrderPreparing.Start();
         }
 
-        private void buttonNewOrder_Click(object sender, EventArgs e)
-        {
-            controller.NewOrder();
-            buttonNextStep.TextLeft = "Συνέχεια";
-            buttonNextStep.TextRight = $"{controller.GetTotalPrice()} €";
-            buttonNextStep.Enabled = true;
-            buttonOrderCancel.Enabled = true;
-            buttonNewOrder.Visible = false;
-            DiscardPanel(activePanel);
-            PopulateMenuItems();
-            ShowPanel(panelMenu);
-        }
+        #endregion
     }
 }
