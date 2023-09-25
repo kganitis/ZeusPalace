@@ -152,7 +152,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1575, 746);
+            this.ClientSize = new System.Drawing.Size(1280, 660);
             this.Controls.Add(this.mainEntrancelabel);
             this.Controls.Add(this.firstLineHorsespictureBox);
             this.Controls.Add(this.pictureBox5);
