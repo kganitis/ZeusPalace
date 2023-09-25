@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Drawing;
+
 namespace ZeusPalace.Properties
 {
 
@@ -24,7 +26,8 @@ namespace ZeusPalace.Properties
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources
     {
-
+        internal static readonly Image horse_left2;
+        internal static readonly Image horse_right;
         private static global::System.Resources.ResourceManager resourceMan;
 
         private static global::System.Globalization.CultureInfo resourceCulture;

@@ -57,6 +57,12 @@
     <Compile Include="Modules\Devices\DevicesForm.Designer.cs">
       <DependentUpon>DevicesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Driving\GardensOfOlympus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Driving\GardensOfOlympus.Designer.cs">
+      <DependentUpon>GardensOfOlympus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\EmbeddedForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     <Compile Include="Entities\User\User.cs" />
     <EmbeddedResource Include="Modules\Devices\DevicesForm.resx">
       <DependentUpon>DevicesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Driving\GardensOfOlympus.resx">
+      <DependentUpon>GardensOfOlympus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\EmbeddedForm.resx">
       <DependentUpon>EmbeddedForm.cs</DependentUpon>
@@ -131,6 +140,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Modules\Driving\Pictures\eightHorses.png" />
+    <EmbeddedResource Include="Modules\Driving\Pictures\fourHorses.png" />
+    <EmbeddedResource Include="Modules\Driving\Pictures\Horses.png" />
+    <EmbeddedResource Include="Modules\Driving\Pictures\horse_left.png" />
+    <EmbeddedResource Include="Modules\Driving\Pictures\horse_left2.png" />
+    <EmbeddedResource Include="Modules\Driving\Pictures\horse_right.png" />
+    <EmbeddedResource Include="Modules\Driving\Pictures\nineHorses.png" />
+    <EmbeddedResource Include="Modules\Driving\Pictures\parking.png" />
+    <EmbeddedResource Include="Modules\Driving\Pictures\parking2.png" />
+    <EmbeddedResource Include="Modules\Driving\Pictures\parking3.png" />
+    <EmbeddedResource Include="Modules\Driving\Pictures\rightarrow.png" />
+    <EmbeddedResource Include="Modules\Driving\Pictures\sevenHorses.png" />
+    <EmbeddedResource Include="Modules\Driving\Pictures\sixHorses.png" />
+    <EmbeddedResource Include="Modules\Driving\Pictures\TenHorses.png" />
+    <EmbeddedResource Include="Modules\Driving\Pictures\TrajonArea.png" />
+    <EmbeddedResource Include="Modules\Driving\Pictures\trojanhorse.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

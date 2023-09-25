@@ -45,8 +45,9 @@
             this.panelMenu.Controls.Add(this.buttonDevices);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1264, 80);
+            this.panelMenu.Size = new System.Drawing.Size(1685, 98);
             this.panelMenu.TabIndex = 1;
             // 
             // buttonOrders
@@ -58,10 +59,11 @@
             this.buttonOrders.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOrders.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonOrders.Location = new System.Drawing.Point(948, 0);
+            this.buttonOrders.Location = new System.Drawing.Point(1263, 0);
+            this.buttonOrders.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOrders.Name = "buttonOrders";
-            this.buttonOrders.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.buttonOrders.Size = new System.Drawing.Size(316, 80);
+            this.buttonOrders.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.buttonOrders.Size = new System.Drawing.Size(421, 98);
             this.buttonOrders.TabIndex = 5;
             this.buttonOrders.Text = "Παραγγελίες";
             this.buttonOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -78,10 +80,11 @@
             this.buttonDriving.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDriving.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonDriving.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDriving.Location = new System.Drawing.Point(632, 0);
+            this.buttonDriving.Location = new System.Drawing.Point(842, 0);
+            this.buttonDriving.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonDriving.Name = "buttonDriving";
-            this.buttonDriving.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.buttonDriving.Size = new System.Drawing.Size(316, 80);
+            this.buttonDriving.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.buttonDriving.Size = new System.Drawing.Size(421, 98);
             this.buttonDriving.TabIndex = 4;
             this.buttonDriving.Text = "Οδήγηση";
             this.buttonDriving.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -98,10 +101,11 @@
             this.buttonPool.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPool.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonPool.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPool.Location = new System.Drawing.Point(316, 0);
+            this.buttonPool.Location = new System.Drawing.Point(421, 0);
+            this.buttonPool.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonPool.Name = "buttonPool";
-            this.buttonPool.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.buttonPool.Size = new System.Drawing.Size(316, 80);
+            this.buttonPool.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.buttonPool.Size = new System.Drawing.Size(421, 98);
             this.buttonPool.TabIndex = 3;
             this.buttonPool.Text = "Πισίνα";
             this.buttonPool.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -119,9 +123,10 @@
             this.buttonDevices.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonDevices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDevices.Location = new System.Drawing.Point(0, 0);
+            this.buttonDevices.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonDevices.Name = "buttonDevices";
-            this.buttonDevices.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.buttonDevices.Size = new System.Drawing.Size(316, 80);
+            this.buttonDevices.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.buttonDevices.Size = new System.Drawing.Size(421, 98);
             this.buttonDevices.TabIndex = 2;
             this.buttonDevices.Text = "Συσκευές";
             this.buttonDevices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -132,20 +137,23 @@
             // panelDesktopPane
             // 
             this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktopPane.Location = new System.Drawing.Point(0, 80);
+            this.panelDesktopPane.Location = new System.Drawing.Point(0, 98);
+            this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(1264, 601);
+            this.panelDesktopPane.Size = new System.Drawing.Size(1685, 740);
             this.panelDesktopPane.TabIndex = 2;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1685, 838);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Το Παλάτι του Δία";
             this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
