@@ -16,5 +16,7 @@ namespace ZeusPalace.Modules.Devices
         {
             InitializeComponent();
         }
+
     }
+
 }

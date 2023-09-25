@@ -94,6 +94,12 @@
     <Compile Include="Modules\Devices\DevicesForm.Designer.cs">
       <DependentUpon>DevicesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Devices\UserControls\ThermostatControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Devices\UserControls\ThermostatControls.Designer.cs">
+      <DependentUpon>ThermostatControls.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\EmbeddedForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +224,9 @@
     <Compile Include="Entities\User\User.cs" />
     <EmbeddedResource Include="Modules\Devices\DevicesForm.resx">
       <DependentUpon>DevicesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Devices\UserControls\ThermostatControls.resx">
+      <DependentUpon>ThermostatControls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\EmbeddedForm.resx">
       <DependentUpon>EmbeddedForm.cs</DependentUpon>
