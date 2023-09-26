@@ -37,36 +37,47 @@
             this.labelCurrency = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanelCustomer = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonPrivate = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.radioButtonAppartment = new System.Windows.Forms.RadioButton();
             this.radioButtonTrojanHorse = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.radioButtonEmployee1 = new System.Windows.Forms.RadioButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.radioButtonEmployee2 = new System.Windows.Forms.RadioButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.radioButtonEmployee3 = new System.Windows.Forms.RadioButton();
+            this.panelEmployee = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.radioButtonEmployee4 = new System.Windows.Forms.RadioButton();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.radioButtonEmployee3 = new System.Windows.Forms.RadioButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.radioButtonEmployee2 = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonEmployee = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.radioButtonPrivate = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
             this.buttonCustomer = new System.Windows.Forms.Button();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.labelUsernameValue = new System.Windows.Forms.Label();
+            this.labelAccNoValue = new System.Windows.Forms.Label();
+            this.labelAccNo = new System.Windows.Forms.Label();
+            this.labelFullnameError = new System.Windows.Forms.Label();
+            this.panelUserData = new System.Windows.Forms.Panel();
+            this.labelEmpPasswordValue = new System.Windows.Forms.Label();
+            this.labelEmpPassword = new System.Windows.Forms.Label();
+            this.labelEmpUsernameValue = new System.Windows.Forms.Label();
+            this.labelEmpUsername = new System.Windows.Forms.Label();
             this.tableLayoutPanelCustomer.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panelEmployee.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelUserData.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelFullname
@@ -175,14 +186,57 @@
             this.tableLayoutPanelCustomer.Size = new System.Drawing.Size(297, 192);
             this.tableLayoutPanelCustomer.TabIndex = 11;
             // 
-            // panel2
+            // panel4
             // 
-            this.panel2.Controls.Add(this.textBoxBalance);
-            this.panel2.Controls.Add(this.labelCurrency);
-            this.panel2.Location = new System.Drawing.Point(154, 96);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(70, 36);
-            this.panel2.TabIndex = 6;
+            this.panel4.Controls.Add(this.radioButton1);
+            this.panel4.Controls.Add(this.radioButtonPrivate);
+            this.panel4.Location = new System.Drawing.Point(154, 138);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(98, 50);
+            this.panel4.TabIndex = 17;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(3, 29);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(72, 17);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.Text = "Δημόσιος";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonPrivate
+            // 
+            this.radioButtonPrivate.AutoSize = true;
+            this.radioButtonPrivate.Checked = true;
+            this.radioButtonPrivate.Location = new System.Drawing.Point(3, 6);
+            this.radioButtonPrivate.Name = "radioButtonPrivate";
+            this.radioButtonPrivate.Size = new System.Drawing.Size(93, 17);
+            this.radioButtonPrivate.TabIndex = 0;
+            this.radioButtonPrivate.TabStop = true;
+            this.radioButtonPrivate.Text = "Καταλύματος";
+            this.radioButtonPrivate.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(145, 57);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Υπολογιστής σύνδεσης";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.radioButtonAppartment);
+            this.panel1.Controls.Add(this.radioButtonTrojanHorse);
+            this.panel1.Location = new System.Drawing.Point(154, 44);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(142, 46);
+            this.panel1.TabIndex = 12;
             // 
             // radioButtonAppartment
             // 
@@ -206,14 +260,14 @@
             this.radioButtonTrojanHorse.Text = "Δούρειος Ίππος";
             this.radioButtonTrojanHorse.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.Controls.Add(this.radioButtonAppartment);
-            this.panel1.Controls.Add(this.radioButtonTrojanHorse);
-            this.panel1.Location = new System.Drawing.Point(154, 44);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(142, 46);
-            this.panel1.TabIndex = 12;
+            this.panel2.Controls.Add(this.textBoxBalance);
+            this.panel2.Controls.Add(this.labelCurrency);
+            this.panel2.Location = new System.Drawing.Point(154, 96);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(70, 36);
+            this.panel2.TabIndex = 6;
             // 
             // label1
             // 
@@ -237,15 +291,6 @@
             this.label2.Text = "Επιλογή υπαλλήλου";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ZeusPalace.Properties.Resources.employee_woman;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 44);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // radioButtonEmployee1
             // 
             this.radioButtonEmployee1.AutoSize = true;
@@ -258,62 +303,24 @@
             this.radioButtonEmployee1.Text = "Περσεφόνη";
             this.radioButtonEmployee1.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // panelEmployee
             // 
-            this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Controls.Add(this.radioButtonEmployee4);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.radioButtonEmployee3);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.radioButtonEmployee2);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.radioButtonEmployee1);
-            this.panel3.Location = new System.Drawing.Point(384, 48);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(152, 195);
-            this.panel3.TabIndex = 15;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ZeusPalace.Properties.Resources.employee_woman;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 52);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(44, 44);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // radioButtonEmployee2
-            // 
-            this.radioButtonEmployee2.AutoSize = true;
-            this.radioButtonEmployee2.Location = new System.Drawing.Point(59, 68);
-            this.radioButtonEmployee2.Name = "radioButtonEmployee2";
-            this.radioButtonEmployee2.Size = new System.Drawing.Size(70, 17);
-            this.radioButtonEmployee2.TabIndex = 3;
-            this.radioButtonEmployee2.Text = "Αχιλλέας";
-            this.radioButtonEmployee2.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::ZeusPalace.Properties.Resources.employee_woman;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 100);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(44, 44);
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
-            // radioButtonEmployee3
-            // 
-            this.radioButtonEmployee3.AutoSize = true;
-            this.radioButtonEmployee3.Location = new System.Drawing.Point(59, 116);
-            this.radioButtonEmployee3.Name = "radioButtonEmployee3";
-            this.radioButtonEmployee3.Size = new System.Drawing.Size(69, 17);
-            this.radioButtonEmployee3.TabIndex = 5;
-            this.radioButtonEmployee3.Text = "Ασπασία";
-            this.radioButtonEmployee3.UseVisualStyleBackColor = true;
+            this.panelEmployee.Controls.Add(this.pictureBox4);
+            this.panelEmployee.Controls.Add(this.radioButtonEmployee4);
+            this.panelEmployee.Controls.Add(this.pictureBox3);
+            this.panelEmployee.Controls.Add(this.radioButtonEmployee3);
+            this.panelEmployee.Controls.Add(this.pictureBox2);
+            this.panelEmployee.Controls.Add(this.radioButtonEmployee2);
+            this.panelEmployee.Controls.Add(this.pictureBox1);
+            this.panelEmployee.Controls.Add(this.radioButtonEmployee1);
+            this.panelEmployee.Location = new System.Drawing.Point(384, 48);
+            this.panelEmployee.Name = "panelEmployee";
+            this.panelEmployee.Size = new System.Drawing.Size(152, 195);
+            this.panelEmployee.TabIndex = 15;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::ZeusPalace.Properties.Resources.employee_woman;
+            this.pictureBox4.Image = global::ZeusPalace.Properties.Resources.employee_man_2;
             this.pictureBox4.Location = new System.Drawing.Point(3, 148);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(44, 44);
@@ -330,6 +337,53 @@
             this.radioButtonEmployee4.Text = "Περικλής";
             this.radioButtonEmployee4.UseVisualStyleBackColor = true;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ZeusPalace.Properties.Resources.employee_woman_2;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 100);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(44, 44);
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
+            // radioButtonEmployee3
+            // 
+            this.radioButtonEmployee3.AutoSize = true;
+            this.radioButtonEmployee3.Location = new System.Drawing.Point(59, 116);
+            this.radioButtonEmployee3.Name = "radioButtonEmployee3";
+            this.radioButtonEmployee3.Size = new System.Drawing.Size(69, 17);
+            this.radioButtonEmployee3.TabIndex = 5;
+            this.radioButtonEmployee3.Text = "Ασπασία";
+            this.radioButtonEmployee3.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ZeusPalace.Properties.Resources.employee_man_1;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 52);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(44, 44);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // radioButtonEmployee2
+            // 
+            this.radioButtonEmployee2.AutoSize = true;
+            this.radioButtonEmployee2.Location = new System.Drawing.Point(59, 68);
+            this.radioButtonEmployee2.Name = "radioButtonEmployee2";
+            this.radioButtonEmployee2.Size = new System.Drawing.Size(70, 17);
+            this.radioButtonEmployee2.TabIndex = 3;
+            this.radioButtonEmployee2.Text = "Αχιλλέας";
+            this.radioButtonEmployee2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ZeusPalace.Properties.Resources.employee_woman_1;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(44, 44);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // buttonEmployee
             // 
             this.buttonEmployee.Location = new System.Drawing.Point(384, 277);
@@ -339,52 +393,9 @@
             this.buttonEmployee.Text = "Εκκίνηση ως υπάλληλος";
             this.buttonEmployee.UseVisualStyleBackColor = true;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.radioButton1);
-            this.panel4.Controls.Add(this.radioButtonPrivate);
-            this.panel4.Location = new System.Drawing.Point(154, 138);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(98, 50);
-            this.panel4.TabIndex = 17;
-            // 
-            // radioButtonPrivate
-            // 
-            this.radioButtonPrivate.AutoSize = true;
-            this.radioButtonPrivate.Checked = true;
-            this.radioButtonPrivate.Location = new System.Drawing.Point(3, 6);
-            this.radioButtonPrivate.Name = "radioButtonPrivate";
-            this.radioButtonPrivate.Size = new System.Drawing.Size(93, 17);
-            this.radioButtonPrivate.TabIndex = 0;
-            this.radioButtonPrivate.TabStop = true;
-            this.radioButtonPrivate.Text = "Καταλύματος";
-            this.radioButtonPrivate.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(3, 29);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(72, 17);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.Text = "Δημόσιος";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 135);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 57);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Υπολογιστής σύνδεσης";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // buttonCustomer
             // 
-            this.buttonCustomer.Location = new System.Drawing.Point(177, 277);
+            this.buttonCustomer.Location = new System.Drawing.Point(186, 277);
             this.buttonCustomer.Name = "buttonCustomer";
             this.buttonCustomer.Size = new System.Drawing.Size(152, 23);
             this.buttonCustomer.TabIndex = 17;
@@ -392,35 +403,153 @@
             this.buttonCustomer.UseVisualStyleBackColor = true;
             this.buttonCustomer.Click += new System.EventHandler(this.buttonCustomer_Click);
             // 
-            // AppController
+            // labelUsername
+            // 
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.ForeColor = System.Drawing.Color.Green;
+            this.labelUsername.Location = new System.Drawing.Point(1, 2);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(58, 13);
+            this.labelUsername.TabIndex = 18;
+            this.labelUsername.Text = "Username:";
+            this.labelUsername.Visible = false;
+            // 
+            // labelUsernameValue
+            // 
+            this.labelUsernameValue.AutoSize = true;
+            this.labelUsernameValue.ForeColor = System.Drawing.Color.Green;
+            this.labelUsernameValue.Location = new System.Drawing.Point(65, 2);
+            this.labelUsernameValue.Name = "labelUsernameValue";
+            this.labelUsernameValue.Size = new System.Drawing.Size(53, 13);
+            this.labelUsernameValue.TabIndex = 19;
+            this.labelUsernameValue.Text = "username";
+            this.labelUsernameValue.Visible = false;
+            // 
+            // labelAccNoValue
+            // 
+            this.labelAccNoValue.AutoSize = true;
+            this.labelAccNoValue.ForeColor = System.Drawing.Color.Green;
+            this.labelAccNoValue.Location = new System.Drawing.Point(65, 15);
+            this.labelAccNoValue.Name = "labelAccNoValue";
+            this.labelAccNoValue.Size = new System.Drawing.Size(25, 13);
+            this.labelAccNoValue.TabIndex = 21;
+            this.labelAccNoValue.Text = "000";
+            this.labelAccNoValue.Visible = false;
+            // 
+            // labelAccNo
+            // 
+            this.labelAccNo.AutoSize = true;
+            this.labelAccNo.ForeColor = System.Drawing.Color.Green;
+            this.labelAccNo.Location = new System.Drawing.Point(1, 15);
+            this.labelAccNo.Name = "labelAccNo";
+            this.labelAccNo.Size = new System.Drawing.Size(46, 13);
+            this.labelAccNo.TabIndex = 20;
+            this.labelAccNo.Text = "Acc. No";
+            this.labelAccNo.Visible = false;
+            // 
+            // labelFullnameError
+            // 
+            this.labelFullnameError.AutoSize = true;
+            this.labelFullnameError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(58)))), ((int)(((byte)(11)))));
+            this.labelFullnameError.Location = new System.Drawing.Point(185, 43);
+            this.labelFullnameError.Name = "labelFullnameError";
+            this.labelFullnameError.Size = new System.Drawing.Size(146, 13);
+            this.labelFullnameError.TabIndex = 22;
+            this.labelFullnameError.Text = "Format: \"Όνομα\" \"Επώνυμο\"";
+            this.labelFullnameError.Visible = false;
+            // 
+            // panelUserData
+            // 
+            this.panelUserData.Controls.Add(this.labelEmpPasswordValue);
+            this.panelUserData.Controls.Add(this.labelEmpPassword);
+            this.panelUserData.Controls.Add(this.labelEmpUsernameValue);
+            this.panelUserData.Controls.Add(this.labelEmpUsername);
+            this.panelUserData.Controls.Add(this.labelAccNoValue);
+            this.panelUserData.Controls.Add(this.labelAccNo);
+            this.panelUserData.Controls.Add(this.labelUsernameValue);
+            this.panelUserData.Controls.Add(this.labelUsername);
+            this.panelUserData.Location = new System.Drawing.Point(186, 245);
+            this.panelUserData.Name = "panelUserData";
+            this.panelUserData.Size = new System.Drawing.Size(349, 31);
+            this.panelUserData.TabIndex = 23;
+            // 
+            // labelEmpPasswordValue
+            // 
+            this.labelEmpPasswordValue.AutoSize = true;
+            this.labelEmpPasswordValue.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelEmpPasswordValue.Location = new System.Drawing.Point(262, 15);
+            this.labelEmpPasswordValue.Name = "labelEmpPasswordValue";
+            this.labelEmpPasswordValue.Size = new System.Drawing.Size(25, 13);
+            this.labelEmpPasswordValue.TabIndex = 25;
+            this.labelEmpPasswordValue.Text = "000";
+            this.labelEmpPasswordValue.Visible = false;
+            // 
+            // labelEmpPassword
+            // 
+            this.labelEmpPassword.AutoSize = true;
+            this.labelEmpPassword.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelEmpPassword.Location = new System.Drawing.Point(199, 15);
+            this.labelEmpPassword.Name = "labelEmpPassword";
+            this.labelEmpPassword.Size = new System.Drawing.Size(53, 13);
+            this.labelEmpPassword.TabIndex = 24;
+            this.labelEmpPassword.Text = "Password";
+            this.labelEmpPassword.Visible = false;
+            // 
+            // labelEmpUsernameValue
+            // 
+            this.labelEmpUsernameValue.AutoSize = true;
+            this.labelEmpUsernameValue.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelEmpUsernameValue.Location = new System.Drawing.Point(262, 2);
+            this.labelEmpUsernameValue.Name = "labelEmpUsernameValue";
+            this.labelEmpUsernameValue.Size = new System.Drawing.Size(53, 13);
+            this.labelEmpUsernameValue.TabIndex = 23;
+            this.labelEmpUsernameValue.Text = "username";
+            this.labelEmpUsernameValue.Visible = false;
+            // 
+            // labelEmpUsername
+            // 
+            this.labelEmpUsername.AutoSize = true;
+            this.labelEmpUsername.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelEmpUsername.Location = new System.Drawing.Point(198, 2);
+            this.labelEmpUsername.Name = "labelEmpUsername";
+            this.labelEmpUsername.Size = new System.Drawing.Size(58, 13);
+            this.labelEmpUsername.TabIndex = 22;
+            this.labelEmpUsername.Text = "Username:";
+            this.labelEmpUsername.Visible = false;
+            // 
+            // AppControllerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 321);
+            this.Controls.Add(this.panelUserData);
+            this.Controls.Add(this.labelFullnameError);
             this.Controls.Add(this.buttonCustomer);
             this.Controls.Add(this.buttonEmployee);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panelEmployee);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableLayoutPanelCustomer);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.labelTime);
-            this.Name = "AppController";
+            this.Name = "AppControllerForm";
             this.Text = "AppController";
             this.tableLayoutPanelCustomer.ResumeLayout(false);
             this.tableLayoutPanelCustomer.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panelEmployee.ResumeLayout(false);
+            this.panelEmployee.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelUserData.ResumeLayout(false);
+            this.panelUserData.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,7 +574,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RadioButton radioButtonEmployee1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelEmployee;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.RadioButton radioButtonEmployee4;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -458,5 +587,15 @@
         private System.Windows.Forms.RadioButton radioButtonPrivate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonCustomer;
+        private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.Label labelUsernameValue;
+        private System.Windows.Forms.Label labelAccNoValue;
+        private System.Windows.Forms.Label labelAccNo;
+        private System.Windows.Forms.Label labelFullnameError;
+        private System.Windows.Forms.Panel panelUserData;
+        private System.Windows.Forms.Label labelEmpPasswordValue;
+        private System.Windows.Forms.Label labelEmpPassword;
+        private System.Windows.Forms.Label labelEmpUsernameValue;
+        private System.Windows.Forms.Label labelEmpUsername;
     }
 }

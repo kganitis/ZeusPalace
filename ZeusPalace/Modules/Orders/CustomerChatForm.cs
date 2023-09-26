@@ -13,7 +13,8 @@ namespace ZeusPalace.Modules.Orders
         public CustomerChatForm()
         {
             InitializeComponent();
-            labelUsername.Text = "Περσεφόνη";
+            labelUsername.Text = AppController.Instance.Employee.Name;
+            pictureBoxEmployee.Image = AppController.Instance.Employee.Image;
         }
 
         public CustomerChatForm(string employeeName) : this()

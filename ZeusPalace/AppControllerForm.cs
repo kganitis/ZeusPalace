@@ -23,11 +23,66 @@ namespace ZeusPalace
 
         private void buttonCustomer_Click(object sender, EventArgs e)
         {
+            // Check for fullname errors
             string fullname = textBoxFullname.Text;
+            string[] nameParts = fullname.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            if (nameParts.Length < 2)
+            {
+                labelFullnameError.Visible = true;
+                return;
+            }
+            else
+            {
+                labelFullnameError.Visible = false;
+            }
+
+            // Create customer
             Accommodation accommodation = radioButtonAppartment.Checked ? new Apartment() : (Accommodation)new TrojanHorse();
             decimal initialBalance = ConvertStringToDecimal(textBoxBalance.Text);
-            AppController.Instance.Customer = new Customer(fullname, accommodation, initialBalance);
-            AppController.Instance.Time = ExtractTimeFromDateTimePicker();
+            Customer customer = new Customer(fullname, accommodation, initialBalance);
+            AppController appController = AppController.Instance;
+            appController.Customer = customer;
+            
+            // Create employee
+            string name;
+            Image image;
+            if (radioButtonEmployee1.Checked)
+            {
+                name = radioButtonEmployee1.Text;
+                image = pictureBox1.Image;
+            }
+            else if (radioButtonEmployee2.Checked)
+            {
+                name = radioButtonEmployee2.Text;
+                image = pictureBox2.Image;
+            }
+            else if (radioButtonEmployee3.Checked)
+            {
+                name = radioButtonEmployee3.Text;
+                image = pictureBox3.Image;
+            }
+            else
+            {
+                name = radioButtonEmployee4.Text;
+                image = pictureBox4.Image;
+            }
+            Employee employee = new Employee(name, image);
+            appController.Employee = employee;
+
+            // Set time
+            appController.Time = ExtractTimeFromDateTimePicker();
+
+            // Display user login data
+            labelUsernameValue.Text = GenerateUsernameFromGreekName(customer.Name);
+            labelAccNoValue.Text = customer.Accommodation.Id;
+            labelEmpUsernameValue.Text = ExtractFirstLetters(employee.Name);
+            labelEmpPasswordValue.Text = ExtractFirstLetters(employee.Name, 3);
+            foreach (Label label in panelUserData.Controls)
+            {
+                label.Visible = true;
+            }
+
+            // Start application
             if (mainForm != null )
             {
                 mainForm.Close();
@@ -76,7 +131,7 @@ namespace ZeusPalace
 
             if (nameParts.Length < 2)
             {
-                throw new ArgumentException("Invalid Greek full name. It should contain at least a first name and a last name.");
+                throw new ArgumentException("Invalid full name. It should contain at least a first name and a last name.");
             }
 
             // Initialize the StringBuilder for the username
@@ -85,7 +140,7 @@ namespace ZeusPalace
             foreach (string part in nameParts)
             {
                 // Extract the first 3 letters of each part
-                string extractedLetters = ExtractFirstThreeLetters(part);
+                string extractedLetters = ExtractFirstLetters(part, 5 - Math.Min(nameParts.Length, 4));
 
                 // Convert the extracted letters to Latin characters and append to the result
                 usernameBuilder.Append(ConvertToLatinCharacters(extractedLetters));
@@ -95,11 +150,11 @@ namespace ZeusPalace
         }
 
         // Extract the first 3 letters of a Greek part while handling special characters
-        private static string ExtractFirstThreeLetters(string greekPart)
+        private static string ExtractFirstLetters(string greekPart, int numberOfLetters = int.MaxValue)
         {
             StringBuilder extractedLetters = new StringBuilder();
 
-            for (int i = 0; i < Math.Min(3, greekPart.Length); i++)
+            for (int i = 0; i < Math.Min(numberOfLetters, greekPart.Length); i++)
             {
                 string currentChar = greekPart[i].ToString();
                 string convertedChar = ConvertToLatinCharacters(currentChar);
