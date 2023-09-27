@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZeusPalace.Modules;
 using ZeusPalace.Modules.Devices;
-using ZeusPalace.Modules.Pool;
+using ZeusPalace.Modules.PoolControl;
 using ZeusPalace.Modules.Driving;
 using ZeusPalace.Modules.Orders;
 

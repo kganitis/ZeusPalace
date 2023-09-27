@@ -16,6 +16,17 @@ namespace ZeusPalace
         public static Color TurquoiseGreen => Color.FromArgb(0, 188, 139);
         public static Color ControlGray => Color.FromArgb(201, 198, 191);
 
+        public static Color[] TemperatureColor = new Color[]
+        {
+            Color.FromArgb(51, 255, 255),    // Sky Blue
+            Color.FromArgb(51, 255, 153),    // Light Blue
+            Color.FromArgb(51, 255, 51),    // Cyan
+            Color.FromArgb(153, 255, 51),  // Light Green
+            Color.FromArgb(255, 255, 51),  // Pale Yellow
+            Color.FromArgb(255, 153, 51),  // Light Orange
+            Color.FromArgb(255, 51, 51)     // Strong Red
+        };
+
         public static Color GetShade(Color baseColor, int percent)
         {
             float scale = 1f - (percent / 100f);

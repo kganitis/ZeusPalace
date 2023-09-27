@@ -93,6 +93,8 @@
     <Compile Include="Entities\Order\OrderItem.cs" />
     <Compile Include="Entities\Order\OrderStatus.cs" />
     <Compile Include="Entities\Order\PaymentMethod.cs" />
+    <Compile Include="Entities\Pool\Pool.cs" />
+    <Compile Include="Entities\Pool\PoolType.cs" />
     <Compile Include="Entities\User\Customer.cs" />
     <Compile Include="Entities\User\Employee.cs" />
     <Compile Include="Modules\Devices\DevicesForm.cs">
@@ -207,11 +209,17 @@
     <Compile Include="Modules\Orders\UserControls\OrderPanelTableControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Pool\PoolForm.cs">
+    <Compile Include="Modules\PoolControl\PoolForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules\Pool\PoolForm.Designer.cs">
+    <Compile Include="Modules\PoolControl\PoolForm.Designer.cs">
       <DependentUpon>PoolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PoolControl\VerticalTemperatureProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\PoolControl\VerticalProgressbar.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -283,7 +291,7 @@
     <EmbeddedResource Include="Modules\Orders\UserControls\OrderPanelTableControl.resx">
       <DependentUpon>OrderPanelTableControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Pool\PoolForm.resx">
+    <EmbeddedResource Include="Modules\PoolControl\PoolForm.resx">
       <DependentUpon>PoolForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -337,5 +345,6 @@
   <ItemGroup>
     <None Include="Resources\employee-woman-2.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
