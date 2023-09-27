@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace ZeusPalace.Entities.Accommodation
 {
-    internal abstract class Accommodation
+    public abstract class Accommodation
     {
-        public string Id { get; set; }
+        public string Id;
         public abstract AccommodationType Type { get; }
+
+        protected static Random random = new Random();
+
+        public abstract string GenerateId();
     }
 }

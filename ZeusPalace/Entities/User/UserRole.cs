@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZeusPalace
 {
-    internal enum UserRole
+    public enum UserRole
     {
         Customer,
         Employee

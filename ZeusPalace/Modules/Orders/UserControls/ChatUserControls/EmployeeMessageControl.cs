@@ -16,6 +16,7 @@ namespace ZeusPalace.Modules.Orders.UserControls.ChatUserControls
         {
             InitializeComponent();
             Dock = DockStyle.Bottom;
+            pictureBoxEmployee.Image = AppController.Instance.Employee.Image;
         }
 
         public EmployeeMessageControl(string message) : this()
