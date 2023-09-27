@@ -60,8 +60,8 @@
             this.buttonCustomer = new System.Windows.Forms.Button();
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelUsernameValue = new System.Windows.Forms.Label();
-            this.labelAccNoValue = new System.Windows.Forms.Label();
-            this.labelAccNo = new System.Windows.Forms.Label();
+            this.labelPasswordValue = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
             this.labelFullnameError = new System.Windows.Forms.Label();
             this.panelUserData = new System.Windows.Forms.Panel();
             this.labelEmpPasswordValue = new System.Windows.Forms.Label();
@@ -273,7 +273,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(179, 20);
+            this.label1.Location = new System.Drawing.Point(184, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 16);
             this.label1.TabIndex = 12;
@@ -284,7 +284,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(381, 20);
+            this.label2.Location = new System.Drawing.Point(383, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 16);
             this.label2.TabIndex = 14;
@@ -297,10 +297,10 @@
             this.radioButtonEmployee1.Checked = true;
             this.radioButtonEmployee1.Location = new System.Drawing.Point(59, 19);
             this.radioButtonEmployee1.Name = "radioButtonEmployee1";
-            this.radioButtonEmployee1.Size = new System.Drawing.Size(83, 17);
+            this.radioButtonEmployee1.Size = new System.Drawing.Size(53, 17);
             this.radioButtonEmployee1.TabIndex = 1;
             this.radioButtonEmployee1.TabStop = true;
-            this.radioButtonEmployee1.Text = "Περσεφόνη";
+            this.radioButtonEmployee1.Text = "Κλειώ";
             this.radioButtonEmployee1.UseVisualStyleBackColor = true;
             // 
             // panelEmployee
@@ -370,9 +370,9 @@
             this.radioButtonEmployee2.AutoSize = true;
             this.radioButtonEmployee2.Location = new System.Drawing.Point(59, 68);
             this.radioButtonEmployee2.Name = "radioButtonEmployee2";
-            this.radioButtonEmployee2.Size = new System.Drawing.Size(70, 17);
+            this.radioButtonEmployee2.Size = new System.Drawing.Size(74, 17);
             this.radioButtonEmployee2.TabIndex = 3;
-            this.radioButtonEmployee2.Text = "Αχιλλέας";
+            this.radioButtonEmployee2.Text = "Λεωνίδας";
             this.radioButtonEmployee2.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
@@ -425,27 +425,27 @@
             this.labelUsernameValue.Text = "username";
             this.labelUsernameValue.Visible = false;
             // 
-            // labelAccNoValue
+            // labelPasswordValue
             // 
-            this.labelAccNoValue.AutoSize = true;
-            this.labelAccNoValue.ForeColor = System.Drawing.Color.Green;
-            this.labelAccNoValue.Location = new System.Drawing.Point(65, 15);
-            this.labelAccNoValue.Name = "labelAccNoValue";
-            this.labelAccNoValue.Size = new System.Drawing.Size(25, 13);
-            this.labelAccNoValue.TabIndex = 21;
-            this.labelAccNoValue.Text = "000";
-            this.labelAccNoValue.Visible = false;
+            this.labelPasswordValue.AutoSize = true;
+            this.labelPasswordValue.ForeColor = System.Drawing.Color.Green;
+            this.labelPasswordValue.Location = new System.Drawing.Point(65, 15);
+            this.labelPasswordValue.Name = "labelPasswordValue";
+            this.labelPasswordValue.Size = new System.Drawing.Size(25, 13);
+            this.labelPasswordValue.TabIndex = 21;
+            this.labelPasswordValue.Text = "000";
+            this.labelPasswordValue.Visible = false;
             // 
-            // labelAccNo
+            // labelPassword
             // 
-            this.labelAccNo.AutoSize = true;
-            this.labelAccNo.ForeColor = System.Drawing.Color.Green;
-            this.labelAccNo.Location = new System.Drawing.Point(1, 15);
-            this.labelAccNo.Name = "labelAccNo";
-            this.labelAccNo.Size = new System.Drawing.Size(46, 13);
-            this.labelAccNo.TabIndex = 20;
-            this.labelAccNo.Text = "Acc. No";
-            this.labelAccNo.Visible = false;
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.ForeColor = System.Drawing.Color.Green;
+            this.labelPassword.Location = new System.Drawing.Point(1, 15);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(56, 13);
+            this.labelPassword.TabIndex = 20;
+            this.labelPassword.Text = "Password:";
+            this.labelPassword.Visible = false;
             // 
             // labelFullnameError
             // 
@@ -464,8 +464,8 @@
             this.panelUserData.Controls.Add(this.labelEmpPassword);
             this.panelUserData.Controls.Add(this.labelEmpUsernameValue);
             this.panelUserData.Controls.Add(this.labelEmpUsername);
-            this.panelUserData.Controls.Add(this.labelAccNoValue);
-            this.panelUserData.Controls.Add(this.labelAccNo);
+            this.panelUserData.Controls.Add(this.labelPasswordValue);
+            this.panelUserData.Controls.Add(this.labelPassword);
             this.panelUserData.Controls.Add(this.labelUsernameValue);
             this.panelUserData.Controls.Add(this.labelUsername);
             this.panelUserData.Location = new System.Drawing.Point(186, 245);
@@ -589,8 +589,8 @@
         private System.Windows.Forms.Button buttonCustomer;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Label labelUsernameValue;
-        private System.Windows.Forms.Label labelAccNoValue;
-        private System.Windows.Forms.Label labelAccNo;
+        private System.Windows.Forms.Label labelPasswordValue;
+        private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelFullnameError;
         private System.Windows.Forms.Panel panelUserData;
         private System.Windows.Forms.Label labelEmpPasswordValue;

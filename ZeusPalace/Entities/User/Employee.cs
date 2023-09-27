@@ -16,6 +16,8 @@ namespace ZeusPalace
         public Employee(string name, Image image)
         {
             Name = name;
+            Username = ExtractFirstLetters(Name);
+            Password = ExtractFirstLetters(Name, 3);
             Image = image;
         }
     }

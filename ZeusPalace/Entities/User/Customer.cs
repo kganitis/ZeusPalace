@@ -17,13 +17,10 @@ namespace ZeusPalace
         public Customer(string name, Accommodation accommodation, decimal initialBalance=0)
         {
             Name = name;
+            Username = GenerateUsernameFromName(Name);
+            Password = accommodation.Id;
             Accommodation = accommodation;
             Balance = initialBalance;
-        }
-
-        public void AddToBalance(decimal amount)
-        {
-            Balance += amount;
         }
     }
 }
