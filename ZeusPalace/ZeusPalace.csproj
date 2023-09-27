@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>C:\Users\PX\source\repos\ZeusPalace\ZeusPalace\Pictures\horse_left2.png</Win32Resource>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -141,22 +144,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Modules\Driving\Pictures\eightHorses.png" />
-    <EmbeddedResource Include="Modules\Driving\Pictures\fourHorses.png" />
-    <EmbeddedResource Include="Modules\Driving\Pictures\Horses.png" />
-    <EmbeddedResource Include="Modules\Driving\Pictures\horse_left.png" />
-    <EmbeddedResource Include="Modules\Driving\Pictures\horse_left2.png" />
-    <EmbeddedResource Include="Modules\Driving\Pictures\horse_right.png" />
-    <EmbeddedResource Include="Modules\Driving\Pictures\nineHorses.png" />
-    <EmbeddedResource Include="Modules\Driving\Pictures\parking.png" />
-    <EmbeddedResource Include="Modules\Driving\Pictures\parking2.png" />
-    <EmbeddedResource Include="Modules\Driving\Pictures\parking3.png" />
-    <EmbeddedResource Include="Modules\Driving\Pictures\rightarrow.png" />
-    <EmbeddedResource Include="Modules\Driving\Pictures\sevenHorses.png" />
-    <EmbeddedResource Include="Modules\Driving\Pictures\sixHorses.png" />
-    <EmbeddedResource Include="Modules\Driving\Pictures\TenHorses.png" />
-    <EmbeddedResource Include="Modules\Driving\Pictures\TrajonArea.png" />
-    <EmbeddedResource Include="Modules\Driving\Pictures\trojanhorse.png" />
+    <EmbeddedResource Include="Properties\horse_left2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
