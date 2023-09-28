@@ -94,6 +94,12 @@
     <Compile Include="Modules\Devices\DevicesForm.Designer.cs">
       <DependentUpon>DevicesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Devices\UserControls\MusicControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Devices\UserControls\MusicControls.Designer.cs">
+      <DependentUpon>MusicControls.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Devices\UserControls\ThermostatControls.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     <EmbeddedResource Include="Modules\Devices\DevicesForm.resx">
       <DependentUpon>DevicesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Devices\UserControls\MusicControls.resx">
+      <DependentUpon>MusicControls.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Devices\UserControls\ThermostatControls.resx">
       <DependentUpon>ThermostatControls.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,6 +332,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\employee_woman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stopmusic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TakeOnMe.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

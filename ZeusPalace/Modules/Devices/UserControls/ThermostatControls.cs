@@ -15,29 +15,23 @@ namespace ZeusPalace.Modules.Devices.UserControls
         public ThermostatControls()
         {
             InitializeComponent();
-            temperature_label.Text = "22,0";
+            temperature_label.Text = "22,0 C";
         }
 
-        public int Quantity
+        public double Quantity = 22;
+        
+
+
+        private void btn_decr_temp_Click(object sender, EventArgs e)
         {
-            get { return int.Parse(temperature_label.Text); }
-            set
-            {
-                if (Quantity != value)
-                {
-                    temperature_label.Text = value.ToString();
-                }
-            }
+            Quantity -= 0.5;
+            temperature_label.Text = Quantity.ToString()+" C";
         }
 
         private void btn_icr_temp_Click(object sender, EventArgs e)
         {
-            Quantity++;
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-            Quantity--;
+            Quantity += 0.5;
+            temperature_label.Text = Quantity.ToString() + " C";
         }
     }
 }

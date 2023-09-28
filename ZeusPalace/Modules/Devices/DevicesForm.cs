@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZeusPalace.Modules.Devices.UserControls;
 
 namespace ZeusPalace.Modules.Devices
 {
@@ -15,7 +16,12 @@ namespace ZeusPalace.Modules.Devices
         public DevicesForm()
         {
             InitializeComponent();
+            /*ThermostatControls thermostat = new ThermostatControls();
+            panel1.Controls.Add(thermostat);*/
+            MusicControls music = new MusicControls();
+            panel1.Controls.Add(music);
         }
+       
 
     }
 
