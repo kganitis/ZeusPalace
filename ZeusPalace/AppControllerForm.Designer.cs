@@ -68,6 +68,7 @@
             this.labelEmpPassword = new System.Windows.Forms.Label();
             this.labelEmpUsernameValue = new System.Windows.Forms.Label();
             this.labelEmpUsername = new System.Windows.Forms.Label();
+            this.checkBoxPersonInPool = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanelCustomer.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -120,7 +121,7 @@
             // 
             this.labelTime.AutoSize = true;
             this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTime.Location = new System.Drawing.Point(35, 264);
+            this.labelTime.Location = new System.Drawing.Point(35, 283);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(33, 13);
             this.labelTime.TabIndex = 3;
@@ -157,10 +158,10 @@
             // dateTimePicker
             // 
             this.dateTimePicker.CustomFormat = "HH:mm";
-            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker.Location = new System.Drawing.Point(38, 280);
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker.Location = new System.Drawing.Point(76, 280);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(101, 20);
+            this.dateTimePicker.Size = new System.Drawing.Size(50, 20);
             this.dateTimePicker.TabIndex = 9;
             // 
             // tableLayoutPanelCustomer
@@ -517,11 +518,24 @@
             this.labelEmpUsername.Text = "Username:";
             this.labelEmpUsername.Visible = false;
             // 
+            // checkBoxPersonInPool
+            // 
+            this.checkBoxPersonInPool.AutoSize = true;
+            this.checkBoxPersonInPool.Location = new System.Drawing.Point(38, 321);
+            this.checkBoxPersonInPool.Name = "checkBoxPersonInPool";
+            this.checkBoxPersonInPool.Size = new System.Drawing.Size(121, 17);
+            this.checkBoxPersonInPool.TabIndex = 24;
+            this.checkBoxPersonInPool.Text = "Άτομα στην πισίνα";
+            this.checkBoxPersonInPool.UseVisualStyleBackColor = true;
+            this.checkBoxPersonInPool.Visible = false;
+            this.checkBoxPersonInPool.CheckedChanged += new System.EventHandler(this.checkBoxPersonInPool_CheckedChanged);
+            // 
             // AppControllerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 321);
+            this.ClientSize = new System.Drawing.Size(584, 350);
+            this.Controls.Add(this.checkBoxPersonInPool);
             this.Controls.Add(this.panelUserData);
             this.Controls.Add(this.labelFullnameError);
             this.Controls.Add(this.buttonCustomer);
@@ -597,5 +611,6 @@
         private System.Windows.Forms.Label labelEmpPassword;
         private System.Windows.Forms.Label labelEmpUsernameValue;
         private System.Windows.Forms.Label labelEmpUsername;
+        private System.Windows.Forms.CheckBox checkBoxPersonInPool;
     }
 }

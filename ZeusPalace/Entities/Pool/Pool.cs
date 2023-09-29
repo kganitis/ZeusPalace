@@ -42,8 +42,9 @@ namespace ZeusPalace.Entities.Pool
             }
         }
 
-        public bool SensorEnabled { get; set; }
-        public bool PersonInPool { get; set; }
-        public bool AlarmEnabled { get; set; }
+        public bool SensorEnabled { get; set; } = false;
+        public bool PersonInPool { get; set; } = false;
+        public bool AlarmEnabled { get; set; } = false;
+        public DateTime AlarmDeactivationTime { get; set; } = DateTime.MaxValue;
     }
 }

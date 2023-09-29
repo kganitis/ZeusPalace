@@ -18,9 +18,26 @@ namespace ZeusPalace
 {
     public partial class MainForm : Form
     {
+        public event EventHandler CurrentFormChanged;
+        private EmbeddedForm currentForm;
+        public EmbeddedForm CurrentForm
+        {
+            get { return currentForm; }
+            private set
+            {
+                currentForm = value;
+                currentForm.BringToFront();
+                currentForm.Show();
+                CurrentFormChanged?.Invoke(this, EventArgs.Empty);
+            }
+        }
+
         private readonly Dictionary<Type, EmbeddedForm> embeddedForms;
         private Button activeButton;
-        private Form activeForm;
+        private DevicesForm devicesForm;
+        private PoolForm poolForm;
+        private DrivingForm drivingForm;
+        private CustomerOrdersForm customerOrdersForm;
         private readonly Color defaultButtonBackColor;
         private readonly Font defaultButtonFont;
         private readonly Font activeButtonFont;
@@ -47,10 +64,14 @@ namespace ZeusPalace
 
         private void PreloadForms()
         {
-            embeddedForms.Add(typeof(DevicesForm), new DevicesForm());
-            embeddedForms.Add(typeof(PoolForm), new PoolForm());
-            embeddedForms.Add(typeof(DrivingForm), new DrivingForm());
-            embeddedForms.Add(typeof(CustomerOrdersForm), new CustomerOrdersForm());
+            devicesForm = new DevicesForm();
+            poolForm = new PoolForm();
+            drivingForm = new DrivingForm();
+            customerOrdersForm = new CustomerOrdersForm();
+            embeddedForms.Add(typeof(DevicesForm), devicesForm);
+            embeddedForms.Add(typeof(PoolForm), poolForm);
+            embeddedForms.Add(typeof(DrivingForm), drivingForm);
+            embeddedForms.Add(typeof(CustomerOrdersForm), customerOrdersForm);
             foreach (var embeddedForm in embeddedForms.Values)
             {
                 embeddedForm.TopLevel = false;
@@ -91,9 +112,7 @@ namespace ZeusPalace
         {
             DisableActiveButton();
             ActivateButton(btn);
-            activeForm = embeddedForm;
-            activeForm.BringToFront();
-            activeForm.Show();
+            CurrentForm = embeddedForm;
         }
 
         private void buttonApartment_Click(object sender, EventArgs e)
@@ -121,6 +140,11 @@ namespace ZeusPalace
         {
             Width = initialWidth;
             Height = initialHeight;
+        }
+
+        public void SetPersonInPool(bool personInPool)
+        {
+            poolForm.SetPersonInPool(personInPool);
         }
     }
 }

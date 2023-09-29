@@ -4,16 +4,24 @@ using System.Globalization;
 using System.Text;
 using System.Windows.Forms;
 using ZeusPalace.Entities.Accommodation;
+using ZeusPalace.Modules.PoolControl;
 
 namespace ZeusPalace
 {
     public partial class AppControllerForm : Form
     {
-        private MainForm mainForm;
+        AppController appController = AppController.Instance;
 
         public AppControllerForm()
         {
             InitializeComponent();
+            appController.CurrentFormChanged += AppController_CurrentFormChanged;
+            dateTimePicker.Value = DateTime.Now;
+        }
+
+        private void AppController_CurrentFormChanged(object sender, EventArgs e)
+        {
+            checkBoxPersonInPool.Visible = appController.CurrentForm.GetType() == typeof(PoolForm);
         }
 
         private void buttonCustomer_Click(object sender, EventArgs e)
@@ -35,7 +43,6 @@ namespace ZeusPalace
             Accommodation accommodation = radioButtonAppartment.Checked ? new Apartment() : (Accommodation)new TrojanHorse();
             decimal initialBalance = ConvertStringToDecimal(textBoxBalance.Text);
             Customer customer = new Customer(fullname, accommodation, initialBalance);
-            AppController appController = AppController.Instance;
             appController.Customer = customer;
             
             // Create employee
@@ -66,6 +73,7 @@ namespace ZeusPalace
 
             // Set time
             appController.Time = ExtractTimeFromDateTimePicker();
+            appController.DateTime = dateTimePicker.Value;
 
             // Display user login data
             labelUsernameValue.Text = customer.Username;
@@ -77,15 +85,7 @@ namespace ZeusPalace
                 label.Visible = true;
             }
 
-            // Start application
-            if (mainForm != null )
-            {
-                mainForm.Close();
-                mainForm.Dispose();
-                mainForm = null;
-            }
-            mainForm = new MainForm();
-            mainForm.Show();
+            appController.StartApplication();
         }
 
         public static decimal ConvertStringToDecimal(string input)
@@ -117,6 +117,11 @@ namespace ZeusPalace
             int timeAsInt = (hours * 100) + minutes;
 
             return timeAsInt;
+        }
+
+        private void checkBoxPersonInPool_CheckedChanged(object sender, EventArgs e)
+        {
+            appController.SetPersonInPool(checkBoxPersonInPool.Checked);
         }
     }
 }

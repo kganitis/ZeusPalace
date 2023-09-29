@@ -215,9 +215,6 @@
     <Compile Include="Modules\PoolControl\PoolForm.Designer.cs">
       <DependentUpon>PoolForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\PoolControl\VerticalTemperatureProgressBar.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Modules\PoolControl\VerticalProgressbar.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -296,14 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Modules\Driving\DrivingForm.resx">
       <DependentUpon>DrivingForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,6 +304,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -345,6 +342,29 @@
   <ItemGroup>
     <None Include="Resources\employee-woman-2.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\toggle-switch-off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggle-switch-on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sensor-on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sensor-off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm-off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm-on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swimmer.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
