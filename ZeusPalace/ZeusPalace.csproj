@@ -366,5 +366,8 @@
   <ItemGroup>
     <None Include="Resources\swimmer.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\alarm.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

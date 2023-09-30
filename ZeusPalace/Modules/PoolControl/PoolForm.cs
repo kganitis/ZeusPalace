@@ -3,12 +3,14 @@ using System.Windows.Forms;
 using System.Drawing;
 using ZeusPalace.Entities.Pool;
 using ZeusPalace.Properties;
+using System.Media;
 
 namespace ZeusPalace.Modules.PoolControl
 {
     public partial class PoolForm : EmbeddedForm
     {
         private Pool pool = new Pool();
+        private SoundPlayer soundPlayer;
 
         public PoolForm()
         {
@@ -25,6 +27,8 @@ namespace ZeusPalace.Modules.PoolControl
             pool.WaterLevel = verticalProgressBarWaterLevel.Value;
 
             UpdatePersonInPoolLocation();
+
+            soundPlayer = new SoundPlayer("..\\..\\Resources\\alarm.wav");
         }
 
         public PoolForm(Pool pool) : this()
@@ -67,10 +71,7 @@ namespace ZeusPalace.Modules.PoolControl
             labelAlarm.Visible = pool.SensorEnabled;
             if (pool.AlarmEnabled && !pool.SensorEnabled)
             {
-                pool.AlarmEnabled = false;
-                pictureBoxAlarmToggle.Image = Resources.toggle_switch_off;
-                pictureBoxAlarm.Image = Resources.alarm_off;
-                panelAlarmMode.Visible = false;
+                pictureBoxAlarmToggle_Click(sender, e);
             }
             pictureBoxSwimmer.Visible = pool.SensorEnabled && pool.PersonInPool;
         }
@@ -86,6 +87,7 @@ namespace ZeusPalace.Modules.PoolControl
             {
                 pictureBoxAlarmToggle.Image = Resources.toggle_switch_on;
                 pictureBoxAlarm.Image= Resources.alarm_on;
+                AlarmStop();
             }
             pool.AlarmEnabled = !pool.AlarmEnabled;
             panelAlarmMode.Visible = pool.AlarmEnabled;
@@ -95,11 +97,11 @@ namespace ZeusPalace.Modules.PoolControl
             }
             if (pool.AlarmEnabled && pool.PersonInPool)
             {
-                RingTheAlarm();
+                AlarmTrigger();
             }
         }
 
-        public void UpdateAlarmDeactivationtime()
+        private void UpdateAlarmDeactivationtime()
         {
             if (radioButtonEnabledUntil.Checked)
             {
@@ -119,15 +121,21 @@ namespace ZeusPalace.Modules.PoolControl
             trackBarWaterLevel.Enabled = !personInPool;
             trackBarTemperature.Enabled = !personInPool;
             labelTrackBarWarning.Visible = personInPool;
+            AlarmStop();
             if (pool.AlarmEnabled && personInPool)
             {
-                RingTheAlarm();
+                AlarmTrigger();
             }
         }
 
-        public void RingTheAlarm()
+        private void AlarmTrigger()
         {
-            // play sound
+            soundPlayer.PlayLooping();
+        }
+
+        private void AlarmStop()
+        {
+            soundPlayer.Stop();
         }
 
         private void UpdatePersonInPoolLocation()

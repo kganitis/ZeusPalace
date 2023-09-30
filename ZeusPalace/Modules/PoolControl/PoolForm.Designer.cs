@@ -144,7 +144,7 @@
             this.labelTemperature.Name = "labelTemperature";
             this.labelTemperature.Size = new System.Drawing.Size(35, 13);
             this.labelTemperature.TabIndex = 7;
-            this.labelTemperature.Text = "31 oC";
+            this.labelTemperature.Text = "28 oC";
             // 
             // labelSensor
             // 
