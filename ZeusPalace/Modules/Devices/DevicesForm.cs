@@ -16,10 +16,12 @@ namespace ZeusPalace.Modules.Devices
         public DevicesForm()
         {
             InitializeComponent();
-            /*ThermostatControls thermostat = new ThermostatControls();
-            panel1.Controls.Add(thermostat);*/
+            ThermostatControls thermostat = new ThermostatControls();
+            flowLayoutPanel1.Controls.Add(thermostat);
             MusicControls music = new MusicControls();
-            panel1.Controls.Add(music);
+            flowLayoutPanel1.Controls.Add(music);
+            TvControls tvControls = new TvControls();
+            flowLayoutPanel1.Controls.Add(tvControls);
         }
        
 

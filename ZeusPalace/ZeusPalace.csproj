@@ -378,5 +378,8 @@
   <ItemGroup>
     <None Include="Resources\tv_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tvremote_off.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
