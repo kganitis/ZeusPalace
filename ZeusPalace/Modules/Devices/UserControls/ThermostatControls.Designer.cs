@@ -31,8 +31,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.thermostat_label = new System.Windows.Forms.Label();
             this.btn_icr_temp = new System.Windows.Forms.Button();
-            this.btn_decr_temp = new System.Windows.Forms.Button();
             this.temperature_label = new System.Windows.Forms.Label();
+            this.btn_decr_temp = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             this.thermostat_label.Name = "thermostat_label";
             this.thermostat_label.Size = new System.Drawing.Size(169, 43);
             this.thermostat_label.TabIndex = 0;
-            this.thermostat_label.Text = "Θερμοκρασία";
+            this.thermostat_label.Text = "Θερμοκρασία ";
             this.thermostat_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_icr_temp
@@ -79,6 +79,15 @@
             this.btn_icr_temp.UseVisualStyleBackColor = true;
             this.btn_icr_temp.Click += new System.EventHandler(this.btn_icr_temp_Click);
             // 
+            // temperature_label
+            // 
+            this.temperature_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.temperature_label.Location = new System.Drawing.Point(226, 0);
+            this.temperature_label.Name = "temperature_label";
+            this.temperature_label.Size = new System.Drawing.Size(101, 43);
+            this.temperature_label.TabIndex = 6;
+            this.temperature_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btn_decr_temp
             // 
             this.btn_decr_temp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
@@ -90,19 +99,11 @@
             this.btn_decr_temp.UseVisualStyleBackColor = true;
             this.btn_decr_temp.Click += new System.EventHandler(this.btn_decr_temp_Click);
             // 
-            // temperature_label
-            // 
-            this.temperature_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.temperature_label.Location = new System.Drawing.Point(226, 0);
-            this.temperature_label.Name = "temperature_label";
-            this.temperature_label.Size = new System.Drawing.Size(101, 43);
-            this.temperature_label.TabIndex = 6;
-            this.temperature_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // ThermostatControls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThermostatControls";

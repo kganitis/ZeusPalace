@@ -14,7 +14,7 @@ namespace ZeusPalace.Modules.Devices.UserControls
 {
     public partial class MusicControls : UserControl
     {        
-        SoundPlayer MyPlayer = new SoundPlayer("..\\..\\Resources\\TakeOnMe.wav");
+        SoundPlayer MyPlayer = new SoundPlayer("..\\..\\Resources\\harp_music.wav");
         public MusicControls()
         {
             InitializeComponent();

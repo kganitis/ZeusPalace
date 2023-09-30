@@ -106,6 +106,12 @@
     <Compile Include="Modules\Devices\UserControls\ThermostatControls.Designer.cs">
       <DependentUpon>ThermostatControls.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Devices\UserControls\TvControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Devices\UserControls\TvControls.Designer.cs">
+      <DependentUpon>TvControls.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\EmbeddedForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +243,9 @@
     <EmbeddedResource Include="Modules\Devices\UserControls\ThermostatControls.resx">
       <DependentUpon>ThermostatControls.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Devices\UserControls\TvControls.resx">
+      <DependentUpon>TvControls.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\EmbeddedForm.resx">
       <DependentUpon>EmbeddedForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -347,6 +356,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TakeOnMe.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\harp_music.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\harp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ancient_suite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\symbol_zeus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\symbol_zeus1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\omega.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tv_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

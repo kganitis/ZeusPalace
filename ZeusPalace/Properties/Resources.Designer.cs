@@ -63,10 +63,39 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ancient_suite {
+            get {
+                object obj = ResourceManager.GetObject("ancient_suite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap employee_woman {
             get {
                 object obj = ResourceManager.GetObject("employee_woman", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap harp {
+            get {
+                object obj = ResourceManager.GetObject("harp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream harp_music {
+            get {
+                return ResourceManager.GetStream("harp_music", resourceCulture);
             }
         }
         
@@ -131,11 +160,22 @@ namespace ZeusPalace.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream TakeOnMe {
+        internal static System.Drawing.Bitmap symbol_zeus {
             get {
-                return ResourceManager.GetStream("TakeOnMe", resourceCulture);
+                object obj = ResourceManager.GetObject("symbol_zeus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tv_icon {
+            get {
+                object obj = ResourceManager.GetObject("tv_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

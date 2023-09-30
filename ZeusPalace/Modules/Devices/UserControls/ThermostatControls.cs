@@ -24,13 +24,27 @@ namespace ZeusPalace.Modules.Devices.UserControls
 
         private void btn_decr_temp_Click(object sender, EventArgs e)
         {
-            Quantity -= 0.5;
-            temperature_label.Text = Quantity.ToString()+" C";
+            if (Quantity <= 16)
+            {
+                Quantity = 16;
+            }
+            else
+            {
+                Quantity -= 0.5;
+            }
+            temperature_label.Text = Quantity.ToString() + " C";
         }
 
         private void btn_icr_temp_Click(object sender, EventArgs e)
         {
-            Quantity += 0.5;
+            if (Quantity >= 30)
+            {
+                Quantity = 30;
+            }
+            else
+            {
+                Quantity += 0.5;
+            }
             temperature_label.Text = Quantity.ToString() + " C";
         }
     }
