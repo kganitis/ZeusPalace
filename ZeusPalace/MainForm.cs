@@ -13,6 +13,7 @@ using ZeusPalace.Modules.Devices;
 using ZeusPalace.Modules.PoolControl;
 using ZeusPalace.Modules.Driving;
 using ZeusPalace.Modules.Orders;
+using ZeusPalace.Entities.Pool;
 
 namespace ZeusPalace
 {

@@ -31,9 +31,8 @@ namespace ZeusPalace.Modules.Orders
         private CustomerChatForm customerChat;
         private EmployeeOrdersForm employeeOrdersForm;
 
-        // external data, hardcoded for testing, TO DO auto-retrieval
         private Customer customer = AppController.Instance.Customer;
-        private int currentTime = AppController.Instance.Time;
+        private int currentTime = AppController.Instance.TimeAsInt();
 
         private EmployeeOrdersForm EmployeeOrdersForm
         {

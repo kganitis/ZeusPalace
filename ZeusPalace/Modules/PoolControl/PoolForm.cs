@@ -15,141 +15,195 @@ namespace ZeusPalace.Modules.PoolControl
         public PoolForm()
         {
             InitializeComponent();
-
-            // Update timerPickerAlarmOff to next occurrence of 7am by default
-            DateTime dt = AppController.Instance.DateTime;
-            DateTime next7am = new DateTime(dt.Year, dt.Month, dt.Day, 7, 0, 0);
-            if (dt >= next7am)
-            {
-                next7am = next7am.AddDays(1);
-            }
-            timePickerAlarmOff.Value = next7am;
-            pool.WaterLevel = verticalProgressBarWaterLevel.Value;
-
-            UpdatePersonInPoolLocation();
-
-            soundPlayer = new SoundPlayer("..\\..\\Resources\\alarm.wav");
+            AppController.Instance.TimeChanged += Instance_TimeChanged;
+            InitializeUI();
         }
 
-        public PoolForm(Pool pool) : this()
+        private void Instance_TimeChanged(object sender, EventArgs e)
         {
-            this.pool = pool;
-            labelTitle.Text = pool.Type == PoolType.Private ? "Ιδιωτική πισίνα" : "Κεντρική πισίνα";
+            if (pool.AlarmEnabled)
+            {
+                if (AppController.Instance.DateTime >= pool.AlarmDeactivationTime)
+                {
+                    pool.AlarmEnabled = false;
+                    UpdateUI();
+                }
+            }
+        }
+
+        private void InitializeUI()
+        {
+            //
+            // Title
+            //
+            PoolType poolType = AppController.Instance.ComputerType == ComputerType.PublicPool ? PoolType.Public : PoolType.Private;
+            labelTitle.Text = poolType == PoolType.Private ? "Ιδιωτική πισίνα" : "Κεντρική πισίνα";
             AlignLabelToCenter(labelTitle, panelTitle);
+
+            //
+            // Soundplayer
+            //
+            soundPlayer = new SoundPlayer("..\\..\\Resources\\alarm.wav");
+            //soundPlayer = new SoundPlayer() { Stream = Resources.alarm1 };
+
+            //
+            // TrackBars
+            //
+            trackBarWaterLevel.Value = pool.WaterLevel;
+            trackBarTemperatureLevel.Value = pool.TemperatureLevel;
+
+            //
+            // Update timerPickerAlarmOff to next occurrence of 7am by default
+            //
+            timePickerAlarmOff.Value = NextOccurrenceOfTime(7, 0);
+
+            UpdateUI();
         }
 
-        private void trackBarWaterLevel_Scroll(object sender, EventArgs e)
+        private DateTime NextOccurrenceOfTime(int hours, int minutes)
         {
-            verticalProgressBarWaterLevel.Value = trackBarWaterLevel.Value;
-            labelWaterLevel.Text = trackBarWaterLevel.Value + " cm";
-            pool.WaterLevel = verticalProgressBarWaterLevel.Value;
-        }
+            hours = Math.Max(0, Math.Min(23, hours));
+            minutes = Math.Max(0, Math.Min(59, minutes));
 
-        private void trackBarTemperature_Scroll(object sender, EventArgs e)
-        {
-            verticalProgressBarTemperature.Value = trackBarTemperature.Value;
-            verticalProgressBarTemperature.ProgressBarColor = ColorPicker.TemperatureColor[verticalProgressBarTemperature.Value - 1];
-            labelTemperature.Text = trackBarTemperature.Value + pool.MinTemperature - 1 + " oC";
-            pool.Temperature = verticalProgressBarTemperature.Value + pool.MinTemperature - 1;
-        }
-
-        private void pictureBoxSensorToggle_Click(object sender, EventArgs e)
-        {
-            if (pool.SensorEnabled)
+            DateTime now = AppController.Instance.DateTime;
+            DateTime nextOccurrence = new DateTime(now.Year, now.Month, now.Day, hours, minutes, 0);
+            if (now >= nextOccurrence)
             {
-                pictureBoxSensorToggle.Image = Resources.toggle_switch_off;
-                pictureBoxSensor.Image = Resources.sensor_off;
+                nextOccurrence = nextOccurrence.AddDays(1);
             }
-            else
-            {
-                pictureBoxSensorToggle.Image = Resources.toggle_switch_on;
-                pictureBoxSensor.Image = Resources.sensor_on;
-            }
-            pool.SensorEnabled = !pool.SensorEnabled;
-            pictureBoxAlarm.Visible = pool.SensorEnabled;
-            pictureBoxAlarmToggle.Visible = pool.SensorEnabled;
-            labelAlarm.Visible = pool.SensorEnabled;
-            if (pool.AlarmEnabled && !pool.SensorEnabled)
-            {
-                pictureBoxAlarmToggle_Click(sender, e);
-            }
-            pictureBoxSwimmer.Visible = pool.SensorEnabled && pool.PersonInPool;
-        }
-
-        private void pictureBoxAlarmToggle_Click(object sender, EventArgs e)
-        {
-            if (pool.AlarmEnabled)
-            {
-                pictureBoxAlarmToggle.Image = Resources.toggle_switch_off;
-                pictureBoxAlarm.Image = Resources.alarm_off;
-            }
-            else
-            {
-                pictureBoxAlarmToggle.Image = Resources.toggle_switch_on;
-                pictureBoxAlarm.Image= Resources.alarm_on;
-                AlarmStop();
-            }
-            pool.AlarmEnabled = !pool.AlarmEnabled;
-            panelAlarmMode.Visible = pool.AlarmEnabled;
-            if (pool.AlarmEnabled)
-            {
-                UpdateAlarmDeactivationtime();
-            }
-            if (pool.AlarmEnabled && pool.PersonInPool)
-            {
-                AlarmTrigger();
-            }
-        }
-
-        private void UpdateAlarmDeactivationtime()
-        {
-            if (radioButtonEnabledUntil.Checked)
-            {
-                pool.AlarmDeactivationTime = timePickerAlarmOff.Value;
-            }
-            else
-            {
-                pool.AlarmDeactivationTime = DateTime.MaxValue;
-            }
+            return nextOccurrence;
         }
 
         public void SetPersonInPool(bool personInPool)
         {
             pool.PersonInPool = personInPool;
-            UpdatePersonInPoolLocation();
-            pictureBoxSwimmer.Visible = personInPool && pool.SensorEnabled;
-            trackBarWaterLevel.Enabled = !personInPool;
-            trackBarTemperature.Enabled = !personInPool;
-            labelTrackBarWarning.Visible = personInPool;
-            AlarmStop();
-            if (pool.AlarmEnabled && personInPool)
+            UpdateUI();
+        }
+
+        private void UpdateUI()
+        {
+            //
+            // Water Level
+            //
+            trackBarWaterLevel.Enabled = !(pool.SensorEnabled && pool.PersonInPool);
+            verticalProgressBarWaterLevel.Value = pool.WaterLevel;
+            labelWaterLevel.Text = $"{pool.WaterLevel} cm";
+
+            //
+            // TemperatureLevel
+            //
+            trackBarTemperatureLevel.Enabled = !(pool.SensorEnabled && pool.PersonInPool);
+            verticalProgressBarTemperature.Value = pool.TemperatureLevel;
+            verticalProgressBarTemperature.ProgressBarColor = ColorPicker.TemperatureColor[pool.TemperatureLevel - 1];
+            labelTemperature.Text = $"{pool.Temperature} oC";
+
+            //
+            // Warnings
+            //
+            panelPoolUsedWarning.Visible = labelTrackBarWarning.Visible = pool.SensorEnabled && pool.PersonInPool;
+
+            //
+            // Sensor
+            //
+            pictureBoxSensor.Image = pool.SensorEnabled ? Resources.sensor_on : Resources.sensor_off;
+            pictureBoxSensorToggle.Image = pool.SensorEnabled ? Resources.toggle_switch_on : Resources.toggle_switch_off;
+
+            //
+            // Alarm
+            //
+            panelAlarm.Visible = pool.SensorEnabled;
+            pictureBoxAlarm.Image = pool.AlarmEnabled ? Resources.alarm_on : Resources.alarm_off;
+            pictureBoxAlarmToggle.Image = pool.AlarmEnabled ? Resources.toggle_switch_on : Resources.toggle_switch_off;
+            panelAlarmMode.Visible = pool.AlarmEnabled;
+            timePickerAlarmOff.Enabled = pool.AlarmEnabled && radioButtonEnabledUntil.Checked;
+            if (timePickerAlarmOff.Enabled) timePickerAlarmOff.Value = pool.AlarmDeactivationTime;
+
+            //
+            // Alarm Triggering
+            //
+            if (pool.AlarmTriggered)
             {
-                AlarmTrigger();
+                soundPlayer.PlayLooping();
+                panelAlarmTrigger.Visible = true;
             }
-        }
+            else
+            {
+                soundPlayer.Stop();
+                panelAlarmTrigger.Visible = false;
+            }
 
-        private void AlarmTrigger()
-        {
-            soundPlayer.PlayLooping();
-        }
-
-        private void AlarmStop()
-        {
-            soundPlayer.Stop();
+            //
+            // Person In Pool
+            //
+            pictureBoxSwimmer.Visible = pool.SensorEnabled && pool.PersonInPool;
+            if (pictureBoxSwimmer.Visible) UpdatePersonInPoolLocation();
         }
 
         private void UpdatePersonInPoolLocation()
         {
-            int filledHeight = (int)(verticalProgressBarWaterLevel.Height * ((double)verticalProgressBarWaterLevel.Value / verticalProgressBarWaterLevel.Maximum));
-            int progressBarY = verticalProgressBarWaterLevel.Location.Y + (verticalProgressBarWaterLevel.Height - filledHeight);
-            int swimmerX = verticalProgressBarWaterLevel.Location.X + (verticalProgressBarWaterLevel.Width - pictureBoxSwimmer.Width) / 2;
-            int swimmerY = progressBarY - 15;
-            pictureBoxSwimmer.Location = new Point(swimmerX, swimmerY);
+            if (pictureBoxSwimmer.Visible)
+            {
+                int filledHeight = (int)(verticalProgressBarWaterLevel.Height * ((double)verticalProgressBarWaterLevel.Value / verticalProgressBarWaterLevel.Maximum));
+                int progressBarY = verticalProgressBarWaterLevel.Location.Y + (verticalProgressBarWaterLevel.Height - filledHeight);
+                int swimmerX = verticalProgressBarWaterLevel.Location.X + (verticalProgressBarWaterLevel.Width - pictureBoxSwimmer.Width) / 2;
+                int swimmerY = progressBarY - 15;
+                pictureBoxSwimmer.Location = new Point(swimmerX, swimmerY);
+            }
         }
 
-        private void radioButtonAlarmEnabled_CheckedChanged(object sender, EventArgs e)
+        private void trackBarWaterLevel_Scroll(object sender, EventArgs e)
         {
-            UpdateAlarmDeactivationtime();
+            pool.WaterLevel = trackBarWaterLevel.Value;
+            UpdateUI();
+        }
+
+        private void trackBarTemperatureLevel_Scroll(object sender, EventArgs e)
+        {
+            pool.TemperatureLevel = trackBarTemperatureLevel.Value;
+            UpdateUI();
+        }
+
+        private void pictureBoxSensorToggle_Click(object sender, EventArgs e)
+        {
+            pool.SensorEnabled = !pool.SensorEnabled;
+            if (pool.AlarmEnabled) pool.AlarmEnabled = false;
+            UpdateUI();
+        }
+
+        private void pictureBoxAlarmToggle_Click(object sender, EventArgs e)
+        {
+            pool.AlarmEnabled = !pool.AlarmEnabled;
+            UpdateAlarmDeactivationTime();
+            UpdateUI();
+        }
+
+        private void radioButtonAlarmMode_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pool.AlarmEnabled)
+            {
+                if (radioButtonEnabledUntil.Checked)
+                {
+                    UpdateAlarmDeactivationTime();
+                }
+                else
+                {
+                    pool.AlarmDeactivationTime = DateTime.MaxValue;
+                }
+            }
+            UpdateUI();
+        }
+
+        private void timePickerAlarmOff_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateAlarmDeactivationTime();
+            UpdateUI();
+        }
+
+        private void UpdateAlarmDeactivationTime()
+        {
+            int hours = timePickerAlarmOff.Value.Hour;
+            int minutes = timePickerAlarmOff.Value.Minute;
+            pool.AlarmDeactivationTime = NextOccurrenceOfTime(hours, minutes);
         }
     }
 }

@@ -21,10 +21,42 @@ namespace ZeusPalace
 
         private void AppController_CurrentFormChanged(object sender, EventArgs e)
         {
-            checkBoxPersonInPool.Visible = appController.CurrentForm.GetType() == typeof(PoolForm);
+            checkBoxPersonInPool.Enabled = appController.CurrentForm.GetType() == typeof(PoolForm);
         }
 
         private void buttonCustomer_Click(object sender, EventArgs e)
+        {
+            InitializeAppControllerData();
+            appController.User = appController.Customer;
+            
+            // Display user login data
+            labelUsernameValue.Text = appController.User.Username;
+            labelPasswordValue.Text = appController.User.Password;
+            labelUsername.Visible = true;
+            labelPassword.Visible = true;
+            labelUsernameValue.Visible = true;
+            labelPasswordValue.Visible = true;
+
+            appController.StartApplication();
+        }
+
+        private void buttonEmployee_Click(object sender, EventArgs e)
+        {
+            InitializeAppControllerData();
+            appController.User = appController.Employee;
+
+            // Display user login data
+            labelEmpUsernameValue.Text = appController.User.Username;
+            labelEmpPasswordValue.Text = appController.User.Password;
+            labelEmpUsername.Visible = true;
+            labelEmpPassword.Visible = true;
+            labelEmpUsernameValue.Visible = true;
+            labelEmpPasswordValue.Visible = true;
+
+            appController.StartApplication();
+        }
+
+        private void InitializeAppControllerData()
         {
             // Check for fullname errors
             string fullname = textBoxFullname.Text;
@@ -44,7 +76,7 @@ namespace ZeusPalace
             decimal initialBalance = ConvertStringToDecimal(textBoxBalance.Text);
             Customer customer = new Customer(fullname, accommodation, initialBalance);
             appController.Customer = customer;
-            
+
             // Create employee
             string name;
             Image image;
@@ -71,21 +103,21 @@ namespace ZeusPalace
             Employee employee = new Employee(name, image);
             appController.Employee = employee;
 
-            // Set time
-            appController.Time = ExtractTimeFromDateTimePicker();
-            appController.DateTime = dateTimePicker.Value;
-
-            // Display user login data
-            labelUsernameValue.Text = customer.Username;
-            labelPasswordValue.Text = customer.Password;
-            labelEmpUsernameValue.Text = employee.Username;
-            labelEmpPasswordValue.Text = employee.Password;
-            foreach (Label label in panelUserData.Controls)
+            // Set computer type
+            if (radioButtonPrivate.Checked)
             {
-                label.Visible = true;
+                appController.ComputerType = ComputerType.Private;
+            }
+            else if (radioButtonPublic.Checked)
+            {
+                appController.ComputerType = ComputerType.Public;
+            }
+            else
+            {
+                appController.ComputerType = ComputerType.PublicPool;
             }
 
-            appController.StartApplication();
+            appController.DateTime = dateTimePicker.Value;
         }
 
         public static decimal ConvertStringToDecimal(string input)
@@ -110,18 +142,19 @@ namespace ZeusPalace
             }
         }
 
-        public int ExtractTimeFromDateTimePicker()
-        {
-            int hours = dateTimePicker.Value.Hour;
-            int minutes = dateTimePicker.Value.Minute;
-            int timeAsInt = (hours * 100) + minutes;
-
-            return timeAsInt;
-        }
-
         private void checkBoxPersonInPool_CheckedChanged(object sender, EventArgs e)
         {
             appController.SetPersonInPool(checkBoxPersonInPool.Checked);
+        }
+
+        private void radioButtonPublicPool_CheckedChanged(object sender, EventArgs e)
+        {
+            buttonCustomer.Enabled = !radioButtonPublicPool.Checked;
+        }
+
+        private void buttonRefreshTime_Click(object sender, EventArgs e)
+        {
+            appController.DateTime = dateTimePicker.Value;
         }
     }
 }

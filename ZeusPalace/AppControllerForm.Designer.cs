@@ -37,11 +37,12 @@
             this.labelCurrency = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanelCustomer = new System.Windows.Forms.TableLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.panelLoginComputer = new System.Windows.Forms.Panel();
+            this.radioButtonPublicPool = new System.Windows.Forms.RadioButton();
+            this.radioButtonPublic = new System.Windows.Forms.RadioButton();
             this.radioButtonPrivate = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelAccommodationType = new System.Windows.Forms.Panel();
             this.radioButtonAppartment = new System.Windows.Forms.RadioButton();
             this.radioButtonTrojanHorse = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -69,9 +70,10 @@
             this.labelEmpUsernameValue = new System.Windows.Forms.Label();
             this.labelEmpUsername = new System.Windows.Forms.Label();
             this.checkBoxPersonInPool = new System.Windows.Forms.CheckBox();
+            this.buttonRefreshTime = new System.Windows.Forms.Button();
             this.tableLayoutPanelCustomer.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelLoginComputer.SuspendLayout();
+            this.panelAccommodationType.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -88,7 +90,7 @@
             this.labelFullname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFullname.Location = new System.Drawing.Point(3, 0);
             this.labelFullname.Name = "labelFullname";
-            this.labelFullname.Size = new System.Drawing.Size(145, 41);
+            this.labelFullname.Size = new System.Drawing.Size(145, 30);
             this.labelFullname.TabIndex = 0;
             this.labelFullname.Text = "Ονοματεπώνυμο";
             this.labelFullname.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -98,9 +100,9 @@
             this.labelInitialBalance.AutoSize = true;
             this.labelInitialBalance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelInitialBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInitialBalance.Location = new System.Drawing.Point(3, 93);
+            this.labelInitialBalance.Location = new System.Drawing.Point(3, 82);
             this.labelInitialBalance.Name = "labelInitialBalance";
-            this.labelInitialBalance.Size = new System.Drawing.Size(145, 42);
+            this.labelInitialBalance.Size = new System.Drawing.Size(145, 30);
             this.labelInitialBalance.TabIndex = 1;
             this.labelInitialBalance.Text = "Υπόλοιπο λογαριασμού";
             this.labelInitialBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -110,7 +112,7 @@
             this.labelAccommodationType.AutoSize = true;
             this.labelAccommodationType.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelAccommodationType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAccommodationType.Location = new System.Drawing.Point(3, 41);
+            this.labelAccommodationType.Location = new System.Drawing.Point(3, 30);
             this.labelAccommodationType.Name = "labelAccommodationType";
             this.labelAccommodationType.Size = new System.Drawing.Size(145, 52);
             this.labelAccommodationType.TabIndex = 2;
@@ -121,7 +123,7 @@
             // 
             this.labelTime.AutoSize = true;
             this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTime.Location = new System.Drawing.Point(35, 283);
+            this.labelTime.Location = new System.Drawing.Point(39, 290);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(33, 13);
             this.labelTime.TabIndex = 3;
@@ -130,7 +132,7 @@
             // textBoxFullname
             // 
             this.textBoxFullname.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxFullname.Location = new System.Drawing.Point(154, 10);
+            this.textBoxFullname.Location = new System.Drawing.Point(154, 5);
             this.textBoxFullname.Name = "textBoxFullname";
             this.textBoxFullname.Size = new System.Drawing.Size(142, 20);
             this.textBoxFullname.TabIndex = 4;
@@ -139,7 +141,7 @@
             // textBoxBalance
             // 
             this.textBoxBalance.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxBalance.Location = new System.Drawing.Point(3, 9);
+            this.textBoxBalance.Location = new System.Drawing.Point(3, 3);
             this.textBoxBalance.Name = "textBoxBalance";
             this.textBoxBalance.Size = new System.Drawing.Size(47, 20);
             this.textBoxBalance.TabIndex = 7;
@@ -149,7 +151,7 @@
             // labelCurrency
             // 
             this.labelCurrency.AutoSize = true;
-            this.labelCurrency.Location = new System.Drawing.Point(48, 12);
+            this.labelCurrency.Location = new System.Drawing.Point(48, 6);
             this.labelCurrency.Name = "labelCurrency";
             this.labelCurrency.Size = new System.Drawing.Size(13, 13);
             this.labelCurrency.TabIndex = 8;
@@ -159,7 +161,7 @@
             // 
             this.dateTimePicker.CustomFormat = "HH:mm";
             this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker.Location = new System.Drawing.Point(76, 280);
+            this.dateTimePicker.Location = new System.Drawing.Point(80, 287);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(50, 20);
             this.dateTimePicker.TabIndex = 9;
@@ -169,15 +171,15 @@
             this.tableLayoutPanelCustomer.ColumnCount = 2;
             this.tableLayoutPanelCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanelCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanelCustomer.Controls.Add(this.panel4, 1, 3);
+            this.tableLayoutPanelCustomer.Controls.Add(this.panelLoginComputer, 1, 3);
             this.tableLayoutPanelCustomer.Controls.Add(this.label3, 0, 3);
-            this.tableLayoutPanelCustomer.Controls.Add(this.panel1, 1, 1);
+            this.tableLayoutPanelCustomer.Controls.Add(this.panelAccommodationType, 1, 1);
             this.tableLayoutPanelCustomer.Controls.Add(this.labelFullname, 0, 0);
             this.tableLayoutPanelCustomer.Controls.Add(this.labelAccommodationType, 0, 1);
             this.tableLayoutPanelCustomer.Controls.Add(this.labelInitialBalance, 0, 2);
             this.tableLayoutPanelCustomer.Controls.Add(this.textBoxFullname, 1, 0);
             this.tableLayoutPanelCustomer.Controls.Add(this.panel2, 1, 2);
-            this.tableLayoutPanelCustomer.Location = new System.Drawing.Point(32, 48);
+            this.tableLayoutPanelCustomer.Location = new System.Drawing.Point(34, 59);
             this.tableLayoutPanelCustomer.Name = "tableLayoutPanelCustomer";
             this.tableLayoutPanelCustomer.RowCount = 4;
             this.tableLayoutPanelCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -187,24 +189,36 @@
             this.tableLayoutPanelCustomer.Size = new System.Drawing.Size(297, 192);
             this.tableLayoutPanelCustomer.TabIndex = 11;
             // 
-            // panel4
+            // panelLoginComputer
             // 
-            this.panel4.Controls.Add(this.radioButton1);
-            this.panel4.Controls.Add(this.radioButtonPrivate);
-            this.panel4.Location = new System.Drawing.Point(154, 138);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(98, 50);
-            this.panel4.TabIndex = 17;
+            this.panelLoginComputer.Controls.Add(this.radioButtonPublicPool);
+            this.panelLoginComputer.Controls.Add(this.radioButtonPublic);
+            this.panelLoginComputer.Controls.Add(this.radioButtonPrivate);
+            this.panelLoginComputer.Location = new System.Drawing.Point(154, 115);
+            this.panelLoginComputer.Name = "panelLoginComputer";
+            this.panelLoginComputer.Size = new System.Drawing.Size(142, 73);
+            this.panelLoginComputer.TabIndex = 17;
             // 
-            // radioButton1
+            // radioButtonPublicPool
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(3, 29);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(72, 17);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.Text = "Δημόσιος";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonPublicPool.AutoSize = true;
+            this.radioButtonPublicPool.Location = new System.Drawing.Point(3, 52);
+            this.radioButtonPublicPool.Name = "radioButtonPublicPool";
+            this.radioButtonPublicPool.Size = new System.Drawing.Size(116, 17);
+            this.radioButtonPublicPool.TabIndex = 2;
+            this.radioButtonPublicPool.Text = "Κεντρικής πισίνας";
+            this.radioButtonPublicPool.UseVisualStyleBackColor = true;
+            this.radioButtonPublicPool.CheckedChanged += new System.EventHandler(this.radioButtonPublicPool_CheckedChanged);
+            // 
+            // radioButtonPublic
+            // 
+            this.radioButtonPublic.AutoSize = true;
+            this.radioButtonPublic.Location = new System.Drawing.Point(3, 29);
+            this.radioButtonPublic.Name = "radioButtonPublic";
+            this.radioButtonPublic.Size = new System.Drawing.Size(72, 17);
+            this.radioButtonPublic.TabIndex = 1;
+            this.radioButtonPublic.Text = "Δημόσιος";
+            this.radioButtonPublic.UseVisualStyleBackColor = true;
             // 
             // radioButtonPrivate
             // 
@@ -223,21 +237,21 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 135);
+            this.label3.Location = new System.Drawing.Point(3, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 57);
+            this.label3.Size = new System.Drawing.Size(145, 80);
             this.label3.TabIndex = 13;
             this.label3.Text = "Υπολογιστής σύνδεσης";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel1
+            // panelAccommodationType
             // 
-            this.panel1.Controls.Add(this.radioButtonAppartment);
-            this.panel1.Controls.Add(this.radioButtonTrojanHorse);
-            this.panel1.Location = new System.Drawing.Point(154, 44);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(142, 46);
-            this.panel1.TabIndex = 12;
+            this.panelAccommodationType.Controls.Add(this.radioButtonAppartment);
+            this.panelAccommodationType.Controls.Add(this.radioButtonTrojanHorse);
+            this.panelAccommodationType.Location = new System.Drawing.Point(154, 33);
+            this.panelAccommodationType.Name = "panelAccommodationType";
+            this.panelAccommodationType.Size = new System.Drawing.Size(142, 46);
+            this.panelAccommodationType.TabIndex = 12;
             // 
             // radioButtonAppartment
             // 
@@ -265,9 +279,9 @@
             // 
             this.panel2.Controls.Add(this.textBoxBalance);
             this.panel2.Controls.Add(this.labelCurrency);
-            this.panel2.Location = new System.Drawing.Point(154, 96);
+            this.panel2.Location = new System.Drawing.Point(154, 85);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(70, 36);
+            this.panel2.Size = new System.Drawing.Size(70, 24);
             this.panel2.TabIndex = 6;
             // 
             // label1
@@ -387,16 +401,17 @@
             // 
             // buttonEmployee
             // 
-            this.buttonEmployee.Location = new System.Drawing.Point(384, 277);
+            this.buttonEmployee.Location = new System.Drawing.Point(385, 284);
             this.buttonEmployee.Name = "buttonEmployee";
             this.buttonEmployee.Size = new System.Drawing.Size(152, 23);
             this.buttonEmployee.TabIndex = 16;
             this.buttonEmployee.Text = "Εκκίνηση ως υπάλληλος";
             this.buttonEmployee.UseVisualStyleBackColor = true;
+            this.buttonEmployee.Click += new System.EventHandler(this.buttonEmployee_Click);
             // 
             // buttonCustomer
             // 
-            this.buttonCustomer.Location = new System.Drawing.Point(186, 277);
+            this.buttonCustomer.Location = new System.Drawing.Point(187, 284);
             this.buttonCustomer.Name = "buttonCustomer";
             this.buttonCustomer.Size = new System.Drawing.Size(152, 23);
             this.buttonCustomer.TabIndex = 17;
@@ -469,7 +484,7 @@
             this.panelUserData.Controls.Add(this.labelPassword);
             this.panelUserData.Controls.Add(this.labelUsernameValue);
             this.panelUserData.Controls.Add(this.labelUsername);
-            this.panelUserData.Location = new System.Drawing.Point(186, 245);
+            this.panelUserData.Location = new System.Drawing.Point(187, 252);
             this.panelUserData.Name = "panelUserData";
             this.panelUserData.Size = new System.Drawing.Size(349, 31);
             this.panelUserData.TabIndex = 23;
@@ -521,20 +536,31 @@
             // checkBoxPersonInPool
             // 
             this.checkBoxPersonInPool.AutoSize = true;
-            this.checkBoxPersonInPool.Location = new System.Drawing.Point(38, 321);
+            this.checkBoxPersonInPool.Enabled = false;
+            this.checkBoxPersonInPool.Location = new System.Drawing.Point(40, 321);
             this.checkBoxPersonInPool.Name = "checkBoxPersonInPool";
             this.checkBoxPersonInPool.Size = new System.Drawing.Size(121, 17);
             this.checkBoxPersonInPool.TabIndex = 24;
             this.checkBoxPersonInPool.Text = "Άτομα στην πισίνα";
             this.checkBoxPersonInPool.UseVisualStyleBackColor = true;
-            this.checkBoxPersonInPool.Visible = false;
             this.checkBoxPersonInPool.CheckedChanged += new System.EventHandler(this.checkBoxPersonInPool_CheckedChanged);
+            // 
+            // buttonRefreshTime
+            // 
+            this.buttonRefreshTime.Image = global::ZeusPalace.Properties.Resources.refresh_16;
+            this.buttonRefreshTime.Location = new System.Drawing.Point(135, 285);
+            this.buttonRefreshTime.Name = "buttonRefreshTime";
+            this.buttonRefreshTime.Size = new System.Drawing.Size(24, 24);
+            this.buttonRefreshTime.TabIndex = 25;
+            this.buttonRefreshTime.UseVisualStyleBackColor = true;
+            this.buttonRefreshTime.Click += new System.EventHandler(this.buttonRefreshTime_Click);
             // 
             // AppControllerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 350);
+            this.Controls.Add(this.buttonRefreshTime);
             this.Controls.Add(this.checkBoxPersonInPool);
             this.Controls.Add(this.panelUserData);
             this.Controls.Add(this.labelFullnameError);
@@ -550,10 +576,10 @@
             this.Text = "AppController";
             this.tableLayoutPanelCustomer.ResumeLayout(false);
             this.tableLayoutPanelCustomer.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelLoginComputer.ResumeLayout(false);
+            this.panelLoginComputer.PerformLayout();
+            this.panelAccommodationType.ResumeLayout(false);
+            this.panelAccommodationType.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelEmployee.ResumeLayout(false);
@@ -583,7 +609,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton radioButtonAppartment;
         private System.Windows.Forms.RadioButton radioButtonTrojanHorse;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelAccommodationType;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -596,8 +622,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.RadioButton radioButtonEmployee2;
         private System.Windows.Forms.Button buttonEmployee;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Panel panelLoginComputer;
+        private System.Windows.Forms.RadioButton radioButtonPublic;
         private System.Windows.Forms.RadioButton radioButtonPrivate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonCustomer;
@@ -612,5 +638,7 @@
         private System.Windows.Forms.Label labelEmpUsernameValue;
         private System.Windows.Forms.Label labelEmpUsername;
         private System.Windows.Forms.CheckBox checkBoxPersonInPool;
+        private System.Windows.Forms.RadioButton radioButtonPublicPool;
+        private System.Windows.Forms.Button buttonRefreshTime;
     }
 }
