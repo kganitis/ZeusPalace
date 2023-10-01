@@ -142,10 +142,5 @@ namespace ZeusPalace
             Width = initialWidth;
             Height = initialHeight;
         }
-
-        public void SetPersonInPool(bool personInPool)
-        {
-            poolForm.SetPersonInPool(personInPool);
-        }
     }
 }

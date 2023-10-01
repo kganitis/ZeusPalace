@@ -29,6 +29,7 @@ namespace ZeusPalace
 
         public event EventHandler CurrentFormChanged;
         public event EventHandler TimeChanged;
+        public event EventHandler PersonInPoolChanged;
 
         public EmbeddedForm CurrentForm => mainForm.CurrentForm;
 
@@ -51,9 +52,15 @@ namespace ZeusPalace
             }
         }
 
-        internal void SetPersonInPool(bool personInPool)
+        private bool personInPool;
+        public bool PersonInPool
         {
-            mainForm.SetPersonInPool(personInPool);
+            get => personInPool;
+            internal set
+            {
+                personInPool = value;
+                PersonInPoolChanged?.Invoke(this, EventArgs.Empty);
+            }
         }
 
         internal void StartApplication()

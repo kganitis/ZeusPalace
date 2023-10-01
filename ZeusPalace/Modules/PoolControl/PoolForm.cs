@@ -16,7 +16,14 @@ namespace ZeusPalace.Modules.PoolControl
         {
             InitializeComponent();
             AppController.Instance.TimeChanged += Instance_TimeChanged;
+            AppController.Instance.PersonInPoolChanged += Instance_PersonInPoolChanged;
             InitializeUI();
+        }
+
+        private void Instance_PersonInPoolChanged(object sender, EventArgs e)
+        {
+            pool.PersonInPool = AppController.Instance.PersonInPool;
+            UpdateUI();
         }
 
         private void Instance_TimeChanged(object sender, EventArgs e)
@@ -72,12 +79,6 @@ namespace ZeusPalace.Modules.PoolControl
                 nextOccurrence = nextOccurrence.AddDays(1);
             }
             return nextOccurrence;
-        }
-
-        public void SetPersonInPool(bool personInPool)
-        {
-            pool.PersonInPool = personInPool;
-            UpdateUI();
         }
 
         private void UpdateUI()

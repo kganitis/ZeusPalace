@@ -144,7 +144,7 @@ namespace ZeusPalace
 
         private void checkBoxPersonInPool_CheckedChanged(object sender, EventArgs e)
         {
-            appController.SetPersonInPool(checkBoxPersonInPool.Checked);
+            appController.PersonInPool = checkBoxPersonInPool.Checked;
         }
 
         private void radioButtonPublicPool_CheckedChanged(object sender, EventArgs e)
