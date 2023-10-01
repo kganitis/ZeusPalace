@@ -58,14 +58,13 @@ namespace ZeusPalace.Modules.Orders
             InitializeControls();
             PopulateMenuItems();
             activePanel = panelMenu;
+            AppController.Instance.TimeChanged += Instance_TimeChanged;
         }
 
         private void InitializeControls()
         {
             // currentTime
-            string formattedTime = $"{currentTime / 100:00}:{currentTime % 100:00}";
-            labelTime.Text = formattedTime;
-            AlignLabelToCenter(labelTime, panelTime);
+            InitializeTimeLabel();
 
             // Buttons
             buttonOrderCancel.FlatAppearance.MouseDownBackColor = buttonOrderCancel.FlatAppearance.MouseOverBackColor;
@@ -82,6 +81,13 @@ namespace ZeusPalace.Modules.Orders
             panelChat.Controls.Add(customerChat);
             customerChat.BringToFront();
             customerChat.Show();
+        }
+
+        private void InitializeTimeLabel()
+        {
+            string formattedTime = $"{currentTime / 100:00}:{currentTime % 100:00}";
+            labelTime.Text = formattedTime;
+            AlignLabelToCenter(labelTime, panelTime);
         }
 
         private void InitializePanelOrderPlaced()
@@ -180,6 +186,16 @@ namespace ZeusPalace.Modules.Orders
         private void PanelPayment_CreditCard_CheckedChanged(object sender, EventArgs e)
         {
             buttonNextStep.TextLeft = ((RadioButton)sender).Checked ? "Πληρωμή" : "Ολοκλήρωση";
+        }
+
+        private void Instance_TimeChanged(object sender, EventArgs e)
+        {
+            currentTime = AppController.Instance.TimeAsInt();
+            InitializeTimeLabel();
+            if (activePanel == panelMenu)
+            {
+                PopulateMenuItems();
+            }
         }
 
         #endregion
