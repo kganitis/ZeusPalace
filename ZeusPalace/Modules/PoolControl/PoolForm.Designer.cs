@@ -285,7 +285,7 @@
             // pictureBoxSwimmer
             // 
             this.pictureBoxSwimmer.Image = global::ZeusPalace.Properties.Resources.swimmer;
-            this.pictureBoxSwimmer.Location = new System.Drawing.Point(560, 376);
+            this.pictureBoxSwimmer.Location = new System.Drawing.Point(560, 358);
             this.pictureBoxSwimmer.Name = "pictureBoxSwimmer";
             this.pictureBoxSwimmer.Size = new System.Drawing.Size(50, 25);
             this.pictureBoxSwimmer.TabIndex = 17;

@@ -117,7 +117,10 @@ namespace ZeusPalace.Modules.PoolControl
             pictureBoxAlarmToggle.Image = pool.AlarmEnabled ? Resources.toggle_switch_on : Resources.toggle_switch_off;
             panelAlarmMode.Visible = pool.AlarmEnabled;
             timePickerAlarmOff.Enabled = pool.AlarmEnabled && radioButtonEnabledUntil.Checked;
-            if (timePickerAlarmOff.Enabled) timePickerAlarmOff.Value = pool.AlarmDeactivationTime;
+            if (timePickerAlarmOff.Enabled)
+            {
+                timePickerAlarmOff.Value = pool.AlarmDeactivationTime;
+            }
 
             //
             // Alarm Triggering
@@ -137,19 +140,19 @@ namespace ZeusPalace.Modules.PoolControl
             // Person In Pool
             //
             pictureBoxSwimmer.Visible = pool.SensorEnabled && pool.PersonInPool;
-            if (pictureBoxSwimmer.Visible) UpdatePersonInPoolLocation();
+            if (pictureBoxSwimmer.Visible)
+            {
+                UpdatePersonInPoolLocation();
+            }
         }
 
         private void UpdatePersonInPoolLocation()
         {
-            if (pictureBoxSwimmer.Visible)
-            {
-                int filledHeight = (int)(verticalProgressBarWaterLevel.Height * ((double)verticalProgressBarWaterLevel.Value / verticalProgressBarWaterLevel.Maximum));
-                int progressBarY = verticalProgressBarWaterLevel.Location.Y + (verticalProgressBarWaterLevel.Height - filledHeight);
-                int swimmerX = verticalProgressBarWaterLevel.Location.X + (verticalProgressBarWaterLevel.Width - pictureBoxSwimmer.Width) / 2;
-                int swimmerY = progressBarY - 15;
-                pictureBoxSwimmer.Location = new Point(swimmerX, swimmerY);
-            }
+            int filledHeight = (int)(verticalProgressBarWaterLevel.Height * ((double)verticalProgressBarWaterLevel.Value / verticalProgressBarWaterLevel.Maximum));
+            int progressBarY = verticalProgressBarWaterLevel.Location.Y + (verticalProgressBarWaterLevel.Height - filledHeight);
+            int swimmerX = verticalProgressBarWaterLevel.Location.X + (verticalProgressBarWaterLevel.Width - pictureBoxSwimmer.Width) / 2;
+            int swimmerY = progressBarY - 15;
+            pictureBoxSwimmer.Location = new Point(swimmerX, swimmerY);
         }
 
         private void trackBarWaterLevel_Scroll(object sender, EventArgs e)

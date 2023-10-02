@@ -213,13 +213,13 @@ namespace ZeusPalace.Modules.Orders
                 // The first item is always a category
                 if (i == 0)
                 {
-                    panelMenu.AddItem(new MenuCategoryControl(nextMenuItem.GetTypeStringValue()));
+                    panelMenu.AddItem(new MenuCategoryControl(nextMenuItem.GetTypeStringValue(), nextMenuItem.GetStartTime(), nextMenuItem.GetEndTime()));
                 }
 
                 // Check if we need to insert new category item
                 if (nextMenuItem.Type != currentType)
                 {
-                    panelMenu.AddItem(new MenuCategoryControl(nextMenuItem.GetTypeStringValue()));
+                    panelMenu.AddItem(new MenuCategoryControl(nextMenuItem.GetTypeStringValue(), nextMenuItem.GetStartTime(), nextMenuItem.GetEndTime()));
                     currentType = nextMenuItem.Type;
                 }
 

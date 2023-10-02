@@ -26,12 +26,27 @@ namespace ZeusPalace
         }
 
         private MainForm mainForm;
+        private PoolForm publicPoolForm;
 
         public event EventHandler CurrentFormChanged;
         public event EventHandler TimeChanged;
         public event EventHandler PersonInPoolChanged;
 
-        public EmbeddedForm CurrentForm => mainForm.CurrentForm;
+        public Form CurrentForm
+        {
+            get
+            {
+                if (publicPoolForm != null)
+                {
+                    return publicPoolForm;
+                }
+                if (mainForm.CurrentForm != null)
+                {
+                    return mainForm.CurrentForm;
+                }
+                return mainForm;
+            }
+        }
 
         public Customer Customer { get; internal set; }
 
@@ -69,10 +84,27 @@ namespace ZeusPalace
             {
                 mainForm.Close();
                 mainForm.Dispose();
+                mainForm = null;
             }
-            mainForm = new MainForm();
-            mainForm.CurrentFormChanged += MainForm_CurrentFormChanged;
-            mainForm.Show();
+            if (publicPoolForm != null)
+            {
+                publicPoolForm.Close();
+                publicPoolForm.Dispose();
+                publicPoolForm = null;
+            }
+
+            if (ComputerType == ComputerType.PublicPool)
+            {
+                publicPoolForm = new PoolForm();
+                publicPoolForm.Show();
+            }
+            else
+            {
+                mainForm = new MainForm();
+                mainForm.CurrentFormChanged += MainForm_CurrentFormChanged;
+                mainForm.Show();
+            }
+            CurrentFormChanged?.Invoke(this, EventArgs.Empty);
         }
 
         private void MainForm_CurrentFormChanged(object sender, EventArgs e)

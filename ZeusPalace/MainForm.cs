@@ -19,6 +19,14 @@ namespace ZeusPalace
 {
     public partial class MainForm : Form
     {
+        // Forms
+        private Dictionary<Type, EmbeddedForm> embeddedForms;
+        private DevicesForm devicesForm;
+        private PoolForm poolForm;
+        private DrivingForm drivingForm;
+        private CustomerOrdersForm customerOrdersForm;
+
+        // Current form
         public event EventHandler CurrentFormChanged;
         private EmbeddedForm currentForm;
         public EmbeddedForm CurrentForm
@@ -33,12 +41,8 @@ namespace ZeusPalace
             }
         }
 
-        private readonly Dictionary<Type, EmbeddedForm> embeddedForms;
+        // UI fields
         private Button activeButton;
-        private DevicesForm devicesForm;
-        private PoolForm poolForm;
-        private DrivingForm drivingForm;
-        private CustomerOrdersForm customerOrdersForm;
         private readonly Color defaultButtonBackColor;
         private readonly Font defaultButtonFont;
         private readonly Font activeButtonFont;
@@ -48,6 +52,8 @@ namespace ZeusPalace
         public MainForm()
         {
             InitializeComponent();
+
+            // Buttons
             defaultButtonBackColor = buttonDevices.BackColor;
             defaultButtonFont = buttonDevices.Font;
             activeButtonFont = new Font("Calibri", 21.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -57,9 +63,19 @@ namespace ZeusPalace
                 btn.FlatAppearance.MouseOverBackColor = ColorPicker.GetTint(defaultButtonBackColor, 10);
                 btn.FlatAppearance.MouseDownBackColor = btn.FlatAppearance.MouseOverBackColor;
             }
+
+            // Hide from employees
+            if (AppController.Instance.User.Role == UserRole.Employee)
+            {
+                //buttonDriving.Visible = buttonOrders.Visible = false;
+                buttonDriving.Text = buttonOrders.Text = string.Empty;
+                buttonDriving.Enabled = buttonOrders.Enabled = false;
+            }
+
+            // Keep the initial dimensions so we can reset them later
             initialWidth = Width;
             initialHeight = Height;
-            embeddedForms = new Dictionary<Type, EmbeddedForm>();
+
             PreloadForms();
         }
 
@@ -69,10 +85,13 @@ namespace ZeusPalace
             poolForm = new PoolForm();
             drivingForm = new DrivingForm();
             customerOrdersForm = new CustomerOrdersForm();
-            embeddedForms.Add(typeof(DevicesForm), devicesForm);
-            embeddedForms.Add(typeof(PoolForm), poolForm);
-            embeddedForms.Add(typeof(DrivingForm), drivingForm);
-            embeddedForms.Add(typeof(CustomerOrdersForm), customerOrdersForm);
+            embeddedForms = new Dictionary<Type, EmbeddedForm>
+            {
+                { typeof(DevicesForm), devicesForm },
+                { typeof(PoolForm), poolForm },
+                { typeof(DrivingForm), drivingForm },
+                { typeof(CustomerOrdersForm), customerOrdersForm }
+            };
             foreach (var embeddedForm in embeddedForms.Values)
             {
                 embeddedForm.TopLevel = false;
@@ -81,12 +100,7 @@ namespace ZeusPalace
             }
         }
 
-        public EmbeddedForm GetEmbeddedForm(Type type)
-        {
-            return embeddedForms[type];
-        }
-
-        private void AlignLabelToCenter(Control label, Panel parentPanel)
+        protected void AlignLabelToCenter(Control label, Panel parentPanel)
         {
             int labelX = (parentPanel.Width - label.Width) / 2;
             int labelY = (parentPanel.Height - label.Height) / 2;

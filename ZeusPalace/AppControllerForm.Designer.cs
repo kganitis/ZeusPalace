@@ -573,7 +573,7 @@
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.labelTime);
             this.Name = "AppControllerForm";
-            this.Text = "AppController";
+            this.Text = "App Controller";
             this.tableLayoutPanelCustomer.ResumeLayout(false);
             this.tableLayoutPanelCustomer.PerformLayout();
             this.panelLoginComputer.ResumeLayout(false);

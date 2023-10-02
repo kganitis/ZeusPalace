@@ -13,10 +13,10 @@ namespace ZeusPalace
         public string Username { get; set; }
         public string Password { get; set; }
 
-        protected static string GenerateUsernameFromName(string greekName)
+        protected static string GenerateUsernameFromName(string name)
         {
-            // Split the Greek full name into parts
-            string[] nameParts = greekName.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            // Split the full name into parts
+            string[] nameParts = name.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
             if (nameParts.Length < 2)
             {
@@ -32,21 +32,21 @@ namespace ZeusPalace
                 string extractedLetters = ExtractFirstLetters(part, 5 - Math.Min(nameParts.Length, 4));
 
                 // Convert the extracted letters to Latin characters and append to the result
-                usernameBuilder.Append(ConvertToLatinCharacters(extractedLetters));
+                usernameBuilder.Append(ConvertGreekCharactersToLatin(extractedLetters));
             }
 
             return usernameBuilder.ToString();
         }
 
-        // Extract the first 3 letters of a Greek part while handling special characters
-        protected static string ExtractFirstLetters(string greekPart, int numberOfLetters = int.MaxValue)
+        // Extract the first 3 letters of a part while handling special characters
+        protected static string ExtractFirstLetters(string part, int numberOfLetters = int.MaxValue)
         {
             StringBuilder extractedLetters = new StringBuilder();
 
-            for (int i = 0; i < Math.Min(numberOfLetters, greekPart.Length); i++)
+            for (int i = 0; i < Math.Min(numberOfLetters, part.Length); i++)
             {
-                string currentChar = greekPart[i].ToString();
-                string convertedChar = ConvertToLatinCharacters(currentChar);
+                string currentChar = part[i].ToString();
+                string convertedChar = ConvertGreekCharactersToLatin(currentChar);
 
                 // Append the converted character to the result
                 extractedLetters.Append(convertedChar);
@@ -56,10 +56,10 @@ namespace ZeusPalace
         }
 
         // A mapping of Greek characters to Latin characters
-        private static string ConvertToLatinCharacters(string greekCharacter)
+        private static string ConvertGreekCharactersToLatin(string greekCharacter)
         {
-            string greekString = greekCharacter.ToLowerInvariant();
-            switch (greekString)
+            string greekChar = greekCharacter.ToLowerInvariant();
+            switch (greekChar)
             {
                 case "α": return "a";
                 case "β": return "b";
@@ -93,7 +93,7 @@ namespace ZeusPalace
                 case "ό": return "o";
                 case "ώ": return "o";
                 case "ύ": return "u";
-                default: return greekString;
+                default: return greekChar;
             }
         }
     }
