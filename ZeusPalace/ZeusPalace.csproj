@@ -76,6 +76,8 @@
     <Compile Include="Entities\Accommodation\AccommodationType.cs" />
     <Compile Include="Entities\Accommodation\Apartment.cs" />
     <Compile Include="Entities\Accommodation\TrojanHorse.cs" />
+    <Compile Include="Entities\Devices\Locks.cs" />
+    <Compile Include="Entities\Devices\Tv.cs" />
     <Compile Include="Entities\Order\Chat.cs" />
     <Compile Include="Entities\Order\DeliveryMethod.cs" />
     <Compile Include="Entities\Order\Menu.cs" />
@@ -93,6 +95,12 @@
     </Compile>
     <Compile Include="Modules\Devices\DevicesForm.Designer.cs">
       <DependentUpon>DevicesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Devices\UserControls\LocksControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Devices\UserControls\LocksControls.Designer.cs">
+      <DependentUpon>LocksControls.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\Devices\UserControls\MusicControls.cs">
       <SubType>UserControl</SubType>
@@ -237,6 +245,9 @@
     <EmbeddedResource Include="Modules\Devices\DevicesForm.resx">
       <DependentUpon>DevicesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Devices\UserControls\LocksControls.resx">
+      <DependentUpon>LocksControls.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Devices\UserControls\MusicControls.resx">
       <DependentUpon>MusicControls.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,6 +391,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tvremote_off.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tvremote_on.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door_unlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door_locked.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door_unlocked.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door_locked.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

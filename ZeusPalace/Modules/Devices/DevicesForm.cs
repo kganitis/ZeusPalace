@@ -22,6 +22,8 @@ namespace ZeusPalace.Modules.Devices
             flowLayoutPanel1.Controls.Add(music);
             TvControls tvControls = new TvControls();
             flowLayoutPanel1.Controls.Add(tvControls);
+            LocksControls locks = new LocksControls();
+            flowLayoutPanel1.Controls.Add(locks);
         }
        
 
