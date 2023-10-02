@@ -369,6 +369,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\alarm.wav" />
+    <None Include="Resources\alarm_enabled.jpg" />
+    <None Include="Resources\sensor_disabled.jpg" />
+    <None Include="Resources\pool-3-people.jpg" />
+    <None Include="Resources\pool-3.jpg" />
+    <None Include="Resources\pool-2-people.jpg" />
+    <None Include="Resources\pool-1-people.jpg" />
+    <None Include="Resources\pool-1.jpg" />
+    <None Include="Resources\pool-2.jpg" />
     <None Include="Resources\refresh-16.png" />
     <None Include="Resources\refresh-20.png" />
     <None Include="Resources\refresh.png" />

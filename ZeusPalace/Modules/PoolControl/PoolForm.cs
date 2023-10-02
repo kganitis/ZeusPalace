@@ -4,6 +4,8 @@ using System.Drawing;
 using ZeusPalace.Entities.Pool;
 using ZeusPalace.Properties;
 using System.Media;
+using System.Resources;
+using System.Xml.Linq;
 
 namespace ZeusPalace.Modules.PoolControl
 {
@@ -82,6 +84,26 @@ namespace ZeusPalace.Modules.PoolControl
         private void UpdateUI()
         {
             //
+            // Background Image (depending on water level and person in pool)
+            //
+            int waterLevelRange = (pool.MaxWaterLevel - pool.MinWaterLevel) / 3;
+            int waterLevel = 1;
+            if (pool.WaterLevel > pool.MinWaterLevel + waterLevelRange)
+            {
+                waterLevel = 2;
+            }
+            if (pool.WaterLevel > pool.MinWaterLevel + 2 * waterLevelRange)
+            {
+                waterLevel = 3;
+            }
+            string backgroundImageName = $"pool_{waterLevel}";
+            if (pool.SensorEnabled && pool.PersonInPool)
+            {
+                backgroundImageName += "_people";
+            }
+            panelBackground.BackgroundImage = (Image)Resources.ResourceManager.GetObject(backgroundImageName);
+
+            //
             // Water Level
             //
             trackBarWaterLevel.Enabled = !(pool.SensorEnabled && pool.PersonInPool);
@@ -106,6 +128,7 @@ namespace ZeusPalace.Modules.PoolControl
             //
             pictureBoxSensor.Image = pool.SensorEnabled ? Resources.sensor_on : Resources.sensor_off;
             pictureBoxSensorToggle.Image = pool.SensorEnabled ? Resources.toggle_switch_on : Resources.toggle_switch_off;
+            pictureBoxSensorDisabled.Visible = !pool.SensorEnabled;
 
             //
             // Alarm
@@ -113,6 +136,7 @@ namespace ZeusPalace.Modules.PoolControl
             panelAlarm.Visible = pool.SensorEnabled;
             pictureBoxAlarm.Image = pool.AlarmEnabled ? Resources.alarm_on : Resources.alarm_off;
             pictureBoxAlarmToggle.Image = pool.AlarmEnabled ? Resources.toggle_switch_on : Resources.toggle_switch_off;
+            pictureBoxAlarmEnabled.Visible = pool.AlarmEnabled;
             panelAlarmMode.Visible = pool.AlarmEnabled;
             timePickerAlarmOff.Enabled = pool.AlarmEnabled && radioButtonEnabledUntil.Checked;
             if (timePickerAlarmOff.Enabled)
@@ -126,32 +150,12 @@ namespace ZeusPalace.Modules.PoolControl
             if (pool.AlarmTriggered)
             {
                 soundPlayer.PlayLooping();
-                panelAlarmTrigger.Visible = true;
             }
             else
             {
                 soundPlayer.Stop();
-                panelAlarmTrigger.Visible = false;
-            }
-
-            //
-            // Person In Pool
-            //
-            bool personInPool = pool.SensorEnabled && pool.PersonInPool;
-            if (personInPool)
-            {
-                
             }
         }
-
-        /*private void UpdatePersonInPoolLocation()
-        {
-            int filledHeight = (int)(verticalProgressBarWaterLevel.Height * ((double)verticalProgressBarWaterLevel.Value / verticalProgressBarWaterLevel.Maximum));
-            int progressBarY = verticalProgressBarWaterLevel.Location.Y + (verticalProgressBarWaterLevel.Height - filledHeight);
-            int swimmerX = verticalProgressBarWaterLevel.Location.X + (verticalProgressBarWaterLevel.Width - pictureBoxSwimmer.Width) / 2;
-            int swimmerY = progressBarY - 15;
-            pictureBoxSwimmer.Location = new Point(swimmerX, swimmerY);
-        }*/
 
         private void trackBarWaterLevel_Scroll(object sender, EventArgs e)
         {
