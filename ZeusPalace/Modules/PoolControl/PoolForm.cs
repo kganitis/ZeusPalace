@@ -44,8 +44,6 @@ namespace ZeusPalace.Modules.PoolControl
             // Title
             //
             PoolType poolType = AppController.Instance.ComputerType == ComputerType.PublicPool ? PoolType.Public : PoolType.Private;
-            labelTitle.Text = poolType == PoolType.Private ? "Ιδιωτική πισίνα" : "Κεντρική πισίνα";
-            AlignLabelToCenter(labelTitle, panelTitle);
 
             //
             // Soundplayer
@@ -139,21 +137,21 @@ namespace ZeusPalace.Modules.PoolControl
             //
             // Person In Pool
             //
-            pictureBoxSwimmer.Visible = pool.SensorEnabled && pool.PersonInPool;
-            if (pictureBoxSwimmer.Visible)
+            bool personInPool = pool.SensorEnabled && pool.PersonInPool;
+            if (personInPool)
             {
-                UpdatePersonInPoolLocation();
+                
             }
         }
 
-        private void UpdatePersonInPoolLocation()
+        /*private void UpdatePersonInPoolLocation()
         {
             int filledHeight = (int)(verticalProgressBarWaterLevel.Height * ((double)verticalProgressBarWaterLevel.Value / verticalProgressBarWaterLevel.Maximum));
             int progressBarY = verticalProgressBarWaterLevel.Location.Y + (verticalProgressBarWaterLevel.Height - filledHeight);
             int swimmerX = verticalProgressBarWaterLevel.Location.X + (verticalProgressBarWaterLevel.Width - pictureBoxSwimmer.Width) / 2;
             int swimmerY = progressBarY - 15;
             pictureBoxSwimmer.Location = new Point(swimmerX, swimmerY);
-        }
+        }*/
 
         private void trackBarWaterLevel_Scroll(object sender, EventArgs e)
         {
