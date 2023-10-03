@@ -14,15 +14,24 @@ namespace ZeusPalace.Modules.Driving
     {
         private Dictionary<Label, string> initialLabelTexts = new Dictionary<Label, string>();
         private Dictionary<Label, string> changedLabelTexts = new Dictionary<Label, string>();
+        private DrivingForm drivingForm;
         private bool isMoving = false;
 
+        private void navigateToDrivingForm() 
+        {
+            if (drivingForm == null) {
+                Point desiredLocation = new Point(750, 190);
+                drivingForm = new DrivingForm(desiredLocation);
+            }
+            drivingForm.ShowDialog();
+        }
 
         public GardensOfOlympusForm()
         {
             InitializeComponent();
             initializeLabelTexts(); 
         }
-
+       
         private void GardensOfOlympusForm_Load(object sender, EventArgs e) {
             richTextBox1.Visible = false;
         }
@@ -178,8 +187,7 @@ namespace ZeusPalace.Modules.Driving
                         drivingHorsePictureBox.Image = Properties.Resources.horse_left2;
                         if (x <= 50)
                         {
-                            DrivingForm drivingForm = new DrivingForm();
-                            drivingForm.ShowDialog();
+                            navigateToDrivingForm();
                             this.Close();
                             return true;
                         }

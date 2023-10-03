@@ -18,7 +18,7 @@ namespace ZeusPalace.Modules.Driving
 
         private Dictionary<Label, string> initialLabelTexts = new Dictionary<Label, string>();
         private Dictionary<Label, string> changedLabelTexts = new Dictionary<Label, string>();
-        GardensOfOlympusForm go = new GardensOfOlympusForm();
+        private GardensOfOlympusForm gardenForm;
         private bool isMoving = false;
 
         public DrivingForm()
@@ -26,6 +26,14 @@ namespace ZeusPalace.Modules.Driving
             InitializeComponent();
             initializeLabelTexts();
         }
+        public DrivingForm(Point newLocation)
+        {
+            InitializeComponent();
+            initializeLabelTexts();
+            drivingHorsePictureBox.Location = newLocation;
+        }
+
+
         //Προσθέτω στο Dictionary το κάθε label με το αντίστοιχο Text
         private void initializeLabelTexts()
         {
@@ -166,14 +174,15 @@ namespace ZeusPalace.Modules.Driving
         //Method for avoiding Obstacles
         private bool CheckCollisionWithObstacles(int x, int y, string c)
         {
-            if ((x >= 261 && x <= 780) && (y >= 140 && y <= 260) || (x >= 630 && x <= 710) && (y >= 50 && y <= 147) || (y >= 184 && y <= 220))
+            if ((x >= 261 && x <= 770) && (y >= 140 && y <= 260) || (x >= 630 && x <= 730) && (y >= 40 && y <= 147) || (y >= 184 && y <= 220))
             {
                 switch (c) 
                 {
                     case "R":
                         drivingHorsePictureBox.Image = Properties.Resources.horse_right;
                         if (x >= 840) {
-                            go.ShowDialog();
+                            gardenForm = new GardensOfOlympusForm();
+                            gardenForm.ShowDialog();
                             this.Close();
                             return true;
                         }
