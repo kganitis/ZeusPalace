@@ -12,7 +12,8 @@ namespace ZeusPalace.Modules.PoolControl
     public partial class PoolForm : EmbeddedForm
     {
         private Pool pool = new Pool();
-        private SoundPlayer soundPlayer;
+        private SoundPlayer soundPlayer = new SoundPlayer();
+        private string currentPoolImageName = "";
 
         public PoolForm()
         {
@@ -42,17 +43,6 @@ namespace ZeusPalace.Modules.PoolControl
 
         private void InitializeUI()
         {
-            //
-            // Title
-            //
-            PoolType poolType = AppController.Instance.ComputerType == ComputerType.PublicPool ? PoolType.Public : PoolType.Private;
-
-            //
-            // Soundplayer
-            //
-            soundPlayer = new SoundPlayer("..\\..\\Resources\\alarm.wav");
-            //soundPlayer = new SoundPlayer() { Stream = Resources.alarm1 };
-
             //
             // TrackBars
             //
@@ -96,13 +86,16 @@ namespace ZeusPalace.Modules.PoolControl
             {
                 waterLevel = 3;
             }
-            string backgroundImageName = $"pool_{waterLevel}";
+            string poolImageName = $"pool_{waterLevel}";
             if (pool.SensorEnabled && pool.PersonInPool)
             {
-                backgroundImageName += "_people";
+                poolImageName += "_people";
             }
-            panelBackground.BackgroundImage = (Image)Resources.ResourceManager.GetObject(backgroundImageName);
-
+            if (!currentPoolImageName.Equals(poolImageName))
+            {
+                pictureBoxPool.Image = (Image)Resources.ResourceManager.GetObject(poolImageName);
+            }
+            
             //
             // Water Level
             //
@@ -117,11 +110,6 @@ namespace ZeusPalace.Modules.PoolControl
             verticalProgressBarTemperature.Value = pool.TemperatureLevel;
             verticalProgressBarTemperature.ProgressBarColor = ColorPicker.TemperatureColor[pool.TemperatureLevel - 1];
             labelTemperature.Text = $"{pool.Temperature} oC";
-
-            //
-            // Warnings
-            //
-            panelPoolUsedWarning.Visible = labelTrackBarWarning.Visible = pool.SensorEnabled && pool.PersonInPool;
 
             //
             // Sensor
@@ -149,6 +137,7 @@ namespace ZeusPalace.Modules.PoolControl
             //
             if (pool.AlarmTriggered)
             {
+                soundPlayer.Stream = Resources.alarm_sound;
                 soundPlayer.PlayLooping();
             }
             else
@@ -210,6 +199,12 @@ namespace ZeusPalace.Modules.PoolControl
             int hours = timePickerAlarmOff.Value.Hour;
             int minutes = timePickerAlarmOff.Value.Minute;
             pool.AlarmDeactivationTime = NextOccurrenceOfTime(hours, minutes);
+        }
+
+        private void PlaySound(System.IO.UnmanagedMemoryStream soundResource)
+        {
+            soundPlayer.Stream = soundResource;
+            soundPlayer.Play();
         }
     }
 }

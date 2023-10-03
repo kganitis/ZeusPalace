@@ -368,6 +368,13 @@
     <None Include="Resources\swimmer.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\pool.jpg" />
+    <None Include="Resources\switch-on.wav" />
+    <None Include="Resources\switch-off.wav" />
+    <None Include="Resources\switch-beep.wav" />
+    <None Include="Resources\blip.wav" />
+    <None Include="Resources\beep-cute.wav" />
+    <None Include="Resources\alarm-sound.wav" />
     <Content Include="Resources\alarm.wav" />
     <None Include="Resources\alarm_enabled.jpg" />
     <None Include="Resources\sensor_disabled.jpg" />
