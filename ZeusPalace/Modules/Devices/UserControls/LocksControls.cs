@@ -26,14 +26,14 @@ namespace ZeusPalace.Modules.Devices.UserControls
             {
                 myLocks.Lock();
                 btn_lock_unlock.BackgroundImage = Properties.Resources.btn_unlocked;
-                LocksPictureBox.BackgroundImage = Properties.Resources.door_unlocked;
+                LocksPictureBox.BackgroundImage = Properties.Resources.door_locked;
 
             }
             else
             {
                 myLocks.UnLock();
                 btn_lock_unlock.BackgroundImage = Properties.Resources.btn_locked;
-                LocksPictureBox.BackgroundImage = Properties.Resources.door_locked;
+                LocksPictureBox.BackgroundImage = Properties.Resources.door_unlocked;
             }
         }
     }

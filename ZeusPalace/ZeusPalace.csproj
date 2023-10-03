@@ -76,6 +76,7 @@
     <Compile Include="Entities\Accommodation\AccommodationType.cs" />
     <Compile Include="Entities\Accommodation\Apartment.cs" />
     <Compile Include="Entities\Accommodation\TrojanHorse.cs" />
+    <Compile Include="Entities\Devices\Lights.cs" />
     <Compile Include="Entities\Devices\Locks.cs" />
     <Compile Include="Entities\Devices\Tv.cs" />
     <Compile Include="Entities\Order\Chat.cs" />
@@ -409,6 +410,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\door_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightBulb_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lights_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lights_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightBulb_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ancient_suite_dark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

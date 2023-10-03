@@ -41,8 +41,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.68831F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.31169F));
-            this.tableLayoutPanel1.Controls.Add(this.LocksPictureBox, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_lock_unlock, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.LocksPictureBox, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 21);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
