@@ -151,14 +151,8 @@
   <data name="symbol_zeus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\symbol_zeus1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tv_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tv_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="btn_unlocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\door_unlocked.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tv_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ancient_suite_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ancient_suite_dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,7 +184,10 @@
   <data name="harp_music" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\harp_music.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tv_off1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="tv_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tv_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tv_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tv_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

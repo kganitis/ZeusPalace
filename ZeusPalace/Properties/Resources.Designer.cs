@@ -272,16 +272,6 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tv_off1 {
-            get {
-                object obj = ResourceManager.GetObject("tv_off1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap tv_on {
             get {
                 object obj = ResourceManager.GetObject("tv_on", resourceCulture);

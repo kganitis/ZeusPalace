@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,13 +20,11 @@ namespace ZeusPalace.Modules.Devices
             InitializeComponent();
             /*ThermostatControls thermostat = new ThermostatControls();
             backPanel.Controls.Add(thermostat);
-            MusicControls music = new MusicControls();
-            backPanel.Controls.Add(music);
-            TvControls tvControls = new TvControls();
-            backPanel.Controls.Add(tvControls);
-            LocksControls locks = new LocksControls();
+            *//*LocksControls locks = new LocksControls();
             backPanel.Controls.Add(locks);*/
         }
+
+        SoundPlayer MyPlayer = new SoundPlayer("..\\..\\Resources\\harp_music.wav");
 
         //
         //Lights Controls
@@ -50,7 +49,49 @@ namespace ZeusPalace.Modules.Devices
             }
         }//lightSwitchBtn_Click
 
+        //
+        //Tv Controls
+        //
+        Tv myTv = new Tv();
 
+        private void btn_ON_OFF_Click(object sender, EventArgs e)
+        {
+            if (myTv.GetStatus() == 0)
+            {
+                myTv.SwitchON();
+                btn_ON_OFF.BackgroundImage = Properties.Resources.tvremote_on;
+                TvpictureBox.BackgroundImage = Properties.Resources.tv_on;
+
+            }
+            else
+            {
+                myTv.SwitchOFF();
+                btn_ON_OFF.BackgroundImage = Properties.Resources.tvremote_off;
+                TvpictureBox.BackgroundImage = Properties.Resources.tv_off;
+            }
+        }
+
+        //
+        //Music Controls
+        //
+
+        Harp myHarp = new Harp();
+
+        private void BtnPlayStop_Click(object sender, EventArgs e)
+        {
+            if (myHarp.GetStatus() == 0)
+            {
+                myHarp.Play();
+                MyPlayer.PlayLooping();
+                BtnPlayStop.BackgroundImage = Properties.Resources.stopmusic;
+            }
+            else
+            {
+                myHarp.Stop();
+                MyPlayer.Stop();
+                BtnPlayStop.BackgroundImage = Properties.Resources.play;
+            }
+        }
     }
 
 }

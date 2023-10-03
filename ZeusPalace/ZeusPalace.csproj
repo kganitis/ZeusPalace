@@ -76,6 +76,7 @@
     <Compile Include="Entities\Accommodation\AccommodationType.cs" />
     <Compile Include="Entities\Accommodation\Apartment.cs" />
     <Compile Include="Entities\Accommodation\TrojanHorse.cs" />
+    <Compile Include="Entities\Devices\Harp.cs" />
     <Compile Include="Entities\Devices\Lights.cs" />
     <Compile Include="Entities\Devices\Locks.cs" />
     <Compile Include="Entities\Devices\Tv.cs" />
@@ -103,23 +104,11 @@
     <Compile Include="Modules\Devices\UserControls\LocksControls.Designer.cs">
       <DependentUpon>LocksControls.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Devices\UserControls\MusicControls.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Devices\UserControls\MusicControls.Designer.cs">
-      <DependentUpon>MusicControls.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modules\Devices\UserControls\ThermostatControls.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Modules\Devices\UserControls\ThermostatControls.Designer.cs">
       <DependentUpon>ThermostatControls.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Devices\UserControls\TvControls.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Devices\UserControls\TvControls.Designer.cs">
-      <DependentUpon>TvControls.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\EmbeddedForm.cs">
       <SubType>Form</SubType>
@@ -249,14 +238,8 @@
     <EmbeddedResource Include="Modules\Devices\UserControls\LocksControls.resx">
       <DependentUpon>LocksControls.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Devices\UserControls\MusicControls.resx">
-      <DependentUpon>MusicControls.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Devices\UserControls\ThermostatControls.resx">
       <DependentUpon>ThermostatControls.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Devices\UserControls\TvControls.resx">
-      <DependentUpon>TvControls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\EmbeddedForm.resx">
       <DependentUpon>EmbeddedForm.cs</DependentUpon>
@@ -428,6 +411,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tv_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tv_on.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
