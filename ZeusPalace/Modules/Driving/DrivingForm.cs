@@ -19,6 +19,7 @@ namespace ZeusPalace.Modules.Driving
         private Dictionary<Label, string> initialLabelTexts = new Dictionary<Label, string>();
         private Dictionary<Label, string> changedLabelTexts = new Dictionary<Label, string>();
         GardensOfOlympusForm go = new GardensOfOlympusForm();
+        private bool isMoving = false;
 
         public DrivingForm()
         {
@@ -129,54 +130,61 @@ namespace ZeusPalace.Modules.Driving
             }
         }
         //Method for driving with keyboard
-        private void DrivingForm_KeyDown(object sender, KeyEventArgs e)
+        private async void DrivingForm_KeyDown(object sender, KeyEventArgs e)
         {
-
-            int newX = drivingHorsePictureBox.Location.X;
-            int newY = drivingHorsePictureBox.Location.Y;
-            string choice = "";
+            string direction = "";
 
             switch (e.KeyCode)
             {
                 case Keys.Right:
-                    newX += 20;
-                    choice = "R";
+                    direction = "Right";
                     break;
                 case Keys.Left:
-                    newX -= 20;
-                    choice = "L";
+                    direction = "Left";
                     break;
                 case Keys.Up:
-                    newY -= 20;
-                    choice = "U";
+                    direction = "Up";
                     break;
                 case Keys.Down:
-                    newY += 20;
-                    choice = "D";
+                    direction = "Down";
                     break;
-
             }
 
-            bool collisionDetected = CheckCollisionWithObstacles(newX, newY, choice);
-
-            if (!collisionDetected)
+            if (!isMoving) // Ξεκινήστε τον χρονοδιακόπτη μόνο αν δεν είναι ήδη σε λειτουργία.
             {
-                drivingHorsePictureBox.Location = new Point(newX, newY);
+                isMoving = true; // Θέστε την μεταβλητή κίνησης σε true.
+
+                // Δημιουργήστε μια καθυστέρηση 500 ms πριν την κίνηση του άλογου.
+                await Task.Delay(100);
+
+                // Εδώ μπορείτε να τοποθετήσετε τον κώδικα για την κίνηση του άλογου.
+                MoveHorse(direction);
+
+                isMoving = false; // Ολοκληρώστε την κίνηση και θέστε την μεταβλητή κίνησης σε false.
             }
         }
         //Method for avoiding Obstacles
         private bool CheckCollisionWithObstacles(int x, int y, string c)
         {
-            if ((x >= 251 && x <= 807) && (y >= 140 && y <= 305) || (x >= 630 && x <= 710) && (y >= 50 && y <= 147))
+            if ((x >= 261 && x <= 780) && (y >= 140 && y <= 260) || (x >= 630 && x <= 710) && (y >= 50 && y <= 147) || (y >= 184 && y <= 220))
             {
                 switch (c) 
                 {
                     case "R":
                         drivingHorsePictureBox.Image = Properties.Resources.horse_right;
+                        if (x >= 840) {
+                            go.ShowDialog();
+                            this.Close();
+                            return true;
+                        }
                         return false;
                     case "L":
-                       //  drivingHorsePictureBox.ImageLocation = "C:/Users/PX/source/repos/ZeusPalace/ZeusPalace/Pictures/horse_left2.png";
-                         drivingHorsePictureBox.Image = Properties.Resources.horse_left2;
+                        //  drivingHorsePictureBox.ImageLocation = "C:/Users/PX/source/repos/ZeusPalace/ZeusPalace/Pictures/horse_left2.png";
+                        drivingHorsePictureBox.Image = Properties.Resources.horse_left2;
+                        if (x <= 190) 
+                        {
+                            return true;
+                        }
                         return false;
                     case"U":
                         return false;
@@ -190,8 +198,7 @@ namespace ZeusPalace.Modules.Driving
 
         private void DrivingForm_Load(object sender, EventArgs e)
         {
-
-            drivingHorsePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+           richTextBox1.Visible = false;
         }
 
         private void pictureBoxRight_Click(object sender, EventArgs e)
@@ -242,11 +249,14 @@ namespace ZeusPalace.Modules.Driving
             changeLabelTexts(labelRetractedLadder);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
-
+            int mouseX = e.X;
+            int mouseY = e.Y;
+            string coordinates = $"X: {mouseX}, Y: {mouseY}";
+           // richTextBox1.Text = coordinates + "\n";
+            richTextBox1.AppendText(coordinates+"\n");
         }
-
 
     }
 }

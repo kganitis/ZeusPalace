@@ -42,8 +42,10 @@
             this.pictureBoxRight = new System.Windows.Forms.PictureBox();
             this.pictureBoxUp = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.drivingHorsePictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.drivingHorsePictureBox = new System.Windows.Forms.PictureBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelLabel.SuspendLayout();
@@ -52,8 +54,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUp)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.drivingHorsePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drivingHorsePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -210,14 +213,37 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.drivingHorsePictureBox);
+            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.drivingHorsePictureBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1292, 549);
             this.panel1.TabIndex = 29;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(1079, 221);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(135, 110);
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(55, 212);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(291, 133);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Tag = "56,213";
             // 
             // drivingHorsePictureBox
             // 
@@ -231,15 +257,13 @@
             this.drivingHorsePictureBox.TabIndex = 0;
             this.drivingHorsePictureBox.TabStop = false;
             // 
-            // pictureBox1
+            // richTextBox1
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(55, 212);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(291, 133);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Tag = "56,213";
+            this.richTextBox1.Location = new System.Drawing.Point(1036, 59);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(195, 96);
+            this.richTextBox1.TabIndex = 4;
+            this.richTextBox1.Text = "";
             // 
             // DrivingForm
             // 
@@ -266,8 +290,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUp)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.drivingHorsePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drivingHorsePictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -288,5 +313,7 @@
         private System.Windows.Forms.Label labelOpenHalfDoor;
         private System.Windows.Forms.Label labelOpenDoor;
         private System.Windows.Forms.PictureBox drivingHorsePictureBox;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

@@ -33,7 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <Win32Resource>C:\Users\PX\source\repos\ZeusPalace\ZeusPalace\Pictures\horse_left2.png</Win32Resource>
+    <Win32Resource>
+    </Win32Resource>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
