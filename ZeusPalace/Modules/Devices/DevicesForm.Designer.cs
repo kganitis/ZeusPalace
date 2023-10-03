@@ -35,10 +35,12 @@
             this.lightBulbBox = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TvpictureBox = new System.Windows.Forms.PictureBox();
             this.backPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lightBulbBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TvpictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -56,6 +58,7 @@
             this.backPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.backPanel.BackgroundImage = global::ZeusPalace.Properties.Resources.ancient_suite;
             this.backPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backPanel.Controls.Add(this.TvpictureBox);
             this.backPanel.Controls.Add(this.lightSwitchBtn);
             this.backPanel.Controls.Add(this.lightBulbBox);
             this.backPanel.Location = new System.Drawing.Point(-1, 155);
@@ -106,6 +109,18 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // TvpictureBox
+            // 
+            this.TvpictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TvpictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.TvpictureBox.BackgroundImage = global::ZeusPalace.Properties.Resources.tv_off1;
+            this.TvpictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.TvpictureBox.Location = new System.Drawing.Point(1178, 269);
+            this.TvpictureBox.Name = "TvpictureBox";
+            this.TvpictureBox.Size = new System.Drawing.Size(201, 90);
+            this.TvpictureBox.TabIndex = 2;
+            this.TvpictureBox.TabStop = false;
+            // 
             // DevicesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -121,6 +136,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lightBulbBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TvpictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -133,5 +149,6 @@
         private System.Windows.Forms.Panel backPanel;
         private System.Windows.Forms.PictureBox lightBulbBox;
         private System.Windows.Forms.Button lightSwitchBtn;
+        private System.Windows.Forms.PictureBox TvpictureBox;
     }
 }
