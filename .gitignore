@@ -364,3 +364,5 @@ FodyWeavers.xsd
 
 /.vs/ZeusPalace/v17/.suo
 /ZeusPalace/obj/
+*.DS_Store
+/ZeusPalace/Resources/Thumbs.db

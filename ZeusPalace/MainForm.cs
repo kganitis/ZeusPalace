@@ -10,17 +10,39 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZeusPalace.Modules;
 using ZeusPalace.Modules.Devices;
-using ZeusPalace.Modules.Pool;
+using ZeusPalace.Modules.PoolControl;
 using ZeusPalace.Modules.Driving;
 using ZeusPalace.Modules.Orders;
+using ZeusPalace.Entities.Pool;
 
 namespace ZeusPalace
 {
     public partial class MainForm : Form
     {
-        private readonly Dictionary<Type, EmbeddedForm> embeddedForms;
+        // Forms
+        private Dictionary<Type, EmbeddedForm> embeddedForms;
+        private DevicesForm devicesForm;
+        private PoolForm poolForm;
+        private DrivingForm drivingForm;
+        private CustomerOrdersForm customerOrdersForm;
+
+        // Current form
+        public event EventHandler CurrentFormChanged;
+        private EmbeddedForm currentForm;
+        public EmbeddedForm CurrentForm
+        {
+            get { return currentForm; }
+            private set
+            {
+                currentForm = value;
+                currentForm.BringToFront();
+                currentForm.Show();
+                CurrentFormChanged?.Invoke(this, EventArgs.Empty);
+            }
+        }
+
+        // UI fields
         private Button activeButton;
-        private Form activeForm;
         private readonly Color defaultButtonBackColor;
         private readonly Font defaultButtonFont;
         private readonly Font activeButtonFont;
@@ -30,6 +52,8 @@ namespace ZeusPalace
         public MainForm()
         {
             InitializeComponent();
+
+            // Buttons
             defaultButtonBackColor = buttonDevices.BackColor;
             defaultButtonFont = buttonDevices.Font;
             activeButtonFont = new Font("Calibri", 21.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -39,18 +63,35 @@ namespace ZeusPalace
                 btn.FlatAppearance.MouseOverBackColor = ColorPicker.GetTint(defaultButtonBackColor, 10);
                 btn.FlatAppearance.MouseDownBackColor = btn.FlatAppearance.MouseOverBackColor;
             }
+
+            // Hide from employees
+            if (AppController.Instance.User.Role == UserRole.Employee)
+            {
+                //buttonDriving.Visible = buttonOrders.Visible = false;
+                buttonDriving.Text = buttonOrders.Text = string.Empty;
+                buttonDriving.Enabled = buttonOrders.Enabled = false;
+            }
+
+            // Keep the initial dimensions so we can reset them later
             initialWidth = Width;
             initialHeight = Height;
-            embeddedForms = new Dictionary<Type, EmbeddedForm>();
+
             PreloadForms();
         }
 
         private void PreloadForms()
         {
-            embeddedForms.Add(typeof(DevicesForm), new DevicesForm());
-            embeddedForms.Add(typeof(PoolForm), new PoolForm());
-            embeddedForms.Add(typeof(DrivingForm), new DrivingForm());
-            embeddedForms.Add(typeof(CustomerOrdersForm), new CustomerOrdersForm());
+            devicesForm = new DevicesForm();
+            poolForm = new PoolForm();
+            drivingForm = new DrivingForm();
+            customerOrdersForm = new CustomerOrdersForm();
+            embeddedForms = new Dictionary<Type, EmbeddedForm>
+            {
+                { typeof(DevicesForm), devicesForm },
+                { typeof(PoolForm), poolForm },
+                { typeof(DrivingForm), drivingForm },
+                { typeof(CustomerOrdersForm), customerOrdersForm }
+            };
             foreach (var embeddedForm in embeddedForms.Values)
             {
                 embeddedForm.TopLevel = false;
@@ -59,12 +100,7 @@ namespace ZeusPalace
             }
         }
 
-        public EmbeddedForm GetEmbeddedForm(Type type)
-        {
-            return embeddedForms[type];
-        }
-
-        private void AlignLabelToCenter(Control label, Panel parentPanel)
+        protected void AlignLabelToCenter(Control label, Panel parentPanel)
         {
             int labelX = (parentPanel.Width - label.Width) / 2;
             int labelY = (parentPanel.Height - label.Height) / 2;
@@ -91,9 +127,7 @@ namespace ZeusPalace
         {
             DisableActiveButton();
             ActivateButton(btn);
-            activeForm = embeddedForm;
-            activeForm.BringToFront();
-            activeForm.Show();
+            CurrentForm = embeddedForm;
         }
 
         private void buttonApartment_Click(object sender, EventArgs e)

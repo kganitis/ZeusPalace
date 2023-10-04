@@ -108,7 +108,6 @@
             // 
             // pictureBoxEmployee
             // 
-            this.pictureBoxEmployee.Image = global::ZeusPalace.Properties.Resources.employee_woman;
             this.pictureBoxEmployee.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxEmployee.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxEmployee.Name = "pictureBoxEmployee";

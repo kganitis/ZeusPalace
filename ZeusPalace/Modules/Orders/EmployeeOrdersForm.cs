@@ -12,12 +12,14 @@ namespace ZeusPalace.Modules.Orders
 {
     public partial class EmployeeOrdersForm : ZeusPalace.Modules.EmbeddedForm
     {
-        private int currentTime;
-        private EmployeeChatForm employeeChat;
         public event EventHandler MessageSent;
         public event EventHandler OrderConfirmed;
         public event EventHandler OrderRejected;
+
+        private int currentTime;
+        private EmployeeChatForm employeeChat;
         private OrderPanelTableControl panelOrderPreview;
+
         public string LastMessageSent => employeeChat.LastMessageSent;
 
         public EmployeeOrdersForm()

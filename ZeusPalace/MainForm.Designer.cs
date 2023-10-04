@@ -39,6 +39,7 @@
             // 
             // panelMenu
             // 
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
             this.panelMenu.Controls.Add(this.buttonOrders);
             this.panelMenu.Controls.Add(this.buttonDriving);
             this.panelMenu.Controls.Add(this.buttonPool);

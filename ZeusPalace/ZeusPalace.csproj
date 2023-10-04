@@ -71,7 +71,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppController.cs" />
+    <Compile Include="AppControllerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppControllerForm.Designer.cs">
+      <DependentUpon>AppControllerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ColorPicker.cs" />
+    <Compile Include="ComputerType.cs" />
     <Compile Include="Entities\Accommodation\Accommodation.cs" />
     <Compile Include="Entities\Accommodation\AccommodationType.cs" />
     <Compile Include="Entities\Accommodation\Apartment.cs" />
@@ -90,6 +98,8 @@
     <Compile Include="Entities\Order\OrderItem.cs" />
     <Compile Include="Entities\Order\OrderStatus.cs" />
     <Compile Include="Entities\Order\PaymentMethod.cs" />
+    <Compile Include="Entities\Pool\Pool.cs" />
+    <Compile Include="Entities\Pool\PoolType.cs" />
     <Compile Include="Entities\User\Customer.cs" />
     <Compile Include="Entities\User\Employee.cs" />
     <Compile Include="Modules\Devices\DevicesForm.cs">
@@ -216,11 +226,20 @@
     <Compile Include="Modules\Orders\UserControls\OrderPanelTableControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Pool\PoolForm.cs">
+    <Compile Include="Modules\PoolControl\PoolForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules\Pool\PoolForm.Designer.cs">
+    <Compile Include="Modules\PoolControl\PoolForm.Designer.cs">
       <DependentUpon>PoolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PoolControl\PublicPoolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\PoolControl\PublicPoolForm.Designer.cs">
+      <DependentUpon>PublicPoolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PoolControl\VerticalProgressbar.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -232,6 +251,9 @@
     </Compile>
     <Compile Include="Entities\User\UserRole.cs" />
     <Compile Include="Entities\User\User.cs" />
+    <EmbeddedResource Include="AppControllerForm.resx">
+      <DependentUpon>AppControllerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Devices\DevicesForm.resx">
       <DependentUpon>DevicesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -295,19 +317,17 @@
     <EmbeddedResource Include="Modules\Orders\UserControls\OrderPanelTableControl.resx">
       <DependentUpon>OrderPanelTableControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Pool\PoolForm.resx">
+    <EmbeddedResource Include="Modules\PoolControl\PoolForm.resx">
       <DependentUpon>PoolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PoolControl\PublicPoolForm.resx">
+      <DependentUpon>PublicPoolForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Modules\Driving\DrivingForm.resx">
       <DependentUpon>DrivingForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +336,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -338,82 +363,71 @@
     <None Include="Resources\employee_woman.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\music_off.png" />
+    <None Include="Resources\employee-man-1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\play.png" />
+    <None Include="Resources\employee-man-2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\stop.jpg" />
+    <None Include="Resources\employee-woman-1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\stopmusic.png" />
+    <None Include="Resources\employee-woman-2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TakeOnMe.wav" />
+    <None Include="Resources\toggle-switch-off.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\harp_music.wav" />
+    <None Include="Resources\toggle-switch-on.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\harp.png" />
+    <None Include="Resources\sensor-on.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ancient_suite.png" />
+    <None Include="Resources\sensor-off.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\symbol_zeus.jpg" />
+    <None Include="Resources\alarm-off.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\symbol_zeus1.jpg" />
+    <None Include="Resources\alarm.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\omega.png" />
+    <None Include="Resources\alarm-on.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tv_icon.png" />
+    <None Include="Resources\swimmer.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tvremote_off.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tvremote_on.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tv.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\door_unlocked.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\door_locked.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\door_unlocked.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\door_locked.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lightBulb_on.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lights_on.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lights_off.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lightBulb_off.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ancient_suite_dark.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tv_off.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tv_on.png" />
+    <None Include="Resources\public-alarm-enabled.jpg" />
+    <None Include="Resources\public-sensor-enabled.jpg" />
+    <None Include="Resources\public-pool-3-people.jpg" />
+    <None Include="Resources\public-pool-3.jpg" />
+    <None Include="Resources\public-pool-2-people.jpg" />
+    <None Include="Resources\public-pool-2.jpg" />
+    <None Include="Resources\public-pool-1-people.jpg" />
+    <None Include="Resources\public-pool-1.jpg" />
+    <None Include="Resources\public-pool.jpg" />
+    <None Include="Resources\pool.jpg" />
+    <None Include="Resources\switch-on.wav" />
+    <None Include="Resources\switch-off.wav" />
+    <None Include="Resources\switch-beep.wav" />
+    <None Include="Resources\blip.wav" />
+    <None Include="Resources\beep-cute.wav" />
+    <None Include="Resources\alarm-sound.wav" />
+    <Content Include="Resources\alarm.wav" />
+    <None Include="Resources\alarm_enabled.jpg" />
+    <None Include="Resources\sensor_disabled.jpg" />
+    <None Include="Resources\pool-3-people.jpg" />
+    <None Include="Resources\pool-3.jpg" />
+    <None Include="Resources\pool-2-people.jpg" />
+    <None Include="Resources\pool-1-people.jpg" />
+    <None Include="Resources\pool-1.jpg" />
+    <None Include="Resources\pool-2.jpg" />
+    <None Include="Resources\refresh-16.png" />
+    <None Include="Resources\refresh-20.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\warning.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
