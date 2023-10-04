@@ -108,17 +108,11 @@
     <Compile Include="Modules\Devices\DevicesForm.Designer.cs">
       <DependentUpon>DevicesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Devices\UserControls\LocksControls.cs">
+    <Compile Include="Modules\Devices\UserControls\ThermostatControls1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Modules\Devices\UserControls\LocksControls.Designer.cs">
-      <DependentUpon>LocksControls.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\Devices\UserControls\ThermostatControls.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Devices\UserControls\ThermostatControls.Designer.cs">
-      <DependentUpon>ThermostatControls.cs</DependentUpon>
+    <Compile Include="Modules\Devices\UserControls\ThermostatControls1.Designer.cs">
+      <DependentUpon>ThermostatControls1.cs</DependentUpon>
     </Compile>
     <Compile Include="Modules\EmbeddedForm.cs">
       <SubType>Form</SubType>
@@ -257,11 +251,8 @@
     <EmbeddedResource Include="Modules\Devices\DevicesForm.resx">
       <DependentUpon>DevicesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Devices\UserControls\LocksControls.resx">
-      <DependentUpon>LocksControls.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Devices\UserControls\ThermostatControls.resx">
-      <DependentUpon>ThermostatControls.cs</DependentUpon>
+    <EmbeddedResource Include="Modules\Devices\UserControls\ThermostatControls1.resx">
+      <DependentUpon>ThermostatControls1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\EmbeddedForm.resx">
       <DependentUpon>EmbeddedForm.cs</DependentUpon>
@@ -399,6 +390,24 @@
     <None Include="Resources\swimmer.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\btn_unlocked.jpg" />
+    <None Include="Resources\btn_locked.jpg" />
+    <None Include="Resources\door_locked.png" />
+    <None Include="Resources\door_unlocked.jpg" />
+    <None Include="Resources\door_locked.jpg" />
+    <None Include="Resources\stop.jpg" />
+    <None Include="Resources\tvremote_on.jpg" />
+    <None Include="Resources\tvremote_off.jpg" />
+    <None Include="Resources\symbol_zeus.jpg" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\lights_on.png" />
+    <None Include="Resources\lightBulb_on.png" />
+    <None Include="Resources\lightBulb_off.png" />
+    <None Include="Resources\harp.png" />
+    <None Include="Resources\ancient_suite_dark.png" />
+    <None Include="Resources\ancient_suite.png" />
+    <None Include="Resources\tv_on.png" />
+    <None Include="Resources\tv_off.png" />
     <None Include="Resources\public-alarm-enabled.jpg" />
     <None Include="Resources\public-sensor-enabled.jpg" />
     <None Include="Resources\public-pool-3-people.jpg" />

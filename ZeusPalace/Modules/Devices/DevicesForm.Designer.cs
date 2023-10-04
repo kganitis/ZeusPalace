@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DevicesForm));
             this.backPanel = new System.Windows.Forms.Panel();
-            this.thermostatControls1 = new ZeusPalace.Modules.Devices.UserControls.ThermostatControls();
             this.BtnPlayStop = new System.Windows.Forms.Button();
             this.MusciBox = new System.Windows.Forms.PictureBox();
             this.btn_ON_OFF = new System.Windows.Forms.Button();
@@ -40,6 +39,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Deviceslabel = new System.Windows.Forms.Label();
+            this.thermostatControls11 = new ZeusPalace.Modules.Devices.UserControls.ThermostatControls1();
             this.backPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MusciBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TvpictureBox)).BeginInit();
@@ -53,7 +53,7 @@
             this.backPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.backPanel.BackgroundImage = global::ZeusPalace.Properties.Resources.ancient_suite;
             this.backPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.backPanel.Controls.Add(this.thermostatControls1);
+            this.backPanel.Controls.Add(this.thermostatControls11);
             this.backPanel.Controls.Add(this.BtnPlayStop);
             this.backPanel.Controls.Add(this.MusciBox);
             this.backPanel.Controls.Add(this.btn_ON_OFF);
@@ -64,15 +64,6 @@
             this.backPanel.Name = "backPanel";
             this.backPanel.Size = new System.Drawing.Size(1706, 670);
             this.backPanel.TabIndex = 4;
-            // 
-            // thermostatControls1
-            // 
-            this.thermostatControls1.BackColor = System.Drawing.Color.Transparent;
-            this.thermostatControls1.Location = new System.Drawing.Point(0, 0);
-            this.thermostatControls1.Margin = new System.Windows.Forms.Padding(4);
-            this.thermostatControls1.Name = "thermostatControls1";
-            this.thermostatControls1.Size = new System.Drawing.Size(533, 43);
-            this.thermostatControls1.TabIndex = 6;
             // 
             // BtnPlayStop
             // 
@@ -173,6 +164,15 @@
             this.Deviceslabel.Text = "Διαχείριση Συσκευών";
             this.Deviceslabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // thermostatControls11
+            // 
+            this.thermostatControls11.BackColor = System.Drawing.Color.Transparent;
+            this.thermostatControls11.Location = new System.Drawing.Point(4, 0);
+            this.thermostatControls11.Margin = new System.Windows.Forms.Padding(4);
+            this.thermostatControls11.Name = "thermostatControls11";
+            this.thermostatControls11.Size = new System.Drawing.Size(533, 43);
+            this.thermostatControls11.TabIndex = 6;
+            // 
             // DevicesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -205,6 +205,6 @@
         private System.Windows.Forms.Button btn_ON_OFF;
         private System.Windows.Forms.PictureBox MusciBox;
         private System.Windows.Forms.Button BtnPlayStop;
-        private UserControls.ThermostatControls thermostatControls1;
+        private UserControls.ThermostatControls1 thermostatControls11;
     }
 }

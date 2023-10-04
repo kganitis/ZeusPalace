@@ -18,10 +18,7 @@ namespace ZeusPalace.Modules.Devices
         public DevicesForm()
         {
             InitializeComponent();
-            /*ThermostatControls thermostat = new ThermostatControls();
-            backPanel.Controls.Add(thermostat);
-            *//*LocksControls locks = new LocksControls();
-            backPanel.Controls.Add(locks);*/
+            
         }
 
         SoundPlayer MyPlayer = new SoundPlayer("..\\..\\Resources\\harp_music.wav");
@@ -83,7 +80,7 @@ namespace ZeusPalace.Modules.Devices
             {
                 myHarp.Play();
                 MyPlayer.PlayLooping();
-                BtnPlayStop.BackgroundImage = Properties.Resources.stopmusic;
+                BtnPlayStop.BackgroundImage = Properties.Resources.stop;
             }
             else
             {
