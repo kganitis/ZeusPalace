@@ -21,7 +21,7 @@ namespace ZeusPalace
 
         private void AppController_CurrentFormChanged(object sender, EventArgs e)
         {
-            checkBoxPersonInPool.Enabled = appController.CurrentForm.GetType() == typeof(PoolForm);
+            checkBoxPersonInPool.Enabled = appController.CurrentForm.GetType() == typeof(PoolForm) || appController.CurrentForm.GetType() == typeof(PublicPoolForm);
         }
 
         private void buttonCustomer_Click(object sender, EventArgs e)

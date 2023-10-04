@@ -157,7 +157,6 @@
             this.timePickerAlarmOff.Name = "timePickerAlarmOff";
             this.timePickerAlarmOff.Size = new System.Drawing.Size(48, 20);
             this.timePickerAlarmOff.TabIndex = 1;
-            this.timePickerAlarmOff.Value = new System.DateTime(2023, 9, 28, 7, 0, 0, 0);
             this.timePickerAlarmOff.ValueChanged += new System.EventHandler(this.timePickerAlarmOff_ValueChanged);
             // 
             // radioButtonEnabledUntil
@@ -200,7 +199,7 @@
             this.verticalProgressBarWaterLevel.ProgressBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.verticalProgressBarWaterLevel.Size = new System.Drawing.Size(90, 120);
             this.verticalProgressBarWaterLevel.TabIndex = 5;
-            this.verticalProgressBarWaterLevel.Value = 93;
+            this.verticalProgressBarWaterLevel.Value = 150;
             // 
             // labelTemperature
             // 
@@ -228,7 +227,7 @@
             // trackBarWaterLevel
             // 
             this.trackBarWaterLevel.LargeChange = 30;
-            this.trackBarWaterLevel.Location = new System.Drawing.Point(109, 523);
+            this.trackBarWaterLevel.Location = new System.Drawing.Point(111, 523);
             this.trackBarWaterLevel.Maximum = 210;
             this.trackBarWaterLevel.Minimum = 90;
             this.trackBarWaterLevel.Name = "trackBarWaterLevel";
@@ -236,7 +235,7 @@
             this.trackBarWaterLevel.Size = new System.Drawing.Size(45, 81);
             this.trackBarWaterLevel.SmallChange = 10;
             this.trackBarWaterLevel.TabIndex = 2;
-            this.trackBarWaterLevel.Value = 90;
+            this.trackBarWaterLevel.Value = 150;
             this.trackBarWaterLevel.Scroll += new System.EventHandler(this.trackBarWaterLevel_Scroll);
             // 
             // pictureBoxSensor
@@ -310,11 +309,11 @@
             this.labelWaterLevel.AutoSize = true;
             this.labelWaterLevel.BackColor = System.Drawing.Color.Transparent;
             this.labelWaterLevel.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWaterLevel.Location = new System.Drawing.Point(101, 605);
+            this.labelWaterLevel.Location = new System.Drawing.Point(91, 604);
             this.labelWaterLevel.Name = "labelWaterLevel";
-            this.labelWaterLevel.Size = new System.Drawing.Size(63, 26);
+            this.labelWaterLevel.Size = new System.Drawing.Size(73, 26);
             this.labelWaterLevel.TabIndex = 3;
-            this.labelWaterLevel.Text = "90 cm";
+            this.labelWaterLevel.Text = "150 cm";
             // 
             // panelAlarm
             // 
@@ -396,31 +395,30 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelWaterLevel;
-        private System.Windows.Forms.PictureBox pictureBoxSensorToggle;
-        private System.Windows.Forms.Label label1;
-        private VerticalProgressBar verticalProgressBarTemperature;
-        private System.Windows.Forms.Label labelSensor;
-        private System.Windows.Forms.TrackBar trackBarTemperatureLevel;
-        private System.Windows.Forms.PictureBox pictureBoxSensor;
-        private System.Windows.Forms.TrackBar trackBarWaterLevel;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelTemperature;
-        private VerticalProgressBar verticalProgressBarWaterLevel;
         private System.Windows.Forms.Label labelTrackBarWarning;
-        private System.Windows.Forms.Panel panelAlarm;
-        private System.Windows.Forms.PictureBox pictureBoxAlarm;
-        private System.Windows.Forms.Label labelAlarm;
-        private System.Windows.Forms.PictureBox pictureBoxAlarmToggle;
-        private System.Windows.Forms.Panel panelAlarmMode;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButtonEnabledUntilTurnoff;
+        protected System.Windows.Forms.Label labelWaterLevel;
+        protected System.Windows.Forms.PictureBox pictureBoxSensorToggle;
+        protected System.Windows.Forms.Label label1;
+        protected VerticalProgressBar verticalProgressBarTemperature;
+        protected System.Windows.Forms.Label labelSensor;
+        protected System.Windows.Forms.TrackBar trackBarTemperatureLevel;
+        protected System.Windows.Forms.PictureBox pictureBoxSensor;
+        protected System.Windows.Forms.TrackBar trackBarWaterLevel;
+        protected System.Windows.Forms.Label label2;
+        protected System.Windows.Forms.Label labelTemperature;
+        protected VerticalProgressBar verticalProgressBarWaterLevel;
+        protected System.Windows.Forms.Panel panelAlarm;
+        protected System.Windows.Forms.Panel panelAlarmMode;
+        protected System.Windows.Forms.PictureBox pictureBoxSensorDisabled;
+        protected System.Windows.Forms.PictureBox pictureBoxAlarmEnabled;
+        protected System.Windows.Forms.PictureBox pictureBoxPool;
+        protected System.Windows.Forms.PictureBox pictureBoxAlarm;
+        protected System.Windows.Forms.Label labelAlarm;
+        protected System.Windows.Forms.PictureBox pictureBoxAlarmToggle;
+        protected System.Windows.Forms.Label label5;
+        protected System.Windows.Forms.RadioButton radioButtonEnabledUntilTurnoff;
+        protected System.Windows.Forms.RadioButton radioButtonEnabledUntil;
+        protected System.Windows.Forms.Panel panelBackground;
         private System.Windows.Forms.DateTimePicker timePickerAlarmOff;
-        private System.Windows.Forms.RadioButton radioButtonEnabledUntil;
-        private System.Windows.Forms.Panel panelBackground;
-        private System.Windows.Forms.PictureBox pictureBoxSensorDisabled;
-        private System.Windows.Forms.PictureBox pictureBoxAlarmEnabled;
-        private System.Windows.Forms.PictureBox pictureBoxPool;
     }
 }

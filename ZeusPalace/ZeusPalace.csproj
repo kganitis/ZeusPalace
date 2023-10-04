@@ -216,6 +216,12 @@
     <Compile Include="Modules\PoolControl\PoolForm.Designer.cs">
       <DependentUpon>PoolForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\PoolControl\PublicPoolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\PoolControl\PublicPoolForm.Designer.cs">
+      <DependentUpon>PublicPoolForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\PoolControl\VerticalProgressbar.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -291,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\PoolControl\PoolForm.resx">
       <DependentUpon>PoolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\PoolControl\PublicPoolForm.resx">
+      <DependentUpon>PublicPoolForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -368,6 +377,15 @@
     <None Include="Resources\swimmer.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\public-alarm-enabled.jpg" />
+    <None Include="Resources\public-sensor-enabled.jpg" />
+    <None Include="Resources\public-pool-3-people.jpg" />
+    <None Include="Resources\public-pool-3.jpg" />
+    <None Include="Resources\public-pool-2-people.jpg" />
+    <None Include="Resources\public-pool-2.jpg" />
+    <None Include="Resources\public-pool-1-people.jpg" />
+    <None Include="Resources\public-pool-1.jpg" />
+    <None Include="Resources\public-pool.jpg" />
     <None Include="Resources\pool.jpg" />
     <None Include="Resources\switch-on.wav" />
     <None Include="Resources\switch-off.wav" />

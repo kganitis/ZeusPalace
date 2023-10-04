@@ -26,7 +26,7 @@ namespace ZeusPalace
         }
 
         private MainForm mainForm;
-        private PoolForm publicPoolForm;
+        private PublicPoolForm publicPoolForm;
 
         public event EventHandler CurrentFormChanged;
         public event EventHandler TimeChanged;
@@ -95,7 +95,7 @@ namespace ZeusPalace
 
             if (ComputerType == ComputerType.PublicPool)
             {
-                publicPoolForm = new PoolForm();
+                publicPoolForm = new PublicPoolForm();
                 publicPoolForm.Show();
             }
             else

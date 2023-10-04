@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,11 +41,11 @@ namespace ZeusPalace.Entities.Pool
         }
         public bool AlarmTriggered => AlarmEnabled && PersonInPool;
 
-        private DateTime alarmDeactivationTime = DateTime.MaxValue;
+        private DateTime alarmDeactivationTime = DateTime.MinValue;
         public DateTime AlarmDeactivationTime
         {
             get { return alarmDeactivationTime; }
-            set { alarmDeactivationTime = AlarmEnabled ? value : DateTime.MaxValue; }
+            set { alarmDeactivationTime = AlarmEnabled ? value : new DateTime(2099, 12, 31, 0, 0, 0); }
         }
     }
 }

@@ -6,6 +6,7 @@ using ZeusPalace.Properties;
 using System.Media;
 using System.Resources;
 using System.Xml.Linq;
+using System.Diagnostics;
 
 namespace ZeusPalace.Modules.PoolControl
 {
@@ -18,27 +19,10 @@ namespace ZeusPalace.Modules.PoolControl
         public PoolForm()
         {
             InitializeComponent();
-            AppController.Instance.TimeChanged += Instance_TimeChanged;
-            AppController.Instance.PersonInPoolChanged += Instance_PersonInPoolChanged;
+            Debug.WriteLine("PoolForm constructor called.");
+            AppController.Instance.TimeChanged += AppController_TimeChanged;
+            AppController.Instance.PersonInPoolChanged += AppController_PersonInPoolChanged;
             InitializeUI();
-        }
-
-        private void Instance_PersonInPoolChanged(object sender, EventArgs e)
-        {
-            pool.PersonInPool = AppController.Instance.PersonInPool;
-            UpdateUI();
-        }
-
-        private void Instance_TimeChanged(object sender, EventArgs e)
-        {
-            if (pool.AlarmEnabled)
-            {
-                if (AppController.Instance.DateTime >= pool.AlarmDeactivationTime)
-                {
-                    pool.AlarmEnabled = false;
-                    UpdateUI();
-                }
-            }
         }
 
         private void InitializeUI()
@@ -52,12 +36,12 @@ namespace ZeusPalace.Modules.PoolControl
             //
             // Update timerPickerAlarmOff to next occurrence of 7am by default
             //
-            timePickerAlarmOff.Value = NextOccurrenceOfTime(7, 0);
+            //timePickerAlarmOff.Value = NextOccurrenceOfTime(7, 0);
 
             UpdateUI();
         }
 
-        private DateTime NextOccurrenceOfTime(int hours, int minutes)
+        protected DateTime NextOccurrenceOfTime(int hours, int minutes)
         {
             hours = Math.Max(0, Math.Min(23, hours));
             minutes = Math.Max(0, Math.Min(59, minutes));
@@ -74,7 +58,7 @@ namespace ZeusPalace.Modules.PoolControl
         private void UpdateUI()
         {
             //
-            // Background Image (depending on water level and person in pool)
+            // Pool Image (depending on water level and person in pool)
             //
             int waterLevelRange = (pool.MaxWaterLevel - pool.MinWaterLevel) / 3;
             int waterLevel = 1;
@@ -86,11 +70,21 @@ namespace ZeusPalace.Modules.PoolControl
             {
                 waterLevel = 3;
             }
-            string poolImageName = $"pool_{waterLevel}";
+
+            string poolImageName = string.Empty;
+
+            if (GetType() == typeof(PublicPoolForm))
+            {
+                poolImageName += "public_";
+            }
+
+            poolImageName += $"pool_{waterLevel}";
+
             if (pool.SensorEnabled && pool.PersonInPool)
             {
                 poolImageName += "_people";
             }
+
             if (!currentPoolImageName.Equals(poolImageName))
             {
                 pictureBoxPool.Image = (Image)Resources.ResourceManager.GetObject(poolImageName);
@@ -117,6 +111,10 @@ namespace ZeusPalace.Modules.PoolControl
             pictureBoxSensor.Image = pool.SensorEnabled ? Resources.sensor_on : Resources.sensor_off;
             pictureBoxSensorToggle.Image = pool.SensorEnabled ? Resources.toggle_switch_on : Resources.toggle_switch_off;
             pictureBoxSensorDisabled.Visible = !pool.SensorEnabled;
+            if (GetType() == typeof(PublicPoolForm))
+            {
+                pictureBoxSensorDisabled.Visible = !pictureBoxSensorDisabled.Visible;
+            }
 
             //
             // Alarm
@@ -168,6 +166,10 @@ namespace ZeusPalace.Modules.PoolControl
         private void pictureBoxAlarmToggle_Click(object sender, EventArgs e)
         {
             pool.AlarmEnabled = !pool.AlarmEnabled;
+            if (pool.AlarmDeactivationTime == DateTime.MinValue)
+            {
+                timePickerAlarmOff.Value = NextOccurrenceOfTime(7, 0);
+            }
             UpdateAlarmDeactivationTime();
             UpdateUI();
         }
@@ -192,6 +194,24 @@ namespace ZeusPalace.Modules.PoolControl
         {
             UpdateAlarmDeactivationTime();
             UpdateUI();
+        }
+
+        private void AppController_PersonInPoolChanged(object sender, EventArgs e)
+        {
+            pool.PersonInPool = AppController.Instance.PersonInPool;
+            UpdateUI();
+        }
+
+        private void AppController_TimeChanged(object sender, EventArgs e)
+        {
+            if (pool.AlarmEnabled)
+            {
+                if (AppController.Instance.DateTime >= pool.AlarmDeactivationTime)
+                {
+                    pool.AlarmEnabled = false;
+                    UpdateUI();
+                }
+            }
         }
 
         private void UpdateAlarmDeactivationTime()
