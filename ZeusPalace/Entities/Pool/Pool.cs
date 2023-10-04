@@ -9,7 +9,7 @@ namespace ZeusPalace.Entities.Pool
 {
     public class Pool
     {
-        private int waterLevel = 120;
+        private int waterLevel = 150;
         public readonly int MinWaterLevel = 90;
         public readonly int MaxWaterLevel = 210;
         public int WaterLevel 

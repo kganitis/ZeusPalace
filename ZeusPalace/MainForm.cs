@@ -14,11 +14,15 @@ using ZeusPalace.Modules.PoolControl;
 using ZeusPalace.Modules.Driving;
 using ZeusPalace.Modules.Orders;
 using ZeusPalace.Entities.Pool;
+using ZeusPalace.Entities.Accommodation;
+using System.Diagnostics;
 
 namespace ZeusPalace
 {
     public partial class MainForm : Form
     {
+        AppController appController = AppController.Instance;
+
         // Forms
         private Dictionary<Type, EmbeddedForm> embeddedForms;
         private DevicesForm devicesForm;
@@ -57,26 +61,51 @@ namespace ZeusPalace
             defaultButtonBackColor = buttonDevices.BackColor;
             defaultButtonFont = buttonDevices.Font;
             activeButtonFont = new Font("Calibri", 21.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            foreach (Button btn in panelMenu.Controls.OfType<Button>())
+            foreach (Button btn in flowLayoutPanelMenu.Controls.OfType<Button>())
             {
                 btn.FlatAppearance.BorderColor = ColorPicker.GetTint(defaultButtonBackColor, 10);
                 btn.FlatAppearance.MouseOverBackColor = ColorPicker.GetTint(defaultButtonBackColor, 10);
                 btn.FlatAppearance.MouseDownBackColor = btn.FlatAppearance.MouseOverBackColor;
             }
 
-            // Hide from employees
-            if (AppController.Instance.User.Role == UserRole.Employee)
-            {
-                //buttonDriving.Visible = buttonOrders.Visible = false;
-                buttonDriving.Text = buttonOrders.Text = string.Empty;
-                buttonDriving.Enabled = buttonOrders.Enabled = false;
-            }
+            HandleUserPermissions();
 
             // Keep the initial dimensions so we can reset them later
             initialWidth = Width;
             initialHeight = Height;
 
             PreloadForms();
+        }
+
+        private void HandleUserPermissions()
+        {
+            bool buttonPoolVisible = appController.Customer.Accommodation.Type == AccommodationType.Apartment;
+            bool buttonDrivingVisible = appController.User.Role == UserRole.Customer &&
+                                    appController.Customer.Accommodation.Type == AccommodationType.TrojanHorse &&
+                                    appController.ComputerType == ComputerType.Private;
+            bool buttonOrdersVisible = appController.User.Role == UserRole.Customer;
+
+            flowLayoutPanelMenu.Controls.Clear();
+
+            flowLayoutPanelMenu.Controls.Add(buttonDevices);
+            if (buttonPoolVisible)
+            {
+                flowLayoutPanelMenu.Controls.Add(buttonPool);
+            }
+            if (buttonDrivingVisible)
+            {
+                flowLayoutPanelMenu.Controls.Add(buttonDriving);
+            }
+            if (buttonOrdersVisible)
+            {
+                flowLayoutPanelMenu.Controls.Add(buttonOrders);
+            }
+        }
+
+        private void HideButton(Button button)
+        {
+            button.Text = string.Empty;
+            button.Enabled = false;
         }
 
         private void PreloadForms()

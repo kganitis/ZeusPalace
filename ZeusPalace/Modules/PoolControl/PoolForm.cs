@@ -19,25 +19,8 @@ namespace ZeusPalace.Modules.PoolControl
         public PoolForm()
         {
             InitializeComponent();
-            Debug.WriteLine("PoolForm constructor called.");
             AppController.Instance.TimeChanged += AppController_TimeChanged;
             AppController.Instance.PersonInPoolChanged += AppController_PersonInPoolChanged;
-            InitializeUI();
-        }
-
-        private void InitializeUI()
-        {
-            //
-            // TrackBars
-            //
-            trackBarWaterLevel.Value = pool.WaterLevel;
-            trackBarTemperatureLevel.Value = pool.TemperatureLevel;
-
-            //
-            // Update timerPickerAlarmOff to next occurrence of 7am by default
-            //
-            //timePickerAlarmOff.Value = NextOccurrenceOfTime(7, 0);
-
             UpdateUI();
         }
 
