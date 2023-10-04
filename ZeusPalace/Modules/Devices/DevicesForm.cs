@@ -44,7 +44,7 @@ namespace ZeusPalace.Modules.Devices
                 lightSwitchBtn.BackgroundImage = Properties.Resources.lights_on;
                 backPanel.BackgroundImage = Properties.Resources.ancient_suite;
             }
-        }//lightSwitchBtn_Click
+        }
 
         //
         //Tv Controls
@@ -89,6 +89,11 @@ namespace ZeusPalace.Modules.Devices
                 BtnPlayStop.BackgroundImage = Properties.Resources.play;
             }
         }
+        //
+        //Humidity Controls
+        //
+        
+        
     }
 
 }
