@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DevicesForm));
             this.backPanel = new System.Windows.Forms.Panel();
+            this.thermostatControls11 = new ZeusPalace.Modules.Devices.UserControls.ThermostatControls1();
             this.BtnPlayStop = new System.Windows.Forms.Button();
             this.MusciBox = new System.Windows.Forms.PictureBox();
             this.btn_ON_OFF = new System.Windows.Forms.Button();
@@ -39,13 +40,16 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Deviceslabel = new System.Windows.Forms.Label();
-            this.thermostatControls11 = new ZeusPalace.Modules.Devices.UserControls.ThermostatControls1();
+            this.ProgressBarHumidity = new VerticalProgressBar();
+            this.HumidityLabel = new System.Windows.Forms.Label();
+            this.trackBarHumidity = new System.Windows.Forms.TrackBar();
             this.backPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MusciBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TvpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lightBulbBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarHumidity)).BeginInit();
             this.SuspendLayout();
             // 
             // backPanel
@@ -53,6 +57,9 @@
             this.backPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.backPanel.BackgroundImage = global::ZeusPalace.Properties.Resources.ancient_suite;
             this.backPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backPanel.Controls.Add(this.trackBarHumidity);
+            this.backPanel.Controls.Add(this.HumidityLabel);
+            this.backPanel.Controls.Add(this.ProgressBarHumidity);
             this.backPanel.Controls.Add(this.thermostatControls11);
             this.backPanel.Controls.Add(this.BtnPlayStop);
             this.backPanel.Controls.Add(this.MusciBox);
@@ -64,6 +71,15 @@
             this.backPanel.Name = "backPanel";
             this.backPanel.Size = new System.Drawing.Size(1706, 670);
             this.backPanel.TabIndex = 4;
+            // 
+            // thermostatControls11
+            // 
+            this.thermostatControls11.BackColor = System.Drawing.Color.Transparent;
+            this.thermostatControls11.Location = new System.Drawing.Point(4, 0);
+            this.thermostatControls11.Margin = new System.Windows.Forms.Padding(4);
+            this.thermostatControls11.Name = "thermostatControls11";
+            this.thermostatControls11.Size = new System.Drawing.Size(533, 43);
+            this.thermostatControls11.TabIndex = 6;
             // 
             // BtnPlayStop
             // 
@@ -164,14 +180,32 @@
             this.Deviceslabel.Text = "Διαχείριση Συσκευών";
             this.Deviceslabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // thermostatControls11
+            // ProgressBarHumidity
             // 
-            this.thermostatControls11.BackColor = System.Drawing.Color.Transparent;
-            this.thermostatControls11.Location = new System.Drawing.Point(4, 0);
-            this.thermostatControls11.Margin = new System.Windows.Forms.Padding(4);
-            this.thermostatControls11.Name = "thermostatControls11";
-            this.thermostatControls11.Size = new System.Drawing.Size(533, 43);
-            this.thermostatControls11.TabIndex = 6;
+            this.ProgressBarHumidity.Location = new System.Drawing.Point(966, 386);
+            this.ProgressBarHumidity.Name = "ProgressBarHumidity";
+            this.ProgressBarHumidity.ProgressBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.ProgressBarHumidity.Size = new System.Drawing.Size(19, 104);
+            this.ProgressBarHumidity.TabIndex = 7;
+            // 
+            // HumidityLabel
+            // 
+            this.HumidityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.HumidityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.HumidityLabel.Location = new System.Drawing.Point(892, 352);
+            this.HumidityLabel.Name = "HumidityLabel";
+            this.HumidityLabel.Size = new System.Drawing.Size(100, 23);
+            this.HumidityLabel.TabIndex = 8;
+            this.HumidityLabel.Text = "Υγρασία";
+            this.HumidityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // trackBarHumidity
+            // 
+            this.trackBarHumidity.Location = new System.Drawing.Point(893, 386);
+            this.trackBarHumidity.Name = "trackBarHumidity";
+            this.trackBarHumidity.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.trackBarHumidity.Size = new System.Drawing.Size(56, 104);
+            this.trackBarHumidity.TabIndex = 9;
             // 
             // DevicesForm
             // 
@@ -185,11 +219,13 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "DevicesForm";
             this.backPanel.ResumeLayout(false);
+            this.backPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MusciBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TvpictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lightBulbBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarHumidity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,5 +242,8 @@
         private System.Windows.Forms.PictureBox MusciBox;
         private System.Windows.Forms.Button BtnPlayStop;
         private UserControls.ThermostatControls1 thermostatControls11;
+        private VerticalProgressBar ProgressBarHumidity;
+        private System.Windows.Forms.TrackBar trackBarHumidity;
+        private System.Windows.Forms.Label HumidityLabel;
     }
 }
