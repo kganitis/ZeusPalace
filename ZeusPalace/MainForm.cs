@@ -27,7 +27,7 @@ namespace ZeusPalace
         private Dictionary<Type, EmbeddedForm> embeddedForms;
         private DevicesForm devicesForm;
         private PoolForm poolForm;
-        private DrivingForm drivingForm;
+        private TrojanHorseForm templeCourtyardForm;
         private CustomerOrdersForm customerOrdersForm;
 
         // Current form
@@ -60,7 +60,7 @@ namespace ZeusPalace
             // Buttons
             defaultButtonBackColor = buttonDevices.BackColor;
             defaultButtonFont = buttonDevices.Font;
-            activeButtonFont = new Font("Calibri", 21.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            activeButtonFont = new Font(defaultButtonFont.Name, 21.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             foreach (Button btn in flowLayoutPanelMenu.Controls.OfType<Button>())
             {
                 btn.FlatAppearance.BorderColor = ColorPicker.GetTint(defaultButtonBackColor, 10);
@@ -102,25 +102,21 @@ namespace ZeusPalace
             }
         }
 
-        private void HideButton(Button button)
-        {
-            button.Text = string.Empty;
-            button.Enabled = false;
-        }
-
         private void PreloadForms()
         {
             devicesForm = new DevicesForm();
             poolForm = new PoolForm();
-            drivingForm = new DrivingForm();
+            templeCourtyardForm = new TrojanHorseForm(this);
             customerOrdersForm = new CustomerOrdersForm();
+
             embeddedForms = new Dictionary<Type, EmbeddedForm>
             {
                 { typeof(DevicesForm), devicesForm },
                 { typeof(PoolForm), poolForm },
-                { typeof(DrivingForm), drivingForm },
+                { typeof(TrojanHorseForm), templeCourtyardForm },
                 { typeof(CustomerOrdersForm), customerOrdersForm }
             };
+
             foreach (var embeddedForm in embeddedForms.Values)
             {
                 embeddedForm.TopLevel = false;
@@ -171,7 +167,7 @@ namespace ZeusPalace
 
         private void buttonTrojanHorse_Click(object sender, EventArgs e)
         {
-            ShowEmbeddedForm(embeddedForms[typeof(DrivingForm)], (Button)sender);
+            ShowEmbeddedForm(embeddedForms[typeof(TrojanHorseForm)], (Button)sender);
         }
 
         private void buttonOrders_Click(object sender, EventArgs e)

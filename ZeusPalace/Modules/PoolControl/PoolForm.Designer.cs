@@ -226,6 +226,7 @@
             // 
             // trackBarWaterLevel
             // 
+            this.trackBarWaterLevel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.trackBarWaterLevel.LargeChange = 30;
             this.trackBarWaterLevel.Location = new System.Drawing.Point(111, 523);
             this.trackBarWaterLevel.Maximum = 210;
@@ -249,6 +250,7 @@
             // 
             // trackBarTemperatureLevel
             // 
+            this.trackBarTemperatureLevel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.trackBarTemperatureLevel.LargeChange = 1;
             this.trackBarTemperatureLevel.Location = new System.Drawing.Point(265, 201);
             this.trackBarTemperatureLevel.Maximum = 7;

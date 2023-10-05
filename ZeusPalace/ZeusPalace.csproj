@@ -104,6 +104,30 @@
     <Compile Include="Modules\Devices\DevicesForm.Designer.cs">
       <DependentUpon>DevicesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Driving\CampingAreaPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Driving\CampingAreaPanel.Designer.cs">
+      <DependentUpon>CampingAreaPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Driving\GardensOfOlympusPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Driving\GardensOfOlympusPanel.Designer.cs">
+      <DependentUpon>GardensOfOlympusPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Driving\TrojanHorseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Driving\TrojanHorseForm.Designer.cs">
+      <DependentUpon>TrojanHorseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Driving\ZeusTempleCourtyardPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Driving\ZeusTempleCourtyardPanel.Designer.cs">
+      <DependentUpon>ZeusTempleCourtyardPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\EmbeddedForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,12 +251,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Modules\Driving\DrivingForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modules\Driving\DrivingForm.Designer.cs">
-      <DependentUpon>DrivingForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Entities\User\UserRole.cs" />
     <Compile Include="Entities\User\User.cs" />
     <EmbeddedResource Include="AppControllerForm.resx">
@@ -240,6 +258,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Devices\DevicesForm.resx">
       <DependentUpon>DevicesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Driving\CampingAreaPanel.resx">
+      <DependentUpon>CampingAreaPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Driving\GardensOfOlympusPanel.resx">
+      <DependentUpon>GardensOfOlympusPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Driving\TrojanHorseForm.resx">
+      <DependentUpon>TrojanHorseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Driving\ZeusTempleCourtyardPanel.resx">
+      <DependentUpon>ZeusTempleCourtyardPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\EmbeddedForm.resx">
       <DependentUpon>EmbeddedForm.cs</DependentUpon>
@@ -305,9 +335,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Driving\DrivingForm.resx">
-      <DependentUpon>DrivingForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -393,7 +420,6 @@
     <None Include="Resources\blip.wav" />
     <None Include="Resources\beep-cute.wav" />
     <None Include="Resources\alarm-sound.wav" />
-    <Content Include="Resources\alarm.wav" />
     <None Include="Resources\alarm_enabled.jpg" />
     <None Include="Resources\sensor_disabled.jpg" />
     <None Include="Resources\pool-3-people.jpg" />
@@ -406,6 +432,30 @@
     <None Include="Resources\refresh-20.png" />
     <None Include="Resources\refresh.png" />
     <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camping-temple_of_zeus_courtyard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horse_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horse_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camping-gardens_of_olympus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move-right.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

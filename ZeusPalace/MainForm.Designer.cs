@@ -43,7 +43,7 @@
             this.buttonOrders.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonOrders.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(99)))), ((int)(((byte)(140)))));
             this.buttonOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOrders.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOrders.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOrders.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
             this.buttonOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonOrders.Location = new System.Drawing.Point(960, 0);
@@ -62,7 +62,7 @@
             this.buttonDriving.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDriving.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(99)))), ((int)(((byte)(140)))));
             this.buttonDriving.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDriving.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDriving.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDriving.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
             this.buttonDriving.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDriving.Location = new System.Drawing.Point(640, 0);
@@ -81,7 +81,7 @@
             this.buttonPool.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPool.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(99)))), ((int)(((byte)(140)))));
             this.buttonPool.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPool.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPool.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPool.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
             this.buttonPool.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonPool.Location = new System.Drawing.Point(320, 0);
@@ -100,7 +100,7 @@
             this.buttonDevices.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDevices.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(99)))), ((int)(((byte)(140)))));
             this.buttonDevices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDevices.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDevices.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDevices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
             this.buttonDevices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDevices.Location = new System.Drawing.Point(0, 0);
@@ -142,6 +142,7 @@
             this.Controls.Add(this.flowLayoutPanelMenu);
             this.Controls.Add(this.panelDesktopPane);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Το Παλάτι του Δία";
