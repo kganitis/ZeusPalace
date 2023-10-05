@@ -28,6 +28,16 @@ namespace ZeusPalace.Modules.Devices.UserControls
             {
                 Quantity = 16;
             }
+            else if (Quantity == 16 && Quantity <=18) 
+            {
+                temperature_label.ForeColor = Color.Blue;
+                Quantity -= 0.5;
+            }
+            else if (Quantity > 26 && Quantity <= 30) 
+            {
+                temperature_label.ForeColor = Color.Crimson;
+                Quantity -= 0.5;
+            }
             else
             {
                 Quantity -= 0.5;
