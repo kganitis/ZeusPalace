@@ -31,8 +31,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.thermostat_label = new System.Windows.Forms.Label();
             this.btn_icr_temp = new System.Windows.Forms.Button();
-            this.temperature_label = new System.Windows.Forms.Label();
             this.btn_decr_temp = new System.Windows.Forms.Button();
+            this.temperature_label = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,10 +43,10 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.88555F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.01501F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.82739F));
-            this.tableLayoutPanel1.Controls.Add(this.thermostat_label, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_icr_temp, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_decr_temp, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.temperature_label, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.thermostat_label, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
@@ -59,6 +59,7 @@
             // thermostat_label
             // 
             this.thermostat_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.thermostat_label.ForeColor = System.Drawing.Color.Snow;
             this.thermostat_label.Location = new System.Drawing.Point(3, 0);
             this.thermostat_label.Name = "thermostat_label";
             this.thermostat_label.Size = new System.Drawing.Size(183, 43);
@@ -78,15 +79,6 @@
             this.btn_icr_temp.UseVisualStyleBackColor = true;
             this.btn_icr_temp.Click += new System.EventHandler(this.btn_icr_temp_Click);
             // 
-            // temperature_label
-            // 
-            this.temperature_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.temperature_label.Location = new System.Drawing.Point(192, 0);
-            this.temperature_label.Name = "temperature_label";
-            this.temperature_label.Size = new System.Drawing.Size(83, 43);
-            this.temperature_label.TabIndex = 6;
-            this.temperature_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btn_decr_temp
             // 
             this.btn_decr_temp.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -99,14 +91,24 @@
             this.btn_decr_temp.UseVisualStyleBackColor = true;
             this.btn_decr_temp.Click += new System.EventHandler(this.btn_decr_temp_Click);
             // 
-            // ThermostatControls
+            // temperature_label
+            // 
+            this.temperature_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.temperature_label.ForeColor = System.Drawing.Color.Snow;
+            this.temperature_label.Location = new System.Drawing.Point(192, 0);
+            this.temperature_label.Name = "temperature_label";
+            this.temperature_label.Size = new System.Drawing.Size(83, 43);
+            this.temperature_label.TabIndex = 6;
+            this.temperature_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ThermostatControls1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "ThermostatControls";
+            this.Name = "ThermostatControls1";
             this.Size = new System.Drawing.Size(533, 43);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

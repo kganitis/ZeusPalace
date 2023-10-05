@@ -89,11 +89,48 @@ namespace ZeusPalace.Modules.Devices
                 BtnPlayStop.BackgroundImage = Properties.Resources.play;
             }
         }
+
         //
         //Humidity Controls
         //
+        private void trackBarHumidity_Scroll(object sender, EventArgs e)
+        {
+            if (trackBarHumidity.Value > 0 && trackBarHumidity.Value <= 25)
+            {
+                ProgressBarHumidity.ProgressBarColor = Color.Crimson;
+                WarningLabel.ForeColor = Color.Crimson;
+                WarningLabel.Text = "Κίνδυνος! Πολύ χαμηλή υγρασία!";
+            }
+            else if (trackBarHumidity.Value > 25 && trackBarHumidity.Value <= 40)
+            {
+                ProgressBarHumidity.ProgressBarColor = Color.Yellow;
+                WarningLabel.ForeColor = Color.Orange;
+                WarningLabel.Text = "Προσοχή! Χαμηλή υγρασία!";
+            }
+            else if (trackBarHumidity.Value > 40 && trackBarHumidity.Value <= 70)
+            {
+                ProgressBarHumidity.ProgressBarColor = Color.Lime;
+                WarningLabel.Text = "";
+            }
+            else if (trackBarHumidity.Value > 70 && trackBarHumidity.Value <= 80)
+            {
+                ProgressBarHumidity.ProgressBarColor = Color.Yellow;
+                WarningLabel.ForeColor = Color.Orange;
+                WarningLabel.Text = "Προσοχή! Υψηλή υγρασία!";
+            }
+            else
+            {
+                ProgressBarHumidity.ProgressBarColor = Color.Crimson;
+                WarningLabel.ForeColor = Color.Crimson;
+                WarningLabel.Text = "Κίνδυνος! Πολύ υψηλή υγρασία!";
+
+            }
+            ProgressBarHumidity.Value = trackBarHumidity.Value;
+            HumidityLabel.Text = "Υγρασία: " + trackBarHumidity.Value+"%";
+        }
         
-        
+
+
     }
 
 }

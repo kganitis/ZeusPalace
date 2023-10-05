@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DevicesForm));
             this.backPanel = new System.Windows.Forms.Panel();
+            this.trackBarHumidity = new System.Windows.Forms.TrackBar();
+            this.HumidityLabel = new System.Windows.Forms.Label();
+            this.ProgressBarHumidity = new VerticalProgressBar();
             this.thermostatControls11 = new ZeusPalace.Modules.Devices.UserControls.ThermostatControls1();
             this.BtnPlayStop = new System.Windows.Forms.Button();
             this.MusciBox = new System.Windows.Forms.PictureBox();
@@ -40,23 +43,21 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Deviceslabel = new System.Windows.Forms.Label();
-            this.ProgressBarHumidity = new VerticalProgressBar();
-            this.HumidityLabel = new System.Windows.Forms.Label();
-            this.trackBarHumidity = new System.Windows.Forms.TrackBar();
+            this.WarningLabel = new System.Windows.Forms.Label();
             this.backPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarHumidity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MusciBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TvpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lightBulbBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarHumidity)).BeginInit();
             this.SuspendLayout();
             // 
             // backPanel
             // 
-            this.backPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.backPanel.BackgroundImage = global::ZeusPalace.Properties.Resources.ancient_suite;
             this.backPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backPanel.Controls.Add(this.WarningLabel);
             this.backPanel.Controls.Add(this.trackBarHumidity);
             this.backPanel.Controls.Add(this.HumidityLabel);
             this.backPanel.Controls.Add(this.ProgressBarHumidity);
@@ -67,10 +68,43 @@
             this.backPanel.Controls.Add(this.TvpictureBox);
             this.backPanel.Controls.Add(this.lightSwitchBtn);
             this.backPanel.Controls.Add(this.lightBulbBox);
-            this.backPanel.Location = new System.Drawing.Point(-1, 140);
+            this.backPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.backPanel.Location = new System.Drawing.Point(0, 128);
             this.backPanel.Name = "backPanel";
-            this.backPanel.Size = new System.Drawing.Size(1706, 670);
+            this.backPanel.Size = new System.Drawing.Size(1707, 684);
             this.backPanel.TabIndex = 4;
+            // 
+            // trackBarHumidity
+            // 
+            this.trackBarHumidity.Location = new System.Drawing.Point(893, 386);
+            this.trackBarHumidity.Maximum = 100;
+            this.trackBarHumidity.Name = "trackBarHumidity";
+            this.trackBarHumidity.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.trackBarHumidity.Size = new System.Drawing.Size(56, 104);
+            this.trackBarHumidity.TabIndex = 9;
+            this.trackBarHumidity.Value = 50;
+            this.trackBarHumidity.Scroll += new System.EventHandler(this.trackBarHumidity_Scroll);
+            // 
+            // HumidityLabel
+            // 
+            this.HumidityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.HumidityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.HumidityLabel.ForeColor = System.Drawing.Color.Snow;
+            this.HumidityLabel.Location = new System.Drawing.Point(869, 352);
+            this.HumidityLabel.Name = "HumidityLabel";
+            this.HumidityLabel.Size = new System.Drawing.Size(159, 23);
+            this.HumidityLabel.TabIndex = 8;
+            this.HumidityLabel.Text = "Υγρασία: 50%";
+            this.HumidityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ProgressBarHumidity
+            // 
+            this.ProgressBarHumidity.Location = new System.Drawing.Point(966, 386);
+            this.ProgressBarHumidity.Name = "ProgressBarHumidity";
+            this.ProgressBarHumidity.ProgressBarColor = System.Drawing.Color.Lime;
+            this.ProgressBarHumidity.Size = new System.Drawing.Size(19, 104);
+            this.ProgressBarHumidity.TabIndex = 7;
+            this.ProgressBarHumidity.Value = 50;
             // 
             // thermostatControls11
             // 
@@ -120,7 +154,7 @@
             this.TvpictureBox.BackColor = System.Drawing.Color.Transparent;
             this.TvpictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TvpictureBox.BackgroundImage")));
             this.TvpictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.TvpictureBox.Location = new System.Drawing.Point(1167, 274);
+            this.TvpictureBox.Location = new System.Drawing.Point(1167, 281);
             this.TvpictureBox.Name = "TvpictureBox";
             this.TvpictureBox.Size = new System.Drawing.Size(212, 100);
             this.TvpictureBox.TabIndex = 2;
@@ -180,32 +214,16 @@
             this.Deviceslabel.Text = "Διαχείριση Συσκευών";
             this.Deviceslabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ProgressBarHumidity
+            // WarningLabel
             // 
-            this.ProgressBarHumidity.Location = new System.Drawing.Point(966, 386);
-            this.ProgressBarHumidity.Name = "ProgressBarHumidity";
-            this.ProgressBarHumidity.ProgressBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.ProgressBarHumidity.Size = new System.Drawing.Size(19, 104);
-            this.ProgressBarHumidity.TabIndex = 7;
-            // 
-            // HumidityLabel
-            // 
-            this.HumidityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.HumidityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.HumidityLabel.Location = new System.Drawing.Point(892, 352);
-            this.HumidityLabel.Name = "HumidityLabel";
-            this.HumidityLabel.Size = new System.Drawing.Size(100, 23);
-            this.HumidityLabel.TabIndex = 8;
-            this.HumidityLabel.Text = "Υγρασία";
-            this.HumidityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // trackBarHumidity
-            // 
-            this.trackBarHumidity.Location = new System.Drawing.Point(893, 386);
-            this.trackBarHumidity.Name = "trackBarHumidity";
-            this.trackBarHumidity.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBarHumidity.Size = new System.Drawing.Size(56, 104);
-            this.trackBarHumidity.TabIndex = 9;
+            this.WarningLabel.BackColor = System.Drawing.Color.Transparent;
+            this.WarningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.WarningLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.WarningLabel.Location = new System.Drawing.Point(766, 324);
+            this.WarningLabel.Name = "WarningLabel";
+            this.WarningLabel.Size = new System.Drawing.Size(332, 23);
+            this.WarningLabel.TabIndex = 10;
+            this.WarningLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DevicesForm
             // 
@@ -220,12 +238,12 @@
             this.Name = "DevicesForm";
             this.backPanel.ResumeLayout(false);
             this.backPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarHumidity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MusciBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TvpictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lightBulbBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarHumidity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -245,5 +263,6 @@
         private VerticalProgressBar ProgressBarHumidity;
         private System.Windows.Forms.TrackBar trackBarHumidity;
         private System.Windows.Forms.Label HumidityLabel;
+        private System.Windows.Forms.Label WarningLabel;
     }
 }
