@@ -64,7 +64,7 @@
             // pictureBoxTrojanHorse
             // 
             this.pictureBoxTrojanHorse.Image = global::ZeusPalace.Properties.Resources.horse_right;
-            this.pictureBoxTrojanHorse.Location = new System.Drawing.Point(326, 210);
+            this.pictureBoxTrojanHorse.Location = new System.Drawing.Point(326, 217);
             this.pictureBoxTrojanHorse.TabIndex = 4;
             // 
             // pictureBox1
@@ -271,7 +271,7 @@
             this.Controls.Add(this.panelMovementArea4);
             this.Controls.Add(this.panelMovementArea5);
             this.Name = "GardensOfOlympusPanel";
-            this.TrojanHorseLocation = new System.Drawing.Point(326, 210);
+            this.TrojanHorseLocation = new System.Drawing.Point(326, 217);
             this.Controls.SetChildIndex(this.panelMovementArea5, 0);
             this.Controls.SetChildIndex(this.panelMovementArea4, 0);
             this.Controls.SetChildIndex(this.panelMovementArea2, 0);

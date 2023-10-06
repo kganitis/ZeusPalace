@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using ZeusPalace.Properties;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ZeusPalace.Modules.Driving
 {
@@ -15,8 +17,47 @@ namespace ZeusPalace.Modules.Driving
     {
         // Movement fields
         private const int trojanHorseSpeed = 10;
-        private bool rightKeyPressed, leftKeyPressed, upKeyPressed, downKeyPressed = false;
-        private char currentDirection = 'R';
+        private bool upKeyPressed, downKeyPressed = false;
+        private readonly Movement currentMovement = new Movement();
+
+        class Movement
+        {
+            private readonly string[] directions = new string[] { "up", "right", "down", "left" };
+            private int directionIndex = 1; // right
+            private string Direction => directions[directionIndex];
+            public int FacingDirection => Direction == "down" || Direction == "right" ? 1 : -1;
+
+            public char Axis => Direction == "up" || Direction == "down" ? 'Y' : 'X';
+
+            private int flipHorizontalIndex = 0;
+            public bool FlipHorizontal {
+                get
+                {
+                    if (Math.Abs(flipHorizontalIndex) == 2)
+                    {
+                        flipHorizontalIndex = 0;
+                        return true;
+                    }
+                    return false;
+                }
+            }
+
+            public void Rotate(string rotation)
+            {
+                if (rotation == "right")
+                {
+                    directionIndex = (directionIndex + 1) % directions.Length;
+                    flipHorizontalIndex++;
+
+                }
+                else if (rotation == "left")
+                {
+                    directionIndex = (directionIndex - 1 + directions.Length) % directions.Length;
+                    flipHorizontalIndex--;
+                }
+                Debug.WriteLine(Direction);
+            }
+        }
 
         // Door and ladder fields
         private Dictionary<Label, string> initialLabelTexts = new Dictionary<Label, string>();
@@ -37,13 +78,13 @@ namespace ZeusPalace.Modules.Driving
         {
             // the key events are sent to the main form to handle
             this.mainForm = mainForm;
-            mainForm.KeyUp += ZeusTempleCourtyardForm_KeyUp;
-            mainForm.KeyDown += ZeusTempleCourtyardForm_KeyDown;
+            mainForm.KeyUp += TrojanHorseForm_KeyUp;
+            mainForm.KeyDown += TrojanHorseForm_KeyDown;
 
             currentCampingAreaPanel = zeusTempleCourtyardPanel;
         }
 
-        private void ZeusTempleCourtyardForm_Load(object sender, EventArgs e)
+        private void TrojanHorseForm_Load(object sender, EventArgs e)
         {
             // Door and ladder fields initialization
             initialLabelTexts.Add(labelOpenDoor, labelOpenDoor.Text);
@@ -72,19 +113,19 @@ namespace ZeusPalace.Modules.Driving
         {
             if (sender == pictureBoxUp)
             {
-                ZeusTempleCourtyardForm_KeyDown(this, new KeyEventArgs(Keys.W));
+                TrojanHorseForm_KeyDown(this, new KeyEventArgs(Keys.W));
             }
             else if (sender == pictureBoxDown)
             {
-                ZeusTempleCourtyardForm_KeyDown(this, new KeyEventArgs(Keys.S));
+                TrojanHorseForm_KeyDown(this, new KeyEventArgs(Keys.S));
             }
             else if (sender == pictureBoxLeft)
             {
-                ZeusTempleCourtyardForm_KeyDown(this, new KeyEventArgs(Keys.A));
+                TrojanHorseForm_KeyDown(this, new KeyEventArgs(Keys.A));
             }
             else if (sender == pictureBoxRight)
             {
-                ZeusTempleCourtyardForm_KeyDown(this, new KeyEventArgs(Keys.D));
+                TrojanHorseForm_KeyDown(this, new KeyEventArgs(Keys.D));
             }
         }
 
@@ -92,72 +133,67 @@ namespace ZeusPalace.Modules.Driving
         {
             if (sender == pictureBoxUp)
             {
-                ZeusTempleCourtyardForm_KeyUp(this, new KeyEventArgs(Keys.W));
+                TrojanHorseForm_KeyUp(this, new KeyEventArgs(Keys.W));
             }
             else if (sender == pictureBoxDown)
             {
-                ZeusTempleCourtyardForm_KeyUp(this, new KeyEventArgs(Keys.S));
+                TrojanHorseForm_KeyUp(this, new KeyEventArgs(Keys.S));
             }
             else if (sender == pictureBoxLeft)
             {
-                ZeusTempleCourtyardForm_KeyUp(this, new KeyEventArgs(Keys.A));
+                TrojanHorseForm_KeyUp(this, new KeyEventArgs(Keys.A));
             }
             else if (sender == pictureBoxRight)
             {
-                ZeusTempleCourtyardForm_KeyUp(this, new KeyEventArgs(Keys.D));
+                TrojanHorseForm_KeyUp(this, new KeyEventArgs(Keys.D));
             }
         }
 
-        private void ZeusTempleCourtyardForm_KeyDown(object sender, KeyEventArgs e)
+        private void TrojanHorseForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (mainForm.CurrentForm == this && selectedDoorLabel.Equals(labelClosedDoor))
             {
                 // set the appropriate key flag when a key is pressed
-                if (e.KeyData == Keys.A || e.KeyData == Keys.Left)
-                {
-                    leftKeyPressed = true;
-                    currentDirection = 'L';
-                    //pictureBoxTrojanHorse.Image = Resources.horse_left;
-                }
-                else if (e.KeyData == Keys.D || e.KeyData == Keys.Right)
-                {
-                    rightKeyPressed = true;
-                    currentDirection = 'R';
-                    //pictureBoxTrojanHorse.Image = Resources.horse_right;
-                }
-                else if (e.KeyData == Keys.W || e.KeyData == Keys.Up)
+                if (e.KeyData == Keys.W || e.KeyData == Keys.Up)
                 {
                     upKeyPressed = true;
-                    currentDirection = 'U';
+                    StartTimer();
                 }
                 else if (e.KeyData == Keys.S || e.KeyData == Keys.Down)
                 {
                     downKeyPressed = true;
-                    currentDirection = 'D';
+                    StartTimer();
                 }
 
                 // start the timer if it's not already running
-                if (!timerMovement.Enabled)
+                void StartTimer()
                 {
-                    timerMovement.Start();
+                    if (!timerMovement.Enabled)
+                    {
+                        timerMovement.Start();
+                    }
                 }
             }
         }
 
-        private void ZeusTempleCourtyardForm_KeyUp(object sender, KeyEventArgs e)
+        private void TrojanHorseForm_KeyUp(object sender, KeyEventArgs e)
         {
             if (mainForm.CurrentForm == this && selectedDoorLabel.Equals(labelClosedDoor))
             {
-                // unset the appropriate key flag when a key is released
+                // left and right keys just rotate the trojan horse
                 if (e.KeyData == Keys.A || e.KeyData == Keys.Left)
                 {
-                    leftKeyPressed = false;
+                    RotateTrojanHorse("left");
+                    return;
                 }
                 else if (e.KeyData == Keys.D || e.KeyData == Keys.Right)
                 {
-                    rightKeyPressed = false;
+                    RotateTrojanHorse("right");
+                    return;
                 }
-                else if (e.KeyData == Keys.W || e.KeyData == Keys.Up)
+
+                // unset the appropriate key flag when a key is released
+                if (e.KeyData == Keys.W || e.KeyData == Keys.Up)
                 {
                     upKeyPressed = false;
                 }
@@ -167,11 +203,17 @@ namespace ZeusPalace.Modules.Driving
                 }
 
                 // stop the timer if all keys are released
-                if (!leftKeyPressed && !rightKeyPressed && !upKeyPressed && !downKeyPressed)
+                if (!upKeyPressed && !downKeyPressed)
                 {
                     timerMovement.Stop();
                 }
             }
+        }
+
+        private void RotateTrojanHorse(string rotation)
+        {
+            currentMovement.Rotate(rotation);
+            currentCampingAreaPanel.RotateTrojanHorse(rotation, currentMovement.FlipHorizontal);
         }
 
         private void timerMovement_Tick(object sender, EventArgs e)
@@ -180,22 +222,19 @@ namespace ZeusPalace.Modules.Driving
             int newTrojanHorseX = currentCampingAreaPanel.TrojanHorseX;
             int newTrojanHorseY = currentCampingAreaPanel.TrojanHorseY;
 
-            // Update the potential new position based on the key that was pressed
-            if (leftKeyPressed)
+            // Move in opposite (negative speed) if forwards is false
+            int currentSpeed = trojanHorseSpeed;
+            if (downKeyPressed) currentSpeed *= -1;
+
+            // Update the potential new position based on movement axis
+            int distance = currentMovement.FacingDirection * currentSpeed;
+            if (currentMovement.Axis == 'X')
             {
-                newTrojanHorseX -= trojanHorseSpeed;
+                newTrojanHorseX += distance;
             }
-            else if (rightKeyPressed)
+            else if (currentMovement.Axis == 'Y')
             {
-                newTrojanHorseX += trojanHorseSpeed;
-            }
-            else if (upKeyPressed)
-            {
-                newTrojanHorseY -= trojanHorseSpeed;
-            }
-            else if (downKeyPressed)
-            {
-                newTrojanHorseY += trojanHorseSpeed;
+                newTrojanHorseY += distance;
             }
 
             // Update the horse's position if it's within bounds
@@ -204,13 +243,16 @@ namespace ZeusPalace.Modules.Driving
             // Check if the new position is in new form area
             if (currentCampingAreaPanel.IsInNewFormArea(newTrojanHorseX, newTrojanHorseY))
             {
+                // Swap the area panels
                 Controls.Remove(currentCampingAreaPanel);
                 if (currentCampingAreaPanel == zeusTempleCourtyardPanel)
                 {
+                    gardensOfOlympusPanel.TrojanHorseImage = currentCampingAreaPanel.TrojanHorseImage;
                     currentCampingAreaPanel = gardensOfOlympusPanel;
                 }
                 else
                 {
+                    zeusTempleCourtyardPanel.TrojanHorseImage = currentCampingAreaPanel.TrojanHorseImage;
                     currentCampingAreaPanel = zeusTempleCourtyardPanel;
                 }
                 Controls.Add(currentCampingAreaPanel);

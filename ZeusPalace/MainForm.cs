@@ -27,7 +27,7 @@ namespace ZeusPalace
         private Dictionary<Type, EmbeddedForm> embeddedForms;
         private DevicesForm devicesForm;
         private PoolForm poolForm;
-        private TrojanHorseForm templeCourtyardForm;
+        private TrojanHorseForm trojanHorseForm;
         private CustomerOrdersForm customerOrdersForm;
 
         // Current form
@@ -106,14 +106,14 @@ namespace ZeusPalace
         {
             devicesForm = new DevicesForm();
             poolForm = new PoolForm();
-            templeCourtyardForm = new TrojanHorseForm(this);
+            trojanHorseForm = new TrojanHorseForm(this);
             customerOrdersForm = new CustomerOrdersForm();
 
             embeddedForms = new Dictionary<Type, EmbeddedForm>
             {
                 { typeof(DevicesForm), devicesForm },
                 { typeof(PoolForm), poolForm },
-                { typeof(TrojanHorseForm), templeCourtyardForm },
+                { typeof(TrojanHorseForm), trojanHorseForm },
                 { typeof(CustomerOrdersForm), customerOrdersForm }
             };
 

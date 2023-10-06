@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Image = System.Drawing.Image;
 
 namespace ZeusPalace.Modules.Driving
 {
@@ -29,6 +30,12 @@ namespace ZeusPalace.Modules.Driving
 
         public List<Panel> MovementAreas = new List<Panel>();
 
+        public Image TrojanHorseImage
+        {
+            get => pictureBoxTrojanHorse.Image;
+            set => pictureBoxTrojanHorse.Image = value;
+        }
+
         public CampingAreaPanel()
         {
             InitializeComponent();
@@ -47,6 +54,48 @@ namespace ZeusPalace.Modules.Driving
             }
 
             return false; // The pictureBoxTrojanHorse is not within any panel's area.
+        }
+
+        public void RotateTrojanHorse(string direction, bool flipHorizontal = false)
+        {
+            Image image = pictureBoxTrojanHorse.Image;
+
+            // Create a new Bitmap for the rotated image
+            Bitmap rotatedImage = new Bitmap(image.Width, image.Height);
+
+            // Create a Graphics object to perform the rotation
+            using (Graphics graphics = Graphics.FromImage(rotatedImage))
+            {
+                // Apply the rotation transformation
+                float rotationAngle;
+                graphics.TranslateTransform(image.Width / 2, image.Height / 2);
+                if (direction == "left")
+                {
+                    rotationAngle = -90.0f;
+                }
+                else if (direction == "right")
+                {
+                    rotationAngle = 90.0f;
+                }
+                else
+                {
+                    rotationAngle = 0;
+                }
+                graphics.RotateTransform(rotationAngle);
+                graphics.TranslateTransform(-image.Width / 2, -image.Height / 2);
+
+                if (flipHorizontal)
+                {
+                    // Apply horizontal flip transformation
+                    graphics.ScaleTransform(-1, 1);
+                    graphics.TranslateTransform(-image.Width, 0);
+                }
+
+                // Draw the original image onto the rotated image
+                graphics.DrawImage(image, Point.Empty);
+
+                pictureBoxTrojanHorse.Image = rotatedImage;
+            }
         }
 
         public virtual bool IsInNewFormArea(int x, int y)

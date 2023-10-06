@@ -39,7 +39,7 @@
             this.pictureBoxTrojanHorse.Image = global::ZeusPalace.Properties.Resources.horse_right;
             this.pictureBoxTrojanHorse.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxTrojanHorse.Name = "pictureBoxTrojanHorse";
-            this.pictureBoxTrojanHorse.Size = new System.Drawing.Size(64, 72);
+            this.pictureBoxTrojanHorse.Size = new System.Drawing.Size(72, 72);
             this.pictureBoxTrojanHorse.TabIndex = 9;
             this.pictureBoxTrojanHorse.TabStop = false;
             // 

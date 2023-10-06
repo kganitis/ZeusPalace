@@ -253,7 +253,7 @@
             this.Controls.Add(this.pictureBoxRight);
             this.Controls.Add(this.pictureBoxUp);
             this.Name = "TrojanHorseForm";
-            this.Load += new System.EventHandler(this.ZeusTempleCourtyardForm_Load);
+            this.Load += new System.EventHandler(this.TrojanHorseForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLeft)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRight)).EndInit();
