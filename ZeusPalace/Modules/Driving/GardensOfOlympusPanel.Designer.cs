@@ -210,9 +210,9 @@
             // panelMovementArea2
             // 
             this.panelMovementArea2.BackColor = System.Drawing.Color.Transparent;
-            this.panelMovementArea2.Location = new System.Drawing.Point(812, 58);
+            this.panelMovementArea2.Location = new System.Drawing.Point(826, 58);
             this.panelMovementArea2.Name = "panelMovementArea2";
-            this.panelMovementArea2.Size = new System.Drawing.Size(178, 190);
+            this.panelMovementArea2.Size = new System.Drawing.Size(142, 190);
             this.panelMovementArea2.TabIndex = 18;
             // 
             // panelMovementArea3
@@ -251,7 +251,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ZeusPalace.Properties.Resources.camping_gardens_of_olympus;
+            this.BackgroundImage = global::ZeusPalace.Properties.Resources.camping_gardens_of_olympus_parking;
             this.Controls.Add(this.panelMovementArea6);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox11);
@@ -271,6 +271,7 @@
             this.Controls.Add(this.panelMovementArea4);
             this.Controls.Add(this.panelMovementArea5);
             this.Name = "GardensOfOlympusPanel";
+            this.TrojanHorseImage = global::ZeusPalace.Properties.Resources.horse_right;
             this.TrojanHorseLocation = new System.Drawing.Point(326, 217);
             this.Controls.SetChildIndex(this.panelMovementArea5, 0);
             this.Controls.SetChildIndex(this.panelMovementArea4, 0);

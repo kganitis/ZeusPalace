@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using ZeusPalace.Properties;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace ZeusPalace.Modules.Driving
 {

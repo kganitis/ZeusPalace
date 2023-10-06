@@ -36,7 +36,7 @@
             // 
             this.pictureBoxTrojanHorse.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxTrojanHorse.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxTrojanHorse.Image = global::ZeusPalace.Properties.Resources.horse_right;
+            this.pictureBoxTrojanHorse.Image = global::ZeusPalace.Properties.Resources.horse_right_glow;
             this.pictureBoxTrojanHorse.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxTrojanHorse.Name = "pictureBoxTrojanHorse";
             this.pictureBoxTrojanHorse.Size = new System.Drawing.Size(72, 72);

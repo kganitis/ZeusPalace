@@ -140,6 +140,16 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap camping_gardens_of_olympus_parking {
+            get {
+                object obj = ResourceManager.GetObject("camping-gardens_of_olympus_parking", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap camping_temple_of_zeus_courtyard {
             get {
                 object obj = ResourceManager.GetObject("camping-temple_of_zeus_courtyard", resourceCulture);
@@ -213,6 +223,16 @@ namespace ZeusPalace.Properties {
         internal static System.Drawing.Bitmap horse_right {
             get {
                 object obj = ResourceManager.GetObject("horse_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap horse_right_glow {
+            get {
+                object obj = ResourceManager.GetObject("horse_right_glow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
