@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZeusPalace.Entities.Devices;
 
 namespace ZeusPalace.Modules.Devices.UserControls
 {
@@ -18,44 +19,51 @@ namespace ZeusPalace.Modules.Devices.UserControls
             temperature_label.Text = "22,0 C";
         }
 
-        public double Quantity = 22;
-        
-
+        Thermostat myThermostat = new Thermostat(22);
+        //string currentFeeling = myThermostat.Feeling;
 
         private void btn_decr_temp_Click(object sender, EventArgs e)
         {
-            if (Quantity <= 16)
+            if (myThermostat.Temperature <= 12)
             {
-                Quantity = 16;
-            }
-            else if (Quantity == 16 && Quantity <=18) 
-            {
-                temperature_label.ForeColor = Color.Blue;
-                Quantity -= 0.5;
-            }
-            else if (Quantity > 26 && Quantity <= 30) 
-            {
-                temperature_label.ForeColor = Color.Crimson;
-                Quantity -= 0.5;
+                myThermostat.Temperature = 12;
             }
             else
             {
-                Quantity -= 0.5;
+                myThermostat.Temperature -= 0.5;
             }
-            temperature_label.Text = Quantity.ToString() + " C";
+            UpdateColor();
+            temperature_label.Text = myThermostat.Temperature.ToString() + " C";
         }
 
         private void btn_icr_temp_Click(object sender, EventArgs e)
         {
-            if (Quantity >= 30)
+            if (myThermostat.Temperature >= 32)
             {
-                Quantity = 30;
+                myThermostat.Temperature = 32;
             }
             else
             {
-                Quantity += 0.5;
+                myThermostat.Temperature += 0.5;
             }
-            temperature_label.Text = Quantity.ToString() + " C";
+            UpdateColor();
+            temperature_label.Text = myThermostat.Temperature.ToString() + " C";
         }
+
+        private void UpdateColor()//Update color of thermostat
+        {
+            if(myThermostat.Feeling.Equals("VeryCold"))
+                tableLayoutPanel1.BackColor = Color.LightSkyBlue;
+            else if(myThermostat.Feeling.Equals("Cold"))
+                tableLayoutPanel1.BackColor = Color.DeepSkyBlue;
+            else if (myThermostat.Feeling.Equals("Normal"))
+                tableLayoutPanel1.BackColor = Color.OliveDrab;
+            else if (myThermostat.Feeling.Equals("Hot"))
+                tableLayoutPanel1.BackColor = Color.Orange;
+            else
+                tableLayoutPanel1.BackColor = Color.OrangeRed;
+        }
+
+        
     }
 }

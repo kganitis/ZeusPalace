@@ -87,6 +87,7 @@
     <Compile Include="Entities\Devices\Harp.cs" />
     <Compile Include="Entities\Devices\Lights.cs" />
     <Compile Include="Entities\Devices\Locks.cs" />
+    <Compile Include="Entities\Devices\Thermostat.cs" />
     <Compile Include="Entities\Devices\Tv.cs" />
     <Compile Include="Entities\Order\Chat.cs" />
     <Compile Include="Entities\Order\DeliveryMethod.cs" />
@@ -390,6 +391,20 @@
     <None Include="Resources\swimmer.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\temp_icon.png" />
+    <None Include="Resources\thermometer-png-icon-1.png" />
+    <None Include="Resources\thermometerIcon.jpg" />
+    <None Include="Resources\pre-ancient-suite-lights-off-devices-off.jpg" />
+    <None Include="Resources\pre-ancient-suite-lights-off.jpg" />
+    <None Include="Resources\pre-ancient-suite.jpg" />
+    <None Include="Resources\harp_on_lightsOFF.jpg" />
+    <None Include="Resources\harp_off_lightsOFF.jpg" />
+    <None Include="Resources\Etv_on_lightsOFF.jpg" />
+    <None Include="Resources\Etv_off_lightsON.jpg" />
+    <None Include="Resources\Etv_off_lightsOFF.jpg" />
+    <None Include="Resources\harp_on_lightsON.jpg" />
+    <None Include="Resources\harp_off_lightsON.jpg" />
+    <None Include="Resources\Etv_on_lights0N.jpg" />
     <None Include="Resources\btn_unlocked.jpg" />
     <None Include="Resources\btn_locked.jpg" />
     <None Include="Resources\door_locked.png" />
@@ -398,7 +413,6 @@
     <None Include="Resources\stop.jpg" />
     <None Include="Resources\tvremote_on.jpg" />
     <None Include="Resources\tvremote_off.jpg" />
-    <None Include="Resources\symbol_zeus.jpg" />
     <None Include="Resources\play.png" />
     <None Include="Resources\lights_on.png" />
     <None Include="Resources\lightBulb_on.png" />
@@ -406,8 +420,6 @@
     <None Include="Resources\harp.png" />
     <None Include="Resources\ancient_suite_dark.png" />
     <None Include="Resources\ancient_suite.png" />
-    <None Include="Resources\tv_on.png" />
-    <None Include="Resources\tv_off.png" />
     <None Include="Resources\public-alarm-enabled.jpg" />
     <None Include="Resources\public-sensor-enabled.jpg" />
     <None Include="Resources\public-pool-3-people.jpg" />

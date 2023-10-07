@@ -32,17 +32,27 @@ namespace ZeusPalace.Modules.Devices
         {
             if (lights.GetStatus() == 1) 
             {
+                TvpictureBox.BackgroundImage = (myTv.GetStatus() == 1) 
+                    ? Properties.Resources.Etv_on_lightsOFF : Properties.Resources.Etv_off_lightsOFF;
+
+                MusciBox.BackgroundImage = (myHarp.GetStatus() == 1) 
+                    ? Properties.Resources.harp_on_lightsOFF : Properties.Resources.harp_off_lightsOFF;
+
                 lights.TurnOff();
-                lightBulbBox.BackgroundImage = Properties.Resources.lightBulb_off;
                 lightSwitchBtn.BackgroundImage = Properties.Resources.lights_off;
-                backPanel.BackgroundImage = Properties.Resources.ancient_suite_dark;
+                backPanel.BackgroundImage = Properties.Resources.pre_ancient_suite_lights_off;
             }
             else
             {
+                TvpictureBox.BackgroundImage = (myTv.GetStatus() == 1) 
+                    ? Properties.Resources.Etv_on_lightsON : Properties.Resources.Etv_off_lightsON;
+
+                MusciBox.BackgroundImage = (myHarp.GetStatus() == 1) 
+                    ? Properties.Resources.harp_on_lightsON : Properties.Resources.harp_off_lightsON;
+                
                 lights.TurnOn();
-                lightBulbBox.BackgroundImage = Properties.Resources.lightBulb_on;
                 lightSwitchBtn.BackgroundImage = Properties.Resources.lights_on;
-                backPanel.BackgroundImage = Properties.Resources.ancient_suite;
+                backPanel.BackgroundImage = Properties.Resources.pre_ancient_suite;
             }
         }
 
@@ -55,16 +65,19 @@ namespace ZeusPalace.Modules.Devices
         {
             if (myTv.GetStatus() == 0)
             {
+                TvpictureBox.BackgroundImage = (lights.GetStatus() == 1)
+                    ? Properties.Resources.Etv_on_lightsON : Properties.Resources.Etv_on_lightsOFF;
+
                 myTv.SwitchON();
                 btn_ON_OFF.BackgroundImage = Properties.Resources.tvremote_on;
-                TvpictureBox.BackgroundImage = Properties.Resources.tv_on;
-
             }
-            else
+            else 
             {
+                TvpictureBox.BackgroundImage = (lights.GetStatus() == 1)
+                    ? Properties.Resources.Etv_off_lightsON : Properties.Resources.Etv_off_lightsOFF;
+
                 myTv.SwitchOFF();
                 btn_ON_OFF.BackgroundImage = Properties.Resources.tvremote_off;
-                TvpictureBox.BackgroundImage = Properties.Resources.tv_off;
             }
         }
 
@@ -78,12 +91,18 @@ namespace ZeusPalace.Modules.Devices
         {
             if (myHarp.GetStatus() == 0)
             {
+                MusciBox.BackgroundImage = (lights.GetStatus() == 1)
+                    ? Properties.Resources.harp_on_lightsON : Properties.Resources.harp_on_lightsOFF;
+
                 myHarp.Play();
                 MyPlayer.PlayLooping();
                 BtnPlayStop.BackgroundImage = Properties.Resources.stop;
             }
             else
             {
+                MusciBox.BackgroundImage = (lights.GetStatus() == 1)
+                    ? Properties.Resources.harp_off_lightsON : Properties.Resources.harp_off_lightsOFF;
+
                 myHarp.Stop();
                 MyPlayer.Stop();
                 BtnPlayStop.BackgroundImage = Properties.Resources.play;
@@ -97,35 +116,34 @@ namespace ZeusPalace.Modules.Devices
         {
             if (trackBarHumidity.Value > 0 && trackBarHumidity.Value <= 25)
             {
-                ProgressBarHumidity.ProgressBarColor = Color.Crimson;
+                humidifierLight.BackColor = Color.Crimson;
                 WarningLabel.ForeColor = Color.Crimson;
                 WarningLabel.Text = "Κίνδυνος! Πολύ χαμηλή υγρασία!";
             }
             else if (trackBarHumidity.Value > 25 && trackBarHumidity.Value <= 40)
             {
-                ProgressBarHumidity.ProgressBarColor = Color.Yellow;
+                humidifierLight.BackColor = Color.Yellow;
                 WarningLabel.ForeColor = Color.Orange;
                 WarningLabel.Text = "Προσοχή! Χαμηλή υγρασία!";
             }
             else if (trackBarHumidity.Value > 40 && trackBarHumidity.Value <= 70)
             {
-                ProgressBarHumidity.ProgressBarColor = Color.Lime;
+                humidifierLight.BackColor = Color.Lime;
                 WarningLabel.Text = "";
             }
             else if (trackBarHumidity.Value > 70 && trackBarHumidity.Value <= 80)
             {
-                ProgressBarHumidity.ProgressBarColor = Color.Yellow;
+                humidifierLight.BackColor = Color.Yellow;
                 WarningLabel.ForeColor = Color.Orange;
                 WarningLabel.Text = "Προσοχή! Υψηλή υγρασία!";
             }
             else
             {
-                ProgressBarHumidity.ProgressBarColor = Color.Crimson;
+                humidifierLight.BackColor = Color.Crimson;
                 WarningLabel.ForeColor = Color.Crimson;
                 WarningLabel.Text = "Κίνδυνος! Πολύ υψηλή υγρασία!";
 
             }
-            ProgressBarHumidity.Value = trackBarHumidity.Value;
             HumidityLabel.Text = "Υγρασία: " + trackBarHumidity.Value+"%";
         }
         
