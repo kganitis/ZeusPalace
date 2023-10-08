@@ -112,11 +112,11 @@
             // TempWarningLabel
             // 
             this.TempWarningLabel.BackColor = System.Drawing.Color.Transparent;
-            this.TempWarningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.TempWarningLabel.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.TempWarningLabel.ForeColor = System.Drawing.Color.Snow;
-            this.TempWarningLabel.Location = new System.Drawing.Point(1538, 9);
+            this.TempWarningLabel.Location = new System.Drawing.Point(1482, 9);
             this.TempWarningLabel.Name = "TempWarningLabel";
-            this.TempWarningLabel.Size = new System.Drawing.Size(130, 28);
+            this.TempWarningLabel.Size = new System.Drawing.Size(167, 28);
             this.TempWarningLabel.TabIndex = 17;
             this.TempWarningLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -124,7 +124,7 @@
             // 
             this.TempWarningSign.BackColor = System.Drawing.Color.Transparent;
             this.TempWarningSign.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.TempWarningSign.Location = new System.Drawing.Point(1571, 47);
+            this.TempWarningSign.Location = new System.Drawing.Point(1528, 47);
             this.TempWarningSign.Name = "TempWarningSign";
             this.TempWarningSign.Size = new System.Drawing.Size(96, 70);
             this.TempWarningSign.TabIndex = 16;
@@ -166,7 +166,7 @@
             // 
             this.TemperatureLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TemperatureLabel.BackColor = System.Drawing.Color.Transparent;
-            this.TemperatureLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.TemperatureLabel.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.TemperatureLabel.ForeColor = System.Drawing.Color.Snow;
             this.TemperatureLabel.Location = new System.Drawing.Point(1542, 207);
             this.TemperatureLabel.Name = "TemperatureLabel";
@@ -187,11 +187,11 @@
             // HumWarningLabel
             // 
             this.HumWarningLabel.BackColor = System.Drawing.Color.Transparent;
-            this.HumWarningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.HumWarningLabel.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.HumWarningLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.HumWarningLabel.Location = new System.Drawing.Point(744, 342);
+            this.HumWarningLabel.Location = new System.Drawing.Point(730, 332);
             this.HumWarningLabel.Name = "HumWarningLabel";
-            this.HumWarningLabel.Size = new System.Drawing.Size(234, 25);
+            this.HumWarningLabel.Size = new System.Drawing.Size(276, 35);
             this.HumWarningLabel.TabIndex = 10;
             this.HumWarningLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -209,11 +209,11 @@
             // HumidityLabel
             // 
             this.HumidityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.HumidityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.HumidityLabel.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.HumidityLabel.ForeColor = System.Drawing.Color.Snow;
-            this.HumidityLabel.Location = new System.Drawing.Point(893, 395);
+            this.HumidityLabel.Location = new System.Drawing.Point(907, 378);
             this.HumidityLabel.Name = "HumidityLabel";
-            this.HumidityLabel.Size = new System.Drawing.Size(113, 52);
+            this.HumidityLabel.Size = new System.Drawing.Size(113, 69);
             this.HumidityLabel.TabIndex = 8;
             this.HumidityLabel.Text = "Υγρασία: 50%";
             this.HumidityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
