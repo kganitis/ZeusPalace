@@ -8,32 +8,38 @@ namespace ZeusPalace.Entities.Devices
 {
     internal class Locks
     {
-        private int status = 0;//0 is unlocked, 1 is locked
+        private int status;
 
-        public int GetStatus()
+        public Locks(int initialStatus)
         {
-            return status;
-        }
-
-        public void SetStatus(int value)
-        {
-            status = value;
-        }
-
-        public void Lock()
-        {
-            if (GetStatus() == 0)
+            if (initialStatus != 0 && initialStatus != 1)
             {
-                SetStatus(1);
+                throw new ArgumentException("Initial status must be 0 or 1");
+            }
+            status = initialStatus;
+        }
+
+        public int Status
+        {
+            get { return status; }
+            set
+            {
+                if (value != 0 && value != 1)
+                {
+                    throw new ArgumentException("Status must be 0 or 1");
+                }
+                status = value;
             }
         }
 
-        public void UnLock()
+        public void LockDoors()
         {
-            if (GetStatus() == 1)
-            {
-                SetStatus(0);
-            }
+            Status = 1;
+        }
+
+        public void UnlockDoors()
+        {
+            Status = 0;
         }
     }
 }

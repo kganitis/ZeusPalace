@@ -110,26 +110,6 @@ namespace ZeusPalace.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ancient_suite {
-            get {
-                object obj = ResourceManager.GetObject("ancient_suite", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ancient_suite_dark {
-            get {
-                object obj = ResourceManager.GetObject("ancient_suite_dark", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream beep_cute {
@@ -144,6 +124,56 @@ namespace ZeusPalace.Properties {
         internal static System.IO.UnmanagedMemoryStream blip {
             get {
                 return ResourceManager.GetStream("blip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cold_person_icon_color {
+            get {
+                object obj = ResourceManager.GetObject("cold_person_icon_color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap door_open_lightsOFF {
+            get {
+                object obj = ResourceManager.GetObject("door_open_lightsOFF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap door_open_lightsON {
+            get {
+                object obj = ResourceManager.GetObject("door_open_lightsON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap door_shut_lightsOFF {
+            get {
+                object obj = ResourceManager.GetObject("door_shut_lightsOFF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap door_shut_lightsON {
+            get {
+                object obj = ResourceManager.GetObject("door_shut_lightsON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -289,29 +319,19 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hot_icon {
+            get {
+                object obj = ResourceManager.GetObject("hot_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hourglass {
             get {
                 object obj = ResourceManager.GetObject("hourglass", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap lightBulb_off {
-            get {
-                object obj = ResourceManager.GetObject("lightBulb_off", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap lightBulb_on {
-            get {
-                object obj = ResourceManager.GetObject("lightBulb_on", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -332,6 +352,16 @@ namespace ZeusPalace.Properties {
         internal static System.Drawing.Bitmap lights_on {
             get {
                 object obj = ResourceManager.GetObject("lights_on", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap locked_icon {
+            get {
+                object obj = ResourceManager.GetObject("locked_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -656,29 +686,9 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap temp_icon {
+        internal static System.Drawing.Bitmap thermometer_color {
             get {
-                object obj = ResourceManager.GetObject("temp_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap thermometer_png_icon_1 {
-            get {
-                object obj = ResourceManager.GetObject("thermometer-png-icon-1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap thermometerIcon {
-            get {
-                object obj = ResourceManager.GetObject("thermometerIcon", resourceCulture);
+                object obj = ResourceManager.GetObject("thermometer_color", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -706,9 +716,9 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tvremote_off {
+        internal static System.Drawing.Bitmap TVremoteOFF {
             get {
-                object obj = ResourceManager.GetObject("tvremote_off", resourceCulture);
+                object obj = ResourceManager.GetObject("TVremoteOFF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -716,9 +726,39 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tvremote_on {
+        internal static System.Drawing.Bitmap TVremoteON {
             get {
-                object obj = ResourceManager.GetObject("tvremote_on", resourceCulture);
+                object obj = ResourceManager.GetObject("TVremoteON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unlocked_icon {
+            get {
+                object obj = ResourceManager.GetObject("unlocked_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VeryCold_icon {
+            get {
+                object obj = ResourceManager.GetObject("VeryCold_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VeryHot_icon {
+            get {
+                object obj = ResourceManager.GetObject("VeryHot_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

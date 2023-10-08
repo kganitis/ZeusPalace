@@ -127,6 +127,9 @@
   <data name="employee-woman-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employee-woman-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="door_shut_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door_shut_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pool_2_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pool-2-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,12 +160,6 @@
   <data name="pool_1_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pool-1-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="switch_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\switch-off.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tvremote_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tvremote_on.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="harp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\harp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -174,9 +171,6 @@
   </data>
   <data name="employee-man-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employee-man-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ancient_suite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ancient_suite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="switch_beep" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\switch-beep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -190,11 +184,11 @@
   <data name="Etv_off_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Etv_off_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="thermometer_color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thermometer_color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="play" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sensor-on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sensor-on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pre-ancient-suite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pre-ancient-suite.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,11 +202,8 @@
   <data name="harp_off_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\harp_off_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="thermometerIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thermometerIcon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tvremote_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tvremote_off.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="switch_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\switch-off.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="pool_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pool-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -222,9 +213,6 @@
   </data>
   <data name="toggle-switch-off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toggle-switch-off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lightBulb_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lightBulb_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="alarm_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alarm-on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,8 +232,8 @@
   <data name="harp_music" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\harp_music.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="thermometer-png-icon-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thermometer-png-icon-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hot_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hot_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pool_3_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pool-3-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,17 +244,26 @@
   <data name="sensor-off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sensor-off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="VeryCold_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VeryCold_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cold_person_icon_color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cold_person_icon_color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="employee-man-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employee-man-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ancient_suite_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ancient_suite_dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="VeryHot_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VeryHot_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="public_alarm_enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\public-alarm-enabled.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="public_sensor_enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\public-sensor-enabled.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="door_open_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door_open_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blip" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blip.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -292,6 +289,9 @@
   <data name="toggle-switch-on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toggle-switch-on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="door_open_lightsOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door_open_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="public_pool_3_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\public-pool-1-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -307,8 +307,11 @@
   <data name="pool_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pool-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lightBulb_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lightBulb_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sensor-on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sensor-on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="door_shut_lightsOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door_shut_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="alarm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alarm.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,7 +322,16 @@
   <data name="hourglass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hourglass.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="temp_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\temp_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="unlocked_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unlocked_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="locked_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\locked_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TVremoteOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TVremoteOFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TVremoteON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TVremoteON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

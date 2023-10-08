@@ -391,9 +391,19 @@
     <None Include="Resources\swimmer.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\temp_icon.png" />
-    <None Include="Resources\thermometer-png-icon-1.png" />
-    <None Include="Resources\thermometerIcon.jpg" />
+    <None Include="Resources\TVremoteON.png" />
+    <None Include="Resources\TVremoteOFF.png" />
+    <None Include="Resources\locked_icon.png" />
+    <None Include="Resources\unlocked_icon.png" />
+    <None Include="Resources\door_shut_lightsON.jpg" />
+    <None Include="Resources\door_shut_lightsOFF.jpg" />
+    <None Include="Resources\door_open_lightsON.jpg" />
+    <None Include="Resources\door_open_lightsOFF.jpg" />
+    <None Include="Resources\cold_person_icon_color.png" />
+    <None Include="Resources\VeryCold_icon.png" />
+    <None Include="Resources\VeryHot_icon.png" />
+    <None Include="Resources\hot_icon.png" />
+    <None Include="Resources\thermometer_color.png" />
     <None Include="Resources\pre-ancient-suite-lights-off-devices-off.jpg" />
     <None Include="Resources\pre-ancient-suite-lights-off.jpg" />
     <None Include="Resources\pre-ancient-suite.jpg" />
@@ -411,15 +421,9 @@
     <None Include="Resources\door_unlocked.jpg" />
     <None Include="Resources\door_locked.jpg" />
     <None Include="Resources\stop.jpg" />
-    <None Include="Resources\tvremote_on.jpg" />
-    <None Include="Resources\tvremote_off.jpg" />
     <None Include="Resources\play.png" />
     <None Include="Resources\lights_on.png" />
-    <None Include="Resources\lightBulb_on.png" />
-    <None Include="Resources\lightBulb_off.png" />
     <None Include="Resources\harp.png" />
-    <None Include="Resources\ancient_suite_dark.png" />
-    <None Include="Resources\ancient_suite.png" />
     <None Include="Resources\public-alarm-enabled.jpg" />
     <None Include="Resources\public-sensor-enabled.jpg" />
     <None Include="Resources\public-pool-3-people.jpg" />
