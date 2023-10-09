@@ -361,26 +361,26 @@
 
         #endregion
 
-        internal System.Windows.Forms.PictureBox pictureBox2;
-        internal System.Windows.Forms.Label lightsLabel;
-        internal System.Windows.Forms.Button lightSwitchBtn;
-        internal System.Windows.Forms.PictureBox TvpictureBox;
-        internal System.Windows.Forms.Button btn_ON_OFF;
-        internal System.Windows.Forms.Button BtnPlayStop;
-        internal System.Windows.Forms.TrackBar trackBarHumidity;
-        internal System.Windows.Forms.Label HumidityLabel;
-        internal System.Windows.Forms.Label HumWarningLabel;
-        internal System.Windows.Forms.PictureBox MusciBox;
-        internal System.Windows.Forms.PictureBox humidifierLight;
-        internal System.Windows.Forms.PictureBox DoorPictureBox;
-        internal System.Windows.Forms.PictureBox LocksPictureBox;
-        internal System.Windows.Forms.PictureBox HumWarningSign;
-        internal System.Windows.Forms.PictureBox ThermometerBox;
-        internal System.Windows.Forms.Label TemperatureLabel;
-        internal System.Windows.Forms.Button inc_temp_btn;
-        internal System.Windows.Forms.Button dec_temp_button;
-        internal System.Windows.Forms.PictureBox TempWarningSign;
-        internal System.Windows.Forms.Label TempWarningLabel;
-        internal System.Windows.Forms.Panel backPanel;
+        protected System.Windows.Forms.PictureBox pictureBox2;
+        protected System.Windows.Forms.Label lightsLabel;
+        protected System.Windows.Forms.Button lightSwitchBtn;
+        protected System.Windows.Forms.PictureBox TvpictureBox;
+        protected System.Windows.Forms.Button btn_ON_OFF;
+        protected System.Windows.Forms.Button BtnPlayStop;
+        protected System.Windows.Forms.TrackBar trackBarHumidity;
+        protected System.Windows.Forms.Label HumidityLabel;
+        protected System.Windows.Forms.Label HumWarningLabel;
+        protected System.Windows.Forms.PictureBox MusciBox;
+        protected System.Windows.Forms.PictureBox humidifierLight;
+        protected System.Windows.Forms.PictureBox DoorPictureBox;
+        protected System.Windows.Forms.PictureBox LocksPictureBox;
+        protected System.Windows.Forms.PictureBox HumWarningSign;
+        protected System.Windows.Forms.PictureBox ThermometerBox;
+        protected System.Windows.Forms.Label TemperatureLabel;
+        protected System.Windows.Forms.Button inc_temp_btn;
+        protected System.Windows.Forms.Button dec_temp_button;
+        protected System.Windows.Forms.PictureBox TempWarningSign;
+        protected System.Windows.Forms.Label TempWarningLabel;
+        protected System.Windows.Forms.Panel backPanel;
     }
 }

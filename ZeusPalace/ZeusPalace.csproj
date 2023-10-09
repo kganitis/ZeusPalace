@@ -391,6 +391,7 @@
     <None Include="Resources\swimmer.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\trojan-horse-lights-on-devices-off.jpg" />
     <None Include="Resources\light_switch_color.png" />
     <None Include="Resources\light_switch.png" />
     <None Include="Resources\stop_btn.png" />
