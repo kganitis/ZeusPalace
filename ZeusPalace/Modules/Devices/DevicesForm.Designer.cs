@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DevicesForm));
             this.backPanel = new System.Windows.Forms.Panel();
+            this.HumWarningSign = new System.Windows.Forms.PictureBox();
             this.LocksPictureBox = new System.Windows.Forms.PictureBox();
             this.DoorPictureBox = new System.Windows.Forms.PictureBox();
             this.TempWarningLabel = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             this.lightSwitchBtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.backPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HumWarningSign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocksPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DoorPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TempWarningSign)).BeginInit();
@@ -64,6 +66,7 @@
             // 
             this.backPanel.BackgroundImage = global::ZeusPalace.Properties.Resources.pre_ancient_suite;
             this.backPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backPanel.Controls.Add(this.HumWarningSign);
             this.backPanel.Controls.Add(this.LocksPictureBox);
             this.backPanel.Controls.Add(this.DoorPictureBox);
             this.backPanel.Controls.Add(this.TempWarningLabel);
@@ -86,6 +89,16 @@
             this.backPanel.Name = "backPanel";
             this.backPanel.Size = new System.Drawing.Size(1707, 812);
             this.backPanel.TabIndex = 4;
+            // 
+            // HumWarningSign
+            // 
+            this.HumWarningSign.BackColor = System.Drawing.Color.Transparent;
+            this.HumWarningSign.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.HumWarningSign.Location = new System.Drawing.Point(189, 75);
+            this.HumWarningSign.Name = "HumWarningSign";
+            this.HumWarningSign.Size = new System.Drawing.Size(100, 66);
+            this.HumWarningSign.TabIndex = 20;
+            this.HumWarningSign.TabStop = false;
             // 
             // LocksPictureBox
             // 
@@ -187,11 +200,11 @@
             // HumWarningLabel
             // 
             this.HumWarningLabel.BackColor = System.Drawing.Color.Transparent;
-            this.HumWarningLabel.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.HumWarningLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.HumWarningLabel.Location = new System.Drawing.Point(730, 332);
+            this.HumWarningLabel.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.HumWarningLabel.ForeColor = System.Drawing.Color.Snow;
+            this.HumWarningLabel.Location = new System.Drawing.Point(74, 9);
             this.HumWarningLabel.Name = "HumWarningLabel";
-            this.HumWarningLabel.Size = new System.Drawing.Size(276, 35);
+            this.HumWarningLabel.Size = new System.Drawing.Size(332, 43);
             this.HumWarningLabel.TabIndex = 10;
             this.HumWarningLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -295,6 +308,7 @@
             this.Name = "DevicesForm";
             this.backPanel.ResumeLayout(false);
             this.backPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HumWarningSign)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocksPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DoorPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TempWarningSign)).EndInit();
@@ -328,5 +342,6 @@
         private System.Windows.Forms.Label TempWarningLabel;
         private System.Windows.Forms.PictureBox DoorPictureBox;
         private System.Windows.Forms.PictureBox LocksPictureBox;
+        private System.Windows.Forms.PictureBox HumWarningSign;
     }
 }

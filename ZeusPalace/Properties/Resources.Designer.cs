@@ -319,6 +319,16 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap highHum_icon {
+            get {
+                object obj = ResourceManager.GetObject("highHum_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hot_icon {
             get {
                 object obj = ResourceManager.GetObject("hot_icon", resourceCulture);
@@ -362,6 +372,16 @@ namespace ZeusPalace.Properties {
         internal static System.Drawing.Bitmap locked_icon {
             get {
                 object obj = ResourceManager.GetObject("locked_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lowHum_icon {
+            get {
+                object obj = ResourceManager.GetObject("lowHum_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -756,9 +776,29 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap VeryhighHum_icon {
+            get {
+                object obj = ResourceManager.GetObject("VeryhighHum_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap VeryHot_icon {
             get {
                 object obj = ResourceManager.GetObject("VeryHot_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VerylowHum_icon {
+            get {
+                object obj = ResourceManager.GetObject("VerylowHum_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

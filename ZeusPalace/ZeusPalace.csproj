@@ -391,6 +391,10 @@
     <None Include="Resources\swimmer.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\VerylowHum_icon.png" />
+    <None Include="Resources\lowHum_icon.png" />
+    <None Include="Resources\VeryhighHum_icon.png" />
+    <None Include="Resources\highHum_icon.png" />
     <None Include="Resources\TVremoteON.png" />
     <None Include="Resources\TVremoteOFF.png" />
     <None Include="Resources\locked_icon.png" />

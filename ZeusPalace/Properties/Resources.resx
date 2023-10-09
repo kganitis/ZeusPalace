@@ -334,4 +334,16 @@
   <data name="TVremoteON" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TVremoteON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="highHum_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\highHum_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lowHum_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lowHum_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VeryhighHum_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VeryhighHum_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VerylowHum_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VerylowHum_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

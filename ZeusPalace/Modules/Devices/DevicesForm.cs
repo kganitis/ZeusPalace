@@ -121,31 +121,48 @@ namespace ZeusPalace.Modules.Devices
         {
             if (trackBarHumidity.Value >= 0 && trackBarHumidity.Value <= 25)
             {
+                if (HumWarningSign.Visible == false)
+                {
+                    HumWarningSign.Visible = true;
+                }
                 humidifierLight.BackColor = Color.OrangeRed;
-                HumWarningLabel.ForeColor = Color.OrangeRed;
+                HumWarningSign.BackgroundImage = Properties.Resources.VerylowHum_icon;
                 HumWarningLabel.Text = "Πολύ χαμηλή υγρασία!";
             }
             else if (trackBarHumidity.Value > 25 && trackBarHumidity.Value <= 40)
             {
+                if (HumWarningSign.Visible == false)
+                {
+                    HumWarningSign.Visible = true;
+                }
                 humidifierLight.BackColor = Color.Orange;
-                HumWarningLabel.ForeColor = Color.Orange;
+                HumWarningSign.BackgroundImage = Properties.Resources.lowHum_icon;
                 HumWarningLabel.Text = "Χαμηλή υγρασία!";
             }
             else if (trackBarHumidity.Value > 40 && trackBarHumidity.Value <= 70)
             {
                 humidifierLight.BackColor = Color.Lime;
+                HumWarningSign.Visible = false;
                 HumWarningLabel.Text = "";
             }
             else if (trackBarHumidity.Value > 70 && trackBarHumidity.Value <= 80)
             {
+                if (HumWarningSign.Visible == false)
+                {
+                    HumWarningSign.Visible = true;
+                }
                 humidifierLight.BackColor = Color.Orange;
-                HumWarningLabel.ForeColor = Color.Orange;
+                HumWarningSign.BackgroundImage = Properties.Resources.highHum_icon;
                 HumWarningLabel.Text = "Υψηλή υγρασία!";
             }
             else
             {
+                if (HumWarningSign.Visible == false)
+                {
+                    HumWarningSign.Visible = true;
+                }
                 humidifierLight.BackColor = Color.OrangeRed;
-                HumWarningLabel.ForeColor = Color.OrangeRed;
+                HumWarningSign.BackgroundImage = Properties.Resources.VeryhighHum_icon;
                 HumWarningLabel.Text = "Πολύ υψηλή υγρασία!";
             }
             HumidityLabel.Text = "Υγρασία: " + trackBarHumidity.Value+"%";
