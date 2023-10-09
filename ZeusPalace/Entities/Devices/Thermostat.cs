@@ -11,8 +11,8 @@ namespace ZeusPalace.Entities.Devices
     internal class Thermostat
     {
         private double temperature; // in Celsius (°C) scale
-        public const double MinTemperature = 12.0;
-        public const double MaxTemperature = 32.0;
+        public readonly double MinTemperature = 12.0;
+        public readonly double MaxTemperature = 32.0;
         public enum FeelingEnum { VeryCold, Cold, Normal, Hot, VeryHot }
         private FeelingEnum Temperaturefeeling;
         

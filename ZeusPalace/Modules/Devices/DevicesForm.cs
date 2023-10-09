@@ -18,7 +18,7 @@ namespace ZeusPalace.Modules.Devices
         public DevicesForm()
         {
             InitializeComponent();
-            
+
         }
 
         SoundPlayer MyPlayer = new SoundPlayer("..\\..\\Resources\\harp_music.wav");
@@ -30,34 +30,34 @@ namespace ZeusPalace.Modules.Devices
 
         private void lightSwitchBtn_Click(object sender, EventArgs e)
         {
-            if (lights.GetStatus() == 1) 
+            if (lights.GetStatus() == 1)
             {
-                TvpictureBox.BackgroundImage = (myTv.GetStatus() == 1) 
+                TvpictureBox.BackgroundImage = (myTv.GetStatus() == 1)
                     ? Properties.Resources.Etv_on_lightsOFF : Properties.Resources.Etv_off_lightsOFF;
 
-                MusciBox.BackgroundImage = (myHarp.GetStatus() == 1) 
+                MusciBox.BackgroundImage = (myHarp.GetStatus() == 1)
                     ? Properties.Resources.harp_on_lightsOFF : Properties.Resources.harp_off_lightsOFF;
 
                 DoorPictureBox.BackgroundImage = (myLocks.Status == 1)
                     ? Properties.Resources.door_shut_lightsOFF : Properties.Resources.door_open_lightsOFF;
 
                 lights.TurnOff();
-                lightSwitchBtn.BackgroundImage = Properties.Resources.lights_off;
+                //lightSwitchBtn.BackgroundImage = Properties.Resources.lights_off;
                 backPanel.BackgroundImage = Properties.Resources.pre_ancient_suite_lights_off;
             }
             else
             {
-                TvpictureBox.BackgroundImage = (myTv.GetStatus() == 1) 
+                TvpictureBox.BackgroundImage = (myTv.GetStatus() == 1)
                     ? Properties.Resources.Etv_on_lightsON : Properties.Resources.Etv_off_lightsON;
 
-                MusciBox.BackgroundImage = (myHarp.GetStatus() == 1) 
+                MusciBox.BackgroundImage = (myHarp.GetStatus() == 1)
                     ? Properties.Resources.harp_on_lightsON : Properties.Resources.harp_off_lightsON;
 
                 DoorPictureBox.BackgroundImage = (myLocks.Status == 1)
                     ? Properties.Resources.door_shut_lightsON : Properties.Resources.door_open_lightsON;
 
                 lights.TurnOn();
-                lightSwitchBtn.BackgroundImage = Properties.Resources.lights_on;
+                //lightSwitchBtn.BackgroundImage = Properties.Resources.lights_on;
                 backPanel.BackgroundImage = Properties.Resources.pre_ancient_suite;
             }
         }
@@ -75,15 +75,15 @@ namespace ZeusPalace.Modules.Devices
                     ? Properties.Resources.Etv_on_lightsON : Properties.Resources.Etv_on_lightsOFF;
 
                 myTv.SwitchON();
-                btn_ON_OFF.BackgroundImage = Properties.Resources.TVremoteON;
+                btn_ON_OFF.BackgroundImage = Properties.Resources.tvremote_on;
             }
-            else 
+            else
             {
                 TvpictureBox.BackgroundImage = (lights.GetStatus() == 1)
                     ? Properties.Resources.Etv_off_lightsON : Properties.Resources.Etv_off_lightsOFF;
 
                 myTv.SwitchOFF();
-                btn_ON_OFF.BackgroundImage = Properties.Resources.TVremoteOFF;
+                btn_ON_OFF.BackgroundImage = Properties.Resources.tvremote_off;
             }
         }
 
@@ -101,7 +101,7 @@ namespace ZeusPalace.Modules.Devices
 
                 myHarp.Play();
                 MyPlayer.PlayLooping();
-                BtnPlayStop.BackgroundImage = Properties.Resources.stop;
+                BtnPlayStop.BackgroundImage = Properties.Resources.stop_btn;
             }
             else
             {
@@ -110,7 +110,7 @@ namespace ZeusPalace.Modules.Devices
 
                 myHarp.Stop();
                 MyPlayer.Stop();
-                BtnPlayStop.BackgroundImage = Properties.Resources.play;
+                BtnPlayStop.BackgroundImage = Properties.Resources.play_btn;
             }
         }
 
@@ -141,7 +141,7 @@ namespace ZeusPalace.Modules.Devices
             }
             else if (trackBarHumidity.Value > 40 && trackBarHumidity.Value <= 70)
             {
-                humidifierLight.BackColor = Color.Lime;
+                humidifierLight.BackColor = Color.OliveDrab;
                 HumWarningSign.Visible = false;
                 HumWarningLabel.Text = "";
             }
@@ -165,7 +165,7 @@ namespace ZeusPalace.Modules.Devices
                 HumWarningSign.BackgroundImage = Properties.Resources.VeryhighHum_icon;
                 HumWarningLabel.Text = "Πολύ υψηλή υγρασία!";
             }
-            HumidityLabel.Text = "Υγρασία: " + trackBarHumidity.Value+"%";
+            HumidityLabel.Text = "Υγρασία: " + trackBarHumidity.Value + "%";
         }
 
         //
@@ -184,7 +184,7 @@ namespace ZeusPalace.Modules.Devices
                 myThermostat.Temperature += 0.5;
             }
             UpdateWarningSign();
-            TemperatureLabel.Text = myThermostat.Temperature.ToString() + " C";
+            TemperatureLabel.Text = "Θερμοκρασία: " + myThermostat.Temperature.ToString() + " C";
         }
 
         private void dec_temp_button_Click(object sender, EventArgs e)
@@ -198,7 +198,7 @@ namespace ZeusPalace.Modules.Devices
                 myThermostat.Temperature -= 0.5;
             }
             UpdateWarningSign();
-            TemperatureLabel.Text = myThermostat.Temperature.ToString() + " C";
+            TemperatureLabel.Text = "Θερμοκρασία: " + myThermostat.Temperature.ToString() + " C";
         }
 
         private void UpdateWarningSign()//Update warning sign of temperature
@@ -220,12 +220,12 @@ namespace ZeusPalace.Modules.Devices
                 }
                 TempWarningLabel.Text = "Κρυώνω!";
                 TempWarningSign.BackgroundImage = Properties.Resources.cold_person_icon_color;
-            }           
+            }
             else if (myThermostat.Feeling.Equals("Normal"))
             {
                 TempWarningSign.Visible = false;
                 TempWarningLabel.Text = "";
-            }             
+            }
             else if (myThermostat.Feeling.Equals("Hot"))
             {
                 if (TempWarningSign.Visible == false)
@@ -234,7 +234,7 @@ namespace ZeusPalace.Modules.Devices
                 }
                 TempWarningLabel.Text = "Ζεστένομαι!";
                 TempWarningSign.BackgroundImage = Properties.Resources.hot_icon;
-            }              
+            }
             else
             {
                 if (TempWarningSign.Visible == false)
@@ -244,7 +244,7 @@ namespace ZeusPalace.Modules.Devices
                 TempWarningLabel.Text = "Βράζω!";
                 TempWarningSign.BackgroundImage = Properties.Resources.VeryHot_icon;
             }
-                
+
         }
 
         //

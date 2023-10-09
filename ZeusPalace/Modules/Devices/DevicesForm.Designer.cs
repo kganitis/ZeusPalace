@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DevicesForm));
             this.backPanel = new System.Windows.Forms.Panel();
+            this.lightsLabel = new System.Windows.Forms.Label();
             this.HumWarningSign = new System.Windows.Forms.PictureBox();
             this.LocksPictureBox = new System.Windows.Forms.PictureBox();
             this.DoorPictureBox = new System.Windows.Forms.PictureBox();
@@ -66,6 +67,7 @@
             // 
             this.backPanel.BackgroundImage = global::ZeusPalace.Properties.Resources.pre_ancient_suite;
             this.backPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backPanel.Controls.Add(this.lightsLabel);
             this.backPanel.Controls.Add(this.HumWarningSign);
             this.backPanel.Controls.Add(this.LocksPictureBox);
             this.backPanel.Controls.Add(this.DoorPictureBox);
@@ -90,6 +92,18 @@
             this.backPanel.Size = new System.Drawing.Size(1707, 812);
             this.backPanel.TabIndex = 4;
             // 
+            // lightsLabel
+            // 
+            this.lightsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.lightsLabel.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lightsLabel.ForeColor = System.Drawing.Color.Snow;
+            this.lightsLabel.Location = new System.Drawing.Point(169, 228);
+            this.lightsLabel.Name = "lightsLabel";
+            this.lightsLabel.Size = new System.Drawing.Size(150, 45);
+            this.lightsLabel.TabIndex = 21;
+            this.lightsLabel.Text = "Φωτισμός";
+            this.lightsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // HumWarningSign
             // 
             this.HumWarningSign.BackColor = System.Drawing.Color.Transparent;
@@ -105,7 +119,8 @@
             this.LocksPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.LocksPictureBox.BackgroundImage = global::ZeusPalace.Properties.Resources.unlocked_icon;
             this.LocksPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.LocksPictureBox.Location = new System.Drawing.Point(1073, 367);
+            this.LocksPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LocksPictureBox.Location = new System.Drawing.Point(1074, 373);
             this.LocksPictureBox.Name = "LocksPictureBox";
             this.LocksPictureBox.Size = new System.Drawing.Size(45, 40);
             this.LocksPictureBox.TabIndex = 19;
@@ -146,22 +161,32 @@
             // 
             // dec_temp_button
             // 
-            this.dec_temp_button.Location = new System.Drawing.Point(1629, 278);
+            this.dec_temp_button.BackColor = System.Drawing.Color.Transparent;
+            this.dec_temp_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dec_temp_button.FlatAppearance.BorderSize = 0;
+            this.dec_temp_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dec_temp_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.dec_temp_button.Location = new System.Drawing.Point(1631, 278);
             this.dec_temp_button.Name = "dec_temp_button";
             this.dec_temp_button.Size = new System.Drawing.Size(50, 23);
             this.dec_temp_button.TabIndex = 15;
             this.dec_temp_button.Text = "-";
-            this.dec_temp_button.UseVisualStyleBackColor = true;
+            this.dec_temp_button.UseVisualStyleBackColor = false;
             this.dec_temp_button.Click += new System.EventHandler(this.dec_temp_button_Click);
             // 
             // inc_temp_btn
             // 
-            this.inc_temp_btn.Location = new System.Drawing.Point(1629, 249);
+            this.inc_temp_btn.BackColor = System.Drawing.Color.Transparent;
+            this.inc_temp_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.inc_temp_btn.FlatAppearance.BorderSize = 0;
+            this.inc_temp_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inc_temp_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.inc_temp_btn.Location = new System.Drawing.Point(1631, 249);
             this.inc_temp_btn.Name = "inc_temp_btn";
             this.inc_temp_btn.Size = new System.Drawing.Size(50, 23);
             this.inc_temp_btn.TabIndex = 14;
             this.inc_temp_btn.Text = "+";
-            this.inc_temp_btn.UseVisualStyleBackColor = true;
+            this.inc_temp_btn.UseVisualStyleBackColor = false;
             this.inc_temp_btn.Click += new System.EventHandler(this.inc_temp_btn_Click);
             // 
             // ThermometerBox
@@ -169,7 +194,7 @@
             this.ThermometerBox.BackColor = System.Drawing.Color.Transparent;
             this.ThermometerBox.BackgroundImage = global::ZeusPalace.Properties.Resources.thermometer_color;
             this.ThermometerBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ThermometerBox.Location = new System.Drawing.Point(1538, 249);
+            this.ThermometerBox.Location = new System.Drawing.Point(1542, 249);
             this.ThermometerBox.Name = "ThermometerBox";
             this.ThermometerBox.Size = new System.Drawing.Size(85, 51);
             this.ThermometerBox.TabIndex = 13;
@@ -181,11 +206,11 @@
             this.TemperatureLabel.BackColor = System.Drawing.Color.Transparent;
             this.TemperatureLabel.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.TemperatureLabel.ForeColor = System.Drawing.Color.Snow;
-            this.TemperatureLabel.Location = new System.Drawing.Point(1542, 207);
+            this.TemperatureLabel.Location = new System.Drawing.Point(1488, 166);
             this.TemperatureLabel.Name = "TemperatureLabel";
-            this.TemperatureLabel.Size = new System.Drawing.Size(95, 35);
+            this.TemperatureLabel.Size = new System.Drawing.Size(207, 80);
             this.TemperatureLabel.TabIndex = 12;
-            this.TemperatureLabel.Text = "22,0 C";
+            this.TemperatureLabel.Text = "Θερμοκρασία: 22,0 C";
             this.TemperatureLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // humidifierLight
@@ -210,6 +235,7 @@
             // 
             // trackBarHumidity
             // 
+            this.trackBarHumidity.BackColor = System.Drawing.SystemColors.Control;
             this.trackBarHumidity.Location = new System.Drawing.Point(847, 378);
             this.trackBarHumidity.Maximum = 100;
             this.trackBarHumidity.Name = "trackBarHumidity";
@@ -222,25 +248,29 @@
             // HumidityLabel
             // 
             this.HumidityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.HumidityLabel.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.HumidityLabel.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.HumidityLabel.ForeColor = System.Drawing.Color.Snow;
-            this.HumidityLabel.Location = new System.Drawing.Point(907, 378);
+            this.HumidityLabel.Location = new System.Drawing.Point(814, 300);
             this.HumidityLabel.Name = "HumidityLabel";
-            this.HumidityLabel.Size = new System.Drawing.Size(113, 69);
+            this.HumidityLabel.Size = new System.Drawing.Size(138, 69);
             this.HumidityLabel.TabIndex = 8;
             this.HumidityLabel.Text = "Υγρασία: 50%";
             this.HumidityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BtnPlayStop
             // 
-            this.BtnPlayStop.BackgroundImage = global::ZeusPalace.Properties.Resources.play;
+            this.BtnPlayStop.BackColor = System.Drawing.Color.Transparent;
+            this.BtnPlayStop.BackgroundImage = global::ZeusPalace.Properties.Resources.play_btn;
             this.BtnPlayStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnPlayStop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnPlayStop.FlatAppearance.BorderSize = 0;
+            this.BtnPlayStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPlayStop.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnPlayStop.Location = new System.Drawing.Point(1406, 249);
+            this.BtnPlayStop.Location = new System.Drawing.Point(1376, 257);
             this.BtnPlayStop.Name = "BtnPlayStop";
             this.BtnPlayStop.Size = new System.Drawing.Size(49, 36);
             this.BtnPlayStop.TabIndex = 5;
-            this.BtnPlayStop.UseVisualStyleBackColor = true;
+            this.BtnPlayStop.UseVisualStyleBackColor = false;
             this.BtnPlayStop.Click += new System.EventHandler(this.BtnPlayStop_Click);
             // 
             // MusciBox
@@ -256,13 +286,17 @@
             // 
             // btn_ON_OFF
             // 
-            this.btn_ON_OFF.BackgroundImage = global::ZeusPalace.Properties.Resources.TVremoteOFF;
+            this.btn_ON_OFF.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ON_OFF.BackgroundImage = global::ZeusPalace.Properties.Resources.tvremote_off;
             this.btn_ON_OFF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_ON_OFF.Location = new System.Drawing.Point(1197, 228);
+            this.btn_ON_OFF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ON_OFF.FlatAppearance.BorderSize = 0;
+            this.btn_ON_OFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ON_OFF.Location = new System.Drawing.Point(1197, 238);
             this.btn_ON_OFF.Name = "btn_ON_OFF";
             this.btn_ON_OFF.Size = new System.Drawing.Size(49, 36);
             this.btn_ON_OFF.TabIndex = 3;
-            this.btn_ON_OFF.UseVisualStyleBackColor = true;
+            this.btn_ON_OFF.UseVisualStyleBackColor = false;
             this.btn_ON_OFF.Click += new System.EventHandler(this.btn_ON_OFF_Click);
             // 
             // TvpictureBox
@@ -280,11 +314,14 @@
             // lightSwitchBtn
             // 
             this.lightSwitchBtn.BackColor = System.Drawing.Color.Transparent;
-            this.lightSwitchBtn.BackgroundImage = global::ZeusPalace.Properties.Resources.lights_on;
+            this.lightSwitchBtn.BackgroundImage = global::ZeusPalace.Properties.Resources.light_switch_color;
             this.lightSwitchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.lightSwitchBtn.Location = new System.Drawing.Point(1578, 342);
+            this.lightSwitchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lightSwitchBtn.FlatAppearance.BorderSize = 0;
+            this.lightSwitchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lightSwitchBtn.Location = new System.Drawing.Point(205, 278);
             this.lightSwitchBtn.Name = "lightSwitchBtn";
-            this.lightSwitchBtn.Size = new System.Drawing.Size(55, 62);
+            this.lightSwitchBtn.Size = new System.Drawing.Size(60, 62);
             this.lightSwitchBtn.TabIndex = 1;
             this.lightSwitchBtn.UseVisualStyleBackColor = false;
             this.lightSwitchBtn.Click += new System.EventHandler(this.lightSwitchBtn_Click);
@@ -323,25 +360,27 @@
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel backPanel;
-        private System.Windows.Forms.Button lightSwitchBtn;
-        private System.Windows.Forms.PictureBox TvpictureBox;
-        private System.Windows.Forms.Button btn_ON_OFF;
-        private System.Windows.Forms.Button BtnPlayStop;
-        private System.Windows.Forms.TrackBar trackBarHumidity;
-        private System.Windows.Forms.Label HumidityLabel;
-        private System.Windows.Forms.Label HumWarningLabel;
-        private System.Windows.Forms.PictureBox MusciBox;
-        private System.Windows.Forms.PictureBox humidifierLight;
-        private System.Windows.Forms.PictureBox ThermometerBox;
-        private System.Windows.Forms.Label TemperatureLabel;
-        private System.Windows.Forms.Button inc_temp_btn;
-        private System.Windows.Forms.Button dec_temp_button;
-        private System.Windows.Forms.PictureBox TempWarningSign;
-        private System.Windows.Forms.Label TempWarningLabel;
-        private System.Windows.Forms.PictureBox DoorPictureBox;
-        private System.Windows.Forms.PictureBox LocksPictureBox;
-        private System.Windows.Forms.PictureBox HumWarningSign;
+
+        internal System.Windows.Forms.PictureBox pictureBox2;
+        internal System.Windows.Forms.Label lightsLabel;
+        internal System.Windows.Forms.Button lightSwitchBtn;
+        internal System.Windows.Forms.PictureBox TvpictureBox;
+        internal System.Windows.Forms.Button btn_ON_OFF;
+        internal System.Windows.Forms.Button BtnPlayStop;
+        internal System.Windows.Forms.TrackBar trackBarHumidity;
+        internal System.Windows.Forms.Label HumidityLabel;
+        internal System.Windows.Forms.Label HumWarningLabel;
+        internal System.Windows.Forms.PictureBox MusciBox;
+        internal System.Windows.Forms.PictureBox humidifierLight;
+        internal System.Windows.Forms.PictureBox DoorPictureBox;
+        internal System.Windows.Forms.PictureBox LocksPictureBox;
+        internal System.Windows.Forms.PictureBox HumWarningSign;
+        internal System.Windows.Forms.PictureBox ThermometerBox;
+        internal System.Windows.Forms.Label TemperatureLabel;
+        internal System.Windows.Forms.Button inc_temp_btn;
+        internal System.Windows.Forms.Button dec_temp_button;
+        internal System.Windows.Forms.PictureBox TempWarningSign;
+        internal System.Windows.Forms.Label TempWarningLabel;
+        internal System.Windows.Forms.Panel backPanel;
     }
 }
