@@ -130,6 +130,46 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boombox_off_lightsOFF {
+            get {
+                object obj = ResourceManager.GetObject("boombox_off_lightsOFF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap boombox_off_lightsON {
+            get {
+                object obj = ResourceManager.GetObject("boombox_off_lightsON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap boombox_on_lightsOFF {
+            get {
+                object obj = ResourceManager.GetObject("boombox_on_lightsOFF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap boombox_on_lightsON {
+            get {
+                object obj = ResourceManager.GetObject("boombox_on_lightsON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cold_person_icon_color {
             get {
                 object obj = ResourceManager.GetObject("cold_person_icon_color", resourceCulture);
@@ -749,6 +789,16 @@ namespace ZeusPalace.Properties {
         internal static System.Drawing.Bitmap toggle_switch_on {
             get {
                 object obj = ResourceManager.GetObject("toggle-switch-on", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trojan_horse_lights_off {
+            get {
+                object obj = ResourceManager.GetObject("trojan_horse_lights_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
