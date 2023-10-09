@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZeusPalace.Properties;
 
 namespace ZeusPalace.Modules.Orders.UserControls
 {
@@ -27,6 +28,16 @@ namespace ZeusPalace.Modules.Orders.UserControls
                 labelTitle.Text = value;
                 AlignLabelToCenter(labelTitle, panelTitle);
             }
+        }
+
+        public void PaintBackground()
+        {
+            BackgroundImage = Resources.background;
+        }
+
+        public void RemoveBackground()
+        {
+            BackgroundImage = null;
         }
 
         protected void AlignLabelToCenter(Label label, Panel parentPanel)

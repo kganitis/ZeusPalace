@@ -125,34 +125,34 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxName.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxName.Location = new System.Drawing.Point(437, 252);
             this.textBoxName.MaxLength = 100;
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(253, 22);
+            this.textBoxName.Size = new System.Drawing.Size(253, 29);
             this.textBoxName.TabIndex = 5;
             // 
             // textBoxCVV
             // 
-            this.textBoxCVV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCVV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxCVV.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCVV.Location = new System.Drawing.Point(437, 202);
             this.textBoxCVV.MaxLength = 3;
             this.textBoxCVV.Name = "textBoxCVV";
-            this.textBoxCVV.Size = new System.Drawing.Size(253, 22);
+            this.textBoxCVV.Size = new System.Drawing.Size(253, 29);
             this.textBoxCVV.TabIndex = 6;
             // 
             // textBoxExpDate
             // 
-            this.textBoxExpDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxExpDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxExpDate.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxExpDate.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.textBoxExpDate.Location = new System.Drawing.Point(437, 152);
             this.textBoxExpDate.MaxLength = 5;
             this.textBoxExpDate.Name = "textBoxExpDate";
-            this.textBoxExpDate.Size = new System.Drawing.Size(253, 22);
+            this.textBoxExpDate.Size = new System.Drawing.Size(253, 29);
             this.textBoxExpDate.TabIndex = 7;
             this.textBoxExpDate.Tag = "MM/EE";
             this.textBoxExpDate.Text = "MM/EE";
@@ -163,12 +163,12 @@
             // 
             // textBoxCardNumber
             // 
-            this.textBoxCardNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCardNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxCardNumber.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCardNumber.Location = new System.Drawing.Point(437, 102);
             this.textBoxCardNumber.MaxLength = 19;
             this.textBoxCardNumber.Name = "textBoxCardNumber";
-            this.textBoxCardNumber.Size = new System.Drawing.Size(253, 22);
+            this.textBoxCardNumber.Size = new System.Drawing.Size(253, 29);
             this.textBoxCardNumber.TabIndex = 8;
             this.textBoxCardNumber.TextChanged += new System.EventHandler(this.textBoxCardNumber_TextChanged);
             // 

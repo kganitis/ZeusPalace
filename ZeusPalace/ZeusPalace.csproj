@@ -463,5 +463,8 @@
   <ItemGroup>
     <None Include="Resources\camping-gardens_of_olympus_parking.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -205,6 +205,7 @@ namespace ZeusPalace.Modules.Orders
         private void PopulateMenuItems()
         {
             panelMenu.ClearItems();
+
             MenuItemType currentType = controller.GetMenuItem(0).Type;
             for (int i = 0; i < controller.GetMenuItemsCount(); i++)
             {
@@ -213,13 +214,15 @@ namespace ZeusPalace.Modules.Orders
                 // The first item is always a category
                 if (i == 0)
                 {
-                    panelMenu.AddItem(new MenuCategoryControl(nextMenuItem.GetTypeStringValue(), nextMenuItem.GetStartTime(), nextMenuItem.GetEndTime()));
+                    MenuCategoryControl menuCategoryControl = new MenuCategoryControl(nextMenuItem.GetTypeStringValue(), nextMenuItem.GetStartTime(), nextMenuItem.GetEndTime());
+                    panelMenu.AddItem(menuCategoryControl);
                 }
 
                 // Check if we need to insert new category item
                 if (nextMenuItem.Type != currentType)
                 {
-                    panelMenu.AddItem(new MenuCategoryControl(nextMenuItem.GetTypeStringValue(), nextMenuItem.GetStartTime(), nextMenuItem.GetEndTime()));
+                    MenuCategoryControl menuCategoryControl = new MenuCategoryControl(nextMenuItem.GetTypeStringValue(), nextMenuItem.GetStartTime(), nextMenuItem.GetEndTime());
+                    panelMenu.AddItem(menuCategoryControl);
                     currentType = nextMenuItem.Type;
                 }
 

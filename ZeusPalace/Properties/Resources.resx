@@ -127,6 +127,9 @@
   <data name="switch_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\switch-on.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="camping-gardens_of_olympus_parking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camping-gardens_of_olympus_parking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="blip" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blip.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -151,8 +154,8 @@
   <data name="refresh-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="move-right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\move-right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pool_2_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pool-2-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +166,11 @@
   <data name="public_pool_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\public-pool-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pool_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pool-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="public_sensor_enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\public-sensor-enabled.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="switch_beep" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\switch-beep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -172,8 +178,8 @@
   <data name="employee-man-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employee-man-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="horse_right_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\horse_right_glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pool_3_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool-3-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="horse_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\horse_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,14 +193,8 @@
   <data name="sensor-off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sensor-off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="move-right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\move-right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="employee-man-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\employee-man-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="success" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\success.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,17 +208,20 @@
   <data name="toggle-switch-off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toggle-switch-off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="alarm_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alarm-sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="public_pool_1_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\public-pool-3-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="spinner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spinner.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="camping_gardens_of_olympus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camping-gardens_of_olympus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="public_alarm_enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\public-alarm-enabled.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="refresh-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="public_pool_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\public-pool-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,8 +229,8 @@
   <data name="alarm_enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alarm_enabled.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="public_sensor_enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\public-sensor-enabled.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="horse_right_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\horse_right_glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="move-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\move-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,14 +247,14 @@
   <data name="pool_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pool-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="alarm_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alarm-sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="employee-man-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\employee-man-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="employee-woman-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\employee-woman-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pool_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="switch_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\switch-off.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="refresh-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pool_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pool-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,11 +268,11 @@
   <data name="employee_woman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employee_woman.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pool_3_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pool-3-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="employee-woman-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\employee-woman-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="camping_gardens_of_olympus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\camping-gardens_of_olympus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="switch_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\switch-off.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="alarm-off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alarm-off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,7 +280,7 @@
   <data name="pool_1_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pool-1-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="camping-gardens_of_olympus_parking" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\camping-gardens_of_olympus_parking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -40,16 +40,17 @@
             this.panelMain.Location = new System.Drawing.Point(0, 100);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(960, 500);
-            this.panelMain.TabIndex = 0;
+            this.panelMain.TabIndex = 2;
             // 
             // panelTitle
             // 
+            this.panelTitle.BackColor = System.Drawing.Color.Transparent;
             this.panelTitle.Controls.Add(this.labelTitle);
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Name = "panelTitle";
             this.panelTitle.Size = new System.Drawing.Size(960, 100);
-            this.panelTitle.TabIndex = 1;
+            this.panelTitle.TabIndex = 3;
             // 
             // labelTitle
             // 
@@ -60,12 +61,12 @@
             this.labelTitle.Size = new System.Drawing.Size(98, 35);
             this.labelTitle.TabIndex = 1;
             this.labelTitle.Text = "Τίτλος";
-            this.labelTitle.TextChanged += new System.EventHandler(this.labelTitle_TextChanged);
             // 
             // OrderPanelControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ZeusPalace.Properties.Resources.background;
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelTitle);
             this.Name = "OrderPanelControl";
