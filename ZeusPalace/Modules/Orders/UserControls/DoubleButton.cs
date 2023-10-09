@@ -80,7 +80,7 @@ namespace ZeusPalace.Modules.Orders.UserControls
             {
                 Anchor = AnchorStyles.None,
                 AutoSize = true,
-                Font = new Font("Calibri", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0),
+                Font = new Font("Palatino Linotype", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0),
                 Text = label
             };
             newLabel.Click += (sender, e) => OnClick(e);

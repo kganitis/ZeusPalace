@@ -95,7 +95,7 @@
             this.buttonNewOrder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonNewOrder.FlatAppearance.BorderSize = 0;
             this.buttonNewOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNewOrder.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNewOrder.Font = new System.Drawing.Font("Palatino Linotype", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNewOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
             this.buttonNewOrder.Location = new System.Drawing.Point(337, 504);
             this.buttonNewOrder.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
@@ -114,7 +114,7 @@
             this.buttonOrderReview.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonOrderReview.FlatAppearance.BorderSize = 0;
             this.buttonOrderReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOrderReview.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOrderReview.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOrderReview.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.buttonOrderReview.Location = new System.Drawing.Point(576, 567);
             this.buttonOrderReview.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
@@ -132,7 +132,7 @@
             this.buttonOrderEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonOrderEdit.FlatAppearance.BorderSize = 0;
             this.buttonOrderEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOrderEdit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOrderEdit.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOrderEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.buttonOrderEdit.Location = new System.Drawing.Point(195, 567);
             this.buttonOrderEdit.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
@@ -181,7 +181,7 @@
             this.buttonOrderCancel.FlatAppearance.BorderSize = 0;
             this.buttonOrderCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.buttonOrderCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOrderCancel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOrderCancel.Font = new System.Drawing.Font("Palatino Linotype", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOrderCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.buttonOrderCancel.Location = new System.Drawing.Point(95, 5);
             this.buttonOrderCancel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
@@ -195,10 +195,12 @@
             // 
             // buttonNextStep
             // 
+            this.buttonNextStep.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonNextStep.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonNextStep.DefaultColor = System.Drawing.Color.Empty;
+            this.buttonNextStep.Font = new System.Drawing.Font("Palatino Linotype", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNextStep.Location = new System.Drawing.Point(476, 5);
-            this.buttonNextStep.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.buttonNextStep.Margin = new System.Windows.Forms.Padding(0);
             this.buttonNextStep.Name = "buttonNextStep";
             this.buttonNextStep.Size = new System.Drawing.Size(286, 50);
             this.buttonNextStep.TabIndex = 3;
@@ -219,11 +221,11 @@
             // 
             // labelTime
             // 
-            this.labelTime.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTime.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelTime.Location = new System.Drawing.Point(12, 17);
+            this.labelTime.Location = new System.Drawing.Point(20, 17);
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(62, 27);
+            this.labelTime.Size = new System.Drawing.Size(57, 27);
             this.labelTime.TabIndex = 0;
             this.labelTime.Text = "16:00";
             // 
@@ -276,7 +278,6 @@
         private System.Windows.Forms.Panel panelChat;
         private System.Windows.Forms.Panel panelTime;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelOrderControls;
-        private UserControls.DoubleButton buttonNextStep;
         private System.Windows.Forms.Button buttonOrderEdit;
         private UserControls.OrderPanelTableControl panelMenu;
         private System.Windows.Forms.Timer timerOrderPreparing;
@@ -284,5 +285,6 @@
         private System.Windows.Forms.Button buttonOrderReview;
         private System.Windows.Forms.Timer timerPaymentSuccessful;
         private System.Windows.Forms.Button buttonNewOrder;
+        private UserControls.DoubleButton buttonNextStep;
     }
 }

@@ -73,7 +73,7 @@
             this.buttonSendMessage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSendMessage.FlatAppearance.BorderSize = 0;
             this.buttonSendMessage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSendMessage.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSendMessage.Font = new System.Drawing.Font("Palatino Linotype", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSendMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
             this.buttonSendMessage.Location = new System.Drawing.Point(10, 605);
             this.buttonSendMessage.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);

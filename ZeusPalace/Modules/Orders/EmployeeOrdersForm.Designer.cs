@@ -114,7 +114,7 @@
             this.buttonReject.FlatAppearance.BorderSize = 0;
             this.buttonReject.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.buttonReject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonReject.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReject.Font = new System.Drawing.Font("Palatino Linotype", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonReject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.buttonReject.Location = new System.Drawing.Point(95, 5);
             this.buttonReject.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
@@ -134,7 +134,7 @@
             this.buttonConfirm.FlatAppearance.BorderSize = 0;
             this.buttonConfirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(207)))), ((int)(((byte)(153)))));
             this.buttonConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonConfirm.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConfirm.Font = new System.Drawing.Font("Palatino Linotype", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.buttonConfirm.Location = new System.Drawing.Point(476, 5);
             this.buttonConfirm.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
@@ -158,9 +158,9 @@
             // 
             // labelTime
             // 
-            this.labelTime.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTime.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelTime.Location = new System.Drawing.Point(12, 17);
+            this.labelTime.Location = new System.Drawing.Point(18, 17);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(62, 27);
             this.labelTime.TabIndex = 0;
