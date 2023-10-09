@@ -42,7 +42,7 @@ namespace ZeusPalace.Entities.Devices
 
         private void UpdateFeeling()
         {
-            if (temperature >= 12 && temperature < 15)
+            if (temperature >= MinTemperature && temperature < 15)
             {
                 Temperaturefeeling = FeelingEnum.VeryCold;
             }
@@ -58,7 +58,7 @@ namespace ZeusPalace.Entities.Devices
             {
                 Temperaturefeeling = FeelingEnum.Hot;
             }
-            else if (temperature >= 30 && temperature <= 32)
+            else if (temperature >= 30 && temperature <= MaxTemperature)
             {
                 Temperaturefeeling = FeelingEnum.VeryHot;
             }
