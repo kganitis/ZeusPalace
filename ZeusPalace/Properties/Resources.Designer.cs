@@ -710,6 +710,16 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap light_switch_color_inverted {
+            get {
+                object obj = ResourceManager.GetObject("light_switch_color_inverted", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lights_off {
             get {
                 object obj = ResourceManager.GetObject("lights_off", resourceCulture);

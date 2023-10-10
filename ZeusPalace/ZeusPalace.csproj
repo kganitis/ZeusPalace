@@ -550,6 +550,7 @@
     <Content Include="Resources\btn_locked.jpg" />
     <Content Include="Resources\btn_unlocked.jpg" />
     <Content Include="Resources\cold_person_icon_color.png" />
+    <None Include="Resources\light_switch_color_inverted.png" />
     <None Include="Resources\devices-th-button.png" />
     <None Include="Resources\devices-th-button-glow.png" />
     <None Include="Resources\devices-th-icon-glow.png" />

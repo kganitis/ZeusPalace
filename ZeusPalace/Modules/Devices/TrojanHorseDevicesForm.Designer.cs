@@ -136,7 +136,7 @@
             // 
             // backPanel
             // 
-            this.backPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backPanel.BackgroundImage")));
+            this.backPanel.BackgroundImage = global::ZeusPalace.Properties.Resources.trojan_horse_lights_on;
             this.backPanel.Controls.Add(this.WheelPictureBox);
             this.backPanel.Controls.SetChildIndex(this.WheelPictureBox, 0);
             this.backPanel.Controls.SetChildIndex(this.lightSwitchBtn, 0);

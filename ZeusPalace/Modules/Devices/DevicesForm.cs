@@ -41,7 +41,7 @@ namespace ZeusPalace.Modules.Devices
                     ? Properties.Resources.door_shut_lightsOFF : Properties.Resources.door_open_lightsOFF;
 
                 lights.TurnOff();
-                //lightSwitchBtn.BackgroundImage = Properties.Resources.lights_off;
+                lightSwitchBtn.BackgroundImage = Properties.Resources.light_switch_color_inverted;
                 backPanel.BackgroundImage = Properties.Resources.pre_ancient_suite_lights_off;
             }
             else
@@ -56,7 +56,7 @@ namespace ZeusPalace.Modules.Devices
                     ? Properties.Resources.door_shut_lightsON : Properties.Resources.door_open_lightsON;
 
                 lights.TurnOn();
-                //lightSwitchBtn.BackgroundImage = Properties.Resources.lights_on;
+                lightSwitchBtn.BackgroundImage = Properties.Resources.light_switch_color;
                 backPanel.BackgroundImage = Properties.Resources.pre_ancient_suite;
             }
         }
