@@ -49,7 +49,6 @@
             this.btn_ON_OFF = new System.Windows.Forms.Button();
             this.TvpictureBox = new System.Windows.Forms.PictureBox();
             this.lightSwitchBtn = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.backPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HumWarningSign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocksPictureBox)).BeginInit();
@@ -60,7 +59,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarHumidity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MusciBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TvpictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // backPanel
@@ -326,21 +324,12 @@
             this.lightSwitchBtn.UseVisualStyleBackColor = false;
             this.lightSwitchBtn.Click += new System.EventHandler(this.lightSwitchBtn_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
             // DevicesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1707, 812);
             this.Controls.Add(this.backPanel);
-            this.Controls.Add(this.pictureBox2);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "DevicesForm";
             this.backPanel.ResumeLayout(false);
@@ -354,14 +343,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarHumidity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MusciBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TvpictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        protected System.Windows.Forms.PictureBox pictureBox2;
         protected System.Windows.Forms.Label lightsLabel;
         protected System.Windows.Forms.Button lightSwitchBtn;
         protected System.Windows.Forms.PictureBox TvpictureBox;

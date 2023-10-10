@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrojanHorseDevicesForm));
             this.WheelPictureBox = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TvpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarHumidity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MusciBox)).BeginInit();
@@ -183,7 +182,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(1707, 812);
             this.Name = "TrojanHorseDevicesForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TvpictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarHumidity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MusciBox)).EndInit();
