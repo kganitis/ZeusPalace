@@ -150,7 +150,7 @@ namespace ZeusPalace
 
         private void radioButtonPublicPool_CheckedChanged(object sender, EventArgs e)
         {
-            buttonCustomer.Enabled = !radioButtonPublicPool.Checked;
+            //buttonCustomer.Enabled = !radioButtonPublicPool.Checked;
         }
 
         private void buttonRefreshTime_Click(object sender, EventArgs e)

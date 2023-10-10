@@ -13,6 +13,17 @@ namespace ZeusPalace.Modules.PoolControl
         public PublicPoolForm()
         {
             InitializeComponent();
+
+            if (AppController.Instance.User.Role == UserRole.Customer)
+            {
+                foreach (Control control in Controls)
+                {
+                    if (control != null)
+                    {
+                        control.Enabled = false;
+                    }
+                }
+            }
         }
     }
 }
