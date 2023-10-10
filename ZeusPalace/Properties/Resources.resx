@@ -337,4 +337,166 @@
   <data name="background_login_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background-login-menu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="boombox_off_lightsOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boombox_off_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boombox_off_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boombox_off_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boombox_on_lightsOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boombox_on_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boombox_on_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boombox_on_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_locked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_locked.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_unlocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_unlocked.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cold_person_icon_color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cold_person_icon_color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="door_locked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door_locked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="door_open_lightsOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door_open_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="door_open_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door_open_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="door_shut_lightsOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door_shut_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="door_shut_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door_shut_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="door_unlocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door_unlocked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="driving_off_lightsOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\driving_off_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="driving_off_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\driving_off_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="driving_on_lightsOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\driving_on_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="driving_on_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\driving_on_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Etv_off_lightsOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Etv_off_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Etv_off_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Etv_off_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Etv_on_lightsOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Etv_on_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Etv_on_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Etv_on_lights0N.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="harp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\harp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="harp_off_lightsOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\harp_off_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="harp_off_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\harp_off_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="harp_on_lightsOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\harp_on_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="harp_on_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\harp_on_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="highHum_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\highHum_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hot_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hot_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_shutdown_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-shutdown-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lights_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lights_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lights_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lights_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="light_switch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\light_switch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="light_switch_color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\light_switch_color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="locked_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\locked_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lowHum_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lowHum_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="music_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\music_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="play_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play_btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pre_ancient_suite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pre-ancient-suite.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pre_ancient_suite_lights_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pre-ancient-suite-lights-off.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pre_ancient_suite_lights_off_devices_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pre-ancient-suite-lights-off-devices-off.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stopmusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stopmusic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stop_btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stop_btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thermometer_color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thermometer_color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trojan_horse_lights_Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trojan_horse_lights_Off.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trojan_horse_lights_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trojan-horse-lights-on.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TVremoteOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TVremoteOFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tvremote_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tvremote_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tvremote_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TVremoteON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tv_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tv_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unlocked_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unlocked_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VeryCold_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VeryCold_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VeryhighHum_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VeryhighHum_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VeryHot_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VeryHot_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VerylowHum_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VerylowHum_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

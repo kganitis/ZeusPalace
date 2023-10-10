@@ -84,6 +84,11 @@
     <Compile Include="Entities\Accommodation\AccommodationType.cs" />
     <Compile Include="Entities\Accommodation\Apartment.cs" />
     <Compile Include="Entities\Accommodation\TrojanHorse.cs" />
+    <Compile Include="Entities\Devices\Harp.cs" />
+    <Compile Include="Entities\Devices\Lights.cs" />
+    <Compile Include="Entities\Devices\Locks.cs" />
+    <Compile Include="Entities\Devices\Thermostat.cs" />
+    <Compile Include="Entities\Devices\Tv.cs" />
     <Compile Include="Entities\Order\Chat.cs" />
     <Compile Include="Entities\Order\DeliveryMethod.cs" />
     <Compile Include="Entities\Order\Menu.cs" />
@@ -522,6 +527,72 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background-login-menu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\._camping-gardens_of_olympus_parking.png" />
+    <Content Include="Resources\._camping-temple_of_zeus_courtyard.png" />
+    <Content Include="Resources\._horse_right.png" />
+    <Content Include="Resources\background-loading.jpg" />
+    <Content Include="Resources\background-login.jpg" />
+    <Content Include="Resources\boombox_off_lightsOFF.jpg" />
+    <Content Include="Resources\boombox_off_lightsON.jpg" />
+    <Content Include="Resources\boombox_on_lightsOFF.jpg" />
+    <Content Include="Resources\boombox_on_lightsON.jpg" />
+    <Content Include="Resources\btn_locked.jpg" />
+    <Content Include="Resources\btn_unlocked.jpg" />
+    <Content Include="Resources\cold_person_icon_color.png" />
+    <Content Include="Resources\door_locked.png" />
+    <Content Include="Resources\door_open_lightsOFF.jpg" />
+    <Content Include="Resources\door_open_lightsON.jpg" />
+    <Content Include="Resources\door_shut_lightsOFF.jpg" />
+    <Content Include="Resources\door_shut_lightsON.jpg" />
+    <Content Include="Resources\door_unlocked.png" />
+    <Content Include="Resources\driving_off_lightsOFF.jpg" />
+    <Content Include="Resources\driving_off_lightsON.jpg" />
+    <Content Include="Resources\driving_on_lightsOFF.jpg" />
+    <Content Include="Resources\driving_on_lightsON.jpg" />
+    <Content Include="Resources\Etv_off_lightsOFF.jpg" />
+    <Content Include="Resources\Etv_off_lightsON.jpg" />
+    <Content Include="Resources\Etv_on_lights0N.jpg" />
+    <Content Include="Resources\Etv_on_lightsOFF.jpg" />
+    <Content Include="Resources\harp.png" />
+    <Content Include="Resources\harp_music.wav" />
+    <Content Include="Resources\harp_off_lightsOFF.jpg" />
+    <Content Include="Resources\harp_off_lightsON.jpg" />
+    <Content Include="Resources\harp_on_lightsOFF.jpg" />
+    <Content Include="Resources\harp_on_lightsON.jpg" />
+    <Content Include="Resources\highHum_icon.png" />
+    <Content Include="Resources\hot_icon.png" />
+    <Content Include="Resources\icons8-shutdown-48.png" />
+    <Content Include="Resources\lights_off.png" />
+    <Content Include="Resources\lights_on.png" />
+    <Content Include="Resources\light_switch.png" />
+    <Content Include="Resources\light_switch_color.png" />
+    <Content Include="Resources\locked_icon.png" />
+    <Content Include="Resources\lowHum_icon.png" />
+    <Content Include="Resources\music_off.png" />
+    <Content Include="Resources\omega.png" />
+    <Content Include="Resources\play_btn.png" />
+    <Content Include="Resources\pre-ancient-suite-lights-off-devices-off.jpg" />
+    <Content Include="Resources\pre-ancient-suite-lights-off.jpg" />
+    <Content Include="Resources\pre-ancient-suite.jpg" />
+    <Content Include="Resources\Shire_Theme.wav" />
+    <Content Include="Resources\stopmusic.png" />
+    <Content Include="Resources\stop_btn.png" />
+    <Content Include="Resources\symbol_zeus1.jpg" />
+    <Content Include="Resources\thermometer_color.png" />
+    <Content Include="Resources\trojan-horse-lights-on.jpg" />
+    <Content Include="Resources\trojan_horse_lights_Off.jpg" />
+    <Content Include="Resources\tv.jpg" />
+    <Content Include="Resources\TVremoteOFF.png" />
+    <Content Include="Resources\TVremoteON.png" />
+    <Content Include="Resources\tvremote_off.png" />
+    <Content Include="Resources\tv_icon.png" />
+    <Content Include="Resources\unlocked_icon.png" />
+    <Content Include="Resources\VeryCold_icon.png" />
+    <Content Include="Resources\VeryhighHum_icon.png" />
+    <Content Include="Resources\VeryHot_icon.png" />
+    <Content Include="Resources\VerylowHum_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
