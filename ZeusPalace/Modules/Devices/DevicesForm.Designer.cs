@@ -426,8 +426,8 @@
         protected System.Windows.Forms.PictureBox TempWarningSign;
         protected System.Windows.Forms.Label TempWarningLabel;
         protected System.Windows.Forms.Panel backPanel;
-        private System.Windows.Forms.Label MusicLabel;
-        private System.Windows.Forms.Label TVLabel;
-        private System.Windows.Forms.Label LocksLabel;
+        protected System.Windows.Forms.Label MusicLabel;
+        protected System.Windows.Forms.Label TVLabel;
+        protected System.Windows.Forms.Label LocksLabel;
     }
 }
