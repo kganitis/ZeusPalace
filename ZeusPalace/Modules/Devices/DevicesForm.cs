@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZeusPalace.Entities.Devices;
-using ZeusPalace.Modules.Devices.UserControls;
 
 namespace ZeusPalace.Modules.Devices
 {

@@ -115,12 +115,6 @@
     <Compile Include="Modules\Devices\TrojanHorseDevicesForm.Designer.cs">
       <DependentUpon>TrojanHorseDevicesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Devices\UserControls\ThermostatControls1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Modules\Devices\UserControls\ThermostatControls1.Designer.cs">
-      <DependentUpon>ThermostatControls1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modules\EmbeddedForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,9 +254,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Devices\TrojanHorseDevicesForm.resx">
       <DependentUpon>TrojanHorseDevicesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\Devices\UserControls\ThermostatControls1.resx">
-      <DependentUpon>ThermostatControls1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\EmbeddedForm.resx">
       <DependentUpon>EmbeddedForm.cs</DependentUpon>
