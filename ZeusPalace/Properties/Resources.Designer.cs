@@ -200,9 +200,9 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap boombox_off_lightsOFF {
+        internal static System.Drawing.Bitmap boombox_off_lightsOff {
             get {
-                object obj = ResourceManager.GetObject("boombox_off_lightsOFF", resourceCulture);
+                object obj = ResourceManager.GetObject("boombox_off_lightsOff", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -210,9 +210,9 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap boombox_off_lightsON {
+        internal static System.Drawing.Bitmap boombox_off_lightsOn {
             get {
-                object obj = ResourceManager.GetObject("boombox_off_lightsON", resourceCulture);
+                object obj = ResourceManager.GetObject("boombox_off_lightsOn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -220,9 +220,9 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap boombox_on_lightsOFF {
+        internal static System.Drawing.Bitmap boombox_on_lightsOff {
             get {
-                object obj = ResourceManager.GetObject("boombox_on_lightsOFF", resourceCulture);
+                object obj = ResourceManager.GetObject("boombox_on_lightsOff", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -230,9 +230,9 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap boombox_on_lightsON {
+        internal static System.Drawing.Bitmap boombox_on_lightsOn {
             get {
-                object obj = ResourceManager.GetObject("boombox_on_lightsON", resourceCulture);
+                object obj = ResourceManager.GetObject("boombox_on_lightsOn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -147,7 +147,15 @@ namespace ZeusPalace
         private void PreloadForms()
         {
             hubForm = new HubForm();
-            devicesForm = new DevicesForm();
+            if (appController.Customer.Accommodation.Type == AccommodationType.Apartment)
+            {
+                devicesForm = new DevicesForm();
+            }
+            else
+            {
+                devicesForm = new TrojanHorseDevicesForm();
+                ((TrojanHorseDevicesForm)devicesForm).WheelPictureBox.Click += WheelPictureBox_Click;
+            }
             poolForm = new PoolForm();
             trojanHorseForm = new TrojanHorseForm(this);
             customerOrdersForm = new CustomerOrdersForm();
@@ -163,6 +171,11 @@ namespace ZeusPalace
                 embeddedForm.Dock = DockStyle.Fill;
                 panelDesktopPane.Controls.Add(embeddedForm);
             }
+        }
+
+        private void WheelPictureBox_Click(object sender, EventArgs e)
+        {
+            buttonTrojanHorse_Click(buttonTrojanHorse, e);
         }
 
         private string GetImageName(Button btn)
