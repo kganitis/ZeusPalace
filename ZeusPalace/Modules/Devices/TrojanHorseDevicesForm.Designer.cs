@@ -193,11 +193,13 @@
             // 
             this.TVLabel.Location = new System.Drawing.Point(1700, 800);
             this.TVLabel.Size = new System.Drawing.Size(1, 1);
+            this.TVLabel.Visible = false;
             // 
             // LocksLabel
             // 
             this.LocksLabel.Location = new System.Drawing.Point(1700, 800);
             this.LocksLabel.Size = new System.Drawing.Size(1, 1);
+            this.LocksLabel.Visible = false;
             // 
             // WheelPictureBox
             // 
@@ -221,7 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(1707, 812);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TrojanHorseDevicesForm";
             ((System.ComponentModel.ISupportInitialize)(this.TvpictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarHumidity)).EndInit();
