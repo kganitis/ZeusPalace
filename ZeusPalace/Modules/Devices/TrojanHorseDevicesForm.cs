@@ -17,7 +17,7 @@ namespace ZeusPalace.Modules.Devices
             InitializeComponent();
         }
 
-        SoundPlayer MyPlayer = new SoundPlayer("..\\..\\Resources\\harp_music.wav");
+        SoundPlayer MyPlayer = new SoundPlayer("..\\..\\Resources\\Shire_Theme.wav");
         
         //
         //Lights Control
@@ -28,18 +28,20 @@ namespace ZeusPalace.Modules.Devices
             if (lights.GetStatus() == 1)
             {
                 MusciBox.BackgroundImage = (myHarp.GetStatus() == 1)
-                    ? Properties.Resources.boombox_on_lightsOFF : Properties.Resources.boombox_off_lightsOFF;
+                    ? Properties.Resources.boombox_on_lightsOff : Properties.Resources.boombox_off_lightsOff;
 
                 lights.TurnOff();
+                WheelPictureBox.BackgroundImage = Properties.Resources.driving_off_lightsOFF;
                 //lightSwitchBtn.BackgroundImage = Properties.Resources.lights_off;
                 backPanel.BackgroundImage = Properties.Resources.trojan_horse_lights_off;
             }
             else
             {
                 MusciBox.BackgroundImage = (myHarp.GetStatus() == 1)
-                    ? Properties.Resources.boombox_on_lightsON : Properties.Resources.boombox_off_lightsON;
+                    ? Properties.Resources.boombox_on_lightsOn : Properties.Resources.boombox_off_lightsOn;
 
                 lights.TurnOn();
+                WheelPictureBox.BackgroundImage = Properties.Resources.driving_off_lightsON;
                 //lightSwitchBtn.BackgroundImage = Properties.Resources.lights_on;
                 backPanel.BackgroundImage = Properties.Resources.trojan_horse_lights_on;
             }
@@ -53,7 +55,7 @@ namespace ZeusPalace.Modules.Devices
             if (myHarp.GetStatus() == 0)
             {
                 MusciBox.BackgroundImage = (lights.GetStatus() == 1)
-                    ? Properties.Resources.boombox_on_lightsON : Properties.Resources.boombox_on_lightsOFF;
+                    ? Properties.Resources.boombox_on_lightsOn : Properties.Resources.boombox_on_lightsOff;
 
                 myHarp.Play();
                 MyPlayer.PlayLooping();
@@ -62,7 +64,7 @@ namespace ZeusPalace.Modules.Devices
             else
             {
                 MusciBox.BackgroundImage = (lights.GetStatus() == 1)
-                    ? Properties.Resources.boombox_off_lightsON : Properties.Resources.boombox_off_lightsOFF;
+                    ? Properties.Resources.boombox_off_lightsOn : Properties.Resources.boombox_off_lightsOff;
 
                 myHarp.Stop();
                 MyPlayer.Stop();
@@ -70,6 +72,34 @@ namespace ZeusPalace.Modules.Devices
             }
         }
 
-        
+        private void WheelPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WheelPictureBox_MouseHover(object sender, EventArgs e)
+        {
+            if (lights.GetStatus() == 1) 
+            {
+                WheelPictureBox.BackgroundImage = Properties.Resources.driving_on_lightsON;
+            }
+            else
+            {
+                WheelPictureBox.BackgroundImage = Properties.Resources.driving_on_lightsOFF;
+            }
+            toolTip1.SetToolTip(WheelPictureBox, "Πάμε μια βόλτα!!");
+        }
+
+        private void WheelPictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            if (lights.GetStatus() == 1)
+            {
+                WheelPictureBox.BackgroundImage = Properties.Resources.driving_off_lightsON;
+            }
+            else
+            {
+                WheelPictureBox.BackgroundImage = Properties.Resources.driving_off_lightsOFF;
+            }
+        }
     }
 }

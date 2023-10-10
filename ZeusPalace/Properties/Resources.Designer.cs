@@ -130,9 +130,9 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap boombox_off_lightsOFF {
+        internal static System.Drawing.Bitmap boombox_off_lightsOff {
             get {
-                object obj = ResourceManager.GetObject("boombox_off_lightsOFF", resourceCulture);
+                object obj = ResourceManager.GetObject("boombox_off_lightsOff", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -140,9 +140,9 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap boombox_off_lightsON {
+        internal static System.Drawing.Bitmap boombox_off_lightsOn {
             get {
-                object obj = ResourceManager.GetObject("boombox_off_lightsON", resourceCulture);
+                object obj = ResourceManager.GetObject("boombox_off_lightsOn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -150,9 +150,9 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap boombox_on_lightsOFF {
+        internal static System.Drawing.Bitmap boombox_on_lightsOff {
             get {
-                object obj = ResourceManager.GetObject("boombox_on_lightsOFF", resourceCulture);
+                object obj = ResourceManager.GetObject("boombox_on_lightsOff", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -160,9 +160,9 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap boombox_on_lightsON {
+        internal static System.Drawing.Bitmap boombox_on_lightsOn {
             get {
-                object obj = ResourceManager.GetObject("boombox_on_lightsON", resourceCulture);
+                object obj = ResourceManager.GetObject("boombox_on_lightsOn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,6 +213,46 @@ namespace ZeusPalace.Properties {
         internal static System.Drawing.Bitmap door_shut_lightsON {
             get {
                 object obj = ResourceManager.GetObject("door_shut_lightsON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap driving_off_lightsOFF {
+            get {
+                object obj = ResourceManager.GetObject("driving_off_lightsOFF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap driving_off_lightsON {
+            get {
+                object obj = ResourceManager.GetObject("driving_off_lightsON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap driving_on_lightsOFF {
+            get {
+                object obj = ResourceManager.GetObject("driving_on_lightsOFF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap driving_on_lightsON {
+            get {
+                object obj = ResourceManager.GetObject("driving_on_lightsON", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -693,6 +733,15 @@ namespace ZeusPalace.Properties {
             get {
                 object obj = ResourceManager.GetObject("sensor-on", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Shire_Theme {
+            get {
+                return ResourceManager.GetStream("Shire_Theme", resourceCulture);
             }
         }
         

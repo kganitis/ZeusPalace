@@ -358,16 +358,31 @@
   <data name="trojan_horse_lights_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trojan-horse-lights-on.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boombox_off_lightsOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boombox_off_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="boombox_off_lightsOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boombox_off_lightsOff.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boombox_off_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boombox_off_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="boombox_off_lightsOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boombox_off_lightsOn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boombox_on_lightsOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boombox_on_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="boombox_on_lightsOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boombox_on_lightsOff.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boombox_on_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boombox_on_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="boombox_on_lightsOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boombox_on_lightsOn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="driving_off_lightsOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\driving_off_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="driving_off_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\driving_off_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="driving_on_lightsOFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\driving_on_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="driving_on_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\driving_on_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shire_Theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shire_Theme.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
