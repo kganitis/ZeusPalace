@@ -17,7 +17,7 @@ namespace ZeusPalace
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TrojanHorseDevicesForm());
+            Application.Run(new AppControllerForm());
         }
     }
 }
