@@ -112,13 +112,13 @@
             this.labelName.TabIndex = 3;
             this.labelName.Text = "Ονοματεπώνυμο κατόχου";
             // 
-            // label1
+            // labelUsername
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Location = new System.Drawing.Point(496, 287);
-            this.label1.Name = "label1";
+            this.label1.Name = "labelUsername";
             this.label1.Size = new System.Drawing.Size(198, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "Όλα τα πεδία είναι υποχρεωτικά";
@@ -172,13 +172,13 @@
             this.textBoxCardNumber.TabIndex = 8;
             this.textBoxCardNumber.TextChanged += new System.EventHandler(this.textBoxCardNumber_TextChanged);
             // 
-            // label2
+            // labelPassword
             // 
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Help;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(280, 203);
-            this.label2.Name = "label2";
+            this.label2.Name = "labelPassword";
             this.label2.Size = new System.Drawing.Size(61, 18);
             this.label2.TabIndex = 9;
             this.label2.Text = "(τι είναι;)";

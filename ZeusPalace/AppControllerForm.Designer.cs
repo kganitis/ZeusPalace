@@ -284,23 +284,23 @@
             this.panel2.Size = new System.Drawing.Size(70, 24);
             this.panel2.TabIndex = 6;
             // 
-            // label1
+            // labelUsername
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(184, 20);
-            this.label1.Name = "label1";
+            this.label1.Name = "labelUsername";
             this.label1.Size = new System.Drawing.Size(121, 16);
             this.label1.TabIndex = 12;
             this.label1.Text = "Στοιχεία Πελάτη";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // labelPassword
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(383, 20);
-            this.label2.Name = "label2";
+            this.label2.Name = "labelPassword";
             this.label2.Size = new System.Drawing.Size(145, 16);
             this.label2.TabIndex = 14;
             this.label2.Text = "Επιλογή υπαλλήλου";

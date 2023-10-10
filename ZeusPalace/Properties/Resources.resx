@@ -118,169 +118,223 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="alarm_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alarm-on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="swimmer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\swimmer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="switch_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\switch-on.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="camping-gardens_of_olympus_parking" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\camping-gardens_of_olympus_parking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blip" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blip.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="camping-temple_of_zeus_courtyard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\camping-temple_of_zeus_courtyard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="public_pool_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\public-pool-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="public_pool_3_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\public-pool-1-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pool_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="move-left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\move-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="alarm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alarm.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="toggle-switch-on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\toggle-switch-on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="refresh-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="move-right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\move-right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pool_2_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pool-2-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="beep_cute" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\beep-cute.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="public_pool_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\public-pool-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="public_sensor_enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\public-sensor-enabled.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="switch_beep" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\switch-beep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="employee-man-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\employee-man-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pool_3_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pool-3-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="horse_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\horse_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="swimmer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\swimmer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="employee-woman-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employee-woman-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="public_pool_2_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\public-pool-2-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pool_2_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool-2-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sensor-off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sensor-off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="trojanhorse_button_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trojanhorse-button-glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="success" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\success.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pool" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pool.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sensor_disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sensor_disabled.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="toggle-switch-off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\toggle-switch-off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alarm_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alarm-sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="public_pool_1_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\public-pool-3-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="spinner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spinner.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="camping_gardens_of_olympus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\camping-gardens_of_olympus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="public_alarm_enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\public-alarm-enabled.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="public_pool_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\public-pool-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alarm_enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alarm_enabled.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="horse_right_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\horse_right_glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="move-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\move-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hourglass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hourglass.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="switch_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\switch-on.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="horse_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\horse_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="public_pool" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\public-pool.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="spinner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spinner.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="public_pool_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\public-pool-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alarm_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alarm-sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="pool_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pool-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="employee-man-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\employee-man-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pool_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pool-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="refresh-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pool_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pool-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sensor-on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sensor-on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="move-down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\move-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="employee_woman" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\employee_woman.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="employee-woman-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\employee-woman-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="switch_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\switch-off.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="alarm-off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alarm-off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="background-loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background-loading.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pool_1_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pool-1-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="public_pool_1_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\public-pool-3-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="employee-man-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\employee-man-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beep_cute" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beep-cute.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="switch_beep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\switch-beep.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="refresh-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="public_pool_2_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\public-pool-2-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pool_icon_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool-icon-glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alarm_enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alarm_enabled.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pool_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="switch_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\switch-off.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pool_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="move-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\move-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orders_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orders-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sensor-on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sensor-on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="toggle-switch-off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\toggle-switch-off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alarm_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alarm-on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="public_pool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\public-pool.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orders_button_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orders-button-glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="move-right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\move-right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="success" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\success.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="camping-gardens_of_olympus_parking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camping-gardens_of_olympus_parking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orders_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orders-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pool_3_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool-3-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="employee_woman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\employee_woman.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sensor_disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sensor_disabled.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background-home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background-home.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="camping_gardens_of_olympus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camping-gardens_of_olympus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trojanhorse_icon_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trojanhorse-icon-glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="camping-temple_of_zeus_courtyard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camping-temple_of_zeus_courtyard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sensor-off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sensor-off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="employee-man-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\employee-man-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trojanhorse_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trojanhorse-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="public_alarm_enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\public-alarm-enabled.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="public_sensor_enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\public-sensor-enabled.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blip.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trojanhorse_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trojanhorse-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="public_pool_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\public-pool-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="horse_right_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\horse_right_glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="toggle-switch-on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\toggle-switch-on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="public_pool_3_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\public-pool-1-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="horse_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\horse_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alarm-off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alarm-off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="public_pool_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\public-pool-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pool_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="move-down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\move-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pool_button_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool-button-glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orders_icon_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orders-icon-glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alarm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alarm.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="employee-woman-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\employee-woman-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background-login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background-login.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hourglass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hourglass.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background-menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background-menu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background_home_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background-home-menu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background_login_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background-login-menu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

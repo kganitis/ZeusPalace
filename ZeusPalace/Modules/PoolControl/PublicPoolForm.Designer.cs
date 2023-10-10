@@ -52,7 +52,7 @@
             // 
             this.pictureBoxSensorToggle.Location = new System.Drawing.Point(980, 471);
             // 
-            // label1
+            // labelUsername
             // 
             this.label1.Location = new System.Drawing.Point(175, 499);
             // 
@@ -77,7 +77,7 @@
             this.trackBarWaterLevel.Location = new System.Drawing.Point(184, 545);
             this.trackBarWaterLevel.Value = 150;
             // 
-            // label2
+            // labelPassword
             // 
             this.label2.Location = new System.Drawing.Point(180, 121);
             // 

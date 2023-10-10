@@ -16,6 +16,7 @@ using ZeusPalace.Modules.Orders;
 using ZeusPalace.Entities.Pool;
 using ZeusPalace.Entities.Accommodation;
 using System.Diagnostics;
+using ZeusPalace.Properties;
 
 namespace ZeusPalace
 {
@@ -24,7 +25,8 @@ namespace ZeusPalace
         AppController appController = AppController.Instance;
 
         // Forms
-        private Dictionary<Type, EmbeddedForm> embeddedForms;
+        private List<EmbeddedForm> embeddedForms;
+        private HubForm hubForm;
         private DevicesForm devicesForm;
         private PoolForm poolForm;
         private TrojanHorseForm trojanHorseForm;
@@ -42,12 +44,12 @@ namespace ZeusPalace
                 currentForm.BringToFront();
                 currentForm.Show();
                 CurrentFormChanged?.Invoke(this, EventArgs.Empty);
+                SetButtonsVisible(currentForm != hubForm);
             }
         }
 
         // UI fields
         private Button activeButton;
-        private readonly Color defaultButtonBackColor;
         private readonly Font defaultButtonFont;
         private readonly Font activeButtonFont;
         private readonly int initialWidth;
@@ -58,29 +60,65 @@ namespace ZeusPalace
             InitializeComponent();
 
             // Buttons
-            defaultButtonBackColor = buttonDevices.BackColor;
             defaultButtonFont = buttonDevices.Font;
-            activeButtonFont = new Font(defaultButtonFont.Name, 21.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            foreach (Button btn in flowLayoutPanelMenu.Controls.OfType<Button>())
-            {
-                btn.FlatAppearance.BorderColor = ColorPicker.GetTint(defaultButtonBackColor, 10);
-                btn.FlatAppearance.MouseOverBackColor = ColorPicker.GetTint(defaultButtonBackColor, 10);
-                btn.FlatAppearance.MouseDownBackColor = btn.FlatAppearance.MouseOverBackColor;
-            }
-
-            HandleUserPermissions();
+            activeButtonFont = new Font(defaultButtonFont.Name, 19F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SetButtonsVisible(false);
 
             // Keep the initial dimensions so we can reset them later
             initialWidth = Width;
             initialHeight = Height;
 
             PreloadForms();
+
+            // Hub Form
+            hubForm.pictureBoxDevices.Click += PictureBoxDevices_Click;
+            hubForm.pictureBoxPoolOrHorse.Click += PictureBoxPoolOrHorse_Click;
+            hubForm.pictureBoxOrders.Click += PictureBoxOrders_Click;
+            //hubForm.timerLoading.Tick += TimerLoading_Tick;
+
+            CurrentForm = hubForm;
+
+            HandleUserPermissions();
+        }
+
+        /*private void TimerLoading_Tick(object sender, EventArgs e)
+        {
+            if (appController.LoginRequired)
+            {
+                flowLayoutPanelMenu.BackgroundImage = Resources.background_login_menu;
+            }
+            else
+            {
+                flowLayoutPanelMenu.BackgroundImage = Resources.background_home_menu;
+            }
+        }*/
+
+        private void PictureBoxOrders_Click(object sender, EventArgs e)
+        {
+            buttonOrders_Click(buttonOrders, e);
+        }
+
+        private void PictureBoxPoolOrHorse_Click(object sender, EventArgs e)
+        {
+            if (appController.Customer.Accommodation.Type == AccommodationType.Apartment)
+            {
+                buttonPool_Click(buttonPool, e);
+            }
+            else
+            {
+                buttonTrojanHorse_Click(buttonTrojanHorse, e);
+            }
+        }
+
+        private void PictureBoxDevices_Click(object sender, EventArgs e)
+        {
+            buttonDevices_Click(buttonDevices, e);
         }
 
         private void HandleUserPermissions()
         {
             bool buttonPoolVisible = appController.Customer.Accommodation.Type == AccommodationType.Apartment;
-            bool buttonDrivingVisible = appController.User.Role == UserRole.Customer &&
+            bool buttonTrojanHorseVisible = appController.User.Role == UserRole.Customer &&
                                     appController.Customer.Accommodation.Type == AccommodationType.TrojanHorse &&
                                     appController.ComputerType == ComputerType.Private;
             bool buttonOrdersVisible = appController.User.Role == UserRole.Customer;
@@ -92,32 +130,34 @@ namespace ZeusPalace
             {
                 flowLayoutPanelMenu.Controls.Add(buttonPool);
             }
-            if (buttonDrivingVisible)
+            if (buttonTrojanHorseVisible)
             {
-                flowLayoutPanelMenu.Controls.Add(buttonDriving);
+                flowLayoutPanelMenu.Controls.Add(buttonTrojanHorse);
             }
             if (buttonOrdersVisible)
             {
                 flowLayoutPanelMenu.Controls.Add(buttonOrders);
             }
+            else
+            {
+                hubForm.panelOrders.Visible = false;
+            }
         }
 
         private void PreloadForms()
         {
+            hubForm = new HubForm();
             devicesForm = new DevicesForm();
             poolForm = new PoolForm();
             trojanHorseForm = new TrojanHorseForm(this);
             customerOrdersForm = new CustomerOrdersForm();
 
-            embeddedForms = new Dictionary<Type, EmbeddedForm>
+            embeddedForms = new List<EmbeddedForm>
             {
-                { typeof(DevicesForm), devicesForm },
-                { typeof(PoolForm), poolForm },
-                { typeof(TrojanHorseForm), trojanHorseForm },
-                { typeof(CustomerOrdersForm), customerOrdersForm }
+                hubForm, devicesForm, poolForm, trojanHorseForm, customerOrdersForm
             };
 
-            foreach (var embeddedForm in embeddedForms.Values)
+            foreach (var embeddedForm in embeddedForms)
             {
                 embeddedForm.TopLevel = false;
                 embeddedForm.Dock = DockStyle.Fill;
@@ -125,26 +165,61 @@ namespace ZeusPalace
             }
         }
 
-        protected void AlignLabelToCenter(Control label, Panel parentPanel)
+        private string GetImageName(Button btn)
         {
-            int labelX = (parentPanel.Width - label.Width) / 2;
-            int labelY = (parentPanel.Height - label.Height) / 2;
-            label.Location = new Point(labelX, labelY);
+            string imageName = string.Empty;
+            if (btn == buttonDevices)
+            {
+                imageName += "devices";
+            }
+            else if (btn == buttonPool)
+            {
+                imageName += "pool";
+            }
+            else if (btn == buttonTrojanHorse)
+            {
+                imageName = "trojanhorse";
+
+            }
+            else if (btn == buttonOrders)
+            {
+                imageName = "orders";
+            }
+            imageName += "_icon";
+            return imageName;
+        }
+
+        private void HighlightButton(Button btn)
+        {
+            btn.Image = (Image)Resources.ResourceManager.GetObject(GetImageName(btn) + "_glow");
+        }
+
+        private void UnhighlightButton(Button btn)
+        {
+            btn.Image = (Image)Resources.ResourceManager.GetObject(GetImageName(btn));
         }
 
         private void ActivateButton(Button btn)
         {
             activeButton = btn;
-            activeButton.BackColor = ColorPicker.GetTint(defaultButtonBackColor, 10);
             activeButton.Font = activeButtonFont;
+            HighlightButton(activeButton);
         }
 
         private void DisableActiveButton()
         {
             if (activeButton != null)
             {
-                activeButton.BackColor = defaultButtonBackColor;
                 activeButton.Font = defaultButtonFont;
+                UnhighlightButton(activeButton);
+            }
+        }
+
+        private void SetButtonsVisible(bool visible)
+        {
+            foreach (Button btn in flowLayoutPanelMenu.Controls.OfType<Button>())
+            {
+                btn.Visible = visible;
             }
         }
 
@@ -155,24 +230,24 @@ namespace ZeusPalace
             CurrentForm = embeddedForm;
         }
 
-        private void buttonApartment_Click(object sender, EventArgs e)
+        private void buttonDevices_Click(object sender, EventArgs e)
         {
-            ShowEmbeddedForm(embeddedForms[typeof(DevicesForm)], (Button)sender);
+            ShowEmbeddedForm(devicesForm, (Button)sender);
         }
 
         private void buttonPool_Click(object sender, EventArgs e)
         {
-            ShowEmbeddedForm(embeddedForms[typeof(PoolForm)], (Button)sender);
+            ShowEmbeddedForm(poolForm, (Button)sender);
         }
 
         private void buttonTrojanHorse_Click(object sender, EventArgs e)
         {
-            ShowEmbeddedForm(embeddedForms[typeof(TrojanHorseForm)], (Button)sender);
+            ShowEmbeddedForm(trojanHorseForm, (Button)sender);
         }
 
         private void buttonOrders_Click(object sender, EventArgs e)
         {
-            ShowEmbeddedForm(embeddedForms[typeof(CustomerOrdersForm)], (Button)sender);
+            ShowEmbeddedForm(customerOrdersForm, (Button)sender);
         }
 
         // Make the form not-resizable by reseting the size on resizing event
@@ -180,6 +255,24 @@ namespace ZeusPalace
         {
             Width = initialWidth;
             Height = initialHeight;
+        }
+
+        private void buttonMenu_MouseEnter(object sender, EventArgs e)
+        {
+            if ((Button)sender != activeButton)
+            {
+                HighlightButton((Button)sender);
+                ((Button)sender).Cursor = Cursors.Hand;
+            }
+        }
+
+        private void buttonMenu_MouseLeave(object sender, EventArgs e)
+        {
+            if ((Button)sender != activeButton)
+            {
+                UnhighlightButton((Button)sender);
+                ((Button)sender).Cursor = Cursors.Default;
+            }
         }
     }
 }

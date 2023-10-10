@@ -28,90 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonOrders = new System.Windows.Forms.Button();
-            this.buttonDriving = new System.Windows.Forms.Button();
-            this.buttonPool = new System.Windows.Forms.Button();
-            this.buttonDevices = new System.Windows.Forms.Button();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.flowLayoutPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonDevices = new System.Windows.Forms.Button();
+            this.buttonPool = new System.Windows.Forms.Button();
+            this.buttonTrojanHorse = new System.Windows.Forms.Button();
+            this.buttonOrders = new System.Windows.Forms.Button();
             this.flowLayoutPanelMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // buttonOrders
-            // 
-            this.buttonOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(112)))));
-            this.buttonOrders.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonOrders.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(99)))), ((int)(((byte)(140)))));
-            this.buttonOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOrders.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOrders.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
-            this.buttonOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonOrders.Location = new System.Drawing.Point(960, 0);
-            this.buttonOrders.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonOrders.Name = "buttonOrders";
-            this.buttonOrders.Size = new System.Drawing.Size(320, 60);
-            this.buttonOrders.TabIndex = 5;
-            this.buttonOrders.Text = "Παραγγελίες";
-            this.buttonOrders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonOrders.UseVisualStyleBackColor = false;
-            this.buttonOrders.Click += new System.EventHandler(this.buttonOrders_Click);
-            // 
-            // buttonDriving
-            // 
-            this.buttonDriving.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(112)))));
-            this.buttonDriving.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonDriving.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(99)))), ((int)(((byte)(140)))));
-            this.buttonDriving.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDriving.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDriving.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
-            this.buttonDriving.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDriving.Location = new System.Drawing.Point(640, 0);
-            this.buttonDriving.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonDriving.Name = "buttonDriving";
-            this.buttonDriving.Size = new System.Drawing.Size(320, 60);
-            this.buttonDriving.TabIndex = 4;
-            this.buttonDriving.Text = "Οδήγηση";
-            this.buttonDriving.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonDriving.UseVisualStyleBackColor = false;
-            this.buttonDriving.Click += new System.EventHandler(this.buttonTrojanHorse_Click);
-            // 
-            // buttonPool
-            // 
-            this.buttonPool.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(112)))));
-            this.buttonPool.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPool.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(99)))), ((int)(((byte)(140)))));
-            this.buttonPool.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPool.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPool.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
-            this.buttonPool.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPool.Location = new System.Drawing.Point(320, 0);
-            this.buttonPool.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonPool.Name = "buttonPool";
-            this.buttonPool.Size = new System.Drawing.Size(320, 60);
-            this.buttonPool.TabIndex = 3;
-            this.buttonPool.Text = "Πισίνα";
-            this.buttonPool.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonPool.UseVisualStyleBackColor = false;
-            this.buttonPool.Click += new System.EventHandler(this.buttonPool_Click);
-            // 
-            // buttonDevices
-            // 
-            this.buttonDevices.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(61)))), ((int)(((byte)(112)))));
-            this.buttonDevices.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonDevices.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(99)))), ((int)(((byte)(140)))));
-            this.buttonDevices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDevices.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDevices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
-            this.buttonDevices.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDevices.Location = new System.Drawing.Point(0, 0);
-            this.buttonDevices.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonDevices.Name = "buttonDevices";
-            this.buttonDevices.Size = new System.Drawing.Size(320, 60);
-            this.buttonDevices.TabIndex = 2;
-            this.buttonDevices.Text = "Συσκευές";
-            this.buttonDevices.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonDevices.UseVisualStyleBackColor = false;
-            this.buttonDevices.Click += new System.EventHandler(this.buttonApartment_Click);
             // 
             // panelDesktopPane
             // 
@@ -123,16 +47,112 @@
             // 
             // flowLayoutPanelMenu
             // 
-            this.flowLayoutPanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
+            this.flowLayoutPanelMenu.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanelMenu.BackgroundImage = global::ZeusPalace.Properties.Resources.background_menu;
             this.flowLayoutPanelMenu.Controls.Add(this.buttonDevices);
             this.flowLayoutPanelMenu.Controls.Add(this.buttonPool);
-            this.flowLayoutPanelMenu.Controls.Add(this.buttonDriving);
+            this.flowLayoutPanelMenu.Controls.Add(this.buttonTrojanHorse);
             this.flowLayoutPanelMenu.Controls.Add(this.buttonOrders);
             this.flowLayoutPanelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanelMenu.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelMenu.Name = "flowLayoutPanelMenu";
             this.flowLayoutPanelMenu.Size = new System.Drawing.Size(1280, 60);
             this.flowLayoutPanelMenu.TabIndex = 6;
+            // 
+            // buttonDevices
+            // 
+            this.buttonDevices.BackColor = System.Drawing.Color.Transparent;
+            this.buttonDevices.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDevices.FlatAppearance.BorderSize = 0;
+            this.buttonDevices.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonDevices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDevices.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDevices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.buttonDevices.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonDevices.Location = new System.Drawing.Point(0, 0);
+            this.buttonDevices.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonDevices.Name = "buttonDevices";
+            this.buttonDevices.Size = new System.Drawing.Size(320, 60);
+            this.buttonDevices.TabIndex = 2;
+            this.buttonDevices.Text = "Συσκευές";
+            this.buttonDevices.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonDevices.UseVisualStyleBackColor = false;
+            this.buttonDevices.Visible = false;
+            this.buttonDevices.Click += new System.EventHandler(this.buttonDevices_Click);
+            this.buttonDevices.MouseEnter += new System.EventHandler(this.buttonMenu_MouseEnter);
+            this.buttonDevices.MouseLeave += new System.EventHandler(this.buttonMenu_MouseLeave);
+            // 
+            // buttonPool
+            // 
+            this.buttonPool.BackColor = System.Drawing.Color.Transparent;
+            this.buttonPool.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPool.FlatAppearance.BorderSize = 0;
+            this.buttonPool.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonPool.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPool.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPool.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.buttonPool.Image = global::ZeusPalace.Properties.Resources.pool_icon;
+            this.buttonPool.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonPool.Location = new System.Drawing.Point(320, 0);
+            this.buttonPool.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonPool.Name = "buttonPool";
+            this.buttonPool.Size = new System.Drawing.Size(320, 60);
+            this.buttonPool.TabIndex = 3;
+            this.buttonPool.Text = "Πισίνα";
+            this.buttonPool.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPool.UseVisualStyleBackColor = false;
+            this.buttonPool.Visible = false;
+            this.buttonPool.Click += new System.EventHandler(this.buttonPool_Click);
+            this.buttonPool.MouseEnter += new System.EventHandler(this.buttonMenu_MouseEnter);
+            this.buttonPool.MouseLeave += new System.EventHandler(this.buttonMenu_MouseLeave);
+            // 
+            // buttonTrojanHorse
+            // 
+            this.buttonTrojanHorse.BackColor = System.Drawing.Color.Transparent;
+            this.buttonTrojanHorse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonTrojanHorse.FlatAppearance.BorderSize = 0;
+            this.buttonTrojanHorse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonTrojanHorse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTrojanHorse.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTrojanHorse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.buttonTrojanHorse.Image = global::ZeusPalace.Properties.Resources.trojanhorse_icon;
+            this.buttonTrojanHorse.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonTrojanHorse.Location = new System.Drawing.Point(640, 0);
+            this.buttonTrojanHorse.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonTrojanHorse.Name = "buttonTrojanHorse";
+            this.buttonTrojanHorse.Size = new System.Drawing.Size(320, 60);
+            this.buttonTrojanHorse.TabIndex = 4;
+            this.buttonTrojanHorse.Text = "Δούρειος Ίππος";
+            this.buttonTrojanHorse.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonTrojanHorse.UseVisualStyleBackColor = false;
+            this.buttonTrojanHorse.Visible = false;
+            this.buttonTrojanHorse.Click += new System.EventHandler(this.buttonTrojanHorse_Click);
+            this.buttonTrojanHorse.MouseEnter += new System.EventHandler(this.buttonMenu_MouseEnter);
+            this.buttonTrojanHorse.MouseLeave += new System.EventHandler(this.buttonMenu_MouseLeave);
+            // 
+            // buttonOrders
+            // 
+            this.buttonOrders.BackColor = System.Drawing.Color.Transparent;
+            this.buttonOrders.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOrders.FlatAppearance.BorderSize = 0;
+            this.buttonOrders.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOrders.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOrders.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.buttonOrders.Image = global::ZeusPalace.Properties.Resources.orders_icon;
+            this.buttonOrders.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonOrders.Location = new System.Drawing.Point(960, 0);
+            this.buttonOrders.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonOrders.Name = "buttonOrders";
+            this.buttonOrders.Size = new System.Drawing.Size(320, 60);
+            this.buttonOrders.TabIndex = 5;
+            this.buttonOrders.Text = "Εστιατόριο";
+            this.buttonOrders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonOrders.UseVisualStyleBackColor = false;
+            this.buttonOrders.Visible = false;
+            this.buttonOrders.Click += new System.EventHandler(this.buttonOrders_Click);
+            this.buttonOrders.MouseEnter += new System.EventHandler(this.buttonMenu_MouseEnter);
+            this.buttonOrders.MouseLeave += new System.EventHandler(this.buttonMenu_MouseLeave);
             // 
             // MainForm
             // 
@@ -141,7 +161,7 @@
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.flowLayoutPanelMenu);
             this.Controls.Add(this.panelDesktopPane);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.KeyPreview = true;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -154,7 +174,7 @@
 
         #endregion
         private System.Windows.Forms.Panel panelDesktopPane;
-        private System.Windows.Forms.Button buttonDriving;
+        private System.Windows.Forms.Button buttonTrojanHorse;
         private System.Windows.Forms.Button buttonPool;
         private System.Windows.Forms.Button buttonDevices;
         private System.Windows.Forms.Button buttonOrders;

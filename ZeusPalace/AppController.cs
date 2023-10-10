@@ -78,6 +78,8 @@ namespace ZeusPalace
             }
         }
 
+        internal bool LoginRequired => ComputerType == ComputerType.Public;
+
         internal void StartApplication()
         {
             if (mainForm != null)
