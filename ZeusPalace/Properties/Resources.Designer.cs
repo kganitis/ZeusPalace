@@ -845,9 +845,9 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap trojan_horse_lights_off {
+        internal static System.Drawing.Bitmap trojan_horse_lights_Off {
             get {
-                object obj = ResourceManager.GetObject("trojan_horse_lights_off", resourceCulture);
+                object obj = ResourceManager.GetObject("trojan_horse_lights_Off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

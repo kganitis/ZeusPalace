@@ -33,7 +33,7 @@ namespace ZeusPalace.Modules.Devices
                 lights.TurnOff();
                 WheelPictureBox.BackgroundImage = Properties.Resources.driving_off_lightsOFF;
                 //lightSwitchBtn.BackgroundImage = Properties.Resources.lights_off;
-                backPanel.BackgroundImage = Properties.Resources.trojan_horse_lights_off;
+                backPanel.BackgroundImage = Properties.Resources.trojan_horse_lights_Off;
             }
             else
             {

@@ -400,6 +400,7 @@
     <None Include="Resources\swimmer.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\trojan_horse_lights_Off.jpg" />
     <None Include="Resources\Shire_Theme.wav" />
     <None Include="Resources\boombox_on_lightsOn.jpg" />
     <None Include="Resources\boombox_on_lightsOff.jpg" />
@@ -410,7 +411,6 @@
     <None Include="Resources\driving_off_lightsOFF.jpg" />
     <None Include="Resources\driving_off_lightsON.jpg" />
     <None Include="Resources\trojan-horse-lights-on.jpg" />
-    <None Include="Resources\trojan-horse-lights-off.jpg" />
     <None Include="Resources\light_switch_color.png" />
     <None Include="Resources\light_switch.png" />
     <None Include="Resources\stop_btn.png" />
