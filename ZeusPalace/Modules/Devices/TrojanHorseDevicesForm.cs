@@ -72,7 +72,7 @@ namespace ZeusPalace.Modules.Devices
             }
         }
 
-        private void WheelPictureBox_MouseHover(object sender, EventArgs e)
+        private void WheelPictureBox_MouseEnter(object sender, EventArgs e)
         {
             if (lights.GetStatus() == 1) 
             {

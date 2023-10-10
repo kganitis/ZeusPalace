@@ -550,6 +550,15 @@
     <Content Include="Resources\btn_locked.jpg" />
     <Content Include="Resources\btn_unlocked.jpg" />
     <Content Include="Resources\cold_person_icon_color.png" />
+    <None Include="Resources\devices-th-button.png" />
+    <None Include="Resources\devices-th-button-glow.png" />
+    <None Include="Resources\devices-th-icon-glow.png" />
+    <None Include="Resources\devices-th-icon.png" />
+    <None Include="Resources\devices-icon1.png" />
+    <None Include="Resources\devices-icon-glow.png" />
+    <None Include="Resources\devices-icon.png" />
+    <None Include="Resources\devices-button.png" />
+    <None Include="Resources\devices-button-glow.png" />
     <Content Include="Resources\door_locked.png" />
     <Content Include="Resources\door_open_lightsOFF.jpg" />
     <Content Include="Resources\door_open_lightsON.jpg" />

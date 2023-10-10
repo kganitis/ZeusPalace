@@ -19,6 +19,8 @@ namespace ZeusPalace.Modules
 
             if (appController.Customer.Accommodation.Type == Entities.Accommodation.AccommodationType.TrojanHorse)
             {
+                pictureBoxDevices.Image = Resources.devices_th_button;
+
                 pictureBoxPoolOrHorse.Image = Resources.trojanhorse_button;
                 labelPoolOrHorse.Text = "ΔΟΥΡΕΙΟΣ ΙΠΠΟΣ";
                 AlignLabelToCenterHorizontally(labelPoolOrHorse, panelPoolOrHorse);
@@ -63,6 +65,10 @@ namespace ZeusPalace.Modules
             if (pictureBox == pictureBoxDevices)
             {
                 imageName += "devices";
+                if (appController.Customer.Accommodation.Type == Entities.Accommodation.AccommodationType.TrojanHorse)
+                {
+                    imageName += "_th";
+                }
             }
             else if (pictureBox == pictureBoxPoolOrHorse)
             {

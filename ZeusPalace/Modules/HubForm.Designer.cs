@@ -220,7 +220,7 @@ namespace ZeusPalace.Modules
             // 
             this.pictureBoxDevices.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxDevices.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxDevices.Image = global::ZeusPalace.Properties.Resources.background_loading;
+            this.pictureBoxDevices.Image = global::ZeusPalace.Properties.Resources.devices_button;
             this.pictureBoxDevices.Location = new System.Drawing.Point(113, 46);
             this.pictureBoxDevices.Name = "pictureBoxDevices";
             this.pictureBoxDevices.Size = new System.Drawing.Size(408, 233);

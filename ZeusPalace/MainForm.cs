@@ -155,6 +155,7 @@ namespace ZeusPalace
             {
                 devicesForm = new TrojanHorseDevicesForm();
                 ((TrojanHorseDevicesForm)devicesForm).WheelPictureBox.Click += WheelPictureBox_Click;
+                buttonDevices.Image = Resources.devices_th_icon;
             }
             poolForm = new PoolForm();
             trojanHorseForm = new TrojanHorseForm(this);
@@ -184,6 +185,10 @@ namespace ZeusPalace
             if (btn == buttonDevices)
             {
                 imageName += "devices";
+                if (appController.Customer.Accommodation.Type == AccommodationType.TrojanHorse)
+                {
+                    imageName += "_th";
+                }
             }
             else if (btn == buttonPool)
             {

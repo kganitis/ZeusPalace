@@ -66,7 +66,7 @@
             // BtnPlayStop
             // 
             this.BtnPlayStop.FlatAppearance.BorderSize = 0;
-            this.BtnPlayStop.Location = new System.Drawing.Point(992, 259);
+            this.BtnPlayStop.Location = new System.Drawing.Point(1093, 226);
             this.BtnPlayStop.Click += new System.EventHandler(this.BtnPlayStop_Click);
             // 
             // trackBarHumidity
@@ -118,21 +118,21 @@
             // 
             // ThermometerBox
             // 
-            this.ThermometerBox.Location = new System.Drawing.Point(1085, 224);
+            this.ThermometerBox.Location = new System.Drawing.Point(1004, 105);
             // 
             // TemperatureLabel
             // 
-            this.TemperatureLabel.Location = new System.Drawing.Point(1045, 157);
+            this.TemperatureLabel.Location = new System.Drawing.Point(964, 38);
             // 
             // inc_temp_btn
             // 
             this.inc_temp_btn.FlatAppearance.BorderSize = 0;
-            this.inc_temp_btn.Location = new System.Drawing.Point(1152, 224);
+            this.inc_temp_btn.Location = new System.Drawing.Point(1071, 105);
             // 
             // dec_temp_button
             // 
             this.dec_temp_button.FlatAppearance.BorderSize = 0;
-            this.dec_temp_button.Location = new System.Drawing.Point(1152, 248);
+            this.dec_temp_button.Location = new System.Drawing.Point(1071, 129);
             // 
             // backPanel
             // 
@@ -168,20 +168,20 @@
             this.WheelPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.WheelPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.WheelPictureBox.Location = new System.Drawing.Point(540, 286);
-            this.WheelPictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WheelPictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.WheelPictureBox.Name = "WheelPictureBox";
             this.WheelPictureBox.Size = new System.Drawing.Size(122, 67);
             this.WheelPictureBox.TabIndex = 22;
             this.WheelPictureBox.TabStop = false;
             this.WheelPictureBox.Tag = "";
+            this.WheelPictureBox.MouseEnter += new System.EventHandler(this.WheelPictureBox_MouseEnter);
             this.WheelPictureBox.MouseLeave += new System.EventHandler(this.WheelPictureBox_MouseLeave);
-            this.WheelPictureBox.MouseHover += new System.EventHandler(this.WheelPictureBox_MouseHover);
             // 
             // TrojanHorseDevicesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1280, 660);
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "TrojanHorseDevicesForm";
             ((System.ComponentModel.ISupportInitialize)(this.TvpictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarHumidity)).EndInit();

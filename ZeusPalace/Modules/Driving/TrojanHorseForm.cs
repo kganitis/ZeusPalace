@@ -54,7 +54,6 @@ namespace ZeusPalace.Modules.Driving
                     directionIndex = (directionIndex - 1 + directions.Length) % directions.Length;
                     flipHorizontalIndex--;
                 }
-                Debug.WriteLine(Direction);
             }
         }
 

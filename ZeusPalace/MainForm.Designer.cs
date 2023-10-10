@@ -68,6 +68,7 @@
             this.buttonDevices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDevices.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDevices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.buttonDevices.Image = global::ZeusPalace.Properties.Resources.devices_icon;
             this.buttonDevices.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonDevices.Location = new System.Drawing.Point(0, 0);
             this.buttonDevices.Margin = new System.Windows.Forms.Padding(0);
