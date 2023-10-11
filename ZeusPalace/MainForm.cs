@@ -131,7 +131,7 @@ namespace ZeusPalace
                 flowLayoutPanelMenu.Controls.Add(buttonPool);
             }
 
-            if (userIsCustomer && acmIsTrojanHorse)
+            if (acmIsTrojanHorse)
             {
                 if (computerIsPrivate)
                 {
