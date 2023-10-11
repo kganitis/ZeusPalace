@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PoolForm));
             this.panelBackground = new System.Windows.Forms.Panel();
-            this.pictureBoxAlarmEnabled = new System.Windows.Forms.PictureBox();
             this.pictureBoxSensorDisabled = new System.Windows.Forms.PictureBox();
+            this.pictureBoxAlarmEnabled = new System.Windows.Forms.PictureBox();
             this.panelAlarmMode = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.radioButtonEnabledUntilTurnoff = new System.Windows.Forms.RadioButton();
@@ -55,8 +55,8 @@
             this.pictureBoxAlarmToggle = new System.Windows.Forms.PictureBox();
             this.pictureBoxPool = new System.Windows.Forms.PictureBox();
             this.panelBackground.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarmEnabled)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSensorDisabled)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarmEnabled)).BeginInit();
             this.panelAlarmMode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarWaterLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSensor)).BeginInit();
@@ -70,9 +70,9 @@
             // 
             // panelBackground
             // 
-            this.panelBackground.BackgroundImage = global::ZeusPalace.Properties.Resources.pool;
-            this.panelBackground.Controls.Add(this.pictureBoxAlarmEnabled);
+            this.panelBackground.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelBackground.BackgroundImage")));
             this.panelBackground.Controls.Add(this.pictureBoxSensorDisabled);
+            this.panelBackground.Controls.Add(this.pictureBoxAlarmEnabled);
             this.panelBackground.Controls.Add(this.panelAlarmMode);
             this.panelBackground.Controls.Add(this.labelTrackBarWarning);
             this.panelBackground.Controls.Add(this.verticalProgressBarWaterLevel);
@@ -93,24 +93,24 @@
             this.panelBackground.Size = new System.Drawing.Size(1280, 660);
             this.panelBackground.TabIndex = 24;
             // 
-            // pictureBoxAlarmEnabled
-            // 
-            this.pictureBoxAlarmEnabled.Image = global::ZeusPalace.Properties.Resources.alarm_enabled;
-            this.pictureBoxAlarmEnabled.Location = new System.Drawing.Point(1088, 167);
-            this.pictureBoxAlarmEnabled.Name = "pictureBoxAlarmEnabled";
-            this.pictureBoxAlarmEnabled.Size = new System.Drawing.Size(80, 80);
-            this.pictureBoxAlarmEnabled.TabIndex = 24;
-            this.pictureBoxAlarmEnabled.TabStop = false;
-            this.pictureBoxAlarmEnabled.Visible = false;
-            // 
             // pictureBoxSensorDisabled
             // 
             this.pictureBoxSensorDisabled.Image = global::ZeusPalace.Properties.Resources.sensor_disabled;
-            this.pictureBoxSensorDisabled.Location = new System.Drawing.Point(535, 375);
+            this.pictureBoxSensorDisabled.Location = new System.Drawing.Point(538, 376);
             this.pictureBoxSensorDisabled.Name = "pictureBoxSensorDisabled";
             this.pictureBoxSensorDisabled.Size = new System.Drawing.Size(20, 20);
             this.pictureBoxSensorDisabled.TabIndex = 23;
             this.pictureBoxSensorDisabled.TabStop = false;
+            // 
+            // pictureBoxAlarmEnabled
+            // 
+            this.pictureBoxAlarmEnabled.Image = global::ZeusPalace.Properties.Resources.alarm_enabled;
+            this.pictureBoxAlarmEnabled.Location = new System.Drawing.Point(1096, 175);
+            this.pictureBoxAlarmEnabled.Name = "pictureBoxAlarmEnabled";
+            this.pictureBoxAlarmEnabled.Size = new System.Drawing.Size(64, 64);
+            this.pictureBoxAlarmEnabled.TabIndex = 24;
+            this.pictureBoxAlarmEnabled.TabStop = false;
+            this.pictureBoxAlarmEnabled.Visible = false;
             // 
             // panelAlarmMode
             // 
@@ -119,9 +119,9 @@
             this.panelAlarmMode.Controls.Add(this.radioButtonEnabledUntilTurnoff);
             this.panelAlarmMode.Controls.Add(this.timePickerAlarmOff);
             this.panelAlarmMode.Controls.Add(this.radioButtonEnabledUntil);
-            this.panelAlarmMode.Location = new System.Drawing.Point(1047, 363);
+            this.panelAlarmMode.Location = new System.Drawing.Point(27, 17);
             this.panelAlarmMode.Name = "panelAlarmMode";
-            this.panelAlarmMode.Size = new System.Drawing.Size(193, 81);
+            this.panelAlarmMode.Size = new System.Drawing.Size(193, 83);
             this.panelAlarmMode.TabIndex = 16;
             this.panelAlarmMode.Visible = false;
             // 
@@ -195,7 +195,7 @@
             // 
             // verticalProgressBarWaterLevel
             // 
-            this.verticalProgressBarWaterLevel.Location = new System.Drawing.Point(160, 506);
+            this.verticalProgressBarWaterLevel.Location = new System.Drawing.Point(104, 528);
             this.verticalProgressBarWaterLevel.Maximum = 270;
             this.verticalProgressBarWaterLevel.Minimum = 90;
             this.verticalProgressBarWaterLevel.Name = "verticalProgressBarWaterLevel";
@@ -210,7 +210,7 @@
             this.labelTemperature.BackColor = System.Drawing.Color.Transparent;
             this.labelTemperature.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTemperature.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelTemperature.Location = new System.Drawing.Point(260, 320);
+            this.labelTemperature.Location = new System.Drawing.Point(48, 454);
             this.labelTemperature.Name = "labelTemperature";
             this.labelTemperature.Size = new System.Drawing.Size(62, 26);
             this.labelTemperature.TabIndex = 7;
@@ -222,18 +222,18 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label2.Location = new System.Drawing.Point(229, 140);
+            this.label2.Location = new System.Drawing.Point(12, 301);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 52);
+            this.label2.Size = new System.Drawing.Size(198, 26);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Θερμοκρασία\r\nνερού";
+            this.label2.Text = "Θερμοκρασία νερού";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // trackBarWaterLevel
             // 
             this.trackBarWaterLevel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.trackBarWaterLevel.LargeChange = 30;
-            this.trackBarWaterLevel.Location = new System.Drawing.Point(111, 523);
+            this.trackBarWaterLevel.Location = new System.Drawing.Point(55, 545);
             this.trackBarWaterLevel.Maximum = 210;
             this.trackBarWaterLevel.Minimum = 90;
             this.trackBarWaterLevel.Name = "trackBarWaterLevel";
@@ -247,7 +247,7 @@
             // pictureBoxSensor
             // 
             this.pictureBoxSensor.Image = global::ZeusPalace.Properties.Resources.sensor_off;
-            this.pictureBoxSensor.Location = new System.Drawing.Point(620, 245);
+            this.pictureBoxSensor.Location = new System.Drawing.Point(67, 241);
             this.pictureBoxSensor.Name = "pictureBoxSensor";
             this.pictureBoxSensor.Size = new System.Drawing.Size(36, 36);
             this.pictureBoxSensor.TabIndex = 10;
@@ -257,7 +257,7 @@
             // 
             this.trackBarTemperatureLevel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.trackBarTemperatureLevel.LargeChange = 1;
-            this.trackBarTemperatureLevel.Location = new System.Drawing.Point(265, 201);
+            this.trackBarTemperatureLevel.Location = new System.Drawing.Point(53, 335);
             this.trackBarTemperatureLevel.Maximum = 7;
             this.trackBarTemperatureLevel.Minimum = 1;
             this.trackBarTemperatureLevel.Name = "trackBarTemperatureLevel";
@@ -273,7 +273,7 @@
             this.labelSensor.BackColor = System.Drawing.Color.Transparent;
             this.labelSensor.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSensor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelSensor.Location = new System.Drawing.Point(565, 208);
+            this.labelSensor.Location = new System.Drawing.Point(12, 204);
             this.labelSensor.Name = "labelSensor";
             this.labelSensor.Size = new System.Drawing.Size(204, 26);
             this.labelSensor.TabIndex = 9;
@@ -281,7 +281,7 @@
             // 
             // verticalProgressBarTemperature
             // 
-            this.verticalProgressBarTemperature.Location = new System.Drawing.Point(316, 194);
+            this.verticalProgressBarTemperature.Location = new System.Drawing.Point(137, 330);
             this.verticalProgressBarTemperature.Maximum = 8;
             this.verticalProgressBarTemperature.Name = "verticalProgressBarTemperature";
             this.verticalProgressBarTemperature.ProgressBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(51)))));
@@ -295,7 +295,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label1.Location = new System.Drawing.Point(101, 468);
+            this.label1.Location = new System.Drawing.Point(47, 494);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(163, 26);
             this.label1.TabIndex = 11;
@@ -306,7 +306,7 @@
             this.pictureBoxSensorToggle.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxSensorToggle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxSensorToggle.Image = global::ZeusPalace.Properties.Resources.toggle_switch_off;
-            this.pictureBoxSensorToggle.Location = new System.Drawing.Point(670, 248);
+            this.pictureBoxSensorToggle.Location = new System.Drawing.Point(117, 244);
             this.pictureBoxSensorToggle.Name = "pictureBoxSensorToggle";
             this.pictureBoxSensorToggle.Size = new System.Drawing.Size(30, 30);
             this.pictureBoxSensorToggle.TabIndex = 8;
@@ -319,7 +319,7 @@
             this.labelWaterLevel.BackColor = System.Drawing.Color.Transparent;
             this.labelWaterLevel.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWaterLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelWaterLevel.Location = new System.Drawing.Point(91, 604);
+            this.labelWaterLevel.Location = new System.Drawing.Point(35, 626);
             this.labelWaterLevel.Name = "labelWaterLevel";
             this.labelWaterLevel.Size = new System.Drawing.Size(73, 26);
             this.labelWaterLevel.TabIndex = 3;
@@ -331,16 +331,16 @@
             this.panelAlarm.Controls.Add(this.pictureBoxAlarm);
             this.panelAlarm.Controls.Add(this.labelAlarm);
             this.panelAlarm.Controls.Add(this.pictureBoxAlarmToggle);
-            this.panelAlarm.Location = new System.Drawing.Point(1062, 253);
+            this.panelAlarm.Location = new System.Drawing.Point(17, 101);
             this.panelAlarm.Name = "panelAlarm";
-            this.panelAlarm.Size = new System.Drawing.Size(153, 109);
+            this.panelAlarm.Size = new System.Drawing.Size(193, 100);
             this.panelAlarm.TabIndex = 22;
             // 
             // pictureBoxAlarm
             // 
             this.pictureBoxAlarm.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxAlarm.Image = global::ZeusPalace.Properties.Resources.alarm_off;
-            this.pictureBoxAlarm.Location = new System.Drawing.Point(26, 13);
+            this.pictureBoxAlarm.Location = new System.Drawing.Point(50, 40);
             this.pictureBoxAlarm.Name = "pictureBoxAlarm";
             this.pictureBoxAlarm.Size = new System.Drawing.Size(40, 40);
             this.pictureBoxAlarm.TabIndex = 15;
@@ -352,7 +352,7 @@
             this.labelAlarm.BackColor = System.Drawing.Color.Transparent;
             this.labelAlarm.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAlarm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelAlarm.Location = new System.Drawing.Point(3, 80);
+            this.labelAlarm.Location = new System.Drawing.Point(27, 2);
             this.labelAlarm.Name = "labelAlarm";
             this.labelAlarm.Size = new System.Drawing.Size(126, 26);
             this.labelAlarm.TabIndex = 14;
@@ -363,7 +363,7 @@
             this.pictureBoxAlarmToggle.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxAlarmToggle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxAlarmToggle.Image = global::ZeusPalace.Properties.Resources.toggle_switch_off;
-            this.pictureBoxAlarmToggle.Location = new System.Drawing.Point(69, 20);
+            this.pictureBoxAlarmToggle.Location = new System.Drawing.Point(100, 50);
             this.pictureBoxAlarmToggle.Name = "pictureBoxAlarmToggle";
             this.pictureBoxAlarmToggle.Size = new System.Drawing.Size(30, 30);
             this.pictureBoxAlarmToggle.TabIndex = 13;
@@ -372,10 +372,10 @@
             // 
             // pictureBoxPool
             // 
-            this.pictureBoxPool.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPool.Image")));
-            this.pictureBoxPool.Location = new System.Drawing.Point(339, 366);
+            this.pictureBoxPool.Image = global::ZeusPalace.Properties.Resources.pool_2;
+            this.pictureBoxPool.Location = new System.Drawing.Point(341, 367);
             this.pictureBoxPool.Name = "pictureBoxPool";
-            this.pictureBoxPool.Size = new System.Drawing.Size(658, 294);
+            this.pictureBoxPool.Size = new System.Drawing.Size(658, 293);
             this.pictureBoxPool.TabIndex = 25;
             this.pictureBoxPool.TabStop = false;
             // 
@@ -388,8 +388,8 @@
             this.Name = "PoolForm";
             this.panelBackground.ResumeLayout(false);
             this.panelBackground.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarmEnabled)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSensorDisabled)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarmEnabled)).EndInit();
             this.panelAlarmMode.ResumeLayout(false);
             this.panelAlarmMode.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarWaterLevel)).EndInit();

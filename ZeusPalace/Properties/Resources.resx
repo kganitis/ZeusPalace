@@ -139,9 +139,6 @@
   <data name="door_shut_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\door_shut_lightsON.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pool_2_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pool-2-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,9 +160,6 @@
   <data name="alarm_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alarm-sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="pool_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pool-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="lowHum_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lowHum_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -180,9 +174,6 @@
   </data>
   <data name="background-loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background-loading.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pool_1_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pool-1-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="boombox_off_lightsOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boombox_off_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,9 +256,6 @@
   <data name="boombox_on_lightsOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boombox_on_lightsOFF.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pool_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pool-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="stopmusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stopmusic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -282,9 +270,6 @@
   </data>
   <data name="orders_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\orders-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pool" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pool.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="public_pool" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\public-pool.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -339,9 +324,6 @@
   </data>
   <data name="trojan_horse_lights_Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trojan_horse_lights_Off.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pool_3_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pool-3-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="background_login_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background-login-menu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -463,9 +445,6 @@
   <data name="Etv_on_lightsON" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Etv_on_lights0N.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pool_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pool-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="devices_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\devices-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -525,5 +504,26 @@
   </data>
   <data name="light_switch_color_inverted" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\light_switch_color_inverted.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pool_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pool_1_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool-1-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pool_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pool_2_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool-2-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pool_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pool_3_people" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool-3-people.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pool.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
