@@ -25,5 +25,10 @@ namespace ZeusPalace.Modules.PoolControl
                 }
             }
         }
+
+        private void labelTemperature_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

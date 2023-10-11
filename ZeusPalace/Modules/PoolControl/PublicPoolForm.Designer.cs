@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PublicPoolForm));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSensorToggle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarTemperatureLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSensor)).BeginInit();
@@ -45,94 +44,99 @@
             // 
             // labelWaterLevel
             // 
-            this.labelWaterLevel.Location = new System.Drawing.Point(162, 624);
-            this.labelWaterLevel.Text = "150 cm";
+            this.labelWaterLevel.Location = new System.Drawing.Point(40, 624);
             // 
             // pictureBoxSensorToggle
             // 
-            this.pictureBoxSensorToggle.Location = new System.Drawing.Point(980, 471);
+            this.pictureBoxSensorToggle.Location = new System.Drawing.Point(123, 262);
             // 
-            // labelUsername
+            // label1
             // 
-            this.label1.Location = new System.Drawing.Point(175, 499);
+            this.label1.Location = new System.Drawing.Point(53, 499);
             // 
             // verticalProgressBarTemperature
             // 
-            this.verticalProgressBarTemperature.Location = new System.Drawing.Point(267, 175);
+            this.verticalProgressBarTemperature.Location = new System.Drawing.Point(147, 356);
+            this.verticalProgressBarTemperature.Size = new System.Drawing.Size(20, 98);
             // 
             // labelSensor
             // 
-            this.labelSensor.Location = new System.Drawing.Point(875, 431);
+            this.labelSensor.Location = new System.Drawing.Point(18, 222);
             // 
             // trackBarTemperatureLevel
             // 
-            this.trackBarTemperatureLevel.Location = new System.Drawing.Point(216, 182);
+            this.trackBarTemperatureLevel.Location = new System.Drawing.Point(62, 360);
+            this.trackBarTemperatureLevel.Size = new System.Drawing.Size(45, 101);
             // 
             // pictureBoxSensor
             // 
-            this.pictureBoxSensor.Location = new System.Drawing.Point(930, 468);
+            this.pictureBoxSensor.Location = new System.Drawing.Point(73, 259);
             // 
             // trackBarWaterLevel
             // 
-            this.trackBarWaterLevel.Location = new System.Drawing.Point(184, 545);
-            this.trackBarWaterLevel.Value = 150;
+            this.trackBarWaterLevel.Location = new System.Drawing.Point(62, 545);
             // 
-            // labelPassword
+            // label2
             // 
-            this.label2.Location = new System.Drawing.Point(180, 121);
+            this.label2.Location = new System.Drawing.Point(27, 322);
+            this.label2.Size = new System.Drawing.Size(198, 26);
+            this.label2.Text = "Θερμοκρασία νερού";
             // 
             // labelTemperature
             // 
-            this.labelTemperature.Location = new System.Drawing.Point(293, 225);
+            this.labelTemperature.Location = new System.Drawing.Point(51, 457);
+            this.labelTemperature.Click += new System.EventHandler(this.labelTemperature_Click);
             // 
             // verticalProgressBarWaterLevel
             // 
-            this.verticalProgressBarWaterLevel.Location = new System.Drawing.Point(234, 528);
-            this.verticalProgressBarWaterLevel.Value = 150;
+            this.verticalProgressBarWaterLevel.Location = new System.Drawing.Point(119, 528);
+            this.verticalProgressBarWaterLevel.Size = new System.Drawing.Size(76, 120);
             // 
             // panelAlarm
             // 
-            this.panelAlarm.Location = new System.Drawing.Point(940, 208);
-            this.panelAlarm.Size = new System.Drawing.Size(130, 77);
+            this.panelAlarm.Location = new System.Drawing.Point(23, 121);
+            this.panelAlarm.Size = new System.Drawing.Size(193, 77);
             // 
             // panelAlarmMode
             // 
-            this.panelAlarmMode.Location = new System.Drawing.Point(924, 283);
+            this.panelAlarmMode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panelAlarmMode.Location = new System.Drawing.Point(35, 38);
             // 
             // pictureBoxSensorDisabled
             // 
-            this.pictureBoxSensorDisabled.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSensorDisabled.Image")));
-            this.pictureBoxSensorDisabled.Location = new System.Drawing.Point(943, 542);
-            this.pictureBoxSensorDisabled.Size = new System.Drawing.Size(22, 24);
+            this.pictureBoxSensorDisabled.Image = global::ZeusPalace.Properties.Resources.public_sensor_enabled;
+            this.pictureBoxSensorDisabled.Location = new System.Drawing.Point(969, 548);
+            this.pictureBoxSensorDisabled.Size = new System.Drawing.Size(12, 12);
             this.pictureBoxSensorDisabled.Visible = false;
             // 
             // pictureBoxAlarmEnabled
             // 
             this.pictureBoxAlarmEnabled.Image = global::ZeusPalace.Properties.Resources.public_alarm_enabled;
-            this.pictureBoxAlarmEnabled.Location = new System.Drawing.Point(889, 130);
+            this.pictureBoxAlarmEnabled.Location = new System.Drawing.Point(915, 131);
             this.pictureBoxAlarmEnabled.Size = new System.Drawing.Size(32, 64);
             // 
             // pictureBoxPool
             // 
             this.pictureBoxPool.Image = global::ZeusPalace.Properties.Resources.public_pool_2;
-            this.pictureBoxPool.Location = new System.Drawing.Point(0, 364);
-            this.pictureBoxPool.Size = new System.Drawing.Size(1253, 296);
+            this.pictureBoxPool.Location = new System.Drawing.Point(0, 360);
+            this.pictureBoxPool.Size = new System.Drawing.Size(1280, 300);
             // 
             // pictureBoxAlarm
             // 
-            this.pictureBoxAlarm.Location = new System.Drawing.Point(44, 3);
+            this.pictureBoxAlarm.Location = new System.Drawing.Point(50, 34);
             // 
             // labelAlarm
             // 
-            this.labelAlarm.Location = new System.Drawing.Point(3, 46);
+            this.labelAlarm.Location = new System.Drawing.Point(29, 1);
             // 
             // pictureBoxAlarmToggle
             // 
-            this.pictureBoxAlarmToggle.Location = new System.Drawing.Point(8, 10);
+            this.pictureBoxAlarmToggle.Location = new System.Drawing.Point(100, 44);
             // 
             // panelBackground
             // 
             this.panelBackground.BackgroundImage = global::ZeusPalace.Properties.Resources.public_pool;
+            this.panelBackground.Location = new System.Drawing.Point(1, 0);
             // 
             // PublicPoolForm
             // 

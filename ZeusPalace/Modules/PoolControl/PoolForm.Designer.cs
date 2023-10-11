@@ -129,6 +129,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.label5.Location = new System.Drawing.Point(21, 5);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 18);
@@ -139,6 +140,7 @@
             // 
             this.radioButtonEnabledUntilTurnoff.AutoSize = true;
             this.radioButtonEnabledUntilTurnoff.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonEnabledUntilTurnoff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.radioButtonEnabledUntilTurnoff.Location = new System.Drawing.Point(4, 28);
             this.radioButtonEnabledUntilTurnoff.Name = "radioButtonEnabledUntilTurnoff";
             this.radioButtonEnabledUntilTurnoff.Size = new System.Drawing.Size(185, 22);
@@ -165,6 +167,7 @@
             this.radioButtonEnabledUntil.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonEnabledUntil.Checked = true;
             this.radioButtonEnabledUntil.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonEnabledUntil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.radioButtonEnabledUntil.Location = new System.Drawing.Point(4, 51);
             this.radioButtonEnabledUntil.Name = "radioButtonEnabledUntil";
             this.radioButtonEnabledUntil.Size = new System.Drawing.Size(61, 22);
@@ -206,6 +209,7 @@
             this.labelTemperature.AutoSize = true;
             this.labelTemperature.BackColor = System.Drawing.Color.Transparent;
             this.labelTemperature.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTemperature.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelTemperature.Location = new System.Drawing.Point(260, 320);
             this.labelTemperature.Name = "labelTemperature";
             this.labelTemperature.Size = new System.Drawing.Size(62, 26);
@@ -217,6 +221,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.label2.Location = new System.Drawing.Point(229, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 52);
@@ -267,6 +272,7 @@
             this.labelSensor.AutoSize = true;
             this.labelSensor.BackColor = System.Drawing.Color.Transparent;
             this.labelSensor.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSensor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelSensor.Location = new System.Drawing.Point(565, 208);
             this.labelSensor.Name = "labelSensor";
             this.labelSensor.Size = new System.Drawing.Size(204, 26);
@@ -288,6 +294,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.label1.Location = new System.Drawing.Point(101, 468);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(163, 26);
@@ -311,6 +318,7 @@
             this.labelWaterLevel.AutoSize = true;
             this.labelWaterLevel.BackColor = System.Drawing.Color.Transparent;
             this.labelWaterLevel.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWaterLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelWaterLevel.Location = new System.Drawing.Point(91, 604);
             this.labelWaterLevel.Name = "labelWaterLevel";
             this.labelWaterLevel.Size = new System.Drawing.Size(73, 26);
@@ -343,6 +351,7 @@
             this.labelAlarm.AutoSize = true;
             this.labelAlarm.BackColor = System.Drawing.Color.Transparent;
             this.labelAlarm.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAlarm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelAlarm.Location = new System.Drawing.Point(3, 80);
             this.labelAlarm.Name = "labelAlarm";
             this.labelAlarm.Size = new System.Drawing.Size(126, 26);
