@@ -117,28 +117,33 @@ namespace ZeusPalace
 
         private void HandleUserPermissions()
         {
-            bool buttonPoolVisible = appController.Customer.Accommodation.Type == AccommodationType.Apartment;
-            bool buttonTrojanHorseVisible = appController.User.Role == UserRole.Customer &&
-                                    appController.Customer.Accommodation.Type == AccommodationType.TrojanHorse &&
-                                    appController.ComputerType == ComputerType.Private;
-            bool buttonOrdersVisible = appController.User.Role == UserRole.Customer;
+            bool acmIsApartment = appController.Customer.Accommodation.Type == AccommodationType.Apartment;
+            bool acmIsTrojanHorse = appController.Customer.Accommodation.Type == AccommodationType.TrojanHorse;
+            bool userIsCustomer = appController.User.Role == UserRole.Customer;
+            bool computerIsPrivate = appController.ComputerType == ComputerType.Private;
 
             flowLayoutPanelMenu.Controls.Clear();
 
             flowLayoutPanelMenu.Controls.Add(buttonDevices);
-            if (buttonPoolVisible)
+
+            if (acmIsApartment)
             {
                 flowLayoutPanelMenu.Controls.Add(buttonPool);
             }
-            if (buttonTrojanHorseVisible)
+
+            if (userIsCustomer && acmIsTrojanHorse)
             {
-                flowLayoutPanelMenu.Controls.Add(buttonTrojanHorse);
+                if (computerIsPrivate)
+                {
+                    flowLayoutPanelMenu.Controls.Add(buttonTrojanHorse); // show trojan horse menu button in private computer
+                }
+                else
+                {
+                    hubForm.panelPoolOrHorse.Visible = false; // hide trojan horse hub button from public computers
+                }
             }
-            else
-            {
-                hubForm.panelPoolOrHorse.Visible = false;
-            }
-            if (buttonOrdersVisible)
+
+            if (userIsCustomer)
             {
                 flowLayoutPanelMenu.Controls.Add(buttonOrders);
             }
