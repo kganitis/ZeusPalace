@@ -15,6 +15,10 @@ namespace ZeusPalace.Modules.Devices
         public TrojanHorseDevicesForm()
         {
             InitializeComponent();
+            if (AppController.Instance.ComputerType != ComputerType.Private)
+            {
+                WheelPictureBox.Enabled = false;
+            }
         }
 
         SoundPlayer MyPlayer = new SoundPlayer("..\\..\\Resources\\Shire_Theme.wav");
