@@ -304,15 +304,15 @@ namespace ZeusPalace.Modules
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Panel panelHub;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panelPoolOrHorse;
         private System.Windows.Forms.Panel panelDevices;
         internal System.Windows.Forms.PictureBox pictureBoxOrders;
-        internal System.Windows.Forms.PictureBox pictureBoxPoolOrHorse;
         internal System.Windows.Forms.PictureBox pictureBoxDevices;
         private System.Windows.Forms.Label labelDevices;
         private System.Windows.Forms.Label labelPoolOrHorse;
         private System.Windows.Forms.Label labelOrders;
         internal System.Windows.Forms.Timer timerLoading;
         internal System.Windows.Forms.Panel panelOrders;
+        public System.Windows.Forms.Panel panelPoolOrHorse;
+        internal System.Windows.Forms.PictureBox pictureBoxPoolOrHorse;
     }
 }

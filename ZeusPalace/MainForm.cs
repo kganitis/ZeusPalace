@@ -134,6 +134,10 @@ namespace ZeusPalace
             {
                 flowLayoutPanelMenu.Controls.Add(buttonTrojanHorse);
             }
+            else
+            {
+                hubForm.panelPoolOrHorse.Visible = false;
+            }
             if (buttonOrdersVisible)
             {
                 flowLayoutPanelMenu.Controls.Add(buttonOrders);
