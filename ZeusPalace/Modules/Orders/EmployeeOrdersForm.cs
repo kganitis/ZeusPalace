@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using ZeusPalace.Modules.Orders.UserControls;
 
@@ -80,6 +75,7 @@ namespace ZeusPalace.Modules.Orders
             }
             panelOrderPreview.Dock = DockStyle.Top;
             panelOrder.Controls.Add(panelOrderPreview);
+            buttonConfirm.Text = "Επιβεβαίωση παραγγελίας";
             buttonConfirm.Visible = true;
             buttonReject.Visible = true;
             buttonConfirm.Enabled = true;

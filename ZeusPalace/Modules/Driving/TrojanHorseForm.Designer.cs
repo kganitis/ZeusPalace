@@ -218,20 +218,21 @@
             // 
             // zeusTempleCourtyardPanel
             // 
-            this.zeusTempleCourtyardPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("zeusTempleCourtyardPanel.BackgroundImage")));
+            this.zeusTempleCourtyardPanel.BackgroundImage = global::ZeusPalace.Properties.Resources.camping_temple_of_zeus_courtyard;
             this.zeusTempleCourtyardPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.zeusTempleCourtyardPanel.Location = new System.Drawing.Point(0, 0);
             this.zeusTempleCourtyardPanel.Name = "zeusTempleCourtyardPanel";
             this.zeusTempleCourtyardPanel.Size = new System.Drawing.Size(1280, 540);
             this.zeusTempleCourtyardPanel.TabIndex = 47;
+            this.zeusTempleCourtyardPanel.TrojanHorseImage = ((System.Drawing.Image)(resources.GetObject("zeusTempleCourtyardPanel.TrojanHorseImage")));
             this.zeusTempleCourtyardPanel.TrojanHorseLocation = new System.Drawing.Point(50, 240);
             // 
-            // labelUsername
+            // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(555, 633);
-            this.label1.Name = "labelUsername";
+            this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 22);
             this.label1.TabIndex = 48;
             this.label1.Text = "Πλήκτρα οδήγησης";

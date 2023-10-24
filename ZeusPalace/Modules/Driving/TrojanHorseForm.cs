@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Drawing;
-using System.Text;
-using System.Threading;
 using System.Windows.Forms;
-using ZeusPalace.Properties;
 
 namespace ZeusPalace.Modules.Driving
 {
@@ -92,10 +85,10 @@ namespace ZeusPalace.Modules.Driving
             initialLabelTexts.Add(labelExtendLadder, labelExtendLadder.Text);
             initialLabelTexts.Add(labelRetractLadder, labelRetractLadder.Text);
 
-            selectedLabelTexts.Add(labelOpenDoor, "Πόρτες ανοιχτές");
-            selectedLabelTexts.Add(labelHalfOpenDoor, "Πόρτες μισοανοιχτές");
-            selectedLabelTexts.Add(labelHalfClosedDoor, "Πόρτες μισόκλειστες");
-            selectedLabelTexts.Add(labelClosedDoor, "Πόρτες κλειστές");
+            selectedLabelTexts.Add(labelOpenDoor, "Πόρτα ανοιχτή");
+            selectedLabelTexts.Add(labelHalfOpenDoor, "Πόρτα μισάνοιχτη");
+            selectedLabelTexts.Add(labelHalfClosedDoor, "Πόρτα μισόκλειστη");
+            selectedLabelTexts.Add(labelClosedDoor, "Πόρτα κλειστή");
             selectedLabelTexts.Add(labelExtendLadder, "Σκάλα κατεβασμένη");
             selectedLabelTexts.Add(labelRetractLadder, "Σκάλα ανεβασμένη");
 

@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using ZeusPalace.Entities.Accommodation;
 using ZeusPalace.Entities.Order;
 
 namespace ZeusPalace.Modules.Orders.UserControls
@@ -43,6 +35,10 @@ namespace ZeusPalace.Modules.Orders.UserControls
             InitializeComponent();
             AlignLabelToCenter(labelTitle, panelTitle);
             Balance = balance;
+            if (AppController.Instance.Customer.Accommodation.Type == AccommodationType.TrojanHorse)
+            {
+                radioButtonAppartment.Text = "Παράδοση στον δούρειο ίππο";
+            }
         }
 
         public decimal Balance

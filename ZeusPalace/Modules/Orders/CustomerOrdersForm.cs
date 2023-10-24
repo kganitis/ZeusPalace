@@ -1,16 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Diagnostics.Contracts;
-using System.Drawing;
-using System.Drawing.Text;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ZeusPalace.Entities.Accommodation;
 using ZeusPalace.Entities.Order;
 using ZeusPalace.Modules.Orders.UserControls;
 using MenuItem = ZeusPalace.Entities.Order.MenuItem;
@@ -341,6 +331,7 @@ namespace ZeusPalace.Modules.Orders
             DiscardPanel(activePanel);
             ShowPanel(panelMenu);
             buttonOrderEdit.Visible = false;
+            buttonNextStep.TextLeft = "Συνέχεια";
             if (employeeOrdersForm != null)
             {
                 EmployeeOrdersForm.CancelOrder();

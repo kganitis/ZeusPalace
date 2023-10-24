@@ -760,6 +760,16 @@ namespace ZeusPalace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minus_button {
+            get {
+                object obj = ResourceManager.GetObject("minus-button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap move_down {
             get {
                 object obj = ResourceManager.GetObject("move-down", resourceCulture);
@@ -853,6 +863,16 @@ namespace ZeusPalace.Properties {
         internal static System.Drawing.Bitmap play_btn {
             get {
                 object obj = ResourceManager.GetObject("play_btn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_button {
+            get {
+                object obj = ResourceManager.GetObject("plus-button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

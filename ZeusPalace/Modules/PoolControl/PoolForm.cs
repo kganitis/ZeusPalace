@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.Drawing;
 using ZeusPalace.Entities.Pool;
 using ZeusPalace.Properties;
 using System.Media;
-using System.Resources;
-using System.Xml.Linq;
-using System.Diagnostics;
 
 namespace ZeusPalace.Modules.PoolControl
 {

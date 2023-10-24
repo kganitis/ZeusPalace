@@ -589,9 +589,11 @@
     <Content Include="Resources\light_switch_color.png" />
     <Content Include="Resources\locked_icon.png" />
     <Content Include="Resources\lowHum_icon.png" />
+    <None Include="Resources\minus-button.png" />
     <Content Include="Resources\music_off.png" />
     <Content Include="Resources\omega.png" />
     <Content Include="Resources\play_btn.png" />
+    <None Include="Resources\plus-button.png" />
     <Content Include="Resources\pre-ancient-suite-lights-off-devices-off.jpg" />
     <Content Include="Resources\pre-ancient-suite-lights-off.jpg" />
     <Content Include="Resources\pre-ancient-suite.jpg" />

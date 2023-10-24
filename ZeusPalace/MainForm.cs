@@ -1,21 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZeusPalace.Modules;
 using ZeusPalace.Modules.Devices;
 using ZeusPalace.Modules.PoolControl;
 using ZeusPalace.Modules.Driving;
 using ZeusPalace.Modules.Orders;
-using ZeusPalace.Entities.Pool;
 using ZeusPalace.Entities.Accommodation;
-using System.Diagnostics;
 using ZeusPalace.Properties;
 
 namespace ZeusPalace

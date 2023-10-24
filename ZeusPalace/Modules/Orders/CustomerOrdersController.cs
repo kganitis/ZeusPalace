@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using ZeusPalace.Entities.Accommodation;
-using ZeusPalace.Entities.Order;
+﻿using ZeusPalace.Entities.Order;
 using Menu = ZeusPalace.Entities.Order.Menu;
 using MenuItem = ZeusPalace.Entities.Order.MenuItem;
 
