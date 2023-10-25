@@ -10,6 +10,7 @@ using ZeusPalace.Modules.Driving;
 using ZeusPalace.Modules.Orders;
 using ZeusPalace.Entities.Accommodation;
 using ZeusPalace.Properties;
+using System.Diagnostics;
 
 namespace ZeusPalace
 {
@@ -74,17 +75,11 @@ namespace ZeusPalace
             HandleUserPermissions();
         }
 
-        /*private void TimerLoading_Tick(object sender, EventArgs e)
+        private static void OpenOnlineHelp()
         {
-            if (appController.LoginRequired)
-            {
-                flowLayoutPanelMenu.BackgroundImage = Resources.background_login_menu;
-            }
-            else
-            {
-                flowLayoutPanelMenu.BackgroundImage = Resources.background_home_menu;
-            }
-        }*/
+            string onlineHelpUrl = "https://zeus-palace.netlify.app";
+            Process.Start(onlineHelpUrl);
+        }
 
         private void PictureBoxOrders_Click(object sender, EventArgs e)
         {
@@ -144,6 +139,8 @@ namespace ZeusPalace
             {
                 hubForm.panelOrders.Visible = false;
             }
+
+            flowLayoutPanelMenu.Controls.Add(buttonOnlineHelp);
         }
 
         private void PreloadForms()
@@ -270,6 +267,11 @@ namespace ZeusPalace
             ShowEmbeddedForm(customerOrdersForm, (Button)sender);
         }
 
+        private void buttonOnlineHelp_Click(object sender, EventArgs e)
+        {
+            OpenOnlineHelp();
+        }
+
         // Make the form not-resizable by reseting the size on resizing event
         private void MainForm_Resize(object sender, EventArgs e)
         {
@@ -294,5 +296,7 @@ namespace ZeusPalace
                 ((Button)sender).Cursor = Cursors.Default;
             }
         }
+
+        
     }
 }

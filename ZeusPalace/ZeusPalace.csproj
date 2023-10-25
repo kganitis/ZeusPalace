@@ -580,6 +580,7 @@
     <Content Include="Resources\harp_off_lightsON.jpg" />
     <Content Include="Resources\harp_on_lightsOFF.jpg" />
     <Content Include="Resources\harp_on_lightsON.jpg" />
+    <None Include="Resources\help.png" />
     <Content Include="Resources\highHum_icon.png" />
     <Content Include="Resources\hot_icon.png" />
     <Content Include="Resources\icons8-shutdown-48.png" />

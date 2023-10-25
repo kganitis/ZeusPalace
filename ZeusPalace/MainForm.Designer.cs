@@ -33,13 +33,16 @@
             this.buttonDevices = new System.Windows.Forms.Button();
             this.buttonPool = new System.Windows.Forms.Button();
             this.buttonTrojanHorse = new System.Windows.Forms.Button();
+            this.buttonOnlineHelp = new System.Windows.Forms.Button();
             this.buttonOrders = new System.Windows.Forms.Button();
+            this.panelDesktopPane.SuspendLayout();
             this.flowLayoutPanelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelDesktopPane
             // 
             this.panelDesktopPane.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(221)))), ((int)(((byte)(213)))));
+            this.panelDesktopPane.Controls.Add(this.buttonOrders);
             this.panelDesktopPane.Location = new System.Drawing.Point(0, 60);
             this.panelDesktopPane.Name = "panelDesktopPane";
             this.panelDesktopPane.Size = new System.Drawing.Size(1280, 660);
@@ -52,7 +55,7 @@
             this.flowLayoutPanelMenu.Controls.Add(this.buttonDevices);
             this.flowLayoutPanelMenu.Controls.Add(this.buttonPool);
             this.flowLayoutPanelMenu.Controls.Add(this.buttonTrojanHorse);
-            this.flowLayoutPanelMenu.Controls.Add(this.buttonOrders);
+            this.flowLayoutPanelMenu.Controls.Add(this.buttonOnlineHelp);
             this.flowLayoutPanelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanelMenu.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelMenu.Name = "flowLayoutPanelMenu";
@@ -131,6 +134,28 @@
             this.buttonTrojanHorse.MouseEnter += new System.EventHandler(this.buttonMenu_MouseEnter);
             this.buttonTrojanHorse.MouseLeave += new System.EventHandler(this.buttonMenu_MouseLeave);
             // 
+            // buttonOnlineHelp
+            // 
+            this.buttonOnlineHelp.BackColor = System.Drawing.Color.Transparent;
+            this.buttonOnlineHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOnlineHelp.FlatAppearance.BorderSize = 0;
+            this.buttonOnlineHelp.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonOnlineHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOnlineHelp.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOnlineHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.buttonOnlineHelp.Image = global::ZeusPalace.Properties.Resources.help;
+            this.buttonOnlineHelp.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonOnlineHelp.Location = new System.Drawing.Point(960, 0);
+            this.buttonOnlineHelp.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonOnlineHelp.Name = "buttonOnlineHelp";
+            this.buttonOnlineHelp.Size = new System.Drawing.Size(320, 60);
+            this.buttonOnlineHelp.TabIndex = 6;
+            this.buttonOnlineHelp.Text = "  Βοήθεια";
+            this.buttonOnlineHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonOnlineHelp.UseVisualStyleBackColor = false;
+            this.buttonOnlineHelp.Visible = false;
+            this.buttonOnlineHelp.Click += new System.EventHandler(this.buttonOnlineHelp_Click);
+            // 
             // buttonOrders
             // 
             this.buttonOrders.BackColor = System.Drawing.Color.Transparent;
@@ -142,7 +167,7 @@
             this.buttonOrders.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.buttonOrders.Image = global::ZeusPalace.Properties.Resources.orders_icon;
             this.buttonOrders.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonOrders.Location = new System.Drawing.Point(960, 0);
+            this.buttonOrders.Location = new System.Drawing.Point(0, 60);
             this.buttonOrders.Margin = new System.Windows.Forms.Padding(0);
             this.buttonOrders.Name = "buttonOrders";
             this.buttonOrders.Size = new System.Drawing.Size(320, 60);
@@ -168,6 +193,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Το Παλάτι του Δία";
             this.Resize += new System.EventHandler(this.MainForm_Resize);
+            this.panelDesktopPane.ResumeLayout(false);
             this.flowLayoutPanelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -180,5 +206,6 @@
         private System.Windows.Forms.Button buttonDevices;
         private System.Windows.Forms.Button buttonOrders;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMenu;
+        private System.Windows.Forms.Button buttonOnlineHelp;
     }
 }
