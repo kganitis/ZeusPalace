@@ -5,6 +5,8 @@ namespace ZeusPalace.Modules
 {
     public partial class EmbeddedForm : Form
     {
+        public string OnlineHelpSection = "#";
+
         public EmbeddedForm()
         {
             InitializeComponent();

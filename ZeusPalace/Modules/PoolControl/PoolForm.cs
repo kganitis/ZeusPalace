@@ -15,6 +15,7 @@ namespace ZeusPalace.Modules.PoolControl
         public PoolForm()
         {
             InitializeComponent();
+            OnlineHelpSection = "#toc-Επισκόπηση%20εργαλείων%20ελέγχου%20πισίνας";
             AppController.Instance.TimeChanged += AppController_TimeChanged;
             AppController.Instance.PersonInPoolChanged += AppController_PersonInPoolChanged;
             UpdateUI();

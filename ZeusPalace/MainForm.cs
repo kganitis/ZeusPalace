@@ -42,6 +42,8 @@ namespace ZeusPalace
             }
         }
 
+        public string OnlineHelpSection => currentForm == null ? "#toc-Αρχική%20οθόνη" : currentForm.OnlineHelpSection;
+
         // UI fields
         private Button activeButton;
         private readonly Font defaultButtonFont;
@@ -75,9 +77,9 @@ namespace ZeusPalace
             HandleUserPermissions();
         }
 
-        private static void OpenOnlineHelp()
+        private void OpenOnlineHelp()
         {
-            string onlineHelpUrl = "https://zeus-palace.netlify.app";
+            string onlineHelpUrl = "https://zeus-palace.netlify.app/" + OnlineHelpSection;
             Process.Start(onlineHelpUrl);
         }
 
@@ -141,6 +143,7 @@ namespace ZeusPalace
             }
 
             flowLayoutPanelMenu.Controls.Add(buttonOnlineHelp);
+            buttonOnlineHelp.Visible = true;
         }
 
         private void PreloadForms()

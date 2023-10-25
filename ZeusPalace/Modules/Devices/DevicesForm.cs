@@ -10,7 +10,7 @@ namespace ZeusPalace.Modules.Devices
         public DevicesForm()
         {
             InitializeComponent();
-
+            OnlineHelpSection = "#toc-Επισκόπηση%20εργαλείων%20ελέγχου%20συσκευών";
         }
 
         SoundPlayer MyPlayer = new SoundPlayer("..\\..\\Resources\\harp_music.wav");

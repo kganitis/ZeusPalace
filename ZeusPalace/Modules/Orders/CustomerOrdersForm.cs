@@ -45,6 +45,7 @@ namespace ZeusPalace.Modules.Orders
         public CustomerOrdersForm()
         {
             InitializeComponent();
+            OnlineHelpSection = "#toc-Αποστολή%20νέας%20παραγγελίας";
             InitializeControls();
             PopulateMenuItems();
             activePanel = panelMenu;

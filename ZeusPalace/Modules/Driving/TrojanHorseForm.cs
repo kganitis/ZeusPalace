@@ -63,6 +63,7 @@ namespace ZeusPalace.Modules.Driving
         public TrojanHorseForm()
         {
             InitializeComponent();
+            OnlineHelpSection = "#toc-Χειρισμός%20Δούρειου%20Ίππου";
         }
 
         public TrojanHorseForm(MainForm mainForm) : this()

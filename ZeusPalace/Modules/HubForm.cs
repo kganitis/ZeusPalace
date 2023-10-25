@@ -12,6 +12,7 @@ namespace ZeusPalace.Modules
         public HubForm()
         {
             InitializeComponent();
+            OnlineHelpSection = "#toc-Αρχική%20οθόνη";
 
             if (appController.Customer.Accommodation.Type == Entities.Accommodation.AccommodationType.TrojanHorse)
             {
@@ -33,6 +34,7 @@ namespace ZeusPalace.Modules
             {
                 BackgroundImage = Resources.background_login;
                 panelLogin.Visible = true;
+                OnlineHelpSection = "#toc-Σύνδεση%20στο%20σύστημα";
             }
             else
             {
@@ -48,6 +50,7 @@ namespace ZeusPalace.Modules
                 panelLogin.Visible = false;
                 panelHub.BringToFront();
                 panelHub.Visible = true;
+                OnlineHelpSection = "#toc-Αρχική%20οθόνη";
             }
             else
             {
